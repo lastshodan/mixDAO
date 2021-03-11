@@ -1,0 +1,4936 @@
+{
+  "_format": "hh-sol-cache-1",
+  "files": {
+    "/Volumes/sdxc/ETHEREUM/CODE/mStable-v1-edit/contracts/governance/ClaimableGovernor.sol": {
+      "lastModificationDate": 1615285936860,
+      "sourceName": "contracts/governance/ClaimableGovernor.sol",
+      "solcConfig": {
+        "version": "0.5.16",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./Governable.sol"
+      ],
+      "versionPragmas": [
+        "0.5.16"
+      ],
+      "artifacts": [
+        "ClaimableGovernor"
+      ]
+    },
+    "/Volumes/sdxc/ETHEREUM/CODE/mStable-v1-edit/contracts/governance/Governable.sol": {
+      "lastModificationDate": 1615285936870,
+      "sourceName": "contracts/governance/Governable.sol",
+      "solcConfig": {
+        "version": "0.5.16",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "0.5.16"
+      ],
+      "artifacts": [
+        "Governable"
+      ]
+    },
+    "/Volumes/sdxc/ETHEREUM/CODE/mStable-v1-edit/contracts/governance/DelayedClaimableGovernor.sol": {
+      "lastModificationDate": 1615285936870,
+      "sourceName": "contracts/governance/DelayedClaimableGovernor.sol",
+      "solcConfig": {
+        "version": "0.5.16",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./ClaimableGovernor.sol",
+        "@openzeppelin/contracts/math/SafeMath.sol"
+      ],
+      "versionPragmas": [
+        "0.5.16"
+      ],
+      "artifacts": [
+        "DelayedClaimableGovernor"
+      ]
+    },
+    "/Volumes/sdxc/ETHEREUM/CODE/mStable-v1-edit/node_modules/@openzeppelin/contracts/math/SafeMath.sol": {
+      "lastModificationDate": 1613584049920,
+      "sourceName": "@openzeppelin/contracts/math/SafeMath.sol",
+      "solcConfig": {
+        "version": "0.5.16",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.5.0"
+      ],
+      "artifacts": [
+        "SafeMath"
+      ]
+    },
+    "/Volumes/sdxc/ETHEREUM/CODE/mStable-v1-edit/contracts/nexus/Nexus.sol": {
+      "lastModificationDate": 1615285937280,
+      "sourceName": "contracts/nexus/Nexus.sol",
+      "solcConfig": {
+        "version": "0.5.16",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../interfaces/INexus.sol",
+        "../governance/DelayedClaimableGovernor.sol"
+      ],
+      "versionPragmas": [
+        "0.5.16"
+      ],
+      "artifacts": [
+        "Nexus"
+      ]
+    },
+    "/Volumes/sdxc/ETHEREUM/CODE/mStable-v1-edit/contracts/interfaces/INexus.sol": {
+      "lastModificationDate": 1615285937040,
+      "sourceName": "contracts/interfaces/INexus.sol",
+      "solcConfig": {
+        "version": "0.5.16",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "0.5.16"
+      ],
+      "artifacts": [
+        "INexus"
+      ]
+    },
+    "/Volumes/sdxc/ETHEREUM/CODE/mStable-v1-edit/contracts/savings/SavingsContract.sol": {
+      "lastModificationDate": 1615286278130,
+      "sourceName": "contracts/savings/SavingsContract.sol",
+      "solcConfig": {
+        "version": "0.5.16",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../interfaces/ISavingsManager.sol",
+        "../interfaces/ISavingsContract.sol",
+        "../shared/InitializableToken.sol",
+        "../shared/InitializableModule2.sol",
+        "./peripheral/IConnector.sol",
+        "@openzeppelin/upgrades/contracts/Initializable.sol",
+        "@openzeppelin/contracts/token/ERC20/IERC20.sol",
+        "@openzeppelin/contracts/math/SafeMath.sol",
+        "../shared/StableMath.sol"
+      ],
+      "versionPragmas": [
+        "0.5.16"
+      ],
+      "artifacts": [
+        "SavingsContract"
+      ]
+    },
+    "/Volumes/sdxc/ETHEREUM/CODE/mStable-v1-edit/contracts/interfaces/ISavingsManager.sol": {
+      "lastModificationDate": 1615286278150,
+      "sourceName": "contracts/interfaces/ISavingsManager.sol",
+      "solcConfig": {
+        "version": "0.5.16",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "0.5.16"
+      ],
+      "artifacts": [
+        "IRevenueRecipient",
+        "ISavingsManager"
+      ]
+    },
+    "/Volumes/sdxc/ETHEREUM/CODE/mStable-v1-edit/contracts/interfaces/ISavingsContract.sol": {
+      "lastModificationDate": 1615286170470,
+      "sourceName": "contracts/interfaces/ISavingsContract.sol",
+      "solcConfig": {
+        "version": "0.5.16",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "0.5.16"
+      ],
+      "artifacts": [
+        "ISavingsContractV1",
+        "ISavingsContractV2"
+      ]
+    },
+    "/Volumes/sdxc/ETHEREUM/CODE/mStable-v1-edit/contracts/shared/InitializableToken.sol": {
+      "lastModificationDate": 1615286226280,
+      "sourceName": "contracts/shared/InitializableToken.sol",
+      "solcConfig": {
+        "version": "0.5.16",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "@openzeppelin/contracts/token/ERC20/ERC20.sol",
+        "./InitializableERC20Detailed.sol"
+      ],
+      "versionPragmas": [
+        "0.5.16"
+      ],
+      "artifacts": [
+        "InitializableToken"
+      ]
+    },
+    "/Volumes/sdxc/ETHEREUM/CODE/mStable-v1-edit/contracts/savings/peripheral/IConnector.sol": {
+      "lastModificationDate": 1615286278120,
+      "sourceName": "contracts/savings/peripheral/IConnector.sol",
+      "solcConfig": {
+        "version": "0.5.16",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "0.5.16"
+      ],
+      "artifacts": [
+        "IConnector"
+      ]
+    },
+    "/Volumes/sdxc/ETHEREUM/CODE/mStable-v1-edit/node_modules/@openzeppelin/upgrades/contracts/Initializable.sol": {
+      "lastModificationDate": 1613584052780,
+      "sourceName": "@openzeppelin/upgrades/contracts/Initializable.sol",
+      "solcConfig": {
+        "version": "0.5.16",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        ">=0.4.24 <0.7.0"
+      ],
+      "artifacts": [
+        "Initializable"
+      ]
+    },
+    "/Volumes/sdxc/ETHEREUM/CODE/mStable-v1-edit/node_modules/@openzeppelin/contracts/token/ERC20/IERC20.sol": {
+      "lastModificationDate": 1613584049920,
+      "sourceName": "@openzeppelin/contracts/token/ERC20/IERC20.sol",
+      "solcConfig": {
+        "version": "0.5.16",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.5.0"
+      ],
+      "artifacts": [
+        "IERC20"
+      ]
+    },
+    "/Volumes/sdxc/ETHEREUM/CODE/mStable-v1-edit/contracts/shared/StableMath.sol": {
+      "lastModificationDate": 1615286278150,
+      "sourceName": "contracts/shared/StableMath.sol",
+      "solcConfig": {
+        "version": "0.5.16",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "@openzeppelin/contracts/math/SafeMath.sol"
+      ],
+      "versionPragmas": [
+        "0.5.16"
+      ],
+      "artifacts": [
+        "StableMath"
+      ]
+    },
+    "/Volumes/sdxc/ETHEREUM/CODE/mStable-v1-edit/node_modules/@openzeppelin/contracts/token/ERC20/ERC20.sol": {
+      "lastModificationDate": 1613584049920,
+      "sourceName": "@openzeppelin/contracts/token/ERC20/ERC20.sol",
+      "solcConfig": {
+        "version": "0.5.16",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../../GSN/Context.sol",
+        "./IERC20.sol",
+        "../../math/SafeMath.sol"
+      ],
+      "versionPragmas": [
+        "^0.5.0"
+      ],
+      "artifacts": [
+        "ERC20"
+      ]
+    },
+    "/Volumes/sdxc/ETHEREUM/CODE/mStable-v1-edit/contracts/shared/InitializableERC20Detailed.sol": {
+      "lastModificationDate": 1615285937630,
+      "sourceName": "contracts/shared/InitializableERC20Detailed.sol",
+      "solcConfig": {
+        "version": "0.5.16",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "@openzeppelin/contracts/token/ERC20/IERC20.sol"
+      ],
+      "versionPragmas": [
+        "0.5.16"
+      ],
+      "artifacts": [
+        "InitializableERC20Detailed"
+      ]
+    },
+    "/Volumes/sdxc/ETHEREUM/CODE/mStable-v1-edit/node_modules/@openzeppelin/contracts/GSN/Context.sol": {
+      "lastModificationDate": 1613584049920,
+      "sourceName": "@openzeppelin/contracts/GSN/Context.sol",
+      "solcConfig": {
+        "version": "0.5.16",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.5.0"
+      ],
+      "artifacts": [
+        "Context"
+      ]
+    },
+    "/Volumes/sdxc/ETHEREUM/CODE/mStable-v1-edit/contracts/z_mocks/shared/PublicStableMath.sol": {
+      "lastModificationDate": 1615285938150,
+      "sourceName": "contracts/z_mocks/shared/PublicStableMath.sol",
+      "solcConfig": {
+        "version": "0.5.16",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../../shared/StableMath.sol"
+      ],
+      "versionPragmas": [
+        "0.5.16"
+      ],
+      "artifacts": [
+        "PublicStableMath"
+      ]
+    },
+    "/Volumes/sdxc/ETHEREUM/CODE/mStable-v1-edit/contracts/z_mocks/shared/MockERC20WithFee.sol": {
+      "lastModificationDate": 1615285938090,
+      "sourceName": "contracts/z_mocks/shared/MockERC20WithFee.sol",
+      "solcConfig": {
+        "version": "0.5.16",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "@openzeppelin/contracts/math/SafeMath.sol",
+        "../../shared/StableMath.sol",
+        "@openzeppelin/contracts/access/roles/MinterRole.sol",
+        "@openzeppelin/contracts/token/ERC20/IERC20.sol"
+      ],
+      "versionPragmas": [
+        "0.5.16"
+      ],
+      "artifacts": [
+        "ERC20WithFee",
+        "MockERC20WithFee"
+      ]
+    },
+    "/Volumes/sdxc/ETHEREUM/CODE/mStable-v1-edit/node_modules/@openzeppelin/contracts/access/roles/MinterRole.sol": {
+      "lastModificationDate": 1613584049920,
+      "sourceName": "@openzeppelin/contracts/access/roles/MinterRole.sol",
+      "solcConfig": {
+        "version": "0.5.16",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../../GSN/Context.sol",
+        "../Roles.sol"
+      ],
+      "versionPragmas": [
+        "^0.5.0"
+      ],
+      "artifacts": [
+        "MinterRole"
+      ]
+    },
+    "/Volumes/sdxc/ETHEREUM/CODE/mStable-v1-edit/node_modules/@openzeppelin/contracts/access/Roles.sol": {
+      "lastModificationDate": 1613584049920,
+      "sourceName": "@openzeppelin/contracts/access/Roles.sol",
+      "solcConfig": {
+        "version": "0.5.16",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.5.0"
+      ],
+      "artifacts": [
+        "Roles"
+      ]
+    },
+    "/Volumes/sdxc/ETHEREUM/CODE/mStable-v1-edit/contracts/z_mocks/shared/MockInitializableTokenWithFee.sol": {
+      "lastModificationDate": 1615286226240,
+      "sourceName": "contracts/z_mocks/shared/MockInitializableTokenWithFee.sol",
+      "solcConfig": {
+        "version": "0.5.16",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./MockERC20WithFee.sol"
+      ],
+      "versionPragmas": [
+        "0.5.16"
+      ],
+      "artifacts": [
+        "MockInitializableTokenWithFee"
+      ]
+    },
+    "/Volumes/sdxc/ETHEREUM/CODE/mStable-v1-edit/contracts/z_mocks/shared/MockUniswap.sol": {
+      "lastModificationDate": 1615286170360,
+      "sourceName": "contracts/z_mocks/shared/MockUniswap.sol",
+      "solcConfig": {
+        "version": "0.5.16",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../../mix/liquidator/IUniswapV2Router02.sol",
+        "@openzeppelin/contracts/token/ERC20/IERC20.sol"
+      ],
+      "versionPragmas": [
+        "0.5.16"
+      ],
+      "artifacts": [
+        "MockUniswap"
+      ]
+    },
+    "/Volumes/sdxc/ETHEREUM/CODE/mStable-v1-edit/contracts/mix/liquidator/IUniswapV2Router02.sol": {
+      "lastModificationDate": 1615285937080,
+      "sourceName": "contracts/mix/liquidator/IUniswapV2Router02.sol",
+      "solcConfig": {
+        "version": "0.5.16",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.5.16"
+      ],
+      "artifacts": [
+        "IUniswapV2Router02"
+      ]
+    },
+    "/Volumes/sdxc/ETHEREUM/CODE/mStable-v1-edit/contracts/interfaces/IMix.sol": {
+      "lastModificationDate": 1615286278140,
+      "sourceName": "contracts/interfaces/IMix.sol",
+      "solcConfig": {
+        "version": "0.5.16",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../mix/shared/MixStructs.sol"
+      ],
+      "versionPragmas": [
+        "0.5.16"
+      ],
+      "artifacts": [
+        "IMix"
+      ]
+    },
+    "/Volumes/sdxc/ETHEREUM/CODE/mStable-v1-edit/node_modules/@openzeppelin/contracts/token/ERC20/SafeERC20.sol": {
+      "lastModificationDate": 1613584049920,
+      "sourceName": "@openzeppelin/contracts/token/ERC20/SafeERC20.sol",
+      "solcConfig": {
+        "version": "0.5.16",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./IERC20.sol",
+        "../../math/SafeMath.sol",
+        "../../utils/Address.sol"
+      ],
+      "versionPragmas": [
+        "^0.5.0"
+      ],
+      "artifacts": [
+        "SafeERC20"
+      ]
+    },
+    "/Volumes/sdxc/ETHEREUM/CODE/mStable-v1-edit/contracts/shared/IBasicToken.sol": {
+      "lastModificationDate": 1615285937620,
+      "sourceName": "contracts/shared/IBasicToken.sol",
+      "solcConfig": {
+        "version": "0.5.16",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "0.5.16"
+      ],
+      "artifacts": [
+        "IBasicToken"
+      ]
+    },
+    "/Volumes/sdxc/ETHEREUM/CODE/mStable-v1-edit/contracts/mix/shared/MixStructs.sol": {
+      "lastModificationDate": 1615286278130,
+      "sourceName": "contracts/mix/shared/MixStructs.sol",
+      "solcConfig": {
+        "version": "0.5.16",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "0.5.16"
+      ],
+      "artifacts": [
+        "MixStructs"
+      ]
+    },
+    "/Volumes/sdxc/ETHEREUM/CODE/mStable-v1-edit/node_modules/@openzeppelin/contracts/utils/Address.sol": {
+      "lastModificationDate": 1613584049920,
+      "sourceName": "@openzeppelin/contracts/utils/Address.sol",
+      "solcConfig": {
+        "version": "0.5.16",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.5.5"
+      ],
+      "artifacts": [
+        "Address"
+      ]
+    },
+    "/Volumes/sdxc/ETHEREUM/CODE/mStable-v1-edit/contracts/z_mocks/savings/MockyvMUSD.sol": {
+      "lastModificationDate": 1615285938000,
+      "sourceName": "contracts/z_mocks/savings/MockyvMUSD.sol",
+      "solcConfig": {
+        "version": "0.5.16",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "@openzeppelin/contracts/token/ERC20/ERC20.sol",
+        "@openzeppelin/contracts/token/ERC20/ERC20Detailed.sol",
+        "@openzeppelin/contracts/token/ERC20/SafeERC20.sol",
+        "@openzeppelin/contracts/math/SafeMath.sol"
+      ],
+      "versionPragmas": [
+        "^0.5.16"
+      ],
+      "artifacts": [
+        "yvMUSD"
+      ]
+    },
+    "/Volumes/sdxc/ETHEREUM/CODE/mStable-v1-edit/node_modules/@openzeppelin/contracts/token/ERC20/ERC20Detailed.sol": {
+      "lastModificationDate": 1613584049920,
+      "sourceName": "@openzeppelin/contracts/token/ERC20/ERC20Detailed.sol",
+      "solcConfig": {
+        "version": "0.5.16",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./IERC20.sol"
+      ],
+      "versionPragmas": [
+        "^0.5.0"
+      ],
+      "artifacts": [
+        "ERC20Detailed"
+      ]
+    },
+    "/Volumes/sdxc/ETHEREUM/CODE/mStable-v1-edit/contracts/z_mocks/integrations/MintWithKyber.sol": {
+      "lastModificationDate": 1615286278110,
+      "sourceName": "contracts/z_mocks/integrations/MintWithKyber.sol",
+      "solcConfig": {
+        "version": "0.5.16",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./AbstractBuyAndMint.sol",
+        "../../interfaces/IMix.sol",
+        "@openzeppelin/contracts/token/ERC20/IERC20.sol",
+        "@openzeppelin/contracts/token/ERC20/SafeERC20.sol",
+        "@openzeppelin/contracts/math/SafeMath.sol",
+        "@openzeppelin/contracts/utils/Address.sol",
+        "@openzeppelin/contracts/utils/ReentrancyGuard.sol",
+        "../../shared/StableMath.sol"
+      ],
+      "versionPragmas": [
+        "0.5.16"
+      ],
+      "artifacts": [
+        "KyberNetworkProxyInterface",
+        "MintWithKyber"
+      ]
+    },
+    "/Volumes/sdxc/ETHEREUM/CODE/mStable-v1-edit/contracts/z_mocks/integrations/AbstractBuyAndMint.sol": {
+      "lastModificationDate": 1615286278110,
+      "sourceName": "contracts/z_mocks/integrations/AbstractBuyAndMint.sol",
+      "solcConfig": {
+        "version": "0.5.16",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../../mix/shared/MixHelpers.sol",
+        "@openzeppelin/contracts/ownership/Ownable.sol"
+      ],
+      "versionPragmas": [
+        "0.5.16"
+      ],
+      "artifacts": [
+        "AbstractBuyAndMint"
+      ]
+    },
+    "/Volumes/sdxc/ETHEREUM/CODE/mStable-v1-edit/node_modules/@openzeppelin/contracts/utils/ReentrancyGuard.sol": {
+      "lastModificationDate": 1613584049920,
+      "sourceName": "@openzeppelin/contracts/utils/ReentrancyGuard.sol",
+      "solcConfig": {
+        "version": "0.5.16",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.5.0"
+      ],
+      "artifacts": [
+        "ReentrancyGuard"
+      ]
+    },
+    "/Volumes/sdxc/ETHEREUM/CODE/mStable-v1-edit/contracts/mix/shared/MixHelpers.sol": {
+      "lastModificationDate": 1615286226290,
+      "sourceName": "contracts/mix/shared/MixHelpers.sol",
+      "solcConfig": {
+        "version": "0.5.16",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../../shared/StableMath.sol",
+        "@openzeppelin/contracts/math/SafeMath.sol",
+        "@openzeppelin/contracts/token/ERC20/SafeERC20.sol",
+        "@openzeppelin/contracts/token/ERC20/IERC20.sol"
+      ],
+      "versionPragmas": [
+        "0.5.16"
+      ],
+      "artifacts": [
+        "MixHelpers"
+      ]
+    },
+    "/Volumes/sdxc/ETHEREUM/CODE/mStable-v1-edit/node_modules/@openzeppelin/contracts/ownership/Ownable.sol": {
+      "lastModificationDate": 1613584049920,
+      "sourceName": "@openzeppelin/contracts/ownership/Ownable.sol",
+      "solcConfig": {
+        "version": "0.5.16",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../GSN/Context.sol"
+      ],
+      "versionPragmas": [
+        "^0.5.0"
+      ],
+      "artifacts": [
+        "Ownable"
+      ]
+    },
+    "/Volumes/sdxc/ETHEREUM/CODE/mStable-v1-edit/contracts/rewards/staking/StakingRewardsWithPlatformToken.sol": {
+      "lastModificationDate": 1615285937440,
+      "sourceName": "contracts/rewards/staking/StakingRewardsWithPlatformToken.sol",
+      "solcConfig": {
+        "version": "0.5.16",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../RewardsDistributionRecipient.sol",
+        "./StakingTokenWrapper.sol",
+        "./PlatformTokenVendor.sol",
+        "@openzeppelin/contracts/token/ERC20/SafeERC20.sol",
+        "@openzeppelin/contracts/utils/ReentrancyGuard.sol",
+        "@openzeppelin/contracts/math/SafeMath.sol",
+        "../../shared/StableMath.sol"
+      ],
+      "versionPragmas": [
+        "0.5.16"
+      ],
+      "artifacts": [
+        "StakingRewardsWithPlatformToken"
+      ]
+    },
+    "/Volumes/sdxc/ETHEREUM/CODE/mStable-v1-edit/contracts/rewards/RewardsDistributionRecipient.sol": {
+      "lastModificationDate": 1615285937280,
+      "sourceName": "contracts/rewards/RewardsDistributionRecipient.sol",
+      "solcConfig": {
+        "version": "0.5.16",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../shared/Module.sol",
+        "@openzeppelin/contracts/token/ERC20/IERC20.sol",
+        "../interfaces/IRewardsDistributionRecipient.sol"
+      ],
+      "versionPragmas": [
+        "0.5.16"
+      ],
+      "artifacts": [
+        "RewardsDistributionRecipient"
+      ]
+    },
+    "/Volumes/sdxc/ETHEREUM/CODE/mStable-v1-edit/contracts/rewards/staking/StakingTokenWrapper.sol": {
+      "lastModificationDate": 1615285937450,
+      "sourceName": "contracts/rewards/staking/StakingTokenWrapper.sol",
+      "solcConfig": {
+        "version": "0.5.16",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "@openzeppelin/contracts/token/ERC20/SafeERC20.sol",
+        "@openzeppelin/contracts/utils/ReentrancyGuard.sol",
+        "@openzeppelin/contracts/math/SafeMath.sol"
+      ],
+      "versionPragmas": [
+        "0.5.16"
+      ],
+      "artifacts": [
+        "StakingTokenWrapper"
+      ]
+    },
+    "/Volumes/sdxc/ETHEREUM/CODE/mStable-v1-edit/contracts/rewards/staking/PlatformTokenVendor.sol": {
+      "lastModificationDate": 1615286226300,
+      "sourceName": "contracts/rewards/staking/PlatformTokenVendor.sol",
+      "solcConfig": {
+        "version": "0.5.16",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "@openzeppelin/contracts/token/ERC20/SafeERC20.sol",
+        "../../mix/shared/MixHelpers.sol"
+      ],
+      "versionPragmas": [
+        "0.5.16"
+      ],
+      "artifacts": [
+        "PlatformTokenVendor"
+      ]
+    },
+    "/Volumes/sdxc/ETHEREUM/CODE/mStable-v1-edit/contracts/interfaces/IRewardsDistributionRecipient.sol": {
+      "lastModificationDate": 1615285937050,
+      "sourceName": "contracts/interfaces/IRewardsDistributionRecipient.sol",
+      "solcConfig": {
+        "version": "0.5.16",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "@openzeppelin/contracts/token/ERC20/IERC20.sol"
+      ],
+      "versionPragmas": [
+        "0.5.16"
+      ],
+      "artifacts": [
+        "IRewardsDistributionRecipient"
+      ]
+    },
+    "/Volumes/sdxc/ETHEREUM/CODE/mStable-v1-edit/contracts/z_mocks/mix/platform-integrations/MockAave.sol": {
+      "lastModificationDate": 1615286226300,
+      "sourceName": "contracts/z_mocks/mix/platform-integrations/MockAave.sol",
+      "solcConfig": {
+        "version": "0.5.16",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../../../mix/platform-integrations/IAave.sol",
+        "../../../mix/platform-integrations/AaveIntegration.sol",
+        "../../../mix/platform-integrations/AaveV2Integration.sol",
+        "../../../mix/shared/MixHelpers.sol",
+        "../../../shared/StableMath.sol",
+        "@openzeppelin/contracts/token/ERC20/ERC20Mintable.sol",
+        "@openzeppelin/contracts/token/ERC20/ERC20Burnable.sol"
+      ],
+      "versionPragmas": [
+        "0.5.16"
+      ],
+      "artifacts": [
+        "MockAToken",
+        "MockATokenV2",
+        "MockAaveIntegration",
+        "MockAaveV1",
+        "MockAaveV2",
+        "MockAaveV2Integration"
+      ]
+    },
+    "/Volumes/sdxc/ETHEREUM/CODE/mStable-v1-edit/contracts/mix/platform-integrations/IAave.sol": {
+      "lastModificationDate": 1615285937090,
+      "sourceName": "contracts/mix/platform-integrations/IAave.sol",
+      "solcConfig": {
+        "version": "0.5.16",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "0.5.16"
+      ],
+      "artifacts": [
+        "IAaveATokenV1",
+        "IAaveATokenV2",
+        "IAaveLendingPoolV1",
+        "IAaveLendingPoolV2",
+        "ILendingPoolAddressesProviderV1",
+        "ILendingPoolAddressesProviderV2"
+      ]
+    },
+    "/Volumes/sdxc/ETHEREUM/CODE/mStable-v1-edit/contracts/mix/platform-integrations/AaveIntegration.sol": {
+      "lastModificationDate": 1615286278120,
+      "sourceName": "contracts/mix/platform-integrations/AaveIntegration.sol",
+      "solcConfig": {
+        "version": "0.5.16",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./IAave.sol",
+        "./InitializableAbstractIntegration.sol"
+      ],
+      "versionPragmas": [
+        "0.5.16"
+      ],
+      "artifacts": [
+        "AaveIntegration"
+      ]
+    },
+    "/Volumes/sdxc/ETHEREUM/CODE/mStable-v1-edit/contracts/mix/platform-integrations/AaveV2Integration.sol": {
+      "lastModificationDate": 1615286278150,
+      "sourceName": "contracts/mix/platform-integrations/AaveV2Integration.sol",
+      "solcConfig": {
+        "version": "0.5.16",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./IAave.sol",
+        "./InitializableAbstractIntegration.sol"
+      ],
+      "versionPragmas": [
+        "0.5.16"
+      ],
+      "artifacts": [
+        "AaveV2Integration"
+      ]
+    },
+    "/Volumes/sdxc/ETHEREUM/CODE/mStable-v1-edit/node_modules/@openzeppelin/contracts/token/ERC20/ERC20Mintable.sol": {
+      "lastModificationDate": 1613584049920,
+      "sourceName": "@openzeppelin/contracts/token/ERC20/ERC20Mintable.sol",
+      "solcConfig": {
+        "version": "0.5.16",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./ERC20.sol",
+        "../../access/roles/MinterRole.sol"
+      ],
+      "versionPragmas": [
+        "^0.5.0"
+      ],
+      "artifacts": [
+        "ERC20Mintable"
+      ]
+    },
+    "/Volumes/sdxc/ETHEREUM/CODE/mStable-v1-edit/node_modules/@openzeppelin/contracts/token/ERC20/ERC20Burnable.sol": {
+      "lastModificationDate": 1613584049920,
+      "sourceName": "@openzeppelin/contracts/token/ERC20/ERC20Burnable.sol",
+      "solcConfig": {
+        "version": "0.5.16",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../../GSN/Context.sol",
+        "./ERC20.sol"
+      ],
+      "versionPragmas": [
+        "^0.5.0"
+      ],
+      "artifacts": [
+        "ERC20Burnable"
+      ]
+    },
+    "/Volumes/sdxc/ETHEREUM/CODE/mStable-v1-edit/contracts/mix/platform-integrations/InitializableAbstractIntegration.sol": {
+      "lastModificationDate": 1615286226310,
+      "sourceName": "contracts/mix/platform-integrations/InitializableAbstractIntegration.sol",
+      "solcConfig": {
+        "version": "0.5.16",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../../interfaces/IPlatformIntegration.sol",
+        "../../governance/InitializableGovernableWhitelist.sol",
+        "@openzeppelin/upgrades/contracts/Initializable.sol",
+        "../shared/MixHelpers.sol",
+        "@openzeppelin/contracts/token/ERC20/SafeERC20.sol",
+        "@openzeppelin/contracts/token/ERC20/IERC20.sol",
+        "@openzeppelin/contracts/math/SafeMath.sol",
+        "../../shared/InitializableReentrancyGuard.sol"
+      ],
+      "versionPragmas": [
+        "0.5.16"
+      ],
+      "artifacts": [
+        "InitializableAbstractIntegration"
+      ]
+    },
+    "/Volumes/sdxc/ETHEREUM/CODE/mStable-v1-edit/contracts/interfaces/IPlatformIntegration.sol": {
+      "lastModificationDate": 1615285937050,
+      "sourceName": "contracts/interfaces/IPlatformIntegration.sol",
+      "solcConfig": {
+        "version": "0.5.16",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "0.5.16"
+      ],
+      "artifacts": [
+        "IPlatformIntegration"
+      ]
+    },
+    "/Volumes/sdxc/ETHEREUM/CODE/mStable-v1-edit/contracts/governance/InitializableGovernableWhitelist.sol": {
+      "lastModificationDate": 1615285936870,
+      "sourceName": "contracts/governance/InitializableGovernableWhitelist.sol",
+      "solcConfig": {
+        "version": "0.5.16",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../shared/InitializableModule.sol"
+      ],
+      "versionPragmas": [
+        "0.5.16"
+      ],
+      "artifacts": [
+        "InitializableGovernableWhitelist"
+      ]
+    },
+    "/Volumes/sdxc/ETHEREUM/CODE/mStable-v1-edit/contracts/shared/InitializableReentrancyGuard.sol": {
+      "lastModificationDate": 1615285937640,
+      "sourceName": "contracts/shared/InitializableReentrancyGuard.sol",
+      "solcConfig": {
+        "version": "0.5.16",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "0.5.16"
+      ],
+      "artifacts": [
+        "InitializableReentrancyGuard"
+      ]
+    },
+    "/Volumes/sdxc/ETHEREUM/CODE/mStable-v1-edit/contracts/z_mocks/shared/MockInitializableToken.sol": {
+      "lastModificationDate": 1615286226270,
+      "sourceName": "contracts/z_mocks/shared/MockInitializableToken.sol",
+      "solcConfig": {
+        "version": "0.5.16",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "@openzeppelin/contracts/token/ERC20/ERC20.sol",
+        "@openzeppelin/contracts/token/ERC20/ERC20Mintable.sol",
+        "../../shared/InitializableERC20Detailed.sol"
+      ],
+      "versionPragmas": [
+        "0.5.16"
+      ],
+      "artifacts": [
+        "MockInitializableToken"
+      ]
+    },
+    "/Volumes/sdxc/ETHEREUM/CODE/mStable-v1-edit/contracts/mix/Mix.sol": {
+      "lastModificationDate": 1615286278130,
+      "sourceName": "contracts/mix/Mix.sol",
+      "solcConfig": {
+        "version": "0.5.16",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./forge-validator/IForgeValidator.sol",
+        "../interfaces/IPlatformIntegration.sol",
+        "../interfaces/IBasketManager.sol",
+        "../interfaces/IMix.sol",
+        "@openzeppelin/upgrades/contracts/Initializable.sol",
+        "../shared/InitializableToken.sol",
+        "../shared/InitializableModule.sol",
+        "../shared/InitializableReentrancyGuard.sol",
+        "./shared/MixStructs.sol",
+        "../shared/StableMath.sol",
+        "./shared/MixHelpers.sol",
+        "@openzeppelin/contracts/token/ERC20/SafeERC20.sol",
+        "@openzeppelin/contracts/token/ERC20/IERC20.sol"
+      ],
+      "versionPragmas": [
+        "0.5.16"
+      ],
+      "artifacts": [
+        "Mix"
+      ]
+    },
+    "/Volumes/sdxc/ETHEREUM/CODE/mStable-v1-edit/contracts/mix/forge-validator/IForgeValidator.sol": {
+      "lastModificationDate": 1615286278120,
+      "sourceName": "contracts/mix/forge-validator/IForgeValidator.sol",
+      "solcConfig": {
+        "version": "0.5.16",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../shared/MixStructs.sol"
+      ],
+      "versionPragmas": [
+        "0.5.16"
+      ],
+      "artifacts": [
+        "IForgeValidator"
+      ]
+    },
+    "/Volumes/sdxc/ETHEREUM/CODE/mStable-v1-edit/contracts/interfaces/IBasketManager.sol": {
+      "lastModificationDate": 1615286278140,
+      "sourceName": "contracts/interfaces/IBasketManager.sol",
+      "solcConfig": {
+        "version": "0.5.16",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../mix/shared/MixStructs.sol"
+      ],
+      "versionPragmas": [
+        "0.5.16"
+      ],
+      "artifacts": [
+        "IBasketManager"
+      ]
+    },
+    "/Volumes/sdxc/ETHEREUM/CODE/mStable-v1-edit/contracts/z_mocks/mix/MockBasketManager.sol": {
+      "lastModificationDate": 1615286226280,
+      "sourceName": "contracts/z_mocks/mix/MockBasketManager.sol",
+      "solcConfig": {
+        "version": "0.5.16",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../../mix/BasketManager.sol",
+        "../../mix/shared/MixStructs.sol",
+        "../../mix/BasketManager.sol",
+        "../../shared/StableMath.sol"
+      ],
+      "versionPragmas": [
+        "0.5.16"
+      ],
+      "artifacts": [
+        "MockBasketManager",
+        "MockBasketManager1",
+        "MockBasketManager2",
+        "MockBasketManager3"
+      ]
+    },
+    "/Volumes/sdxc/ETHEREUM/CODE/mStable-v1-edit/contracts/mix/BasketManager.sol": {
+      "lastModificationDate": 1615286278160,
+      "sourceName": "contracts/mix/BasketManager.sol",
+      "solcConfig": {
+        "version": "0.5.16",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../interfaces/IPlatformIntegration.sol",
+        "@openzeppelin/contracts/token/ERC20/IERC20.sol",
+        "../shared/InitializablePausableModule.sol",
+        "../interfaces/IBasketManager.sol",
+        "@openzeppelin/upgrades/contracts/Initializable.sol",
+        "../shared/CommonHelpers.sol",
+        "@openzeppelin/contracts/token/ERC20/SafeERC20.sol",
+        "@openzeppelin/contracts/math/SafeMath.sol",
+        "../shared/StableMath.sol",
+        "../shared/InitializableReentrancyGuard.sol"
+      ],
+      "versionPragmas": [
+        "0.5.16"
+      ],
+      "artifacts": [
+        "BasketManager"
+      ]
+    },
+    "/Volumes/sdxc/ETHEREUM/CODE/mStable-v1-edit/contracts/shared/InitializablePausableModule.sol": {
+      "lastModificationDate": 1615285937640,
+      "sourceName": "contracts/shared/InitializablePausableModule.sol",
+      "solcConfig": {
+        "version": "0.5.16",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./InitializableModule.sol"
+      ],
+      "versionPragmas": [
+        "0.5.16"
+      ],
+      "artifacts": [
+        "InitializablePausableModule"
+      ]
+    },
+    "/Volumes/sdxc/ETHEREUM/CODE/mStable-v1-edit/contracts/shared/CommonHelpers.sol": {
+      "lastModificationDate": 1615285937610,
+      "sourceName": "contracts/shared/CommonHelpers.sol",
+      "solcConfig": {
+        "version": "0.5.16",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./IBasicToken.sol"
+      ],
+      "versionPragmas": [
+        "0.5.16"
+      ],
+      "artifacts": [
+        "CommonHelpers"
+      ]
+    },
+    "/Volumes/sdxc/ETHEREUM/CODE/mStable-v1-edit/contracts/savings/BoostedTokenWrapper.sol": {
+      "lastModificationDate": 1615285937450,
+      "sourceName": "contracts/savings/BoostedTokenWrapper.sol",
+      "solcConfig": {
+        "version": "0.5.16",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../interfaces/IIncentivisedVotingLockup.sol",
+        "@openzeppelin/contracts/token/ERC20/SafeERC20.sol",
+        "../shared/InitializableReentrancyGuard.sol",
+        "@openzeppelin/contracts/math/SafeMath.sol",
+        "../shared/StableMath.sol",
+        "../shared/Root.sol"
+      ],
+      "versionPragmas": [
+        "0.5.16"
+      ],
+      "artifacts": [
+        "BoostedTokenWrapper"
+      ]
+    },
+    "/Volumes/sdxc/ETHEREUM/CODE/mStable-v1-edit/contracts/interfaces/IIncentivisedVotingLockup.sol": {
+      "lastModificationDate": 1615285936990,
+      "sourceName": "contracts/interfaces/IIncentivisedVotingLockup.sol",
+      "solcConfig": {
+        "version": "0.5.16",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../shared/IERC20WithCheckpointing.sol"
+      ],
+      "versionPragmas": [
+        "0.5.16"
+      ],
+      "artifacts": [
+        "IIncentivisedVotingLockup"
+      ]
+    },
+    "/Volumes/sdxc/ETHEREUM/CODE/mStable-v1-edit/contracts/shared/Root.sol": {
+      "lastModificationDate": 1615285937660,
+      "sourceName": "contracts/shared/Root.sol",
+      "solcConfig": {
+        "version": "0.5.16",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "@openzeppelin/contracts/math/SafeMath.sol"
+      ],
+      "versionPragmas": [
+        "0.5.16"
+      ],
+      "artifacts": [
+        "Root"
+      ]
+    },
+    "/Volumes/sdxc/ETHEREUM/CODE/mStable-v1-edit/contracts/shared/IERC20WithCheckpointing.sol": {
+      "lastModificationDate": 1615285937630,
+      "sourceName": "contracts/shared/IERC20WithCheckpointing.sol",
+      "solcConfig": {
+        "version": "0.5.16",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "0.5.16"
+      ],
+      "artifacts": [
+        "IERC20WithCheckpointing"
+      ]
+    },
+    "/Volumes/sdxc/ETHEREUM/CODE/mStable-v1-edit/contracts/z_mocks/shared/MockRoot.sol": {
+      "lastModificationDate": 1615285938110,
+      "sourceName": "contracts/z_mocks/shared/MockRoot.sol",
+      "solcConfig": {
+        "version": "0.5.16",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../../shared/Root.sol"
+      ],
+      "versionPragmas": [
+        "0.5.16"
+      ],
+      "artifacts": [
+        "MockRoot"
+      ]
+    },
+    "/Volumes/sdxc/ETHEREUM/CODE/mStable-v1-edit/contracts/governance/IncentivisedVotingLockup.sol": {
+      "lastModificationDate": 1615285936870,
+      "sourceName": "contracts/governance/IncentivisedVotingLockup.sol",
+      "solcConfig": {
+        "version": "0.5.16",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../shared/IBasicToken.sol",
+        "../interfaces/IIncentivisedVotingLockup.sol",
+        "@openzeppelin/contracts/utils/ReentrancyGuard.sol",
+        "../rewards/RewardsDistributionRecipient.sol",
+        "@openzeppelin/contracts/token/ERC20/SafeERC20.sol",
+        "../shared/SignedSafeMath128.sol",
+        "../shared/StableMath.sol",
+        "../shared/Root.sol"
+      ],
+      "versionPragmas": [
+        "0.5.16"
+      ],
+      "artifacts": [
+        "IncentivisedVotingLockup"
+      ]
+    },
+    "/Volumes/sdxc/ETHEREUM/CODE/mStable-v1-edit/contracts/shared/SignedSafeMath128.sol": {
+      "lastModificationDate": 1615285937660,
+      "sourceName": "contracts/shared/SignedSafeMath128.sol",
+      "solcConfig": {
+        "version": "0.5.16",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "0.5.16"
+      ],
+      "artifacts": [
+        "SignedSafeMath128"
+      ]
+    },
+    "/Volumes/sdxc/ETHEREUM/CODE/mStable-v1-edit/contracts/z_mocks/shared/SignedSafeMath128Mock.sol": {
+      "lastModificationDate": 1615285938160,
+      "sourceName": "contracts/z_mocks/shared/SignedSafeMath128Mock.sol",
+      "solcConfig": {
+        "version": "0.5.16",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../../shared/SignedSafeMath128.sol"
+      ],
+      "versionPragmas": [
+        "0.5.16"
+      ],
+      "artifacts": [
+        "SignedSafeMath128Mock"
+      ]
+    },
+    "/Volumes/sdxc/ETHEREUM/CODE/mStable-v1-edit/contracts/rewards/staking/StakingRewards.sol": {
+      "lastModificationDate": 1615285937440,
+      "sourceName": "contracts/rewards/staking/StakingRewards.sol",
+      "solcConfig": {
+        "version": "0.5.16",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./StakingTokenWrapper.sol",
+        "../RewardsDistributionRecipient.sol",
+        "@openzeppelin/contracts/token/ERC20/SafeERC20.sol",
+        "../../shared/StableMath.sol"
+      ],
+      "versionPragmas": [
+        "0.5.16"
+      ],
+      "artifacts": [
+        "StakingRewards"
+      ]
+    },
+    "/Volumes/sdxc/ETHEREUM/CODE/mStable-v1-edit/contracts/z_mocks/rewards/MockRewardsDistributionRecipient.sol": {
+      "lastModificationDate": 1615285937960,
+      "sourceName": "contracts/z_mocks/rewards/MockRewardsDistributionRecipient.sol",
+      "solcConfig": {
+        "version": "0.5.16",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "@openzeppelin/contracts/token/ERC20/IERC20.sol",
+        "../../interfaces/IRewardsDistributionRecipient.sol"
+      ],
+      "versionPragmas": [
+        "0.5.16"
+      ],
+      "artifacts": [
+        "MockRewardsDistributionRecipient"
+      ]
+    },
+    "/Volumes/sdxc/ETHEREUM/CODE/mStable-v1-edit/contracts/rewards/RewardsDistributor.sol": {
+      "lastModificationDate": 1615285937420,
+      "sourceName": "contracts/rewards/RewardsDistributor.sol",
+      "solcConfig": {
+        "version": "0.5.16",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../interfaces/IRewardsDistributionRecipient.sol",
+        "../governance/InitializableGovernableWhitelist.sol",
+        "@openzeppelin/contracts/token/ERC20/SafeERC20.sol"
+      ],
+      "versionPragmas": [
+        "0.5.16"
+      ],
+      "artifacts": [
+        "RewardsDistributor"
+      ]
+    },
+    "/Volumes/sdxc/ETHEREUM/CODE/mStable-v1-edit/contracts/z_mocks/mix/platform-integrations/MockUpgradedAaveIntegration.sol": {
+      "lastModificationDate": 1615286226280,
+      "sourceName": "contracts/z_mocks/mix/platform-integrations/MockUpgradedAaveIntegration.sol",
+      "solcConfig": {
+        "version": "0.5.16",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../../../mix/platform-integrations/InitializableAbstractIntegration.sol",
+        "../../../mix/platform-integrations/IAave.sol"
+      ],
+      "versionPragmas": [
+        "0.5.16"
+      ],
+      "artifacts": [
+        "AaveIntegrationV2",
+        "AaveIntegrationV3"
+      ]
+    },
+    "/Volumes/sdxc/ETHEREUM/CODE/mStable-v1-edit/contracts/z_mocks/mix/platform-integrations/MaliciousAaveIntegration.sol": {
+      "lastModificationDate": 1615286278150,
+      "sourceName": "contracts/z_mocks/mix/platform-integrations/MaliciousAaveIntegration.sol",
+      "solcConfig": {
+        "version": "0.5.16",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../../../mix/platform-integrations/IAave.sol",
+        "../../../mix/platform-integrations/InitializableAbstractIntegration.sol"
+      ],
+      "versionPragmas": [
+        "0.5.16"
+      ],
+      "artifacts": [
+        "MaliciousAaveIntegration"
+      ]
+    },
+    "/Volumes/sdxc/ETHEREUM/CODE/mStable-v1-edit/contracts/mix/platform-integrations/CompoundIntegration.sol": {
+      "lastModificationDate": 1615286278150,
+      "sourceName": "contracts/mix/platform-integrations/CompoundIntegration.sol",
+      "solcConfig": {
+        "version": "0.5.16",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./ICompound.sol",
+        "./InitializableAbstractIntegration.sol"
+      ],
+      "versionPragmas": [
+        "0.5.16"
+      ],
+      "artifacts": [
+        "CompoundIntegration"
+      ]
+    },
+    "/Volumes/sdxc/ETHEREUM/CODE/mStable-v1-edit/contracts/mix/platform-integrations/ICompound.sol": {
+      "lastModificationDate": 1615285937230,
+      "sourceName": "contracts/mix/platform-integrations/ICompound.sol",
+      "solcConfig": {
+        "version": "0.5.16",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "0.5.16"
+      ],
+      "artifacts": [
+        "ICERC20"
+      ]
+    },
+    "/Volumes/sdxc/ETHEREUM/CODE/mStable-v1-edit/contracts/z_mocks/mix/platform-integrations/MockCompoundIntegration.sol": {
+      "lastModificationDate": 1615286226280,
+      "sourceName": "contracts/z_mocks/mix/platform-integrations/MockCompoundIntegration.sol",
+      "solcConfig": {
+        "version": "0.5.16",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../../../mix/platform-integrations/CompoundIntegration.sol"
+      ],
+      "versionPragmas": [
+        "0.5.16"
+      ],
+      "artifacts": [
+        "MockCompoundIntegration1",
+        "MockCompoundIntegration2"
+      ]
+    },
+    "/Volumes/sdxc/ETHEREUM/CODE/mStable-v1-edit/contracts/z_mocks/mix/platform-integrations/MockCToken.sol": {
+      "lastModificationDate": 1615286170360,
+      "sourceName": "contracts/z_mocks/mix/platform-integrations/MockCToken.sol",
+      "solcConfig": {
+        "version": "0.5.16",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../../../mix/platform-integrations/ICompound.sol",
+        "@openzeppelin/contracts/token/ERC20/ERC20Mintable.sol",
+        "@openzeppelin/contracts/token/ERC20/ERC20Detailed.sol",
+        "../../../shared/StableMath.sol"
+      ],
+      "versionPragmas": [
+        "0.5.16"
+      ],
+      "artifacts": [
+        "MockCToken"
+      ]
+    },
+    "/Volumes/sdxc/ETHEREUM/CODE/mStable-v1-edit/contracts/z_mocks/shared/MockERC20.sol": {
+      "lastModificationDate": 1615285938090,
+      "sourceName": "contracts/z_mocks/shared/MockERC20.sol",
+      "solcConfig": {
+        "version": "0.5.16",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "@openzeppelin/contracts/token/ERC20/ERC20Detailed.sol",
+        "@openzeppelin/contracts/token/ERC20/ERC20Mintable.sol",
+        "@openzeppelin/contracts/token/ERC20/ERC20.sol"
+      ],
+      "versionPragmas": [
+        "0.5.16"
+      ],
+      "artifacts": [
+        "MockERC20",
+        "MockUSDT"
+      ]
+    },
+    "/Volumes/sdxc/ETHEREUM/CODE/mStable-v1-edit/contracts/bild-token/GovernedMinterRole.sol": {
+      "lastModificationDate": 1615285937270,
+      "sourceName": "contracts/bild-token/GovernedMinterRole.sol",
+      "solcConfig": {
+        "version": "0.5.16",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../shared/Module.sol",
+        "@openzeppelin/contracts/token/ERC20/ERC20.sol",
+        "@openzeppelin/contracts/access/Roles.sol"
+      ],
+      "versionPragmas": [
+        "0.5.16"
+      ],
+      "artifacts": [
+        "GovernedMinterRole"
+      ]
+    },
+    "/Volumes/sdxc/ETHEREUM/CODE/mStable-v1-edit/contracts/upgradability/DelayedProxyAdmin.sol": {
+      "lastModificationDate": 1615285937660,
+      "sourceName": "contracts/upgradability/DelayedProxyAdmin.sol",
+      "solcConfig": {
+        "version": "0.5.16",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../shared/Module.sol",
+        "@openzeppelin/contracts/math/SafeMath.sol",
+        "@openzeppelin/upgrades/contracts/upgradeability/AdminUpgradeabilityProxy.sol"
+      ],
+      "versionPragmas": [
+        "0.5.16"
+      ],
+      "artifacts": [
+        "DelayedProxyAdmin"
+      ]
+    },
+    "/Volumes/sdxc/ETHEREUM/CODE/mStable-v1-edit/node_modules/@openzeppelin/upgrades/contracts/upgradeability/AdminUpgradeabilityProxy.sol": {
+      "lastModificationDate": 1613584052780,
+      "sourceName": "@openzeppelin/upgrades/contracts/upgradeability/AdminUpgradeabilityProxy.sol",
+      "solcConfig": {
+        "version": "0.5.16",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./BaseAdminUpgradeabilityProxy.sol"
+      ],
+      "versionPragmas": [
+        "^0.5.0"
+      ],
+      "artifacts": [
+        "AdminUpgradeabilityProxy"
+      ]
+    },
+    "/Volumes/sdxc/ETHEREUM/CODE/mStable-v1-edit/node_modules/@openzeppelin/upgrades/contracts/upgradeability/BaseAdminUpgradeabilityProxy.sol": {
+      "lastModificationDate": 1613584052780,
+      "sourceName": "@openzeppelin/upgrades/contracts/upgradeability/BaseAdminUpgradeabilityProxy.sol",
+      "solcConfig": {
+        "version": "0.5.16",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./UpgradeabilityProxy.sol"
+      ],
+      "versionPragmas": [
+        "^0.5.0"
+      ],
+      "artifacts": [
+        "BaseAdminUpgradeabilityProxy"
+      ]
+    },
+    "/Volumes/sdxc/ETHEREUM/CODE/mStable-v1-edit/node_modules/@openzeppelin/upgrades/contracts/upgradeability/UpgradeabilityProxy.sol": {
+      "lastModificationDate": 1613584052780,
+      "sourceName": "@openzeppelin/upgrades/contracts/upgradeability/UpgradeabilityProxy.sol",
+      "solcConfig": {
+        "version": "0.5.16",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./BaseUpgradeabilityProxy.sol"
+      ],
+      "versionPragmas": [
+        "^0.5.0"
+      ],
+      "artifacts": [
+        "UpgradeabilityProxy"
+      ]
+    },
+    "/Volumes/sdxc/ETHEREUM/CODE/mStable-v1-edit/node_modules/@openzeppelin/upgrades/contracts/upgradeability/BaseUpgradeabilityProxy.sol": {
+      "lastModificationDate": 1613584052780,
+      "sourceName": "@openzeppelin/upgrades/contracts/upgradeability/BaseUpgradeabilityProxy.sol",
+      "solcConfig": {
+        "version": "0.5.16",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./Proxy.sol",
+        "../utils/Address.sol"
+      ],
+      "versionPragmas": [
+        "^0.5.0"
+      ],
+      "artifacts": [
+        "BaseUpgradeabilityProxy"
+      ]
+    },
+    "/Volumes/sdxc/ETHEREUM/CODE/mStable-v1-edit/node_modules/@openzeppelin/upgrades/contracts/upgradeability/Proxy.sol": {
+      "lastModificationDate": 1613584052780,
+      "sourceName": "@openzeppelin/upgrades/contracts/upgradeability/Proxy.sol",
+      "solcConfig": {
+        "version": "0.5.16",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.5.0"
+      ],
+      "artifacts": [
+        "Proxy"
+      ]
+    },
+    "/Volumes/sdxc/ETHEREUM/CODE/mStable-v1-edit/node_modules/@openzeppelin/upgrades/contracts/utils/Address.sol": {
+      "lastModificationDate": 1613584052780,
+      "sourceName": "@openzeppelin/upgrades/contracts/utils/Address.sol",
+      "solcConfig": {
+        "version": "0.5.16",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.5.0"
+      ],
+      "artifacts": [
+        "OpenZeppelinUpgradesAddress"
+      ]
+    },
+    "/Volumes/sdxc/ETHEREUM/CODE/mStable-v1-edit/node_modules/@openzeppelin/upgrades/contracts/upgradeability/InitializableAdminUpgradeabilityProxy.sol": {
+      "lastModificationDate": 1613584052780,
+      "sourceName": "@openzeppelin/upgrades/contracts/upgradeability/InitializableAdminUpgradeabilityProxy.sol",
+      "solcConfig": {
+        "version": "0.5.16",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./BaseAdminUpgradeabilityProxy.sol",
+        "./InitializableUpgradeabilityProxy.sol"
+      ],
+      "versionPragmas": [
+        "^0.5.0"
+      ],
+      "artifacts": [
+        "InitializableAdminUpgradeabilityProxy"
+      ]
+    },
+    "/Volumes/sdxc/ETHEREUM/CODE/mStable-v1-edit/node_modules/@openzeppelin/upgrades/contracts/upgradeability/InitializableUpgradeabilityProxy.sol": {
+      "lastModificationDate": 1613584052780,
+      "sourceName": "@openzeppelin/upgrades/contracts/upgradeability/InitializableUpgradeabilityProxy.sol",
+      "solcConfig": {
+        "version": "0.5.16",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./BaseUpgradeabilityProxy.sol"
+      ],
+      "versionPragmas": [
+        "^0.5.0"
+      ],
+      "artifacts": [
+        "InitializableUpgradeabilityProxy"
+      ]
+    },
+    "/Volumes/sdxc/ETHEREUM/CODE/mStable-v1-edit/contracts/z_mocks/shared/MockProxy.sol": {
+      "lastModificationDate": 1615285938110,
+      "sourceName": "contracts/z_mocks/shared/MockProxy.sol",
+      "solcConfig": {
+        "version": "0.5.16",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "@openzeppelin/upgrades/contracts/upgradeability/InitializableAdminUpgradeabilityProxy.sol"
+      ],
+      "versionPragmas": [
+        "0.5.16"
+      ],
+      "artifacts": [
+        "MockProxy"
+      ]
+    },
+    "/Volumes/sdxc/ETHEREUM/CODE/mStable-v1-edit/contracts/upgradability/Proxies.sol": {
+      "lastModificationDate": 1615286226200,
+      "sourceName": "contracts/upgradability/Proxies.sol",
+      "solcConfig": {
+        "version": "0.5.16",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "@openzeppelin/upgrades/contracts/upgradeability/InitializableAdminUpgradeabilityProxy.sol"
+      ],
+      "versionPragmas": [
+        "0.5.16"
+      ],
+      "artifacts": [
+        "BasketManagerProxy",
+        "InitializableProxy",
+        "LiquidatorProxy",
+        "MixProxy",
+        "VaultProxy"
+      ]
+    },
+    "/Volumes/sdxc/ETHEREUM/CODE/mStable-v1-edit/contracts/shared/PausableModule.sol": {
+      "lastModificationDate": 1615285937650,
+      "sourceName": "contracts/shared/PausableModule.sol",
+      "solcConfig": {
+        "version": "0.5.16",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./Module.sol"
+      ],
+      "versionPragmas": [
+        "0.5.16"
+      ],
+      "artifacts": [
+        "PausableModule"
+      ]
+    },
+    "/Volumes/sdxc/ETHEREUM/CODE/mStable-v1-edit/contracts/z_mocks/shared/MockPausableModule.sol": {
+      "lastModificationDate": 1615285938110,
+      "sourceName": "contracts/z_mocks/shared/MockPausableModule.sol",
+      "solcConfig": {
+        "version": "0.5.16",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../../shared/PausableModule.sol"
+      ],
+      "versionPragmas": [
+        "0.5.16"
+      ],
+      "artifacts": [
+        "MockPausableModule"
+      ]
+    },
+    "/Volumes/sdxc/ETHEREUM/CODE/mStable-v1-edit/contracts/savings/SavingsManager.sol": {
+      "lastModificationDate": 1615286278120,
+      "sourceName": "contracts/savings/SavingsManager.sol",
+      "solcConfig": {
+        "version": "0.5.16",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../interfaces/IMix.sol",
+        "../interfaces/ISavingsContract.sol",
+        "../interfaces/ISavingsManager.sol",
+        "../shared/PausableModule.sol",
+        "@openzeppelin/contracts/token/ERC20/IERC20.sol",
+        "@openzeppelin/contracts/token/ERC20/SafeERC20.sol",
+        "@openzeppelin/contracts/math/SafeMath.sol",
+        "../shared/StableMath.sol"
+      ],
+      "versionPragmas": [
+        "0.5.16"
+      ],
+      "artifacts": [
+        "SavingsManager"
+      ]
+    },
+    "/Volumes/sdxc/ETHEREUM/CODE/mStable-v1-edit/contracts/z_mocks/savings/MockRevenueRecipient.sol": {
+      "lastModificationDate": 1615286278110,
+      "sourceName": "contracts/z_mocks/savings/MockRevenueRecipient.sol",
+      "solcConfig": {
+        "version": "0.5.16",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../../interfaces/ISavingsManager.sol",
+        "@openzeppelin/contracts/token/ERC20/IERC20.sol"
+      ],
+      "versionPragmas": [
+        "0.5.16"
+      ],
+      "artifacts": [
+        "MockRevenueRecipient"
+      ]
+    },
+    "/Volumes/sdxc/ETHEREUM/CODE/mStable-v1-edit/contracts/mix/liquidator/ILiquidator.sol": {
+      "lastModificationDate": 1615285937070,
+      "sourceName": "contracts/mix/liquidator/ILiquidator.sol",
+      "solcConfig": {
+        "version": "0.5.16",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "0.5.16"
+      ],
+      "artifacts": [
+        "ILiquidator"
+      ]
+    },
+    "/Volumes/sdxc/ETHEREUM/CODE/mStable-v1-edit/contracts/z_mocks/shared/MockCommonHelpers.sol": {
+      "lastModificationDate": 1615285938080,
+      "sourceName": "contracts/z_mocks/shared/MockCommonHelpers.sol",
+      "solcConfig": {
+        "version": "0.5.16",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../../shared/CommonHelpers.sol"
+      ],
+      "versionPragmas": [
+        "0.5.16"
+      ],
+      "artifacts": [
+        "MockCommonHelpers"
+      ]
+    },
+    "/Volumes/sdxc/ETHEREUM/CODE/mStable-v1-edit/contracts/z_mocks/shared/MockTrigger.sol": {
+      "lastModificationDate": 1615286170360,
+      "sourceName": "contracts/z_mocks/shared/MockTrigger.sol",
+      "solcConfig": {
+        "version": "0.5.16",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../../mix/liquidator/ILiquidator.sol"
+      ],
+      "versionPragmas": [
+        "0.5.16"
+      ],
+      "artifacts": [
+        "MockTrigger"
+      ]
+    },
+    "/Volumes/sdxc/ETHEREUM/CODE/mStable-v1-edit/contracts/z_mocks/upgradability/MockImplementation.sol": {
+      "lastModificationDate": 1615285938160,
+      "sourceName": "contracts/z_mocks/upgradability/MockImplementation.sol",
+      "solcConfig": {
+        "version": "0.5.16",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "@openzeppelin/upgrades/contracts/Initializable.sol"
+      ],
+      "versionPragmas": [
+        "0.5.16"
+      ],
+      "artifacts": [
+        "MockImplementationV1",
+        "MockImplementationV2",
+        "MockImplementationV3"
+      ]
+    },
+    "/Volumes/sdxc/ETHEREUM/CODE/mStable-v1-edit/contracts/savings/BoostedSavingsVault.sol": {
+      "lastModificationDate": 1615285937450,
+      "sourceName": "contracts/savings/BoostedSavingsVault.sol",
+      "solcConfig": {
+        "version": "0.5.16",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../interfaces/IBoostedVaultWithLockup.sol",
+        "../rewards/InitializableRewardsDistributionRecipient.sol",
+        "./BoostedTokenWrapper.sol",
+        "@openzeppelin/upgrades/contracts/Initializable.sol",
+        "@openzeppelin/contracts/token/ERC20/SafeERC20.sol",
+        "@openzeppelin/contracts/utils/SafeCast.sol",
+        "../shared/StableMath.sol"
+      ],
+      "versionPragmas": [
+        "0.5.16"
+      ],
+      "artifacts": [
+        "BoostedSavingsVault"
+      ]
+    },
+    "/Volumes/sdxc/ETHEREUM/CODE/mStable-v1-edit/contracts/interfaces/IBoostedVaultWithLockup.sol": {
+      "lastModificationDate": 1615285936880,
+      "sourceName": "contracts/interfaces/IBoostedVaultWithLockup.sol",
+      "solcConfig": {
+        "version": "0.5.16",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "@openzeppelin/contracts/token/ERC20/IERC20.sol"
+      ],
+      "versionPragmas": [
+        "0.5.16"
+      ],
+      "artifacts": [
+        "IBoostedVaultWithLockup"
+      ]
+    },
+    "/Volumes/sdxc/ETHEREUM/CODE/mStable-v1-edit/contracts/rewards/InitializableRewardsDistributionRecipient.sol": {
+      "lastModificationDate": 1615285937280,
+      "sourceName": "contracts/rewards/InitializableRewardsDistributionRecipient.sol",
+      "solcConfig": {
+        "version": "0.5.16",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../shared/InitializableModule2.sol",
+        "@openzeppelin/contracts/token/ERC20/IERC20.sol",
+        "../interfaces/IRewardsDistributionRecipient.sol"
+      ],
+      "versionPragmas": [
+        "0.5.16"
+      ],
+      "artifacts": [
+        "InitializableRewardsDistributionRecipient"
+      ]
+    },
+    "/Volumes/sdxc/ETHEREUM/CODE/mStable-v1-edit/node_modules/@openzeppelin/contracts/utils/SafeCast.sol": {
+      "lastModificationDate": 1613584049920,
+      "sourceName": "@openzeppelin/contracts/utils/SafeCast.sol",
+      "solcConfig": {
+        "version": "0.5.16",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.5.0"
+      ],
+      "artifacts": [
+        "SafeCast"
+      ]
+    },
+    "/Volumes/sdxc/ETHEREUM/CODE/mStable-v1-edit/contracts/mix/shared/MStableHelper.sol": {
+      "lastModificationDate": 1615286278130,
+      "sourceName": "contracts/mix/shared/MStableHelper.sol",
+      "solcConfig": {
+        "version": "0.5.16",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../../interfaces/IMix.sol",
+        "../../interfaces/IBasketManager.sol",
+        "../../interfaces/IMStableHelper.sol",
+        "../../interfaces/ISavingsContract.sol",
+        "../forge-validator/IForgeValidator.sol",
+        "./MixStructs.sol",
+        "../../shared/StableMath.sol"
+      ],
+      "versionPragmas": [
+        "0.5.16"
+      ],
+      "artifacts": [
+        "MStableHelper"
+      ]
+    },
+    "/Volumes/sdxc/ETHEREUM/CODE/mStable-v1-edit/contracts/interfaces/IMStableHelper.sol": {
+      "lastModificationDate": 1615286278140,
+      "sourceName": "contracts/interfaces/IMStableHelper.sol",
+      "solcConfig": {
+        "version": "0.5.16",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./ISavingsContract.sol"
+      ],
+      "versionPragmas": [
+        "0.5.16"
+      ],
+      "artifacts": [
+        "IMStableHelper"
+      ]
+    },
+    "/Volumes/sdxc/ETHEREUM/CODE/mStable-v1-edit/contracts/mix/forge-validator/ForgeValidator.sol": {
+      "lastModificationDate": 1615286278130,
+      "sourceName": "contracts/mix/forge-validator/ForgeValidator.sol",
+      "solcConfig": {
+        "version": "0.5.16",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./IForgeValidator.sol",
+        "../../shared/StableMath.sol",
+        "@openzeppelin/contracts/math/SafeMath.sol"
+      ],
+      "versionPragmas": [
+        "0.5.16"
+      ],
+      "artifacts": [
+        "ForgeValidator"
+      ]
+    },
+    "/Volumes/sdxc/ETHEREUM/CODE/mStable-v1-edit/contracts/z_mocks/integrations/MintWith1Inch.sol": {
+      "lastModificationDate": 1615286278110,
+      "sourceName": "contracts/z_mocks/integrations/MintWith1Inch.sol",
+      "solcConfig": {
+        "version": "0.5.16",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./AbstractBuyAndMint.sol",
+        "../../interfaces/IMix.sol",
+        "@openzeppelin/contracts/token/ERC20/IERC20.sol",
+        "@openzeppelin/contracts/math/SafeMath.sol"
+      ],
+      "versionPragmas": [
+        "0.5.16"
+      ],
+      "artifacts": [
+        "IOneSplit",
+        "MintWith1Inch"
+      ]
+    },
+    "/Volumes/sdxc/ETHEREUM/CODE/mStable-v1-edit/contracts/z_mocks/mix/MockMix.sol": {
+      "lastModificationDate": 1615286226280,
+      "sourceName": "contracts/z_mocks/mix/MockMix.sol",
+      "solcConfig": {
+        "version": "0.5.16",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../shared/MockERC20.sol"
+      ],
+      "versionPragmas": [
+        "0.5.16"
+      ],
+      "artifacts": [
+        "MockMix",
+        "MockMix1"
+      ]
+    },
+    "/Volumes/sdxc/ETHEREUM/CODE/mStable-v1-edit/contracts/z_mocks/governance/Ejector.sol": {
+      "lastModificationDate": 1615285937670,
+      "sourceName": "contracts/z_mocks/governance/Ejector.sol",
+      "solcConfig": {
+        "version": "0.5.16",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../../interfaces/IIncentivisedVotingLockup.sol"
+      ],
+      "versionPragmas": [
+        "0.5.16"
+      ],
+      "artifacts": [
+        "Ejector"
+      ]
+    },
+    "/Volumes/sdxc/ETHEREUM/CODE/mStable-v1-edit/contracts/z_mocks/savings/MockVaultConnector.sol": {
+      "lastModificationDate": 1615285938000,
+      "sourceName": "contracts/z_mocks/savings/MockVaultConnector.sol",
+      "solcConfig": {
+        "version": "0.5.16",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "@openzeppelin/contracts/token/ERC20/ERC20.sol",
+        "../../savings/peripheral/IConnector.sol",
+        "../../shared/StableMath.sol"
+      ],
+      "versionPragmas": [
+        "0.5.16"
+      ],
+      "artifacts": [
+        "MockVaultConnector"
+      ]
+    },
+    "/Volumes/sdxc/ETHEREUM/CODE/mStable-v1-edit/contracts/z_mocks/savings/MockLendingConnector.sol": {
+      "lastModificationDate": 1615285937990,
+      "sourceName": "contracts/z_mocks/savings/MockLendingConnector.sol",
+      "solcConfig": {
+        "version": "0.5.16",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "@openzeppelin/contracts/token/ERC20/ERC20.sol",
+        "../../savings/peripheral/IConnector.sol",
+        "../../shared/StableMath.sol"
+      ],
+      "versionPragmas": [
+        "0.5.16"
+      ],
+      "artifacts": [
+        "MockLendingConnector"
+      ]
+    },
+    "/Volumes/sdxc/ETHEREUM/CODE/mStable-v1-edit/contracts/z_mocks/savings/MockErroneousConnector2.sol": {
+      "lastModificationDate": 1615285937990,
+      "sourceName": "contracts/z_mocks/savings/MockErroneousConnector2.sol",
+      "solcConfig": {
+        "version": "0.5.16",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "@openzeppelin/contracts/token/ERC20/ERC20.sol",
+        "../../savings/peripheral/IConnector.sol",
+        "../../shared/StableMath.sol"
+      ],
+      "versionPragmas": [
+        "0.5.16"
+      ],
+      "artifacts": [
+        "MockErroneousConnector2"
+      ]
+    },
+    "/Volumes/sdxc/ETHEREUM/CODE/mStable-v1-edit/contracts/z_mocks/savings/MockErroneousConnector1.sol": {
+      "lastModificationDate": 1615285937980,
+      "sourceName": "contracts/z_mocks/savings/MockErroneousConnector1.sol",
+      "solcConfig": {
+        "version": "0.5.16",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "@openzeppelin/contracts/token/ERC20/ERC20.sol",
+        "../../savings/peripheral/IConnector.sol",
+        "../../shared/StableMath.sol"
+      ],
+      "versionPragmas": [
+        "0.5.16"
+      ],
+      "artifacts": [
+        "MockErroneousConnector1"
+      ]
+    },
+    "/Volumes/sdxc/ETHEREUM/CODE/mStable-v1-edit/contracts/z_mocks/savings/MockConnector.sol": {
+      "lastModificationDate": 1615285937980,
+      "sourceName": "contracts/z_mocks/savings/MockConnector.sol",
+      "solcConfig": {
+        "version": "0.5.16",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "@openzeppelin/contracts/token/ERC20/ERC20.sol",
+        "../../savings/peripheral/IConnector.sol",
+        "../../shared/StableMath.sol"
+      ],
+      "versionPragmas": [
+        "0.5.16"
+      ],
+      "artifacts": [
+        "MockConnector"
+      ]
+    },
+    "/Volumes/sdxc/ETHEREUM/CODE/mStable-v1-edit/contracts/z_mocks/governance/MockGovernable.sol": {
+      "lastModificationDate": 1615285937670,
+      "sourceName": "contracts/z_mocks/governance/MockGovernable.sol",
+      "solcConfig": {
+        "version": "0.5.16",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../../governance/Governable.sol"
+      ],
+      "versionPragmas": [
+        "0.5.16"
+      ],
+      "artifacts": [
+        "MockGovernable"
+      ]
+    },
+    "/Volumes/sdxc/ETHEREUM/CODE/mStable-v1-edit/contracts/Migrations.sol": {
+      "lastModificationDate": 1615285936860,
+      "sourceName": "contracts/Migrations.sol",
+      "solcConfig": {
+        "version": "0.5.16",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "0.5.16"
+      ],
+      "artifacts": [
+        "Migrations"
+      ]
+    },
+    "/Volumes/sdxc/ETHEREUM/CODE/mStable-v1-edit/contracts/z_mocks/mix/platform-integrations/DeadIntegration.sol": {
+      "lastModificationDate": 1615285937690,
+      "sourceName": "contracts/z_mocks/mix/platform-integrations/DeadIntegration.sol",
+      "solcConfig": {
+        "version": "0.5.16",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "0.5.16"
+      ],
+      "artifacts": [
+        "DeadIntegration"
+      ]
+    },
+    "/Volumes/sdxc/ETHEREUM/CODE/mStable-v1-edit/contracts/z_mocks/savings/MockSavingsManager.sol": {
+      "lastModificationDate": 1615286278100,
+      "sourceName": "contracts/z_mocks/savings/MockSavingsManager.sol",
+      "solcConfig": {
+        "version": "0.5.16",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "0.5.16"
+      ],
+      "artifacts": [
+        "MockSavingsManager"
+      ]
+    },
+    "/Volumes/sdxc/ETHEREUM/CODE/mStable-v1-edit/contracts/z_mocks/savings/MockStakingContract.sol": {
+      "lastModificationDate": 1615285937990,
+      "sourceName": "contracts/z_mocks/savings/MockStakingContract.sol",
+      "solcConfig": {
+        "version": "0.5.16",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "0.5.16"
+      ],
+      "artifacts": [
+        "MockStakingContract"
+      ]
+    },
+    "/Volumes/sdxc/ETHEREUM/CODE/mStable-v1-edit/contracts/z_mocks/savings/yEarn_Controller.sol": {
+      "lastModificationDate": 1615285938000,
+      "sourceName": "contracts/z_mocks/savings/yEarn_Controller.sol",
+      "solcConfig": {
+        "version": "0.5.16",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.5.16"
+      ],
+      "artifacts": [
+        "Address",
+        "Controller",
+        "Converter",
+        "IERC20",
+        "OneSplitAudit",
+        "SafeERC20",
+        "SafeMath",
+        "Strategy"
+      ]
+    },
+    "/Volumes/sdxc/ETHEREUM/CODE/mStable-v1-edit/contracts/z_mocks/savings/yEarn_StrategyCurvemUSDVoterProxy.sol": {
+      "lastModificationDate": 1615285938000,
+      "sourceName": "contracts/z_mocks/savings/yEarn_StrategyCurvemUSDVoterProxy.sol",
+      "solcConfig": {
+        "version": "0.5.16",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.5.16"
+      ],
+      "artifacts": [
+        "Address",
+        "Gauge",
+        "IController",
+        "ICurveFi",
+        "IERC20",
+        "Mintr",
+        "SafeERC20",
+        "SafeMath",
+        "StrategyCurvemUSDVoterProxy",
+        "Uni",
+        "VoterProxy"
+      ]
+    },
+    "/Volumes/sdxc/ETHEREUM/CODE/mStable-v1-edit/contracts/z_mocks/savings/yEarn_Vault.sol": {
+      "lastModificationDate": 1615285938010,
+      "sourceName": "contracts/z_mocks/savings/yEarn_Vault.sol",
+      "solcConfig": {
+        "version": "0.5.16",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.5.16"
+      ],
+      "artifacts": [
+        "Address",
+        "Context",
+        "Controller",
+        "ERC20",
+        "IDetailed",
+        "IERC20",
+        "SafeERC20",
+        "SafeMath",
+        "yVault"
+      ]
+    },
+    "/Volumes/sdxc/ETHEREUM/CODE/mStable-v1-edit/contracts/bild-token/BildToken.sol": {
+      "lastModificationDate": 1615288281300,
+      "sourceName": "contracts/bild-token/BildToken.sol",
+      "solcConfig": {
+        "version": "0.5.16",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./GovernedMinterRole.sol",
+        "@openzeppelin/contracts/token/ERC20/ERC20.sol",
+        "@openzeppelin/contracts/token/ERC20/ERC20Detailed.sol",
+        "@openzeppelin/contracts/token/ERC20/ERC20Burnable.sol"
+      ],
+      "versionPragmas": [
+        "0.5.16"
+      ],
+      "artifacts": [
+        "BildToken"
+      ]
+    },
+    "/Volumes/sdxc/ETHEREUM/CODE/mStable-v1-edit/contracts/shared/Module.sol": {
+      "lastModificationDate": 1615288281270,
+      "sourceName": "contracts/shared/Module.sol",
+      "solcConfig": {
+        "version": "0.5.16",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../shared/ModuleKeys.sol",
+        "../interfaces/INexus.sol"
+      ],
+      "versionPragmas": [
+        "0.5.16"
+      ],
+      "artifacts": [
+        "Module"
+      ]
+    },
+    "/Volumes/sdxc/ETHEREUM/CODE/mStable-v1-edit/contracts/shared/ModuleKeys.sol": {
+      "lastModificationDate": 1615288281290,
+      "sourceName": "contracts/shared/ModuleKeys.sol",
+      "solcConfig": {
+        "version": "0.5.16",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "0.5.16"
+      ],
+      "artifacts": [
+        "ModuleKeys"
+      ]
+    },
+    "/Volumes/sdxc/ETHEREUM/CODE/mStable-v1-edit/contracts/shared/InitializableModule.sol": {
+      "lastModificationDate": 1615288281260,
+      "sourceName": "contracts/shared/InitializableModule.sol",
+      "solcConfig": {
+        "version": "0.5.16",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./InitializableModuleKeys.sol",
+        "../interfaces/INexus.sol"
+      ],
+      "versionPragmas": [
+        "0.5.16"
+      ],
+      "artifacts": [
+        "InitializableModule"
+      ]
+    },
+    "/Volumes/sdxc/ETHEREUM/CODE/mStable-v1-edit/contracts/shared/InitializableModuleKeys.sol": {
+      "lastModificationDate": 1615288281270,
+      "sourceName": "contracts/shared/InitializableModuleKeys.sol",
+      "solcConfig": {
+        "version": "0.5.16",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "0.5.16"
+      ],
+      "artifacts": [
+        "InitializableModuleKeys"
+      ]
+    },
+    "/Volumes/sdxc/ETHEREUM/CODE/mStable-v1-edit/contracts/savings/peripheral/SaveWrapper.sol": {
+      "lastModificationDate": 1615288281270,
+      "sourceName": "contracts/savings/peripheral/SaveWrapper.sol",
+      "solcConfig": {
+        "version": "0.5.16",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../../interfaces/ISavingsContract.sol",
+        "../../interfaces/IMix.sol",
+        "@openzeppelin/contracts/token/ERC20/IERC20.sol",
+        "@openzeppelin/contracts/token/ERC20/SafeERC20.sol",
+        "../../mix/liquidator/IUniswapV2Router02.sol",
+        "../../mix/liquidator/ICurveBildPool.sol",
+        "../../shared/IBasicToken.sol",
+        "@openzeppelin/contracts/math/SafeMath.sol"
+      ],
+      "versionPragmas": [
+        "0.5.16"
+      ],
+      "artifacts": [
+        "IBoostedSavingsVault",
+        "SaveWrapper"
+      ]
+    },
+    "/Volumes/sdxc/ETHEREUM/CODE/mStable-v1-edit/contracts/mix/liquidator/ICurveBildPool.sol": {
+      "lastModificationDate": 1615288281240,
+      "sourceName": "contracts/mix/liquidator/ICurveBildPool.sol",
+      "solcConfig": {
+        "version": "0.5.16",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "0.5.16"
+      ],
+      "artifacts": [
+        "ICurveBildPool"
+      ]
+    },
+    "/Volumes/sdxc/ETHEREUM/CODE/mStable-v1-edit/contracts/z_mocks/savings/Connector_yVault_mUSD3Pool.sol": {
+      "lastModificationDate": 1615288255030,
+      "sourceName": "contracts/z_mocks/savings/Connector_yVault_mUSD3Pool.sol",
+      "solcConfig": {
+        "version": "0.5.16",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "@openzeppelin/contracts/token/ERC20/ERC20.sol",
+        "../../savings/peripheral/IConnector.sol",
+        "../../shared/StableMath.sol"
+      ],
+      "versionPragmas": [
+        "0.5.16"
+      ],
+      "artifacts": [
+        "Connector_yVault_mUSD3Pool",
+        "ICurve_DepositMUSD",
+        "ICurve_ExchangeMUSD",
+        "IyVault"
+      ]
+    },
+    "/Volumes/sdxc/ETHEREUM/CODE/mStable-v1-edit/contracts/shared/InitializableModule2.sol": {
+      "lastModificationDate": 1615288281170,
+      "sourceName": "contracts/shared/InitializableModule2.sol",
+      "solcConfig": {
+        "version": "0.5.16",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./ModuleKeys.sol",
+        "../interfaces/INexus.sol"
+      ],
+      "versionPragmas": [
+        "0.5.16"
+      ],
+      "artifacts": [
+        "InitializableModule2"
+      ]
+    },
+    "/Volumes/sdxc/ETHEREUM/CODE/mStable-v1-edit/contracts/z_mocks/shared/MockInitializablePausableModule.sol": {
+      "lastModificationDate": 1615288255030,
+      "sourceName": "contracts/z_mocks/shared/MockInitializablePausableModule.sol",
+      "solcConfig": {
+        "version": "0.5.16",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../../shared/InitializablePausableModule.sol",
+        "@openzeppelin/upgrades/contracts/Initializable.sol"
+      ],
+      "versionPragmas": [
+        "0.5.16"
+      ],
+      "artifacts": [
+        "MockInitializablePausableModule"
+      ]
+    },
+    "/Volumes/sdxc/ETHEREUM/CODE/mStable-v1-edit/contracts/z_mocks/shared/MockInitializableModule.sol": {
+      "lastModificationDate": 1615288255030,
+      "sourceName": "contracts/z_mocks/shared/MockInitializableModule.sol",
+      "solcConfig": {
+        "version": "0.5.16",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../../shared/InitializableModule.sol",
+        "@openzeppelin/upgrades/contracts/Initializable.sol"
+      ],
+      "versionPragmas": [
+        "0.5.16"
+      ],
+      "artifacts": [
+        "MockInitializableModule"
+      ]
+    },
+    "/Volumes/sdxc/ETHEREUM/CODE/mStable-v1-edit/contracts/z_mocks/shared/MockModule.sol": {
+      "lastModificationDate": 1615288255040,
+      "sourceName": "contracts/z_mocks/shared/MockModule.sol",
+      "solcConfig": {
+        "version": "0.5.16",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../../shared/Module.sol"
+      ],
+      "versionPragmas": [
+        "0.5.16"
+      ],
+      "artifacts": [
+        "MockModule"
+      ]
+    },
+    "/Volumes/sdxc/ETHEREUM/CODE/mStable-v1-edit/contracts/z_mocks/nexus/MockNexus.sol": {
+      "lastModificationDate": 1615288217830,
+      "sourceName": "contracts/z_mocks/nexus/MockNexus.sol",
+      "solcConfig": {
+        "version": "0.5.16",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../../nexus/Nexus.sol",
+        "../../shared/ModuleKeys.sol"
+      ],
+      "versionPragmas": [
+        "0.5.16"
+      ],
+      "artifacts": [
+        "MockNexus"
+      ]
+    },
+    "/Volumes/sdxc/ETHEREUM/CODE/mStable-v1-edit/contracts/z_mocks/shared/MockCurveMetaPool.sol": {
+      "lastModificationDate": 1615288281260,
+      "sourceName": "contracts/z_mocks/shared/MockCurveMetaPool.sol",
+      "solcConfig": {
+        "version": "0.5.16",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../../mix/liquidator/ICurveBildPool.sol",
+        "@openzeppelin/contracts/token/ERC20/IERC20.sol",
+        "../../shared/IBasicToken.sol"
+      ],
+      "versionPragmas": [
+        "0.5.16"
+      ],
+      "artifacts": [
+        "MockCurveBildPool"
+      ]
+    },
+    "/Volumes/sdxc/ETHEREUM/CODE/mStable-v1-edit/contracts/mix/liquidator/Liquidator.sol": {
+      "lastModificationDate": 1615288281250,
+      "sourceName": "contracts/mix/liquidator/Liquidator.sol",
+      "solcConfig": {
+        "version": "0.5.16",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./ICurveBildPool.sol",
+        "./IUniswapV2Router02.sol",
+        "../../interfaces/ISavingsManager.sol",
+        "@openzeppelin/upgrades/contracts/Initializable.sol",
+        "../../shared/InitializableModule.sol",
+        "./ILiquidator.sol",
+        "../../shared/IBasicToken.sol",
+        "@openzeppelin/contracts/math/SafeMath.sol",
+        "@openzeppelin/contracts/token/ERC20/SafeERC20.sol",
+        "@openzeppelin/contracts/token/ERC20/IERC20.sol"
+      ],
+      "versionPragmas": [
+        "0.5.16"
+      ],
+      "artifacts": [
+        "Liquidator"
+      ]
+    },
+    "/Volumes/sdxc/ETHEREUM/CODE/mStable-v1-edit/contracts/interfaces/IBildToken.sol": {
+      "lastModificationDate": 1615288281270,
+      "sourceName": "contracts/interfaces/IBildToken.sol",
+      "solcConfig": {
+        "version": "0.5.16",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "0.5.16"
+      ],
+      "artifacts": [
+        "IBildToken"
+      ]
+    }
+  }
+}

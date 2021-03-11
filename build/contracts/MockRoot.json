@@ -1,0 +1,474 @@
+{
+  "contractName": "MockRoot",
+  "abi": [
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "r",
+          "type": "uint256"
+        }
+      ],
+      "name": "sqrt",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "pure",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.5.16+commit.9c3226ce\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":true,\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"r\",\"type\":\"uint256\"}],\"name\":\"sqrt\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"pure\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/Volumes/sdxc/ETHEREUM/CODE/mStable-v1-edit/contracts/z_mocks/shared/MockRoot.sol\":\"MockRoot\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Volumes/sdxc/ETHEREUM/CODE/mStable-v1-edit/contracts/shared/Root.sol\":{\"keccak256\":\"0x538a440c395aa0d89e2637903e020fa97d7bf6d1586dd834008308ea495d95ca\",\"urls\":[\"bzz-raw://febe0d746cfdf1eafc92997527499eb8fcaf33a40a9b4d1661813e37770d5360\",\"dweb:/ipfs/Qmav3bYMv6sMXi294oEg2fMtUMGAb1ZoV6RuWQfDnP8Eqe\"]},\"/Volumes/sdxc/ETHEREUM/CODE/mStable-v1-edit/contracts/z_mocks/shared/MockRoot.sol\":{\"keccak256\":\"0xfae7d25cfb84d922dfb70f1c885558d449f391bfc09899f5f68322e31145103e\",\"urls\":[\"bzz-raw://c0671c1b8beb99bc387105bcd457d5816eb7f0ba36b5acd4aa8e35e623539f2a\",\"dweb:/ipfs/QmSmxUKXhCejNsmN8UBhStiJT1CwpLhfJXdtjA6o7sxTRV\"]},\"@openzeppelin/contracts/math/SafeMath.sol\":{\"keccak256\":\"0x640b6dee7a4b830bdfd52b5031a07fc2b12209f5b2e29e5d364a7d37f69d8076\",\"urls\":[\"bzz-raw://31113152e1ddb78fe7a4197f247591ca894e93f916867beb708d8e747b6cc74f\",\"dweb:/ipfs/QmbZaJyXdpsYGykVhHH9qpVGQg9DGCxE2QufbCUy3daTgq\"]}},\"version\":1}",
+  "bytecode": "0x608060405234801561001057600080fd5b5061024d806100206000396000f3fe608060405234801561001057600080fd5b506004361061002b5760003560e01c8063677342ce14610030575b600080fd5b61004d6004803603602081101561004657600080fd5b503561005f565b60408051918252519081900360200190f35b600061006a82610070565b92915050565b600080610095600261008985600163ffffffff6100d816565b9063ffffffff61013916565b90508291505b818110156100d2579050806100cb6002610089836100bf878263ffffffff61013916565b9063ffffffff6100d816565b905061009b565b50919050565b600082820183811015610132576040805162461bcd60e51b815260206004820152601b60248201527f536166654d6174683a206164646974696f6e206f766572666c6f770000000000604482015290519081900360640190fd5b9392505050565b600061013283836040518060400160405280601a81526020017f536166654d6174683a206469766973696f6e206279207a65726f000000000000815250600081836102025760405162461bcd60e51b81526004018080602001828103825283818151815260200191508051906020019080838360005b838110156101c75781810151838201526020016101af565b50505050905090810190601f1680156101f45780820380516001836020036101000a031916815260200191505b509250505060405180910390fd5b50600083858161020e57fe5b049594505050505056fea265627a7a72315820bbfb3add4b11ed023e947c800918d1958ee0265d8c1809768fd33cc0851e7b3764736f6c63430005100032",
+  "deployedBytecode": "0x608060405234801561001057600080fd5b506004361061002b5760003560e01c8063677342ce14610030575b600080fd5b61004d6004803603602081101561004657600080fd5b503561005f565b60408051918252519081900360200190f35b600061006a82610070565b92915050565b600080610095600261008985600163ffffffff6100d816565b9063ffffffff61013916565b90508291505b818110156100d2579050806100cb6002610089836100bf878263ffffffff61013916565b9063ffffffff6100d816565b905061009b565b50919050565b600082820183811015610132576040805162461bcd60e51b815260206004820152601b60248201527f536166654d6174683a206164646974696f6e206f766572666c6f770000000000604482015290519081900360640190fd5b9392505050565b600061013283836040518060400160405280601a81526020017f536166654d6174683a206469766973696f6e206279207a65726f000000000000815250600081836102025760405162461bcd60e51b81526004018080602001828103825283818151815260200191508051906020019080838360005b838110156101c75781810151838201526020016101af565b50505050905090810190601f1680156101f45780820380516001836020036101000a031916815260200191505b509250505060405180910390fd5b50600083858161020e57fe5b049594505050505056fea265627a7a72315820bbfb3add4b11ed023e947c800918d1958ee0265d8c1809768fd33cc0851e7b3764736f6c63430005100032",
+  "sourceMap": "72:117:107:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;72:117:107;;;;;;;",
+  "deployedSourceMap": "72:117:107:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;72:117:107;;;;;;;;;;;;;;;;;;;96:91;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;-1:-1;96:91:107;;:::i;:::-;;;;;;;;;;;;;;;;;142:7;168:12;178:1;168:9;:12::i;:::-;161:19;96:91;-1:-1:-1;;96:91:107:o;279:206:63:-;324:6;;351:17;366:1;352:8;:1;358;352:8;:5;:8;:::i;:::-;351:14;:17;:14;:17;:::i;:::-;342:26;;382:1;378:5;;393:86;404:1;400;:5;393:86;;;425:1;-1:-1:-1;425:1:63;444:24;466:1;445:15;425:1;445:8;:1;425;445:8;:5;:8;:::i;:::-;:12;:15;:12;:15;:::i;444:24::-;440:28;;393:86;;;279:206;;;;:::o;834:176:116:-;892:7;923:5;;;946:6;;;;938:46;;;;;-1:-1:-1;;;938:46:116;;;;;;;;;;;;;;;;;;;;;;;;;;;;1002:1;834:176;-1:-1:-1;;;834:176:116:o;3073:130::-;3131:7;3157:39;3161:1;3164;3157:39;;;;;;;;;;;;;;;;;3804:7;3904:12;3897:5;3889:28;;;;-1:-1:-1;;;3889:28:116;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;23:1:-1;8:100;33:3;30:1;27:10;8:100;;;90:11;;;84:18;71:11;;;64:39;52:2;45:10;8:100;;;12:14;3889:28:116;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;3927:9;3943:1;3939;:5;;;;;;;3718:338;-1:-1:-1;;;;;3718:338:116:o",
+  "source": "pragma solidity 0.5.16;\n\nimport { Root } from \"../../shared/Root.sol\";\n\ncontract MockRoot {\n    function sqrt(uint256 r) public pure returns (uint256) {\n        return Root.sqrt(r);\n    }\n}\n",
+  "sourcePath": "/Volumes/sdxc/ETHEREUM/CODE/mStable-v1-edit/contracts/z_mocks/shared/MockRoot.sol",
+  "ast": {
+    "absolutePath": "/Volumes/sdxc/ETHEREUM/CODE/mStable-v1-edit/contracts/z_mocks/shared/MockRoot.sol",
+    "exportedSymbols": {
+      "MockRoot": [
+        33536
+      ]
+    },
+    "id": 33537,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 33520,
+        "literals": [
+          "solidity",
+          "0.5",
+          ".16"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:107"
+      },
+      {
+        "absolutePath": "/Volumes/sdxc/ETHEREUM/CODE/mStable-v1-edit/contracts/shared/Root.sol",
+        "file": "../../shared/Root.sol",
+        "id": 33522,
+        "nodeType": "ImportDirective",
+        "scope": 33537,
+        "sourceUnit": 21769,
+        "src": "25:45:107",
+        "symbolAliases": [
+          {
+            "foreign": 33521,
+            "local": null
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 33536,
+        "linearizedBaseContracts": [
+          33536
+        ],
+        "name": "MockRoot",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": {
+              "id": 33534,
+              "nodeType": "Block",
+              "src": "151:36:107",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 33531,
+                        "name": "r",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 33524,
+                        "src": "178:1:107",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 33529,
+                        "name": "Root",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 21768,
+                        "src": "168:4:107",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_type$_t_contract$_Root_$21768_$",
+                          "typeString": "type(library Root)"
+                        }
+                      },
+                      "id": 33530,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "sqrt",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 21767,
+                      "src": "168:9:107",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_pure$_t_uint256_$returns$_t_uint256_$",
+                        "typeString": "function (uint256) pure returns (uint256)"
+                      }
+                    },
+                    "id": 33532,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "168:12:107",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "functionReturnParameters": 33528,
+                  "id": 33533,
+                  "nodeType": "Return",
+                  "src": "161:19:107"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 33535,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "sqrt",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 33525,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 33524,
+                  "name": "r",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 33535,
+                  "src": "110:9:107",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 33523,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "110:7:107",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "109:11:107"
+            },
+            "returnParameters": {
+              "id": 33528,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 33527,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 33535,
+                  "src": "142:7:107",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 33526,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "142:7:107",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "141:9:107"
+            },
+            "scope": 33536,
+            "src": "96:91:107",
+            "stateMutability": "pure",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 33537,
+        "src": "72:117:107"
+      }
+    ],
+    "src": "0:190:107"
+  },
+  "legacyAST": {
+    "absolutePath": "/Volumes/sdxc/ETHEREUM/CODE/mStable-v1-edit/contracts/z_mocks/shared/MockRoot.sol",
+    "exportedSymbols": {
+      "MockRoot": [
+        33536
+      ]
+    },
+    "id": 33537,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 33520,
+        "literals": [
+          "solidity",
+          "0.5",
+          ".16"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:107"
+      },
+      {
+        "absolutePath": "/Volumes/sdxc/ETHEREUM/CODE/mStable-v1-edit/contracts/shared/Root.sol",
+        "file": "../../shared/Root.sol",
+        "id": 33522,
+        "nodeType": "ImportDirective",
+        "scope": 33537,
+        "sourceUnit": 21769,
+        "src": "25:45:107",
+        "symbolAliases": [
+          {
+            "foreign": 33521,
+            "local": null
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 33536,
+        "linearizedBaseContracts": [
+          33536
+        ],
+        "name": "MockRoot",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": {
+              "id": 33534,
+              "nodeType": "Block",
+              "src": "151:36:107",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 33531,
+                        "name": "r",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 33524,
+                        "src": "178:1:107",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 33529,
+                        "name": "Root",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 21768,
+                        "src": "168:4:107",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_type$_t_contract$_Root_$21768_$",
+                          "typeString": "type(library Root)"
+                        }
+                      },
+                      "id": 33530,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "sqrt",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 21767,
+                      "src": "168:9:107",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_pure$_t_uint256_$returns$_t_uint256_$",
+                        "typeString": "function (uint256) pure returns (uint256)"
+                      }
+                    },
+                    "id": 33532,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "168:12:107",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "functionReturnParameters": 33528,
+                  "id": 33533,
+                  "nodeType": "Return",
+                  "src": "161:19:107"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 33535,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "sqrt",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 33525,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 33524,
+                  "name": "r",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 33535,
+                  "src": "110:9:107",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 33523,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "110:7:107",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "109:11:107"
+            },
+            "returnParameters": {
+              "id": 33528,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 33527,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 33535,
+                  "src": "142:7:107",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 33526,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "142:7:107",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "141:9:107"
+            },
+            "scope": 33536,
+            "src": "96:91:107",
+            "stateMutability": "pure",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 33537,
+        "src": "72:117:107"
+      }
+    ],
+    "src": "0:190:107"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.16+commit.9c3226ce.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.1.0",
+  "updatedAt": "2021-03-11T05:43:18.441Z",
+  "devdoc": {
+    "methods": {}
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}

@@ -1,0 +1,1010 @@
+{
+  "contractName": "ICERC20",
+  "abi": [
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "mintAmount",
+          "type": "uint256"
+        }
+      ],
+      "name": "mint",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "redeemAmount",
+          "type": "uint256"
+        }
+      ],
+      "name": "redeemUnderlying",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "owner",
+          "type": "address"
+        }
+      ],
+      "name": "balanceOfUnderlying",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "exchangeRateStored",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "owner",
+          "type": "address"
+        }
+      ],
+      "name": "balanceOf",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.5.16+commit.9c3226ce\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":true,\"inputs\":[{\"internalType\":\"address\",\"name\":\"owner\",\"type\":\"address\"}],\"name\":\"balanceOf\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"address\",\"name\":\"owner\",\"type\":\"address\"}],\"name\":\"balanceOfUnderlying\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"exchangeRateStored\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"mintAmount\",\"type\":\"uint256\"}],\"name\":\"mint\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"redeemAmount\",\"type\":\"uint256\"}],\"name\":\"redeemUnderlying\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"details\":\"Compound C Token interface Documentation: https://compound.finance/developers/ctokens\",\"methods\":{\"balanceOf(address)\":{\"params\":{\"owner\":\"The address of the account to query\"},\"return\":\"The number of tokens owned by `owner`\"},\"balanceOfUnderlying(address)\":{\"params\":{\"owner\":\"The account to get the underlying balance of.\"},\"return\":\"The amount of underlying currently owned by the account.\"},\"exchangeRateStored()\":{\"details\":\"This function does not accrue interest before calculating the exchange rate\",\"return\":\"Calculated exchange rate scaled by 1e18\"},\"mint(uint256)\":{\"params\":{\"mintAmount\":\"The amount of the asset to be supplied, in units of the underlying asset.\"},\"return\":\"0 on success, otherwise an Error codes\"},\"redeemUnderlying(uint256)\":{\"params\":{\"redeemAmount\":\"The amount of underlying to be redeemed.\"},\"return\":\"0 on success, otherwise an Error codes\"}}},\"userdoc\":{\"methods\":{\"balanceOf(address)\":{\"notice\":\"Get the token balance of the `owner`\"},\"balanceOfUnderlying(address)\":{\"notice\":\"The user's underlying balance, representing their assets in the protocol, is equal to the user's cToken balance multiplied by the Exchange Rate.\"},\"exchangeRateStored()\":{\"notice\":\"Calculates the exchange rate from the underlying to the CToken\"},\"mint(uint256)\":{\"notice\":\"The mint function transfers an asset into the protocol, which begins accumulating interest based on the current Supply Rate for the asset. The user receives a quantity of cTokens equal to the underlying tokens supplied, divided by the current Exchange Rate.\"},\"redeemUnderlying(uint256)\":{\"notice\":\"The redeem underlying function converts cTokens into a specified quantity of the underlying asset, and returns them to the user. The amount of cTokens redeemed is equal to the quantity of underlying tokens received, divided by the current Exchange Rate. The amount redeemed must be less than the user's Account Liquidity and the market's available liquidity.\"}}}},\"settings\":{\"compilationTarget\":{\"/Volumes/sdxc/ETHEREUM/CODE/mStable-v1-edit/contracts/mix/platform-integrations/ICompound.sol\":\"ICERC20\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Volumes/sdxc/ETHEREUM/CODE/mStable-v1-edit/contracts/mix/platform-integrations/ICompound.sol\":{\"keccak256\":\"0x249a5fc26cecff5b85255408e1769a6d7ab55d4c77ed08176b2353550009d16d\",\"urls\":[\"bzz-raw://de6793ec1292b1408c16e3e1636d1a6fe5224e6b53dea355fbca0876e3b73584\",\"dweb:/ipfs/QmerADCqVtSCPficKoU3XRYb64zkq9uUvkzHerGC8Gp5Yb\"]}},\"version\":1}",
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "sourceMap": "",
+  "deployedSourceMap": "",
+  "source": "pragma solidity 0.5.16;\n\n/**\n * @dev Compound C Token interface\n * Documentation: https://compound.finance/developers/ctokens\n */\ninterface ICERC20 {\n\n    /**\n     * @notice The mint function transfers an asset into the protocol, which begins accumulating\n     * interest based on the current Supply Rate for the asset. The user receives a quantity of\n     * cTokens equal to the underlying tokens supplied, divided by the current Exchange Rate.\n     * @param mintAmount The amount of the asset to be supplied, in units of the underlying asset.\n     * @return 0 on success, otherwise an Error codes\n     */\n    function mint(uint mintAmount) external returns (uint);\n\n    /**\n     * @notice The redeem underlying function converts cTokens into a specified quantity of the underlying\n     * asset, and returns them to the user. The amount of cTokens redeemed is equal to the quantity of\n     * underlying tokens received, divided by the current Exchange Rate. The amount redeemed must be less\n     * than the user's Account Liquidity and the market's available liquidity.\n     * @param redeemAmount The amount of underlying to be redeemed.\n     * @return 0 on success, otherwise an Error codes\n     */\n    function redeemUnderlying(uint redeemAmount) external returns (uint);\n\n    /**\n     * @notice The user's underlying balance, representing their assets in the protocol, is equal to\n     * the user's cToken balance multiplied by the Exchange Rate.\n     * @param owner The account to get the underlying balance of.\n     * @return The amount of underlying currently owned by the account.\n     */\n    function balanceOfUnderlying(address owner) external returns (uint);\n\n    /**\n     * @notice Calculates the exchange rate from the underlying to the CToken\n     * @dev This function does not accrue interest before calculating the exchange rate\n     * @return Calculated exchange rate scaled by 1e18\n     */\n    function exchangeRateStored() external view returns (uint);\n\n    /**\n     * @notice Get the token balance of the `owner`\n     * @param owner The address of the account to query\n     * @return The number of tokens owned by `owner`\n     */\n    function balanceOf(address owner) external view returns (uint256);\n}\n",
+  "sourcePath": "/Volumes/sdxc/ETHEREUM/CODE/mStable-v1-edit/contracts/mix/platform-integrations/ICompound.sol",
+  "ast": {
+    "absolutePath": "/Volumes/sdxc/ETHEREUM/CODE/mStable-v1-edit/contracts/mix/platform-integrations/ICompound.sol",
+    "exportedSymbols": {
+      "ICERC20": [
+        11966
+      ]
+    },
+    "id": 11967,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 11932,
+        "literals": [
+          "solidity",
+          "0.5",
+          ".16"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:31"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "documentation": "@dev Compound C Token interface\nDocumentation: https://compound.finance/developers/ctokens",
+        "fullyImplemented": false,
+        "id": 11966,
+        "linearizedBaseContracts": [
+          11966
+        ],
+        "name": "ICERC20",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": null,
+            "documentation": "@notice The mint function transfers an asset into the protocol, which begins accumulating\ninterest based on the current Supply Rate for the asset. The user receives a quantity of\ncTokens equal to the underlying tokens supplied, divided by the current Exchange Rate.\n@param mintAmount The amount of the asset to be supplied, in units of the underlying asset.\n@return 0 on success, otherwise an Error codes",
+            "id": 11939,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "mint",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 11935,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 11934,
+                  "name": "mintAmount",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 11939,
+                  "src": "625:15:31",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 11933,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "625:4:31",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "624:17:31"
+            },
+            "returnParameters": {
+              "id": 11938,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 11937,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 11939,
+                  "src": "660:4:31",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 11936,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "660:4:31",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "659:6:31"
+            },
+            "scope": 11966,
+            "src": "611:55:31",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": "@notice The redeem underlying function converts cTokens into a specified quantity of the underlying\nasset, and returns them to the user. The amount of cTokens redeemed is equal to the quantity of\nunderlying tokens received, divided by the current Exchange Rate. The amount redeemed must be less\nthan the user's Account Liquidity and the market's available liquidity.\n@param redeemAmount The amount of underlying to be redeemed.\n@return 0 on success, otherwise an Error codes",
+            "id": 11946,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "redeemUnderlying",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 11942,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 11941,
+                  "name": "redeemAmount",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 11946,
+                  "src": "1231:17:31",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 11940,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1231:4:31",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1230:19:31"
+            },
+            "returnParameters": {
+              "id": 11945,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 11944,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 11946,
+                  "src": "1268:4:31",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 11943,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1268:4:31",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1267:6:31"
+            },
+            "scope": 11966,
+            "src": "1205:69:31",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": "@notice The user's underlying balance, representing their assets in the protocol, is equal to\nthe user's cToken balance multiplied by the Exchange Rate.\n@param owner The account to get the underlying balance of.\n@return The amount of underlying currently owned by the account.",
+            "id": 11953,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "balanceOfUnderlying",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 11949,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 11948,
+                  "name": "owner",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 11953,
+                  "src": "1630:13:31",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 11947,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1630:7:31",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1629:15:31"
+            },
+            "returnParameters": {
+              "id": 11952,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 11951,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 11953,
+                  "src": "1663:4:31",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 11950,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1663:4:31",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1662:6:31"
+            },
+            "scope": 11966,
+            "src": "1601:68:31",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": "@notice Calculates the exchange rate from the underlying to the CToken\n@dev This function does not accrue interest before calculating the exchange rate\n@return Calculated exchange rate scaled by 1e18",
+            "id": 11958,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "exchangeRateStored",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 11954,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1939:2:31"
+            },
+            "returnParameters": {
+              "id": 11957,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 11956,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 11958,
+                  "src": "1965:4:31",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 11955,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1965:4:31",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1964:6:31"
+            },
+            "scope": 11966,
+            "src": "1912:59:31",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": "@notice Get the token balance of the `owner`\n@param owner The address of the account to query\n@return The number of tokens owned by `owner`",
+            "id": 11965,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "balanceOf",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 11961,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 11960,
+                  "name": "owner",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 11965,
+                  "src": "2173:13:31",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 11959,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2173:7:31",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2172:15:31"
+            },
+            "returnParameters": {
+              "id": 11964,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 11963,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 11965,
+                  "src": "2211:7:31",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 11962,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2211:7:31",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2210:9:31"
+            },
+            "scope": 11966,
+            "src": "2154:66:31",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "external"
+          }
+        ],
+        "scope": 11967,
+        "src": "130:2092:31"
+      }
+    ],
+    "src": "0:2223:31"
+  },
+  "legacyAST": {
+    "absolutePath": "/Volumes/sdxc/ETHEREUM/CODE/mStable-v1-edit/contracts/mix/platform-integrations/ICompound.sol",
+    "exportedSymbols": {
+      "ICERC20": [
+        11966
+      ]
+    },
+    "id": 11967,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 11932,
+        "literals": [
+          "solidity",
+          "0.5",
+          ".16"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:31"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "documentation": "@dev Compound C Token interface\nDocumentation: https://compound.finance/developers/ctokens",
+        "fullyImplemented": false,
+        "id": 11966,
+        "linearizedBaseContracts": [
+          11966
+        ],
+        "name": "ICERC20",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": null,
+            "documentation": "@notice The mint function transfers an asset into the protocol, which begins accumulating\ninterest based on the current Supply Rate for the asset. The user receives a quantity of\ncTokens equal to the underlying tokens supplied, divided by the current Exchange Rate.\n@param mintAmount The amount of the asset to be supplied, in units of the underlying asset.\n@return 0 on success, otherwise an Error codes",
+            "id": 11939,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "mint",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 11935,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 11934,
+                  "name": "mintAmount",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 11939,
+                  "src": "625:15:31",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 11933,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "625:4:31",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "624:17:31"
+            },
+            "returnParameters": {
+              "id": 11938,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 11937,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 11939,
+                  "src": "660:4:31",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 11936,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "660:4:31",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "659:6:31"
+            },
+            "scope": 11966,
+            "src": "611:55:31",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": "@notice The redeem underlying function converts cTokens into a specified quantity of the underlying\nasset, and returns them to the user. The amount of cTokens redeemed is equal to the quantity of\nunderlying tokens received, divided by the current Exchange Rate. The amount redeemed must be less\nthan the user's Account Liquidity and the market's available liquidity.\n@param redeemAmount The amount of underlying to be redeemed.\n@return 0 on success, otherwise an Error codes",
+            "id": 11946,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "redeemUnderlying",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 11942,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 11941,
+                  "name": "redeemAmount",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 11946,
+                  "src": "1231:17:31",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 11940,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1231:4:31",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1230:19:31"
+            },
+            "returnParameters": {
+              "id": 11945,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 11944,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 11946,
+                  "src": "1268:4:31",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 11943,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1268:4:31",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1267:6:31"
+            },
+            "scope": 11966,
+            "src": "1205:69:31",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": "@notice The user's underlying balance, representing their assets in the protocol, is equal to\nthe user's cToken balance multiplied by the Exchange Rate.\n@param owner The account to get the underlying balance of.\n@return The amount of underlying currently owned by the account.",
+            "id": 11953,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "balanceOfUnderlying",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 11949,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 11948,
+                  "name": "owner",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 11953,
+                  "src": "1630:13:31",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 11947,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1630:7:31",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1629:15:31"
+            },
+            "returnParameters": {
+              "id": 11952,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 11951,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 11953,
+                  "src": "1663:4:31",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 11950,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1663:4:31",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1662:6:31"
+            },
+            "scope": 11966,
+            "src": "1601:68:31",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": "@notice Calculates the exchange rate from the underlying to the CToken\n@dev This function does not accrue interest before calculating the exchange rate\n@return Calculated exchange rate scaled by 1e18",
+            "id": 11958,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "exchangeRateStored",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 11954,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1939:2:31"
+            },
+            "returnParameters": {
+              "id": 11957,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 11956,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 11958,
+                  "src": "1965:4:31",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 11955,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1965:4:31",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1964:6:31"
+            },
+            "scope": 11966,
+            "src": "1912:59:31",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": "@notice Get the token balance of the `owner`\n@param owner The address of the account to query\n@return The number of tokens owned by `owner`",
+            "id": 11965,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "balanceOf",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 11961,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 11960,
+                  "name": "owner",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 11965,
+                  "src": "2173:13:31",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 11959,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2173:7:31",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2172:15:31"
+            },
+            "returnParameters": {
+              "id": 11964,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 11963,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 11965,
+                  "src": "2211:7:31",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 11962,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2211:7:31",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2210:9:31"
+            },
+            "scope": 11966,
+            "src": "2154:66:31",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "external"
+          }
+        ],
+        "scope": 11967,
+        "src": "130:2092:31"
+      }
+    ],
+    "src": "0:2223:31"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.16+commit.9c3226ce.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.1.0",
+  "updatedAt": "2021-03-11T05:43:15.756Z",
+  "devdoc": {
+    "details": "Compound C Token interface Documentation: https://compound.finance/developers/ctokens",
+    "methods": {
+      "balanceOf(address)": {
+        "params": {
+          "owner": "The address of the account to query"
+        },
+        "return": "The number of tokens owned by `owner`"
+      },
+      "balanceOfUnderlying(address)": {
+        "params": {
+          "owner": "The account to get the underlying balance of."
+        },
+        "return": "The amount of underlying currently owned by the account."
+      },
+      "exchangeRateStored()": {
+        "details": "This function does not accrue interest before calculating the exchange rate",
+        "return": "Calculated exchange rate scaled by 1e18"
+      },
+      "mint(uint256)": {
+        "params": {
+          "mintAmount": "The amount of the asset to be supplied, in units of the underlying asset."
+        },
+        "return": "0 on success, otherwise an Error codes"
+      },
+      "redeemUnderlying(uint256)": {
+        "params": {
+          "redeemAmount": "The amount of underlying to be redeemed."
+        },
+        "return": "0 on success, otherwise an Error codes"
+      }
+    }
+  },
+  "userdoc": {
+    "methods": {
+      "balanceOf(address)": {
+        "notice": "Get the token balance of the `owner`"
+      },
+      "balanceOfUnderlying(address)": {
+        "notice": "The user's underlying balance, representing their assets in the protocol, is equal to the user's cToken balance multiplied by the Exchange Rate."
+      },
+      "exchangeRateStored()": {
+        "notice": "Calculates the exchange rate from the underlying to the CToken"
+      },
+      "mint(uint256)": {
+        "notice": "The mint function transfers an asset into the protocol, which begins accumulating interest based on the current Supply Rate for the asset. The user receives a quantity of cTokens equal to the underlying tokens supplied, divided by the current Exchange Rate."
+      },
+      "redeemUnderlying(uint256)": {
+        "notice": "The redeem underlying function converts cTokens into a specified quantity of the underlying asset, and returns them to the user. The amount of cTokens redeemed is equal to the quantity of underlying tokens received, divided by the current Exchange Rate. The amount redeemed must be less than the user's Account Liquidity and the market's available liquidity."
+      }
+    }
+  }
+}

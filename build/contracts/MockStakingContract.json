@@ -1,0 +1,824 @@
+{
+  "contractName": "MockStakingContract",
+  "abi": [
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "account",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "balance",
+          "type": "uint256"
+        }
+      ],
+      "name": "setBalanceOf",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "account",
+          "type": "address"
+        }
+      ],
+      "name": "balanceOf",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.5.16+commit.9c3226ce\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":true,\"inputs\":[{\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"}],\"name\":\"balanceOf\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"balance\",\"type\":\"uint256\"}],\"name\":\"setBalanceOf\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/Volumes/sdxc/ETHEREUM/CODE/mStable-v1-edit/contracts/z_mocks/savings/MockStakingContract.sol\":\"MockStakingContract\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Volumes/sdxc/ETHEREUM/CODE/mStable-v1-edit/contracts/z_mocks/savings/MockStakingContract.sol\":{\"keccak256\":\"0x946e258d163cfc9b3711438615697cf0747f7ef7f04448b06ad8800eaf08c6f5\",\"urls\":[\"bzz-raw://3cd2dc4e8d2a91c61cec62de72fc65d1fb218643e642b9dd0a133a648b12c742\",\"dweb:/ipfs/QmWbHbWHV3RHikqTmfuKNfDzhL3UrYQPF5bKgJdKn6RSVw\"]}},\"version\":1}",
+  "bytecode": "0x608060405234801561001057600080fd5b50610103806100206000396000f3fe6080604052348015600f57600080fd5b506004361060325760003560e01c806370a08231146037578063b46310f614606c575b600080fd5b605a60048036036020811015604b57600080fd5b50356001600160a01b03166097565b60408051918252519081900360200190f35b609560048036036040811015608057600080fd5b506001600160a01b03813516906020013560b2565b005b6001600160a01b031660009081526020819052604090205490565b6001600160a01b0390911660009081526020819052604090205556fea265627a7a7231582013b667f04d50ed6e0caff35988b80a7b678529ae3e379bfc886258ef90031d0f64736f6c63430005100032",
+  "deployedBytecode": "0x6080604052348015600f57600080fd5b506004361060325760003560e01c806370a08231146037578063b46310f614606c575b600080fd5b605a60048036036020811015604b57600080fd5b50356001600160a01b03166097565b60408051918252519081900360200190f35b609560048036036040811015608057600080fd5b506001600160a01b03813516906020013560b2565b005b6001600160a01b031660009081526020819052604090205490565b6001600160a01b0390911660009081526020819052604090205556fea265627a7a7231582013b667f04d50ed6e0caff35988b80a7b678529ae3e379bfc886258ef90031d0f64736f6c63430005100032",
+  "sourceMap": "28:311:90:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;28:311:90;;;;;;;",
+  "deployedSourceMap": "28:311:90:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;28:311:90;;;;;;;;;;;;;;;;;;;;;;;;229:108;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;-1:-1;229:108:90;-1:-1:-1;;;;;229:108:90;;:::i;:::-;;;;;;;;;;;;;;;;117:106;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;-1:-1;;;;;;117:106:90;;;;;;;;:::i;:::-;;229:108;-1:-1:-1;;;;;312:18:90;286:7;312:18;;;;;;;;;;;;229:108::o;117:106::-;-1:-1:-1;;;;;188:18:90;;;:9;:18;;;;;;;;;;:28;117:106::o",
+  "source": "pragma solidity 0.5.16;\n\n\n\n\ncontract MockStakingContract {\n\n    mapping (address => uint256) private _balances;\n\n    function setBalanceOf(address account, uint256 balance) public {\n      _balances[account] = balance;\n    }\n\n    function balanceOf(address account) public view returns (uint256) {\n        return _balances[account];\n    }\n}",
+  "sourcePath": "/Volumes/sdxc/ETHEREUM/CODE/mStable-v1-edit/contracts/z_mocks/savings/MockStakingContract.sol",
+  "ast": {
+    "absolutePath": "/Volumes/sdxc/ETHEREUM/CODE/mStable-v1-edit/contracts/z_mocks/savings/MockStakingContract.sol",
+    "exportedSymbols": {
+      "MockStakingContract": [
+        27317
+      ]
+    },
+    "id": 27318,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 27286,
+        "literals": [
+          "solidity",
+          "0.5",
+          ".16"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:90"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 27317,
+        "linearizedBaseContracts": [
+          27317
+        ],
+        "name": "MockStakingContract",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "id": 27290,
+            "name": "_balances",
+            "nodeType": "VariableDeclaration",
+            "scope": 27317,
+            "src": "64:46:90",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_address_$_t_uint256_$",
+              "typeString": "mapping(address => uint256)"
+            },
+            "typeName": {
+              "id": 27289,
+              "keyType": {
+                "id": 27287,
+                "name": "address",
+                "nodeType": "ElementaryTypeName",
+                "src": "73:7:90",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "64:28:90",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_address_$_t_uint256_$",
+                "typeString": "mapping(address => uint256)"
+              },
+              "valueType": {
+                "id": 27288,
+                "name": "uint256",
+                "nodeType": "ElementaryTypeName",
+                "src": "84:7:90",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                }
+              }
+            },
+            "value": null,
+            "visibility": "private"
+          },
+          {
+            "body": {
+              "id": 27303,
+              "nodeType": "Block",
+              "src": "180:43:90",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 27301,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "baseExpression": {
+                        "argumentTypes": null,
+                        "id": 27297,
+                        "name": "_balances",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 27290,
+                        "src": "188:9:90",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_mapping$_t_address_$_t_uint256_$",
+                          "typeString": "mapping(address => uint256)"
+                        }
+                      },
+                      "id": 27299,
+                      "indexExpression": {
+                        "argumentTypes": null,
+                        "id": 27298,
+                        "name": "account",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 27292,
+                        "src": "198:7:90",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      },
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "nodeType": "IndexAccess",
+                      "src": "188:18:90",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 27300,
+                      "name": "balance",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 27294,
+                      "src": "209:7:90",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "src": "188:28:90",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 27302,
+                  "nodeType": "ExpressionStatement",
+                  "src": "188:28:90"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 27304,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "setBalanceOf",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 27295,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 27292,
+                  "name": "account",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 27304,
+                  "src": "139:15:90",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 27291,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "139:7:90",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 27294,
+                  "name": "balance",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 27304,
+                  "src": "156:15:90",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 27293,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "156:7:90",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "138:34:90"
+            },
+            "returnParameters": {
+              "id": 27296,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "180:0:90"
+            },
+            "scope": 27317,
+            "src": "117:106:90",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 27315,
+              "nodeType": "Block",
+              "src": "295:42:90",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "baseExpression": {
+                      "argumentTypes": null,
+                      "id": 27311,
+                      "name": "_balances",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 27290,
+                      "src": "312:9:90",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_mapping$_t_address_$_t_uint256_$",
+                        "typeString": "mapping(address => uint256)"
+                      }
+                    },
+                    "id": 27313,
+                    "indexExpression": {
+                      "argumentTypes": null,
+                      "id": 27312,
+                      "name": "account",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 27306,
+                      "src": "322:7:90",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "isConstant": false,
+                    "isLValue": true,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "nodeType": "IndexAccess",
+                    "src": "312:18:90",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "functionReturnParameters": 27310,
+                  "id": 27314,
+                  "nodeType": "Return",
+                  "src": "305:25:90"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 27316,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "balanceOf",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 27307,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 27306,
+                  "name": "account",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 27316,
+                  "src": "248:15:90",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 27305,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "248:7:90",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "247:17:90"
+            },
+            "returnParameters": {
+              "id": 27310,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 27309,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 27316,
+                  "src": "286:7:90",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 27308,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "286:7:90",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "285:9:90"
+            },
+            "scope": 27317,
+            "src": "229:108:90",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 27318,
+        "src": "28:311:90"
+      }
+    ],
+    "src": "0:339:90"
+  },
+  "legacyAST": {
+    "absolutePath": "/Volumes/sdxc/ETHEREUM/CODE/mStable-v1-edit/contracts/z_mocks/savings/MockStakingContract.sol",
+    "exportedSymbols": {
+      "MockStakingContract": [
+        27317
+      ]
+    },
+    "id": 27318,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 27286,
+        "literals": [
+          "solidity",
+          "0.5",
+          ".16"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:90"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 27317,
+        "linearizedBaseContracts": [
+          27317
+        ],
+        "name": "MockStakingContract",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "id": 27290,
+            "name": "_balances",
+            "nodeType": "VariableDeclaration",
+            "scope": 27317,
+            "src": "64:46:90",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_address_$_t_uint256_$",
+              "typeString": "mapping(address => uint256)"
+            },
+            "typeName": {
+              "id": 27289,
+              "keyType": {
+                "id": 27287,
+                "name": "address",
+                "nodeType": "ElementaryTypeName",
+                "src": "73:7:90",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "64:28:90",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_address_$_t_uint256_$",
+                "typeString": "mapping(address => uint256)"
+              },
+              "valueType": {
+                "id": 27288,
+                "name": "uint256",
+                "nodeType": "ElementaryTypeName",
+                "src": "84:7:90",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                }
+              }
+            },
+            "value": null,
+            "visibility": "private"
+          },
+          {
+            "body": {
+              "id": 27303,
+              "nodeType": "Block",
+              "src": "180:43:90",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 27301,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "baseExpression": {
+                        "argumentTypes": null,
+                        "id": 27297,
+                        "name": "_balances",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 27290,
+                        "src": "188:9:90",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_mapping$_t_address_$_t_uint256_$",
+                          "typeString": "mapping(address => uint256)"
+                        }
+                      },
+                      "id": 27299,
+                      "indexExpression": {
+                        "argumentTypes": null,
+                        "id": 27298,
+                        "name": "account",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 27292,
+                        "src": "198:7:90",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      },
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "nodeType": "IndexAccess",
+                      "src": "188:18:90",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 27300,
+                      "name": "balance",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 27294,
+                      "src": "209:7:90",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "src": "188:28:90",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 27302,
+                  "nodeType": "ExpressionStatement",
+                  "src": "188:28:90"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 27304,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "setBalanceOf",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 27295,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 27292,
+                  "name": "account",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 27304,
+                  "src": "139:15:90",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 27291,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "139:7:90",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 27294,
+                  "name": "balance",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 27304,
+                  "src": "156:15:90",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 27293,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "156:7:90",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "138:34:90"
+            },
+            "returnParameters": {
+              "id": 27296,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "180:0:90"
+            },
+            "scope": 27317,
+            "src": "117:106:90",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 27315,
+              "nodeType": "Block",
+              "src": "295:42:90",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "baseExpression": {
+                      "argumentTypes": null,
+                      "id": 27311,
+                      "name": "_balances",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 27290,
+                      "src": "312:9:90",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_mapping$_t_address_$_t_uint256_$",
+                        "typeString": "mapping(address => uint256)"
+                      }
+                    },
+                    "id": 27313,
+                    "indexExpression": {
+                      "argumentTypes": null,
+                      "id": 27312,
+                      "name": "account",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 27306,
+                      "src": "322:7:90",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "isConstant": false,
+                    "isLValue": true,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "nodeType": "IndexAccess",
+                    "src": "312:18:90",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "functionReturnParameters": 27310,
+                  "id": 27314,
+                  "nodeType": "Return",
+                  "src": "305:25:90"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 27316,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "balanceOf",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 27307,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 27306,
+                  "name": "account",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 27316,
+                  "src": "248:15:90",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 27305,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "248:7:90",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "247:17:90"
+            },
+            "returnParameters": {
+              "id": 27310,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 27309,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 27316,
+                  "src": "286:7:90",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 27308,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "286:7:90",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "285:9:90"
+            },
+            "scope": 27317,
+            "src": "229:108:90",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 27318,
+        "src": "28:311:90"
+      }
+    ],
+    "src": "0:339:90"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.16+commit.9c3226ce.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.1.0",
+  "updatedAt": "2021-03-11T05:43:17.327Z",
+  "devdoc": {
+    "methods": {}
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}

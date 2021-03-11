@@ -1,0 +1,1694 @@
+{
+  "contractName": "IPlatformIntegration",
+  "abi": [
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_bAsset",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "_amount",
+          "type": "uint256"
+        },
+        {
+          "internalType": "bool",
+          "name": "isTokenFeeCharged",
+          "type": "bool"
+        }
+      ],
+      "name": "deposit",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "quantityDeposited",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_receiver",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "_bAsset",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "_amount",
+          "type": "uint256"
+        },
+        {
+          "internalType": "bool",
+          "name": "_hasTxFee",
+          "type": "bool"
+        }
+      ],
+      "name": "withdraw",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_receiver",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "_bAsset",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "_amount",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "_totalAmount",
+          "type": "uint256"
+        },
+        {
+          "internalType": "bool",
+          "name": "_hasTxFee",
+          "type": "bool"
+        }
+      ],
+      "name": "withdraw",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_receiver",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "_bAsset",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "_amount",
+          "type": "uint256"
+        }
+      ],
+      "name": "withdrawRaw",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_bAsset",
+          "type": "address"
+        }
+      ],
+      "name": "checkBalance",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "balance",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_bAsset",
+          "type": "address"
+        }
+      ],
+      "name": "bAssetToPToken",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "pToken",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.5.16+commit.9c3226ce\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":false,\"inputs\":[{\"internalType\":\"address\",\"name\":\"_bAsset\",\"type\":\"address\"}],\"name\":\"bAssetToPToken\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"pToken\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"address\",\"name\":\"_bAsset\",\"type\":\"address\"}],\"name\":\"checkBalance\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"balance\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"address\",\"name\":\"_bAsset\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"_amount\",\"type\":\"uint256\"},{\"internalType\":\"bool\",\"name\":\"isTokenFeeCharged\",\"type\":\"bool\"}],\"name\":\"deposit\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"quantityDeposited\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"address\",\"name\":\"_receiver\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"_bAsset\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"_amount\",\"type\":\"uint256\"},{\"internalType\":\"bool\",\"name\":\"_hasTxFee\",\"type\":\"bool\"}],\"name\":\"withdraw\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"address\",\"name\":\"_receiver\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"_bAsset\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"_amount\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"_totalAmount\",\"type\":\"uint256\"},{\"internalType\":\"bool\",\"name\":\"_hasTxFee\",\"type\":\"bool\"}],\"name\":\"withdraw\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"address\",\"name\":\"_receiver\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"_bAsset\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"_amount\",\"type\":\"uint256\"}],\"name\":\"withdrawRaw\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{\"bAssetToPToken(address)\":{\"details\":\"Returns the pToken\"},\"checkBalance(address)\":{\"details\":\"Returns the current balance of the given bAsset\"},\"deposit(address,uint256,bool)\":{\"details\":\"Deposit the given bAsset to Lending platform\",\"params\":{\"_amount\":\"Amount to deposit\",\"_bAsset\":\"bAsset address\"}},\"withdraw(address,address,uint256,bool)\":{\"details\":\"Withdraw given bAsset from Lending platform\"},\"withdraw(address,address,uint256,uint256,bool)\":{\"details\":\"Withdraw given bAsset from Lending platform\"},\"withdrawRaw(address,address,uint256)\":{\"details\":\"Withdraw given bAsset from the cache\"}},\"title\":\"Platform interface to integrate with lending platform like Compound, AAVE etc.\"},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/Volumes/sdxc/ETHEREUM/CODE/mStable-v1-edit/contracts/interfaces/IPlatformIntegration.sol\":\"IPlatformIntegration\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Volumes/sdxc/ETHEREUM/CODE/mStable-v1-edit/contracts/interfaces/IPlatformIntegration.sol\":{\"keccak256\":\"0x3a6353d05674c582b0f7e9de6aa57d3ee2354e3d6c27e9d74adeb3a3271a07ba\",\"urls\":[\"bzz-raw://03c81a8a973d9bdde92646aa4943a1e69e6206b16bfd10f21b8af844c5161ce9\",\"dweb:/ipfs/QmYcLX95PPBcFTmSBHcPAzvQHpzQyM2aHQWyvVGdBgxdbP\"]}},\"version\":1}",
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "sourceMap": "",
+  "deployedSourceMap": "",
+  "source": "pragma solidity 0.5.16;\n\n/**\n * @title Platform interface to integrate with lending platform like Compound, AAVE etc.\n */\ninterface IPlatformIntegration {\n\n    /**\n     * @dev Deposit the given bAsset to Lending platform\n     * @param _bAsset bAsset address\n     * @param _amount Amount to deposit\n     */\n    function deposit(address _bAsset, uint256 _amount, bool isTokenFeeCharged)\n        external returns (uint256 quantityDeposited);\n\n    /**\n     * @dev Withdraw given bAsset from Lending platform\n     */\n    function withdraw(address _receiver, address _bAsset, uint256 _amount, bool _hasTxFee) external;\n\n    /**\n     * @dev Withdraw given bAsset from Lending platform\n     */\n    function withdraw(address _receiver, address _bAsset, uint256 _amount, uint256 _totalAmount, bool _hasTxFee) external;\n\n    /**\n     * @dev Withdraw given bAsset from the cache\n     */\n    function withdrawRaw(address _receiver, address _bAsset, uint256 _amount) external;\n\n    /**\n     * @dev Returns the current balance of the given bAsset\n     */\n    function checkBalance(address _bAsset) external returns (uint256 balance);\n\n    /**\n     * @dev Returns the pToken\n     */\n    function bAssetToPToken(address _bAsset) external returns (address pToken);\n}\n",
+  "sourcePath": "/Volumes/sdxc/ETHEREUM/CODE/mStable-v1-edit/contracts/interfaces/IPlatformIntegration.sol",
+  "ast": {
+    "absolutePath": "/Volumes/sdxc/ETHEREUM/CODE/mStable-v1-edit/contracts/interfaces/IPlatformIntegration.sol",
+    "exportedSymbols": {
+      "IPlatformIntegration": [
+        3907
+      ]
+    },
+    "id": 3908,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 3848,
+        "literals": [
+          "solidity",
+          "0.5",
+          ".16"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:15"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "documentation": "@title Platform interface to integrate with lending platform like Compound, AAVE etc.",
+        "fullyImplemented": false,
+        "id": 3907,
+        "linearizedBaseContracts": [
+          3907
+        ],
+        "name": "IPlatformIntegration",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": null,
+            "documentation": "@dev Deposit the given bAsset to Lending platform\n@param _bAsset bAsset address\n@param _amount Amount to deposit",
+            "id": 3859,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "deposit",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 3855,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3850,
+                  "name": "_bAsset",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3859,
+                  "src": "327:15:15",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 3849,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "327:7:15",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 3852,
+                  "name": "_amount",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3859,
+                  "src": "344:15:15",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 3851,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "344:7:15",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 3854,
+                  "name": "isTokenFeeCharged",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3859,
+                  "src": "361:22:15",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 3853,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "361:4:15",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "326:58:15"
+            },
+            "returnParameters": {
+              "id": 3858,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3857,
+                  "name": "quantityDeposited",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3859,
+                  "src": "411:25:15",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 3856,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "411:7:15",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "410:27:15"
+            },
+            "scope": 3907,
+            "src": "310:128:15",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": "@dev Withdraw given bAsset from Lending platform",
+            "id": 3870,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "withdraw",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 3868,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3861,
+                  "name": "_receiver",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3870,
+                  "src": "534:17:15",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 3860,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "534:7:15",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 3863,
+                  "name": "_bAsset",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3870,
+                  "src": "553:15:15",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 3862,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "553:7:15",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 3865,
+                  "name": "_amount",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3870,
+                  "src": "570:15:15",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 3864,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "570:7:15",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 3867,
+                  "name": "_hasTxFee",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3870,
+                  "src": "587:14:15",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 3866,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "587:4:15",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "533:69:15"
+            },
+            "returnParameters": {
+              "id": 3869,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "611:0:15"
+            },
+            "scope": 3907,
+            "src": "516:96:15",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": "@dev Withdraw given bAsset from Lending platform",
+            "id": 3883,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "withdraw",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 3881,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3872,
+                  "name": "_receiver",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3883,
+                  "src": "708:17:15",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 3871,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "708:7:15",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 3874,
+                  "name": "_bAsset",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3883,
+                  "src": "727:15:15",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 3873,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "727:7:15",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 3876,
+                  "name": "_amount",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3883,
+                  "src": "744:15:15",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 3875,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "744:7:15",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 3878,
+                  "name": "_totalAmount",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3883,
+                  "src": "761:20:15",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 3877,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "761:7:15",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 3880,
+                  "name": "_hasTxFee",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3883,
+                  "src": "783:14:15",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 3879,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "783:4:15",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "707:91:15"
+            },
+            "returnParameters": {
+              "id": 3882,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "807:0:15"
+            },
+            "scope": 3907,
+            "src": "690:118:15",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": "@dev Withdraw given bAsset from the cache",
+            "id": 3892,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "withdrawRaw",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 3890,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3885,
+                  "name": "_receiver",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3892,
+                  "src": "900:17:15",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 3884,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "900:7:15",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 3887,
+                  "name": "_bAsset",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3892,
+                  "src": "919:15:15",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 3886,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "919:7:15",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 3889,
+                  "name": "_amount",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3892,
+                  "src": "936:15:15",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 3888,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "936:7:15",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "899:53:15"
+            },
+            "returnParameters": {
+              "id": 3891,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "961:0:15"
+            },
+            "scope": 3907,
+            "src": "879:83:15",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": "@dev Returns the current balance of the given bAsset",
+            "id": 3899,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "checkBalance",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 3895,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3894,
+                  "name": "_bAsset",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3899,
+                  "src": "1066:15:15",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 3893,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1066:7:15",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1065:17:15"
+            },
+            "returnParameters": {
+              "id": 3898,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3897,
+                  "name": "balance",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3899,
+                  "src": "1101:15:15",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 3896,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1101:7:15",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1100:17:15"
+            },
+            "scope": 3907,
+            "src": "1044:74:15",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": "@dev Returns the pToken",
+            "id": 3906,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "bAssetToPToken",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 3902,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3901,
+                  "name": "_bAsset",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3906,
+                  "src": "1195:15:15",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 3900,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1195:7:15",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1194:17:15"
+            },
+            "returnParameters": {
+              "id": 3905,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3904,
+                  "name": "pToken",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3906,
+                  "src": "1230:14:15",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 3903,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1230:7:15",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1229:16:15"
+            },
+            "scope": 3907,
+            "src": "1171:75:15",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "external"
+          }
+        ],
+        "scope": 3908,
+        "src": "122:1126:15"
+      }
+    ],
+    "src": "0:1249:15"
+  },
+  "legacyAST": {
+    "absolutePath": "/Volumes/sdxc/ETHEREUM/CODE/mStable-v1-edit/contracts/interfaces/IPlatformIntegration.sol",
+    "exportedSymbols": {
+      "IPlatformIntegration": [
+        3907
+      ]
+    },
+    "id": 3908,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 3848,
+        "literals": [
+          "solidity",
+          "0.5",
+          ".16"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:15"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "documentation": "@title Platform interface to integrate with lending platform like Compound, AAVE etc.",
+        "fullyImplemented": false,
+        "id": 3907,
+        "linearizedBaseContracts": [
+          3907
+        ],
+        "name": "IPlatformIntegration",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": null,
+            "documentation": "@dev Deposit the given bAsset to Lending platform\n@param _bAsset bAsset address\n@param _amount Amount to deposit",
+            "id": 3859,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "deposit",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 3855,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3850,
+                  "name": "_bAsset",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3859,
+                  "src": "327:15:15",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 3849,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "327:7:15",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 3852,
+                  "name": "_amount",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3859,
+                  "src": "344:15:15",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 3851,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "344:7:15",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 3854,
+                  "name": "isTokenFeeCharged",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3859,
+                  "src": "361:22:15",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 3853,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "361:4:15",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "326:58:15"
+            },
+            "returnParameters": {
+              "id": 3858,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3857,
+                  "name": "quantityDeposited",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3859,
+                  "src": "411:25:15",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 3856,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "411:7:15",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "410:27:15"
+            },
+            "scope": 3907,
+            "src": "310:128:15",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": "@dev Withdraw given bAsset from Lending platform",
+            "id": 3870,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "withdraw",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 3868,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3861,
+                  "name": "_receiver",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3870,
+                  "src": "534:17:15",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 3860,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "534:7:15",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 3863,
+                  "name": "_bAsset",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3870,
+                  "src": "553:15:15",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 3862,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "553:7:15",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 3865,
+                  "name": "_amount",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3870,
+                  "src": "570:15:15",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 3864,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "570:7:15",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 3867,
+                  "name": "_hasTxFee",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3870,
+                  "src": "587:14:15",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 3866,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "587:4:15",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "533:69:15"
+            },
+            "returnParameters": {
+              "id": 3869,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "611:0:15"
+            },
+            "scope": 3907,
+            "src": "516:96:15",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": "@dev Withdraw given bAsset from Lending platform",
+            "id": 3883,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "withdraw",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 3881,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3872,
+                  "name": "_receiver",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3883,
+                  "src": "708:17:15",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 3871,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "708:7:15",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 3874,
+                  "name": "_bAsset",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3883,
+                  "src": "727:15:15",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 3873,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "727:7:15",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 3876,
+                  "name": "_amount",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3883,
+                  "src": "744:15:15",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 3875,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "744:7:15",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 3878,
+                  "name": "_totalAmount",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3883,
+                  "src": "761:20:15",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 3877,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "761:7:15",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 3880,
+                  "name": "_hasTxFee",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3883,
+                  "src": "783:14:15",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 3879,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "783:4:15",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "707:91:15"
+            },
+            "returnParameters": {
+              "id": 3882,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "807:0:15"
+            },
+            "scope": 3907,
+            "src": "690:118:15",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": "@dev Withdraw given bAsset from the cache",
+            "id": 3892,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "withdrawRaw",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 3890,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3885,
+                  "name": "_receiver",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3892,
+                  "src": "900:17:15",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 3884,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "900:7:15",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 3887,
+                  "name": "_bAsset",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3892,
+                  "src": "919:15:15",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 3886,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "919:7:15",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 3889,
+                  "name": "_amount",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3892,
+                  "src": "936:15:15",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 3888,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "936:7:15",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "899:53:15"
+            },
+            "returnParameters": {
+              "id": 3891,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "961:0:15"
+            },
+            "scope": 3907,
+            "src": "879:83:15",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": "@dev Returns the current balance of the given bAsset",
+            "id": 3899,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "checkBalance",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 3895,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3894,
+                  "name": "_bAsset",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3899,
+                  "src": "1066:15:15",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 3893,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1066:7:15",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1065:17:15"
+            },
+            "returnParameters": {
+              "id": 3898,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3897,
+                  "name": "balance",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3899,
+                  "src": "1101:15:15",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 3896,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1101:7:15",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1100:17:15"
+            },
+            "scope": 3907,
+            "src": "1044:74:15",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": "@dev Returns the pToken",
+            "id": 3906,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "bAssetToPToken",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 3902,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3901,
+                  "name": "_bAsset",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3906,
+                  "src": "1195:15:15",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 3900,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1195:7:15",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1194:17:15"
+            },
+            "returnParameters": {
+              "id": 3905,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3904,
+                  "name": "pToken",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3906,
+                  "src": "1230:14:15",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 3903,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1230:7:15",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1229:16:15"
+            },
+            "scope": 3907,
+            "src": "1171:75:15",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "external"
+          }
+        ],
+        "scope": 3908,
+        "src": "122:1126:15"
+      }
+    ],
+    "src": "0:1249:15"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.16+commit.9c3226ce.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.1.0",
+  "updatedAt": "2021-03-11T05:43:15.108Z",
+  "devdoc": {
+    "methods": {
+      "bAssetToPToken(address)": {
+        "details": "Returns the pToken"
+      },
+      "checkBalance(address)": {
+        "details": "Returns the current balance of the given bAsset"
+      },
+      "deposit(address,uint256,bool)": {
+        "details": "Deposit the given bAsset to Lending platform",
+        "params": {
+          "_amount": "Amount to deposit",
+          "_bAsset": "bAsset address"
+        }
+      },
+      "withdraw(address,address,uint256,bool)": {
+        "details": "Withdraw given bAsset from Lending platform"
+      },
+      "withdraw(address,address,uint256,uint256,bool)": {
+        "details": "Withdraw given bAsset from Lending platform"
+      },
+      "withdrawRaw(address,address,uint256)": {
+        "details": "Withdraw given bAsset from the cache"
+      }
+    },
+    "title": "Platform interface to integrate with lending platform like Compound, AAVE etc."
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}

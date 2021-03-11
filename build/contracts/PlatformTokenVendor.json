@@ -1,0 +1,1247 @@
+{
+  "contractName": "PlatformTokenVendor",
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "contract IERC20",
+          "name": "_platformToken",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "parentStakingContract",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "platformToken",
+      "outputs": [
+        {
+          "internalType": "contract IERC20",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [],
+      "name": "reApproveOwner",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.5.16+commit.9c3226ce\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"contract IERC20\",\"name\":\"_platformToken\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"constant\":true,\"inputs\":[],\"name\":\"parentStakingContract\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"platformToken\",\"outputs\":[{\"internalType\":\"contract IERC20\",\"name\":\"\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[],\"name\":\"reApproveOwner\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"author\":\"Stability Labs Pty. Ltd.\",\"details\":\"Only deploy this during the constructor of a given StakingReward contract\",\"methods\":{\"constructor\":{\"details\":\"Simple constructor that stores the parent address \"},\"reApproveOwner()\":{\"details\":\"Re-approves the StakingReward contract to spend the platform token. Just incase for some reason approval has been reset.\"}},\"title\":\"PlatformTokenVendor\"},\"userdoc\":{\"methods\":{},\"notice\":\"Stores platform tokens for distributing to StakingReward participants\"}},\"settings\":{\"compilationTarget\":{\"/Volumes/sdxc/ETHEREUM/CODE/mStable-v1-edit/contracts/rewards/staking/PlatformTokenVendor.sol\":\"PlatformTokenVendor\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Volumes/sdxc/ETHEREUM/CODE/mStable-v1-edit/contracts/mix/shared/MixHelpers.sol\":{\"keccak256\":\"0x099f87d7aaf63cda690c046a80d1ec49740da40cae2473ee7cb69cbc252447ec\",\"urls\":[\"bzz-raw://1df9d14f56d4445364749e66b807953fe3e2b31729a0200a0862813dfa89d04b\",\"dweb:/ipfs/QmNSRHeJGeCTQg5sPVjD7QZpqfpwY52BHx6mLMLKk99ThH\"]},\"/Volumes/sdxc/ETHEREUM/CODE/mStable-v1-edit/contracts/rewards/staking/PlatformTokenVendor.sol\":{\"keccak256\":\"0x939adeb8845b9f118cabfbbec2baf995a5c85c872aaf586c08f9b609cb0222a7\",\"urls\":[\"bzz-raw://9533bab2842c6be1585e541f53c54bbde2e3e3d94cbb561ecb3558ab934d2640\",\"dweb:/ipfs/QmbWp9ZjaDJ3Jy7DvJkbxPRBVJjqPmVky9UDSFaPBEGR5W\"]},\"/Volumes/sdxc/ETHEREUM/CODE/mStable-v1-edit/contracts/shared/StableMath.sol\":{\"keccak256\":\"0x08d17d7581628d72ac3233f042e1b6d4e6cbc050a991672f9b69a85380a6158f\",\"urls\":[\"bzz-raw://a0305949a756551cd30719caf13465bdfa17dbcfdba67955c16152e3a5e89a93\",\"dweb:/ipfs/QmZmX1FuaArqk3MCfUBFoDTJTVZfFnhteAnMPpA3AMbTom\"]},\"@openzeppelin/contracts/math/SafeMath.sol\":{\"keccak256\":\"0x640b6dee7a4b830bdfd52b5031a07fc2b12209f5b2e29e5d364a7d37f69d8076\",\"urls\":[\"bzz-raw://31113152e1ddb78fe7a4197f247591ca894e93f916867beb708d8e747b6cc74f\",\"dweb:/ipfs/QmbZaJyXdpsYGykVhHH9qpVGQg9DGCxE2QufbCUy3daTgq\"]},\"@openzeppelin/contracts/token/ERC20/IERC20.sol\":{\"keccak256\":\"0xe5bb0f57cff3e299f360052ba50f1ea0fff046df2be070b6943e0e3c3fdad8a9\",\"urls\":[\"bzz-raw://59fd025151435da35faa8093a5c7a17de02de9d08ad27275c5cdf05050820d91\",\"dweb:/ipfs/QmQMvwEcPhoRXzbXyrdoeRtvLoifUW9Qh7Luho7bmUPRkc\"]},\"@openzeppelin/contracts/token/ERC20/SafeERC20.sol\":{\"keccak256\":\"0x6f2c9955d65c522b80f4b8792f076512d2df947d2112cbc4d98a4781ed42ede2\",\"urls\":[\"bzz-raw://7d8ec81683520c06baeef3f7e06cd82bd6fd5fa611f26857f475f6c829540aff\",\"dweb:/ipfs/QmTDkFzKnrpiV1UKnSoiZAHPuguWzokrr4pFbSPvyaSo56\"]},\"@openzeppelin/contracts/utils/Address.sol\":{\"keccak256\":\"0x1a8e5072509c5ea7365eb1d48030b9be865140c8fb779968da0a459a0e174a11\",\"urls\":[\"bzz-raw://03335b7b07c7c8c8d613cfdd8ec39a0b5ec133ee510bf2fe6cc5a496767bef4b\",\"dweb:/ipfs/Qmebp4nzPja645c9yXSdJkGq96oU3am3LUnG2K3R7XxyKf\"]}},\"version\":1}",
+  "bytecode": "0x608060405234801561001057600080fd5b506040516108f53803806108f58339818101604052602081101561003357600080fd5b5051600180546001600160a01b0319908116331791829055600080546001600160a01b038086169190931617905561007b918391166100b8610081602090811b91909117901c565b506103ec565b6100a4816000846001600160a01b03166100cc60201b6100f3179092919060201c565b6100c881600019846001600160a01b03166100cc60201b6100f3179092919060201c565b5050565b801580610152575060408051636eb1769f60e11b81523060048201526001600160a01b03848116602483015291519185169163dd62ed3e91604480820192602092909190829003018186803b15801561012457600080fd5b505afa158015610138573d6000803e3d6000fd5b505050506040513d602081101561014e57600080fd5b5051155b61018d5760405162461bcd60e51b81526004018080602001828103825260368152602001806108bf6036913960400191505060405180910390fd5b604080516001600160a01b038416602482015260448082018490528251808303909101815260649091019091526020810180516001600160e01b0390811663095ea7b360e01b179091526101e39185916101e816565b505050565b610204826001600160a01b03166103b060201b6103c91760201c565b610255576040805162461bcd60e51b815260206004820152601f60248201527f5361666545524332303a2063616c6c20746f206e6f6e2d636f6e747261637400604482015290519081900360640190fd5b60006060836001600160a01b0316836040518082805190602001908083835b602083106102935780518252601f199092019160209182019101610274565b6001836020036101000a0380198251168184511680821785525050505050509050019150506000604051808303816000865af19150503d80600081146102f5576040519150601f19603f3d011682016040523d82523d6000602084013e6102fa565b606091505b509150915081610351576040805162461bcd60e51b815260206004820181905260248201527f5361666545524332303a206c6f772d6c6576656c2063616c6c206661696c6564604482015290519081900360640190fd5b8051156103aa5780806020019051602081101561036d57600080fd5b50516103aa5760405162461bcd60e51b815260040180806020018281038252602a815260200180610895602a913960400191505060405180910390fd5b50505050565b6000813f7fc5d2460186f7233c927e7db2dcc703c0e500b653ca82273b7bfad8045d85a4708181148015906103e457508115155b949350505050565b61049a806103fb6000396000f3fe608060405234801561001057600080fd5b50600436106100415760003560e01c8063488a49e314610046578063d1b812cd1461006a578063d8245bb914610072575b600080fd5b61004e61007c565b604080516001600160a01b039092168252519081900360200190f35b61004e61008b565b61007a61009a565b005b6001546001600160a01b031681565b6000546001600160a01b031681565b6000546001546100b6916001600160a01b0390811691166100b8565b565b6100d36001600160a01b03831682600063ffffffff6100f316565b6100ef6001600160a01b0383168260001963ffffffff6100f316565b5050565b801580610179575060408051636eb1769f60e11b81523060048201526001600160a01b03848116602483015291519185169163dd62ed3e91604480820192602092909190829003018186803b15801561014b57600080fd5b505afa15801561015f573d6000803e3d6000fd5b505050506040513d602081101561017557600080fd5b5051155b6101b45760405162461bcd60e51b81526004018080602001828103825260368152602001806104306036913960400191505060405180910390fd5b604080516001600160a01b038416602482015260448082018490528251808303909101815260649091019091526020810180516001600160e01b031663095ea7b360e01b17905261020690849061020b565b505050565b61021d826001600160a01b03166103c9565b61026e576040805162461bcd60e51b815260206004820152601f60248201527f5361666545524332303a2063616c6c20746f206e6f6e2d636f6e747261637400604482015290519081900360640190fd5b60006060836001600160a01b0316836040518082805190602001908083835b602083106102ac5780518252601f19909201916020918201910161028d565b6001836020036101000a0380198251168184511680821785525050505050509050019150506000604051808303816000865af19150503d806000811461030e576040519150601f19603f3d011682016040523d82523d6000602084013e610313565b606091505b50915091508161036a576040805162461bcd60e51b815260206004820181905260248201527f5361666545524332303a206c6f772d6c6576656c2063616c6c206661696c6564604482015290519081900360640190fd5b8051156103c35780806020019051602081101561038657600080fd5b50516103c35760405162461bcd60e51b815260040180806020018281038252602a815260200180610406602a913960400191505060405180910390fd5b50505050565b6000813f7fc5d2460186f7233c927e7db2dcc703c0e500b653ca82273b7bfad8045d85a4708181148015906103fd57508115155b94935050505056fe5361666545524332303a204552433230206f7065726174696f6e20646964206e6f7420737563636565645361666545524332303a20617070726f76652066726f6d206e6f6e2d7a65726f20746f206e6f6e2d7a65726f20616c6c6f77616e6365a265627a7a723158203ea36ec3f40de908a3ce1ae1551aed8d9231767d653cbfc8dc48b46baf2f49de64736f6c634300051000325361666545524332303a204552433230206f7065726174696f6e20646964206e6f7420737563636565645361666545524332303a20617070726f76652066726f6d206e6f6e2d7a65726f20746f206e6f6e2d7a65726f20616c6c6f77616e6365",
+  "deployedBytecode": "0x608060405234801561001057600080fd5b50600436106100415760003560e01c8063488a49e314610046578063d1b812cd1461006a578063d8245bb914610072575b600080fd5b61004e61007c565b604080516001600160a01b039092168252519081900360200190f35b61004e61008b565b61007a61009a565b005b6001546001600160a01b031681565b6000546001600160a01b031681565b6000546001546100b6916001600160a01b0390811691166100b8565b565b6100d36001600160a01b03831682600063ffffffff6100f316565b6100ef6001600160a01b0383168260001963ffffffff6100f316565b5050565b801580610179575060408051636eb1769f60e11b81523060048201526001600160a01b03848116602483015291519185169163dd62ed3e91604480820192602092909190829003018186803b15801561014b57600080fd5b505afa15801561015f573d6000803e3d6000fd5b505050506040513d602081101561017557600080fd5b5051155b6101b45760405162461bcd60e51b81526004018080602001828103825260368152602001806104306036913960400191505060405180910390fd5b604080516001600160a01b038416602482015260448082018490528251808303909101815260649091019091526020810180516001600160e01b031663095ea7b360e01b17905261020690849061020b565b505050565b61021d826001600160a01b03166103c9565b61026e576040805162461bcd60e51b815260206004820152601f60248201527f5361666545524332303a2063616c6c20746f206e6f6e2d636f6e747261637400604482015290519081900360640190fd5b60006060836001600160a01b0316836040518082805190602001908083835b602083106102ac5780518252601f19909201916020918201910161028d565b6001836020036101000a0380198251168184511680821785525050505050509050019150506000604051808303816000865af19150503d806000811461030e576040519150601f19603f3d011682016040523d82523d6000602084013e610313565b606091505b50915091508161036a576040805162461bcd60e51b815260206004820181905260248201527f5361666545524332303a206c6f772d6c6576656c2063616c6c206661696c6564604482015290519081900360640190fd5b8051156103c35780806020019051602081101561038657600080fd5b50516103c35760405162461bcd60e51b815260040180806020018281038252602a815260200180610406602a913960400191505060405180910390fd5b50505050565b6000813f7fc5d2460186f7233c927e7db2dcc703c0e500b653ca82273b7bfad8045d85a4708181148015906103fd57508115155b94935050505056fe5361666545524332303a204552433230206f7065726174696f6e20646964206e6f7420737563636565645361666545524332303a20617070726f76652066726f6d206e6f6e2d7a65726f20746f206e6f6e2d7a65726f20616c6c6f77616e6365a265627a7a723158203ea36ec3f40de908a3ce1ae1551aed8d9231767d653cbfc8dc48b46baf2f49de64736f6c63430005100032",
+  "sourceMap": "405:692:40:-;;;583:221;8:9:-1;5:2;;;30:1;27;20:12;5:2;583:221:40;;;;;;;;;;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;-1:-1;583:221:40;635:21;:34;;659:10;-1:-1:-1;;;;;;635:34:40;;;;;;;;-1:-1:-1;679:30:40;;;;;-1:-1:-1;;;;;679:30:40;;;;;;;;;;719:78;;583:221;;775:21;719:30;583:221;719:30;;;;;:78;;:::i;:::-;583:221;405:692;;1158:199:34;1252:39;-1:-1:-1;;;;;1252:26:34;;1279:8;1289:1;1252:26;;;;;;;:39;;:::i;:::-;1301:49;-1:-1:-1;;;;;1301:26:34;;1328:8;-1:-1:-1;;1301:26:34;;;;;;;:49;;:::i;:::-;1158:199;;:::o;1050:612:123:-;1415:10;;;1414:62;;-1:-1:-1;1431:39:123;;;-1:-1:-1;;;1431:39:123;;1455:4;1431:39;;;;-1:-1:-1;;;;;1431:39:123;;;;;;;;;:15;;;;;;:39;;;;;;;;;;;;;;;:15;:39;;;5:2:-1;;;;30:1;27;20:12;5:2;1431:39:123;;;;8:9:-1;5:2;;;45:16;42:1;39;24:38;77:16;74:1;67:27;5:2;1431:39:123;;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;-1:-1;1431:39:123;:44;1414:62;1406:150;;;;-1:-1:-1;;;1406:150:123;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1592:62;;;-1:-1:-1;;;;;1592:62:123;;;;;;;;;;;;;;;26:21:-1;;;22:32;;;6:49;;1592:62:123;;;;;;;;25:18:-1;;61:17;;-1:-1;;;;;;;;182:15;;;179:29;160:49;;;1566:89:123;;1585:5;;1566:18;:89;:::i;:::-;1050:612;;;:::o;2666:1095::-;3261:27;3269:5;-1:-1:-1;;;;;3261:25:123;;;;;;:27;;:::i;:::-;3253:71;;;;;-1:-1:-1;;;3253:71:123;;;;;;;;;;;;;;;;;;;;;;;;;;;;3395:12;3409:23;3444:5;-1:-1:-1;;;;;3436:19:123;3456:4;3436:25;;;;;;;;;;;;;36:153:-1;66:2;61:3;58:11;36:153;;176:10;;164:23;;-1:-1;;139:12;;;;98:2;89:12;;;;114;36:153;;;274:1;267:3;263:2;259:12;254:3;250:22;246:30;315:4;311:9;305:3;299:10;295:26;356:4;350:3;344:10;340:21;389:7;380;377:20;372:3;365:33;3:399;;;3436:25:123;;;;;;;;;;;;;;;;;;;;;;;;14:1:-1;21;16:31;;;;75:4;69:11;64:16;;144:4;140:9;133:4;115:16;111:27;107:43;104:1;100:51;94:4;87:65;169:16;166:1;159:27;225:16;222:1;215:4;212:1;208:12;193:49;7:242;;16:31;36:4;31:9;;7:242;;3394:67:123;;;;3479:7;3471:52;;;;;-1:-1:-1;;;3471:52:123;;;;;;;;;;;;;;;;;;;;;;;;;;;;;3538:17;;:21;3534:221;;3678:10;3667:30;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;-1:-1;3667:30:123;3659:85;;;;-1:-1:-1;;;3659:85:123;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;2666:1095;;;;:::o;686:610:124:-;746:4;1207:20;;1052:66;1246:23;;;;;;:42;;-1:-1:-1;1273:15:124;;;1246:42;1238:51;686:610;-1:-1:-1;;;;686:610:124:o;405:692:40:-;;;;;;;",
+  "deployedSourceMap": "405:692:40:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;405:692:40;;;;;;;;;;;;;;;;;;;;;;;;;;;;;474:36;;;:::i;:::-;;;;-1:-1:-1;;;;;474:36:40;;;;;;;;;;;;;;441:27;;;:::i;966:129::-;;;:::i;:::-;;474:36;;;-1:-1:-1;;;;;474:36:40;;:::o;441:27::-;;;-1:-1:-1;;;;;441:27:40;;:::o;966:129::-;1050:13;;;1066:21;1011:77;;-1:-1:-1;;;;;1050:13:40;;;;1066:21;1011:30;:77::i;:::-;966:129::o;1158:199:34:-;1252:39;-1:-1:-1;;;;;1252:26:34;;1279:8;1289:1;1252:26;:39::i;:::-;1301:49;-1:-1:-1;;;;;1301:26:34;;1328:8;-1:-1:-1;;1301:26:34;:49::i;:::-;1158:199;;:::o;1050:612:123:-;1415:10;;;1414:62;;-1:-1:-1;1431:39:123;;;-1:-1:-1;;;1431:39:123;;1455:4;1431:39;;;;-1:-1:-1;;;;;1431:39:123;;;;;;;;;:15;;;;;;:39;;;;;;;;;;;;;;;:15;:39;;;5:2:-1;;;;30:1;27;20:12;5:2;1431:39:123;;;;8:9:-1;5:2;;;45:16;42:1;39;24:38;77:16;74:1;67:27;5:2;1431:39:123;;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;-1:-1;1431:39:123;:44;1414:62;1406:150;;;;-1:-1:-1;;;1406:150:123;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1592:62;;;-1:-1:-1;;;;;1592:62:123;;;;;;;;;;;;;;;26:21:-1;;;22:32;;;6:49;;1592:62:123;;;;;;;;25:18:-1;;61:17;;-1:-1;;;;;182:15;-1:-1;;;179:29;160:49;;1566:89:123;;1585:5;;1566:18;:89::i;:::-;1050:612;;;:::o;2666:1095::-;3261:27;-1:-1:-1;;;;;3261:25:123;;;:27::i;:::-;3253:71;;;;;-1:-1:-1;;;3253:71:123;;;;;;;;;;;;;;;;;;;;;;;;;;;;3395:12;3409:23;3444:5;-1:-1:-1;;;;;3436:19:123;3456:4;3436:25;;;;;;;;;;;;;36:153:-1;66:2;61:3;58:11;36:153;;176:10;;164:23;;-1:-1;;139:12;;;;98:2;89:12;;;;114;36:153;;;274:1;267:3;263:2;259:12;254:3;250:22;246:30;315:4;311:9;305:3;299:10;295:26;356:4;350:3;344:10;340:21;389:7;380;377:20;372:3;365:33;3:399;;;3436:25:123;;;;;;;;;;;;;;;;;;;;;;;;14:1:-1;21;16:31;;;;75:4;69:11;64:16;;144:4;140:9;133:4;115:16;111:27;107:43;104:1;100:51;94:4;87:65;169:16;166:1;159:27;225:16;222:1;215:4;212:1;208:12;193:49;7:242;;16:31;36:4;31:9;;7:242;;3394:67:123;;;;3479:7;3471:52;;;;;-1:-1:-1;;;3471:52:123;;;;;;;;;;;;;;;;;;;;;;;;;;;;;3538:17;;:21;3534:221;;3678:10;3667:30;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;-1:-1;3667:30:123;3659:85;;;;-1:-1:-1;;;3659:85:123;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;2666:1095;;;;:::o;686:610:124:-;746:4;1207:20;;1052:66;1246:23;;;;;;:42;;-1:-1:-1;1273:15:124;;;1246:42;1238:51;686:610;-1:-1:-1;;;;686:610:124:o",
+  "source": "pragma solidity 0.5.16;\n\nimport { IERC20 } from \"@openzeppelin/contracts/token/ERC20/SafeERC20.sol\";\nimport { MixHelpers } from \"../../mix/shared/MixHelpers.sol\";\n\n/**\n * @title  PlatformTokenVendor\n * @author Stability Labs Pty. Ltd.\n * @notice Stores platform tokens for distributing to StakingReward participants\n * @dev    Only deploy this during the constructor of a given StakingReward contract\n */\ncontract PlatformTokenVendor {\n\n    IERC20 public platformToken;\n    address public parentStakingContract;\n\n    /** @dev Simple constructor that stores the parent address */\n    constructor(IERC20 _platformToken) public {\n        parentStakingContract = msg.sender;\n        platformToken = _platformToken;\n        MixHelpers.safeInfiniteApprove(address(_platformToken), parentStakingContract);\n    }\n\n    /**\n     * @dev Re-approves the StakingReward contract to spend the platform token.\n     * Just incase for some reason approval has been reset.\n     */\n    function reApproveOwner() external {\n        MixHelpers.safeInfiniteApprove(address(platformToken), parentStakingContract);\n    }\n}\n",
+  "sourcePath": "/Volumes/sdxc/ETHEREUM/CODE/mStable-v1-edit/contracts/rewards/staking/PlatformTokenVendor.sol",
+  "ast": {
+    "absolutePath": "/Volumes/sdxc/ETHEREUM/CODE/mStable-v1-edit/contracts/rewards/staking/PlatformTokenVendor.sol",
+    "exportedSymbols": {
+      "PlatformTokenVendor": [
+        14626
+      ]
+    },
+    "id": 14627,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 14580,
+        "literals": [
+          "solidity",
+          "0.5",
+          ".16"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:40"
+      },
+      {
+        "absolutePath": "@openzeppelin/contracts/token/ERC20/SafeERC20.sol",
+        "file": "@openzeppelin/contracts/token/ERC20/SafeERC20.sol",
+        "id": 14582,
+        "nodeType": "ImportDirective",
+        "scope": 14627,
+        "sourceUnit": 35465,
+        "src": "25:75:40",
+        "symbolAliases": [
+          {
+            "foreign": 14581,
+            "local": null
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "/Volumes/sdxc/ETHEREUM/CODE/mStable-v1-edit/contracts/mix/shared/MixHelpers.sol",
+        "file": "../../mix/shared/MixHelpers.sol",
+        "id": 14584,
+        "nodeType": "ImportDirective",
+        "scope": 14627,
+        "sourceUnit": 13561,
+        "src": "101:61:40",
+        "symbolAliases": [
+          {
+            "foreign": 14583,
+            "local": null
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": "@title  PlatformTokenVendor\n@author Stability Labs Pty. Ltd.\n@notice Stores platform tokens for distributing to StakingReward participants\n@dev    Only deploy this during the constructor of a given StakingReward contract",
+        "fullyImplemented": true,
+        "id": 14626,
+        "linearizedBaseContracts": [
+          14626
+        ],
+        "name": "PlatformTokenVendor",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "id": 14586,
+            "name": "platformToken",
+            "nodeType": "VariableDeclaration",
+            "scope": 14626,
+            "src": "441:27:40",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_contract$_IERC20_$35244",
+              "typeString": "contract IERC20"
+            },
+            "typeName": {
+              "contractScope": null,
+              "id": 14585,
+              "name": "IERC20",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 35244,
+              "src": "441:6:40",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_IERC20_$35244",
+                "typeString": "contract IERC20"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 14588,
+            "name": "parentStakingContract",
+            "nodeType": "VariableDeclaration",
+            "scope": 14626,
+            "src": "474:36:40",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_address",
+              "typeString": "address"
+            },
+            "typeName": {
+              "id": 14587,
+              "name": "address",
+              "nodeType": "ElementaryTypeName",
+              "src": "474:7:40",
+              "stateMutability": "nonpayable",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 14611,
+              "nodeType": "Block",
+              "src": "625:179:40",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 14596,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 14593,
+                      "name": "parentStakingContract",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 14588,
+                      "src": "635:21:40",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 14594,
+                        "name": "msg",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 36232,
+                        "src": "659:3:40",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_magic_message",
+                          "typeString": "msg"
+                        }
+                      },
+                      "id": 14595,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "sender",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": null,
+                      "src": "659:10:40",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address_payable",
+                        "typeString": "address payable"
+                      }
+                    },
+                    "src": "635:34:40",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "id": 14597,
+                  "nodeType": "ExpressionStatement",
+                  "src": "635:34:40"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 14600,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 14598,
+                      "name": "platformToken",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 14586,
+                      "src": "679:13:40",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_IERC20_$35244",
+                        "typeString": "contract IERC20"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 14599,
+                      "name": "_platformToken",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 14590,
+                      "src": "695:14:40",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_IERC20_$35244",
+                        "typeString": "contract IERC20"
+                      }
+                    },
+                    "src": "679:30:40",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_IERC20_$35244",
+                      "typeString": "contract IERC20"
+                    }
+                  },
+                  "id": 14601,
+                  "nodeType": "ExpressionStatement",
+                  "src": "679:30:40"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "arguments": [
+                          {
+                            "argumentTypes": null,
+                            "id": 14606,
+                            "name": "_platformToken",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 14590,
+                            "src": "758:14:40",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_contract$_IERC20_$35244",
+                              "typeString": "contract IERC20"
+                            }
+                          }
+                        ],
+                        "expression": {
+                          "argumentTypes": [
+                            {
+                              "typeIdentifier": "t_contract$_IERC20_$35244",
+                              "typeString": "contract IERC20"
+                            }
+                          ],
+                          "id": 14605,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": true,
+                          "lValueRequested": false,
+                          "nodeType": "ElementaryTypeNameExpression",
+                          "src": "750:7:40",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_type$_t_address_$",
+                            "typeString": "type(address)"
+                          },
+                          "typeName": "address"
+                        },
+                        "id": 14607,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "kind": "typeConversion",
+                        "lValueRequested": false,
+                        "names": [],
+                        "nodeType": "FunctionCall",
+                        "src": "750:23:40",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "id": 14608,
+                        "name": "parentStakingContract",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 14588,
+                        "src": "775:21:40",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        },
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 14602,
+                        "name": "MixHelpers",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 13560,
+                        "src": "719:10:40",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_type$_t_contract$_MixHelpers_$13560_$",
+                          "typeString": "type(library MixHelpers)"
+                        }
+                      },
+                      "id": 14604,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "safeInfiniteApprove",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 13559,
+                      "src": "719:30:40",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_nonpayable$_t_address_$_t_address_$returns$__$",
+                        "typeString": "function (address,address)"
+                      }
+                    },
+                    "id": 14609,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "719:78:40",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 14610,
+                  "nodeType": "ExpressionStatement",
+                  "src": "719:78:40"
+                }
+              ]
+            },
+            "documentation": "@dev Simple constructor that stores the parent address ",
+            "id": 14612,
+            "implemented": true,
+            "kind": "constructor",
+            "modifiers": [],
+            "name": "",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 14591,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 14590,
+                  "name": "_platformToken",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 14612,
+                  "src": "595:21:40",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_IERC20_$35244",
+                    "typeString": "contract IERC20"
+                  },
+                  "typeName": {
+                    "contractScope": null,
+                    "id": 14589,
+                    "name": "IERC20",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 35244,
+                    "src": "595:6:40",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_IERC20_$35244",
+                      "typeString": "contract IERC20"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "594:23:40"
+            },
+            "returnParameters": {
+              "id": 14592,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "625:0:40"
+            },
+            "scope": 14626,
+            "src": "583:221:40",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 14624,
+              "nodeType": "Block",
+              "src": "1001:94:40",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "arguments": [
+                          {
+                            "argumentTypes": null,
+                            "id": 14619,
+                            "name": "platformToken",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 14586,
+                            "src": "1050:13:40",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_contract$_IERC20_$35244",
+                              "typeString": "contract IERC20"
+                            }
+                          }
+                        ],
+                        "expression": {
+                          "argumentTypes": [
+                            {
+                              "typeIdentifier": "t_contract$_IERC20_$35244",
+                              "typeString": "contract IERC20"
+                            }
+                          ],
+                          "id": 14618,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": true,
+                          "lValueRequested": false,
+                          "nodeType": "ElementaryTypeNameExpression",
+                          "src": "1042:7:40",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_type$_t_address_$",
+                            "typeString": "type(address)"
+                          },
+                          "typeName": "address"
+                        },
+                        "id": 14620,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "kind": "typeConversion",
+                        "lValueRequested": false,
+                        "names": [],
+                        "nodeType": "FunctionCall",
+                        "src": "1042:22:40",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "id": 14621,
+                        "name": "parentStakingContract",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 14588,
+                        "src": "1066:21:40",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        },
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 14615,
+                        "name": "MixHelpers",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 13560,
+                        "src": "1011:10:40",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_type$_t_contract$_MixHelpers_$13560_$",
+                          "typeString": "type(library MixHelpers)"
+                        }
+                      },
+                      "id": 14617,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "safeInfiniteApprove",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 13559,
+                      "src": "1011:30:40",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_nonpayable$_t_address_$_t_address_$returns$__$",
+                        "typeString": "function (address,address)"
+                      }
+                    },
+                    "id": 14622,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1011:77:40",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 14623,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1011:77:40"
+                }
+              ]
+            },
+            "documentation": "@dev Re-approves the StakingReward contract to spend the platform token.\nJust incase for some reason approval has been reset.",
+            "id": 14625,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "reApproveOwner",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 14613,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "989:2:40"
+            },
+            "returnParameters": {
+              "id": 14614,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1001:0:40"
+            },
+            "scope": 14626,
+            "src": "966:129:40",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "external"
+          }
+        ],
+        "scope": 14627,
+        "src": "405:692:40"
+      }
+    ],
+    "src": "0:1098:40"
+  },
+  "legacyAST": {
+    "absolutePath": "/Volumes/sdxc/ETHEREUM/CODE/mStable-v1-edit/contracts/rewards/staking/PlatformTokenVendor.sol",
+    "exportedSymbols": {
+      "PlatformTokenVendor": [
+        14626
+      ]
+    },
+    "id": 14627,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 14580,
+        "literals": [
+          "solidity",
+          "0.5",
+          ".16"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:40"
+      },
+      {
+        "absolutePath": "@openzeppelin/contracts/token/ERC20/SafeERC20.sol",
+        "file": "@openzeppelin/contracts/token/ERC20/SafeERC20.sol",
+        "id": 14582,
+        "nodeType": "ImportDirective",
+        "scope": 14627,
+        "sourceUnit": 35465,
+        "src": "25:75:40",
+        "symbolAliases": [
+          {
+            "foreign": 14581,
+            "local": null
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "/Volumes/sdxc/ETHEREUM/CODE/mStable-v1-edit/contracts/mix/shared/MixHelpers.sol",
+        "file": "../../mix/shared/MixHelpers.sol",
+        "id": 14584,
+        "nodeType": "ImportDirective",
+        "scope": 14627,
+        "sourceUnit": 13561,
+        "src": "101:61:40",
+        "symbolAliases": [
+          {
+            "foreign": 14583,
+            "local": null
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": "@title  PlatformTokenVendor\n@author Stability Labs Pty. Ltd.\n@notice Stores platform tokens for distributing to StakingReward participants\n@dev    Only deploy this during the constructor of a given StakingReward contract",
+        "fullyImplemented": true,
+        "id": 14626,
+        "linearizedBaseContracts": [
+          14626
+        ],
+        "name": "PlatformTokenVendor",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "id": 14586,
+            "name": "platformToken",
+            "nodeType": "VariableDeclaration",
+            "scope": 14626,
+            "src": "441:27:40",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_contract$_IERC20_$35244",
+              "typeString": "contract IERC20"
+            },
+            "typeName": {
+              "contractScope": null,
+              "id": 14585,
+              "name": "IERC20",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 35244,
+              "src": "441:6:40",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_IERC20_$35244",
+                "typeString": "contract IERC20"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 14588,
+            "name": "parentStakingContract",
+            "nodeType": "VariableDeclaration",
+            "scope": 14626,
+            "src": "474:36:40",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_address",
+              "typeString": "address"
+            },
+            "typeName": {
+              "id": 14587,
+              "name": "address",
+              "nodeType": "ElementaryTypeName",
+              "src": "474:7:40",
+              "stateMutability": "nonpayable",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 14611,
+              "nodeType": "Block",
+              "src": "625:179:40",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 14596,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 14593,
+                      "name": "parentStakingContract",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 14588,
+                      "src": "635:21:40",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 14594,
+                        "name": "msg",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 36232,
+                        "src": "659:3:40",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_magic_message",
+                          "typeString": "msg"
+                        }
+                      },
+                      "id": 14595,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "sender",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": null,
+                      "src": "659:10:40",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address_payable",
+                        "typeString": "address payable"
+                      }
+                    },
+                    "src": "635:34:40",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "id": 14597,
+                  "nodeType": "ExpressionStatement",
+                  "src": "635:34:40"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 14600,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 14598,
+                      "name": "platformToken",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 14586,
+                      "src": "679:13:40",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_IERC20_$35244",
+                        "typeString": "contract IERC20"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 14599,
+                      "name": "_platformToken",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 14590,
+                      "src": "695:14:40",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_IERC20_$35244",
+                        "typeString": "contract IERC20"
+                      }
+                    },
+                    "src": "679:30:40",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_IERC20_$35244",
+                      "typeString": "contract IERC20"
+                    }
+                  },
+                  "id": 14601,
+                  "nodeType": "ExpressionStatement",
+                  "src": "679:30:40"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "arguments": [
+                          {
+                            "argumentTypes": null,
+                            "id": 14606,
+                            "name": "_platformToken",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 14590,
+                            "src": "758:14:40",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_contract$_IERC20_$35244",
+                              "typeString": "contract IERC20"
+                            }
+                          }
+                        ],
+                        "expression": {
+                          "argumentTypes": [
+                            {
+                              "typeIdentifier": "t_contract$_IERC20_$35244",
+                              "typeString": "contract IERC20"
+                            }
+                          ],
+                          "id": 14605,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": true,
+                          "lValueRequested": false,
+                          "nodeType": "ElementaryTypeNameExpression",
+                          "src": "750:7:40",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_type$_t_address_$",
+                            "typeString": "type(address)"
+                          },
+                          "typeName": "address"
+                        },
+                        "id": 14607,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "kind": "typeConversion",
+                        "lValueRequested": false,
+                        "names": [],
+                        "nodeType": "FunctionCall",
+                        "src": "750:23:40",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "id": 14608,
+                        "name": "parentStakingContract",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 14588,
+                        "src": "775:21:40",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        },
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 14602,
+                        "name": "MixHelpers",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 13560,
+                        "src": "719:10:40",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_type$_t_contract$_MixHelpers_$13560_$",
+                          "typeString": "type(library MixHelpers)"
+                        }
+                      },
+                      "id": 14604,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "safeInfiniteApprove",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 13559,
+                      "src": "719:30:40",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_nonpayable$_t_address_$_t_address_$returns$__$",
+                        "typeString": "function (address,address)"
+                      }
+                    },
+                    "id": 14609,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "719:78:40",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 14610,
+                  "nodeType": "ExpressionStatement",
+                  "src": "719:78:40"
+                }
+              ]
+            },
+            "documentation": "@dev Simple constructor that stores the parent address ",
+            "id": 14612,
+            "implemented": true,
+            "kind": "constructor",
+            "modifiers": [],
+            "name": "",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 14591,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 14590,
+                  "name": "_platformToken",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 14612,
+                  "src": "595:21:40",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_IERC20_$35244",
+                    "typeString": "contract IERC20"
+                  },
+                  "typeName": {
+                    "contractScope": null,
+                    "id": 14589,
+                    "name": "IERC20",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 35244,
+                    "src": "595:6:40",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_IERC20_$35244",
+                      "typeString": "contract IERC20"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "594:23:40"
+            },
+            "returnParameters": {
+              "id": 14592,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "625:0:40"
+            },
+            "scope": 14626,
+            "src": "583:221:40",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 14624,
+              "nodeType": "Block",
+              "src": "1001:94:40",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "arguments": [
+                          {
+                            "argumentTypes": null,
+                            "id": 14619,
+                            "name": "platformToken",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 14586,
+                            "src": "1050:13:40",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_contract$_IERC20_$35244",
+                              "typeString": "contract IERC20"
+                            }
+                          }
+                        ],
+                        "expression": {
+                          "argumentTypes": [
+                            {
+                              "typeIdentifier": "t_contract$_IERC20_$35244",
+                              "typeString": "contract IERC20"
+                            }
+                          ],
+                          "id": 14618,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": true,
+                          "lValueRequested": false,
+                          "nodeType": "ElementaryTypeNameExpression",
+                          "src": "1042:7:40",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_type$_t_address_$",
+                            "typeString": "type(address)"
+                          },
+                          "typeName": "address"
+                        },
+                        "id": 14620,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "kind": "typeConversion",
+                        "lValueRequested": false,
+                        "names": [],
+                        "nodeType": "FunctionCall",
+                        "src": "1042:22:40",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "id": 14621,
+                        "name": "parentStakingContract",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 14588,
+                        "src": "1066:21:40",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        },
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 14615,
+                        "name": "MixHelpers",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 13560,
+                        "src": "1011:10:40",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_type$_t_contract$_MixHelpers_$13560_$",
+                          "typeString": "type(library MixHelpers)"
+                        }
+                      },
+                      "id": 14617,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "safeInfiniteApprove",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 13559,
+                      "src": "1011:30:40",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_nonpayable$_t_address_$_t_address_$returns$__$",
+                        "typeString": "function (address,address)"
+                      }
+                    },
+                    "id": 14622,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1011:77:40",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 14623,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1011:77:40"
+                }
+              ]
+            },
+            "documentation": "@dev Re-approves the StakingReward contract to spend the platform token.\nJust incase for some reason approval has been reset.",
+            "id": 14625,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "reApproveOwner",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 14613,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "989:2:40"
+            },
+            "returnParameters": {
+              "id": 14614,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1001:0:40"
+            },
+            "scope": 14626,
+            "src": "966:129:40",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "external"
+          }
+        ],
+        "scope": 14627,
+        "src": "405:692:40"
+      }
+    ],
+    "src": "0:1098:40"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.16+commit.9c3226ce.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.1.0",
+  "updatedAt": "2021-03-11T05:43:15.929Z",
+  "devdoc": {
+    "author": "Stability Labs Pty. Ltd.",
+    "details": "Only deploy this during the constructor of a given StakingReward contract",
+    "methods": {
+      "constructor": {
+        "details": "Simple constructor that stores the parent address "
+      },
+      "reApproveOwner()": {
+        "details": "Re-approves the StakingReward contract to spend the platform token. Just incase for some reason approval has been reset."
+      }
+    },
+    "title": "PlatformTokenVendor"
+  },
+  "userdoc": {
+    "methods": {},
+    "notice": "Stores platform tokens for distributing to StakingReward participants"
+  }
+}

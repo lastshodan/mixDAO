@@ -1,0 +1,1357 @@
+{
+  "contractName": "INexus",
+  "abi": [
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "governor",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "internalType": "bytes32",
+          "name": "key",
+          "type": "bytes32"
+        }
+      ],
+      "name": "getModule",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "internalType": "bytes32",
+          "name": "_key",
+          "type": "bytes32"
+        },
+        {
+          "internalType": "address",
+          "name": "_addr",
+          "type": "address"
+        }
+      ],
+      "name": "proposeModule",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "internalType": "bytes32",
+          "name": "_key",
+          "type": "bytes32"
+        }
+      ],
+      "name": "cancelProposedModule",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "internalType": "bytes32",
+          "name": "_key",
+          "type": "bytes32"
+        }
+      ],
+      "name": "acceptProposedModule",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "internalType": "bytes32[]",
+          "name": "_keys",
+          "type": "bytes32[]"
+        }
+      ],
+      "name": "acceptProposedModules",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "internalType": "bytes32",
+          "name": "_key",
+          "type": "bytes32"
+        }
+      ],
+      "name": "requestLockModule",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "internalType": "bytes32",
+          "name": "_key",
+          "type": "bytes32"
+        }
+      ],
+      "name": "cancelLockModule",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "internalType": "bytes32",
+          "name": "_key",
+          "type": "bytes32"
+        }
+      ],
+      "name": "lockModule",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.5.16+commit.9c3226ce\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":false,\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"_key\",\"type\":\"bytes32\"}],\"name\":\"acceptProposedModule\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"bytes32[]\",\"name\":\"_keys\",\"type\":\"bytes32[]\"}],\"name\":\"acceptProposedModules\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"_key\",\"type\":\"bytes32\"}],\"name\":\"cancelLockModule\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"_key\",\"type\":\"bytes32\"}],\"name\":\"cancelProposedModule\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"key\",\"type\":\"bytes32\"}],\"name\":\"getModule\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"governor\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"_key\",\"type\":\"bytes32\"}],\"name\":\"lockModule\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"_key\",\"type\":\"bytes32\"},{\"internalType\":\"address\",\"name\":\"_addr\",\"type\":\"address\"}],\"name\":\"proposeModule\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"_key\",\"type\":\"bytes32\"}],\"name\":\"requestLockModule\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"details\":\"Basic interface for interacting with the Nexus i.e. SystemKernel\",\"methods\":{},\"title\":\"INexus\"},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/Volumes/sdxc/ETHEREUM/CODE/mStable-v1-edit/contracts/interfaces/INexus.sol\":\"INexus\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Volumes/sdxc/ETHEREUM/CODE/mStable-v1-edit/contracts/interfaces/INexus.sol\":{\"keccak256\":\"0x8ac00cbb7588f1aea0b7a8a0ac0b1d8b12ae097e3fc0ec03aa6a5e45c4a2d9fd\",\"urls\":[\"bzz-raw://490602c4d449667e7b37ace56c7132e0665779a889e60857e21a30f5dfb70c50\",\"dweb:/ipfs/QmV9RuY3FQ9WrpdkHVuHi46xBCq1WHp5suygQxJJY6nUcq\"]}},\"version\":1}",
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "sourceMap": "",
+  "deployedSourceMap": "",
+  "source": "pragma solidity 0.5.16;\n\n/**\n  * @title INexus\n  * @dev Basic interface for interacting with the Nexus i.e. SystemKernel\n  */\ninterface INexus {\n    function governor() external view returns (address);\n    function getModule(bytes32 key) external view returns (address);\n\n    function proposeModule(bytes32 _key, address _addr) external;\n    function cancelProposedModule(bytes32 _key) external;\n    function acceptProposedModule(bytes32 _key) external;\n    function acceptProposedModules(bytes32[] calldata _keys) external;\n\n    function requestLockModule(bytes32 _key) external;\n    function cancelLockModule(bytes32 _key) external;\n    function lockModule(bytes32 _key) external;\n}",
+  "sourcePath": "/Volumes/sdxc/ETHEREUM/CODE/mStable-v1-edit/contracts/interfaces/INexus.sol",
+  "ast": {
+    "absolutePath": "/Volumes/sdxc/ETHEREUM/CODE/mStable-v1-edit/contracts/interfaces/INexus.sol",
+    "exportedSymbols": {
+      "INexus": [
+        3846
+      ]
+    },
+    "id": 3847,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 3795,
+        "literals": [
+          "solidity",
+          "0.5",
+          ".16"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:14"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "documentation": "@title INexus\n@dev Basic interface for interacting with the Nexus i.e. SystemKernel",
+        "fullyImplemented": false,
+        "id": 3846,
+        "linearizedBaseContracts": [
+          3846
+        ],
+        "name": "INexus",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": null,
+            "documentation": null,
+            "id": 3800,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "governor",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 3796,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "166:2:14"
+            },
+            "returnParameters": {
+              "id": 3799,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3798,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3800,
+                  "src": "192:7:14",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 3797,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "192:7:14",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "191:9:14"
+            },
+            "scope": 3846,
+            "src": "149:52:14",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": null,
+            "id": 3807,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getModule",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 3803,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3802,
+                  "name": "key",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3807,
+                  "src": "225:11:14",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 3801,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "225:7:14",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "224:13:14"
+            },
+            "returnParameters": {
+              "id": 3806,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3805,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3807,
+                  "src": "261:7:14",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 3804,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "261:7:14",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "260:9:14"
+            },
+            "scope": 3846,
+            "src": "206:64:14",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": null,
+            "id": 3814,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "proposeModule",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 3812,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3809,
+                  "name": "_key",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3814,
+                  "src": "299:12:14",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 3808,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "299:7:14",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 3811,
+                  "name": "_addr",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3814,
+                  "src": "313:13:14",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 3810,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "313:7:14",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "298:29:14"
+            },
+            "returnParameters": {
+              "id": 3813,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "336:0:14"
+            },
+            "scope": 3846,
+            "src": "276:61:14",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": null,
+            "id": 3819,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "cancelProposedModule",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 3817,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3816,
+                  "name": "_key",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3819,
+                  "src": "372:12:14",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 3815,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "372:7:14",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "371:14:14"
+            },
+            "returnParameters": {
+              "id": 3818,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "394:0:14"
+            },
+            "scope": 3846,
+            "src": "342:53:14",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": null,
+            "id": 3824,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "acceptProposedModule",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 3822,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3821,
+                  "name": "_key",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3824,
+                  "src": "430:12:14",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 3820,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "430:7:14",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "429:14:14"
+            },
+            "returnParameters": {
+              "id": 3823,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "452:0:14"
+            },
+            "scope": 3846,
+            "src": "400:53:14",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": null,
+            "id": 3830,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "acceptProposedModules",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 3828,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3827,
+                  "name": "_keys",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3830,
+                  "src": "489:24:14",
+                  "stateVariable": false,
+                  "storageLocation": "calldata",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_bytes32_$dyn_calldata_ptr",
+                    "typeString": "bytes32[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 3825,
+                      "name": "bytes32",
+                      "nodeType": "ElementaryTypeName",
+                      "src": "489:7:14",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bytes32",
+                        "typeString": "bytes32"
+                      }
+                    },
+                    "id": 3826,
+                    "length": null,
+                    "nodeType": "ArrayTypeName",
+                    "src": "489:9:14",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_bytes32_$dyn_storage_ptr",
+                      "typeString": "bytes32[]"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "488:26:14"
+            },
+            "returnParameters": {
+              "id": 3829,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "523:0:14"
+            },
+            "scope": 3846,
+            "src": "458:66:14",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": null,
+            "id": 3835,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "requestLockModule",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 3833,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3832,
+                  "name": "_key",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3835,
+                  "src": "557:12:14",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 3831,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "557:7:14",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "556:14:14"
+            },
+            "returnParameters": {
+              "id": 3834,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "579:0:14"
+            },
+            "scope": 3846,
+            "src": "530:50:14",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": null,
+            "id": 3840,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "cancelLockModule",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 3838,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3837,
+                  "name": "_key",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3840,
+                  "src": "611:12:14",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 3836,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "611:7:14",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "610:14:14"
+            },
+            "returnParameters": {
+              "id": 3839,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "633:0:14"
+            },
+            "scope": 3846,
+            "src": "585:49:14",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": null,
+            "id": 3845,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "lockModule",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 3843,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3842,
+                  "name": "_key",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3845,
+                  "src": "659:12:14",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 3841,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "659:7:14",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "658:14:14"
+            },
+            "returnParameters": {
+              "id": 3844,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "681:0:14"
+            },
+            "scope": 3846,
+            "src": "639:43:14",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "external"
+          }
+        ],
+        "scope": 3847,
+        "src": "126:558:14"
+      }
+    ],
+    "src": "0:684:14"
+  },
+  "legacyAST": {
+    "absolutePath": "/Volumes/sdxc/ETHEREUM/CODE/mStable-v1-edit/contracts/interfaces/INexus.sol",
+    "exportedSymbols": {
+      "INexus": [
+        3846
+      ]
+    },
+    "id": 3847,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 3795,
+        "literals": [
+          "solidity",
+          "0.5",
+          ".16"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:14"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "documentation": "@title INexus\n@dev Basic interface for interacting with the Nexus i.e. SystemKernel",
+        "fullyImplemented": false,
+        "id": 3846,
+        "linearizedBaseContracts": [
+          3846
+        ],
+        "name": "INexus",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": null,
+            "documentation": null,
+            "id": 3800,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "governor",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 3796,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "166:2:14"
+            },
+            "returnParameters": {
+              "id": 3799,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3798,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3800,
+                  "src": "192:7:14",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 3797,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "192:7:14",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "191:9:14"
+            },
+            "scope": 3846,
+            "src": "149:52:14",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": null,
+            "id": 3807,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getModule",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 3803,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3802,
+                  "name": "key",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3807,
+                  "src": "225:11:14",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 3801,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "225:7:14",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "224:13:14"
+            },
+            "returnParameters": {
+              "id": 3806,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3805,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3807,
+                  "src": "261:7:14",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 3804,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "261:7:14",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "260:9:14"
+            },
+            "scope": 3846,
+            "src": "206:64:14",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": null,
+            "id": 3814,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "proposeModule",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 3812,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3809,
+                  "name": "_key",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3814,
+                  "src": "299:12:14",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 3808,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "299:7:14",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 3811,
+                  "name": "_addr",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3814,
+                  "src": "313:13:14",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 3810,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "313:7:14",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "298:29:14"
+            },
+            "returnParameters": {
+              "id": 3813,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "336:0:14"
+            },
+            "scope": 3846,
+            "src": "276:61:14",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": null,
+            "id": 3819,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "cancelProposedModule",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 3817,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3816,
+                  "name": "_key",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3819,
+                  "src": "372:12:14",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 3815,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "372:7:14",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "371:14:14"
+            },
+            "returnParameters": {
+              "id": 3818,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "394:0:14"
+            },
+            "scope": 3846,
+            "src": "342:53:14",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": null,
+            "id": 3824,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "acceptProposedModule",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 3822,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3821,
+                  "name": "_key",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3824,
+                  "src": "430:12:14",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 3820,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "430:7:14",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "429:14:14"
+            },
+            "returnParameters": {
+              "id": 3823,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "452:0:14"
+            },
+            "scope": 3846,
+            "src": "400:53:14",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": null,
+            "id": 3830,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "acceptProposedModules",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 3828,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3827,
+                  "name": "_keys",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3830,
+                  "src": "489:24:14",
+                  "stateVariable": false,
+                  "storageLocation": "calldata",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_bytes32_$dyn_calldata_ptr",
+                    "typeString": "bytes32[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 3825,
+                      "name": "bytes32",
+                      "nodeType": "ElementaryTypeName",
+                      "src": "489:7:14",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bytes32",
+                        "typeString": "bytes32"
+                      }
+                    },
+                    "id": 3826,
+                    "length": null,
+                    "nodeType": "ArrayTypeName",
+                    "src": "489:9:14",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_bytes32_$dyn_storage_ptr",
+                      "typeString": "bytes32[]"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "488:26:14"
+            },
+            "returnParameters": {
+              "id": 3829,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "523:0:14"
+            },
+            "scope": 3846,
+            "src": "458:66:14",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": null,
+            "id": 3835,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "requestLockModule",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 3833,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3832,
+                  "name": "_key",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3835,
+                  "src": "557:12:14",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 3831,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "557:7:14",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "556:14:14"
+            },
+            "returnParameters": {
+              "id": 3834,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "579:0:14"
+            },
+            "scope": 3846,
+            "src": "530:50:14",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": null,
+            "id": 3840,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "cancelLockModule",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 3838,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3837,
+                  "name": "_key",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3840,
+                  "src": "611:12:14",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 3836,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "611:7:14",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "610:14:14"
+            },
+            "returnParameters": {
+              "id": 3839,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "633:0:14"
+            },
+            "scope": 3846,
+            "src": "585:49:14",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": null,
+            "id": 3845,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "lockModule",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 3843,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3842,
+                  "name": "_key",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3845,
+                  "src": "659:12:14",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 3841,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "659:7:14",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "658:14:14"
+            },
+            "returnParameters": {
+              "id": 3844,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "681:0:14"
+            },
+            "scope": 3846,
+            "src": "639:43:14",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "external"
+          }
+        ],
+        "scope": 3847,
+        "src": "126:558:14"
+      }
+    ],
+    "src": "0:684:14"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.16+commit.9c3226ce.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.1.0",
+  "updatedAt": "2021-03-11T05:43:15.104Z",
+  "devdoc": {
+    "details": "Basic interface for interacting with the Nexus i.e. SystemKernel",
+    "methods": {},
+    "title": "INexus"
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}

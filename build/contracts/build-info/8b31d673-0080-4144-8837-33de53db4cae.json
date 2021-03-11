@@ -1,0 +1,202 @@
+{
+  "id": "8b31d673-0080-4144-8837-33de53db4cae",
+  "_format": "hh-sol-build-info-1",
+  "solcVersion": "0.5.16",
+  "solcLongVersion": "0.5.16+commit.9c3226ce",
+  "input": {
+    "language": "Solidity",
+    "sources": {
+      "contracts/z_mocks/savings/MockSavingsManager.sol": {
+        "content": "pragma solidity 0.5.16;\n\ncontract MockSavingsManager {\n    function collectAndDistributeInterest(address /* _mIx*/) public {\n        return;\n    }\n}"
+      }
+    },
+    "settings": {
+      "optimizer": {
+        "enabled": true,
+        "runs": 200
+      },
+      "outputSelection": {
+        "*": {
+          "*": [
+            "abi",
+            "evm.bytecode",
+            "evm.deployedBytecode",
+            "evm.methodIdentifiers"
+          ],
+          "": [
+            "ast"
+          ]
+        }
+      }
+    }
+  },
+  "output": {
+    "contracts": {
+      "contracts/z_mocks/savings/MockSavingsManager.sol": {
+        "MockSavingsManager": {
+          "abi": [
+            {
+              "constant": false,
+              "inputs": [
+                {
+                  "internalType": "address",
+                  "name": "",
+                  "type": "address"
+                }
+              ],
+              "name": "collectAndDistributeInterest",
+              "outputs": [],
+              "payable": false,
+              "stateMutability": "nonpayable",
+              "type": "function"
+            }
+          ],
+          "evm": {
+            "bytecode": {
+              "linkReferences": {},
+              "object": "6080604052348015600f57600080fd5b50608a8061001e6000396000f3fe6080604052348015600f57600080fd5b506004361060285760003560e01c8063ca2bdfe614602d575b600080fd5b605060048036036020811015604157600080fd5b50356001600160a01b03166052565b005b5056fea265627a7a72315820d48b27e5a74701d8d39c9664679fba27a3d94953b6fa513ffc5040d45f99bc9764736f6c63430005100032",
+              "opcodes": "PUSH1 0x80 PUSH1 0x40 MSTORE CALLVALUE DUP1 ISZERO PUSH1 0xF JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST POP PUSH1 0x8A DUP1 PUSH2 0x1E PUSH1 0x0 CODECOPY PUSH1 0x0 RETURN INVALID PUSH1 0x80 PUSH1 0x40 MSTORE CALLVALUE DUP1 ISZERO PUSH1 0xF JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST POP PUSH1 0x4 CALLDATASIZE LT PUSH1 0x28 JUMPI PUSH1 0x0 CALLDATALOAD PUSH1 0xE0 SHR DUP1 PUSH4 0xCA2BDFE6 EQ PUSH1 0x2D JUMPI JUMPDEST PUSH1 0x0 DUP1 REVERT JUMPDEST PUSH1 0x50 PUSH1 0x4 DUP1 CALLDATASIZE SUB PUSH1 0x20 DUP2 LT ISZERO PUSH1 0x41 JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST POP CALLDATALOAD PUSH1 0x1 PUSH1 0x1 PUSH1 0xA0 SHL SUB AND PUSH1 0x52 JUMP JUMPDEST STOP JUMPDEST POP JUMP INVALID LOG2 PUSH6 0x627A7A723158 KECCAK256 0xD4 DUP12 0x27 0xE5 0xA7 SELFBALANCE ADD 0xD8 0xD3 SWAP13 SWAP7 PUSH5 0x679FBA27A3 0xD9 0x49 MSTORE8 0xB6 STATICCALL MLOAD EXTCODEHASH 0xFC POP BLOCKHASH 0xD4 0x5F SWAP10 0xBC SWAP8 PUSH5 0x736F6C6343 STOP SDIV LT STOP ORIGIN ",
+              "sourceMap": "25:123:0:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;25:123:0;;;;;;;"
+            },
+            "deployedBytecode": {
+              "linkReferences": {},
+              "object": "6080604052348015600f57600080fd5b506004361060285760003560e01c8063ca2bdfe614602d575b600080fd5b605060048036036020811015604157600080fd5b50356001600160a01b03166052565b005b5056fea265627a7a72315820d48b27e5a74701d8d39c9664679fba27a3d94953b6fa513ffc5040d45f99bc9764736f6c63430005100032",
+              "opcodes": "PUSH1 0x80 PUSH1 0x40 MSTORE CALLVALUE DUP1 ISZERO PUSH1 0xF JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST POP PUSH1 0x4 CALLDATASIZE LT PUSH1 0x28 JUMPI PUSH1 0x0 CALLDATALOAD PUSH1 0xE0 SHR DUP1 PUSH4 0xCA2BDFE6 EQ PUSH1 0x2D JUMPI JUMPDEST PUSH1 0x0 DUP1 REVERT JUMPDEST PUSH1 0x50 PUSH1 0x4 DUP1 CALLDATASIZE SUB PUSH1 0x20 DUP2 LT ISZERO PUSH1 0x41 JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST POP CALLDATALOAD PUSH1 0x1 PUSH1 0x1 PUSH1 0xA0 SHL SUB AND PUSH1 0x52 JUMP JUMPDEST STOP JUMPDEST POP JUMP INVALID LOG2 PUSH6 0x627A7A723158 KECCAK256 0xD4 DUP12 0x27 0xE5 0xA7 SELFBALANCE ADD 0xD8 0xD3 SWAP13 SWAP7 PUSH5 0x679FBA27A3 0xD9 0x49 MSTORE8 0xB6 STATICCALL MLOAD EXTCODEHASH 0xFC POP BLOCKHASH 0xD4 0x5F SWAP10 0xBC SWAP8 PUSH5 0x736F6C6343 STOP SDIV LT STOP ORIGIN ",
+              "sourceMap": "25:123:0:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;25:123:0;;;;;;;;;;;;;;;;;;;59:87;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;-1:-1;59:87:0;-1:-1:-1;;;;;59:87:0;;:::i;:::-;;;;:::o"
+            },
+            "methodIdentifiers": {
+              "collectAndDistributeInterest(address)": "ca2bdfe6"
+            }
+          }
+        }
+      }
+    },
+    "errors": [
+      {
+        "component": "general",
+        "formattedMessage": "contracts/z_mocks/savings/MockSavingsManager.sol:4:5: Warning: Function state mutability can be restricted to pure\n    function collectAndDistributeInterest(address /* _mIx*/) public {\n    ^ (Relevant source part starts here and spans across multiple lines).\n",
+        "message": "Function state mutability can be restricted to pure",
+        "severity": "warning",
+        "sourceLocation": {
+          "end": 146,
+          "file": "contracts/z_mocks/savings/MockSavingsManager.sol",
+          "start": 59
+        },
+        "type": "Warning"
+      }
+    ],
+    "sources": {
+      "contracts/z_mocks/savings/MockSavingsManager.sol": {
+        "ast": {
+          "absolutePath": "contracts/z_mocks/savings/MockSavingsManager.sol",
+          "exportedSymbols": {
+            "MockSavingsManager": [
+              9
+            ]
+          },
+          "id": 10,
+          "nodeType": "SourceUnit",
+          "nodes": [
+            {
+              "id": 1,
+              "literals": [
+                "solidity",
+                "0.5",
+                ".16"
+              ],
+              "nodeType": "PragmaDirective",
+              "src": "0:23:0"
+            },
+            {
+              "baseContracts": [],
+              "contractDependencies": [],
+              "contractKind": "contract",
+              "documentation": null,
+              "fullyImplemented": true,
+              "id": 9,
+              "linearizedBaseContracts": [
+                9
+              ],
+              "name": "MockSavingsManager",
+              "nodeType": "ContractDefinition",
+              "nodes": [
+                {
+                  "body": {
+                    "id": 7,
+                    "nodeType": "Block",
+                    "src": "123:23:0",
+                    "statements": [
+                      {
+                        "expression": null,
+                        "functionReturnParameters": 5,
+                        "id": 6,
+                        "nodeType": "Return",
+                        "src": "133:7:0"
+                      }
+                    ]
+                  },
+                  "documentation": null,
+                  "id": 8,
+                  "implemented": true,
+                  "kind": "function",
+                  "modifiers": [],
+                  "name": "collectAndDistributeInterest",
+                  "nodeType": "FunctionDefinition",
+                  "parameters": {
+                    "id": 4,
+                    "nodeType": "ParameterList",
+                    "parameters": [
+                      {
+                        "constant": false,
+                        "id": 3,
+                        "name": "",
+                        "nodeType": "VariableDeclaration",
+                        "scope": 8,
+                        "src": "97:7:0",
+                        "stateVariable": false,
+                        "storageLocation": "default",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        },
+                        "typeName": {
+                          "id": 2,
+                          "name": "address",
+                          "nodeType": "ElementaryTypeName",
+                          "src": "97:7:0",
+                          "stateMutability": "nonpayable",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        },
+                        "value": null,
+                        "visibility": "internal"
+                      }
+                    ],
+                    "src": "96:19:0"
+                  },
+                  "returnParameters": {
+                    "id": 5,
+                    "nodeType": "ParameterList",
+                    "parameters": [],
+                    "src": "123:0:0"
+                  },
+                  "scope": 9,
+                  "src": "59:87:0",
+                  "stateMutability": "nonpayable",
+                  "superFunction": null,
+                  "visibility": "public"
+                }
+              ],
+              "scope": 10,
+              "src": "25:123:0"
+            }
+          ],
+          "src": "0:148:0"
+        },
+        "id": 0
+      }
+    }
+  }
+}

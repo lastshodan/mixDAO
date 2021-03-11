@@ -1,0 +1,252 @@
+{
+  "id": "ada7b9d6-00c0-4adb-8f7f-d95ed70b06ab",
+  "_format": "hh-sol-build-info-1",
+  "solcVersion": "0.5.16",
+  "solcLongVersion": "0.5.16+commit.9c3226ce",
+  "input": {
+    "language": "Solidity",
+    "sources": {
+      "contracts/z_mocks/mix/platform-integrations/DeadIntegration.sol": {
+        "content": "pragma solidity 0.5.16;\n\n\n\n/**\n * @dev This file is used purely to allow the instantiation of BasketManagers\n * initialize function with dead data. This stops attackers calling the func\n * and initializing the contract with data. Even though this is the implementation\n * contract of a proxy and the storage will not be used.\n */\ncontract DeadIntegration {\n\n    function checkBalance(address /*_bAsset*/) external returns (uint256 balance) {\n        return 0;\n    }\n}"
+      }
+    },
+    "settings": {
+      "optimizer": {
+        "enabled": true,
+        "runs": 200
+      },
+      "outputSelection": {
+        "*": {
+          "*": [
+            "abi",
+            "evm.bytecode",
+            "evm.deployedBytecode",
+            "evm.methodIdentifiers"
+          ],
+          "": [
+            "ast"
+          ]
+        }
+      }
+    }
+  },
+  "output": {
+    "contracts": {
+      "contracts/z_mocks/mix/platform-integrations/DeadIntegration.sol": {
+        "DeadIntegration": {
+          "abi": [
+            {
+              "constant": false,
+              "inputs": [
+                {
+                  "internalType": "address",
+                  "name": "",
+                  "type": "address"
+                }
+              ],
+              "name": "checkBalance",
+              "outputs": [
+                {
+                  "internalType": "uint256",
+                  "name": "balance",
+                  "type": "uint256"
+                }
+              ],
+              "payable": false,
+              "stateMutability": "nonpayable",
+              "type": "function"
+            }
+          ],
+          "evm": {
+            "bytecode": {
+              "linkReferences": {},
+              "object": "6080604052348015600f57600080fd5b50609d8061001e6000396000f3fe6080604052348015600f57600080fd5b506004361060285760003560e01c80635f51522614602d575b600080fd5b605060048036036020811015604157600080fd5b50356001600160a01b03166062565b60408051918252519081900360200190f35b5060009056fea265627a7a7231582056f47d8d969960ec7bd63e551544237f861bf12870f2463c5903f5e7d0c234a364736f6c63430005100032",
+              "opcodes": "PUSH1 0x80 PUSH1 0x40 MSTORE CALLVALUE DUP1 ISZERO PUSH1 0xF JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST POP PUSH1 0x9D DUP1 PUSH2 0x1E PUSH1 0x0 CODECOPY PUSH1 0x0 RETURN INVALID PUSH1 0x80 PUSH1 0x40 MSTORE CALLVALUE DUP1 ISZERO PUSH1 0xF JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST POP PUSH1 0x4 CALLDATASIZE LT PUSH1 0x28 JUMPI PUSH1 0x0 CALLDATALOAD PUSH1 0xE0 SHR DUP1 PUSH4 0x5F515226 EQ PUSH1 0x2D JUMPI JUMPDEST PUSH1 0x0 DUP1 REVERT JUMPDEST PUSH1 0x50 PUSH1 0x4 DUP1 CALLDATASIZE SUB PUSH1 0x20 DUP2 LT ISZERO PUSH1 0x41 JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST POP CALLDATALOAD PUSH1 0x1 PUSH1 0x1 PUSH1 0xA0 SHL SUB AND PUSH1 0x62 JUMP JUMPDEST PUSH1 0x40 DUP1 MLOAD SWAP2 DUP3 MSTORE MLOAD SWAP1 DUP2 SWAP1 SUB PUSH1 0x20 ADD SWAP1 RETURN JUMPDEST POP PUSH1 0x0 SWAP1 JUMP INVALID LOG2 PUSH6 0x627A7A723158 KECCAK256 JUMP DELEGATECALL PUSH30 0x8D969960EC7BD63E551544237F861BF12870F2463C5903F5E7D0C234A364 PUSH20 0x6F6C634300051000320000000000000000000000 ",
+              "sourceMap": "330:137:0:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;330:137:0;;;;;;;"
+            },
+            "deployedBytecode": {
+              "linkReferences": {},
+              "object": "6080604052348015600f57600080fd5b506004361060285760003560e01c80635f51522614602d575b600080fd5b605060048036036020811015604157600080fd5b50356001600160a01b03166062565b60408051918252519081900360200190f35b5060009056fea265627a7a7231582056f47d8d969960ec7bd63e551544237f861bf12870f2463c5903f5e7d0c234a364736f6c63430005100032",
+              "opcodes": "PUSH1 0x80 PUSH1 0x40 MSTORE CALLVALUE DUP1 ISZERO PUSH1 0xF JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST POP PUSH1 0x4 CALLDATASIZE LT PUSH1 0x28 JUMPI PUSH1 0x0 CALLDATALOAD PUSH1 0xE0 SHR DUP1 PUSH4 0x5F515226 EQ PUSH1 0x2D JUMPI JUMPDEST PUSH1 0x0 DUP1 REVERT JUMPDEST PUSH1 0x50 PUSH1 0x4 DUP1 CALLDATASIZE SUB PUSH1 0x20 DUP2 LT ISZERO PUSH1 0x41 JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST POP CALLDATALOAD PUSH1 0x1 PUSH1 0x1 PUSH1 0xA0 SHL SUB AND PUSH1 0x62 JUMP JUMPDEST PUSH1 0x40 DUP1 MLOAD SWAP2 DUP3 MSTORE MLOAD SWAP1 DUP2 SWAP1 SUB PUSH1 0x20 ADD SWAP1 RETURN JUMPDEST POP PUSH1 0x0 SWAP1 JUMP INVALID LOG2 PUSH6 0x627A7A723158 KECCAK256 JUMP DELEGATECALL PUSH30 0x8D969960EC7BD63E551544237F861BF12870F2463C5903F5E7D0C234A364 PUSH20 0x6F6C634300051000320000000000000000000000 ",
+              "sourceMap": "330:137:0:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;330:137:0;;;;;;;;;;;;;;;;;;;362:103;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;-1:-1;362:103:0;-1:-1:-1;;;;;362:103:0;;:::i;:::-;;;;;;;;;;;;;;;;;-1:-1:-1;423:15:0;;362:103::o"
+            },
+            "methodIdentifiers": {
+              "checkBalance(address)": "5f515226"
+            }
+          }
+        }
+      }
+    },
+    "errors": [
+      {
+        "component": "general",
+        "formattedMessage": "contracts/z_mocks/mix/platform-integrations/DeadIntegration.sol:13:5: Warning: Function state mutability can be restricted to pure\n    function checkBalance(address /*_bAsset*/) external returns (uint256 balance) {\n    ^ (Relevant source part starts here and spans across multiple lines).\n",
+        "message": "Function state mutability can be restricted to pure",
+        "severity": "warning",
+        "sourceLocation": {
+          "end": 465,
+          "file": "contracts/z_mocks/mix/platform-integrations/DeadIntegration.sol",
+          "start": 362
+        },
+        "type": "Warning"
+      }
+    ],
+    "sources": {
+      "contracts/z_mocks/mix/platform-integrations/DeadIntegration.sol": {
+        "ast": {
+          "absolutePath": "contracts/z_mocks/mix/platform-integrations/DeadIntegration.sol",
+          "exportedSymbols": {
+            "DeadIntegration": [
+              12
+            ]
+          },
+          "id": 13,
+          "nodeType": "SourceUnit",
+          "nodes": [
+            {
+              "id": 1,
+              "literals": [
+                "solidity",
+                "0.5",
+                ".16"
+              ],
+              "nodeType": "PragmaDirective",
+              "src": "0:23:0"
+            },
+            {
+              "baseContracts": [],
+              "contractDependencies": [],
+              "contractKind": "contract",
+              "documentation": "@dev This file is used purely to allow the instantiation of BasketManagers\ninitialize function with dead data. This stops attackers calling the func\nand initializing the contract with data. Even though this is the implementation\ncontract of a proxy and the storage will not be used.",
+              "fullyImplemented": true,
+              "id": 12,
+              "linearizedBaseContracts": [
+                12
+              ],
+              "name": "DeadIntegration",
+              "nodeType": "ContractDefinition",
+              "nodes": [
+                {
+                  "body": {
+                    "id": 10,
+                    "nodeType": "Block",
+                    "src": "440:25:0",
+                    "statements": [
+                      {
+                        "expression": {
+                          "argumentTypes": null,
+                          "hexValue": "30",
+                          "id": 8,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": true,
+                          "kind": "number",
+                          "lValueRequested": false,
+                          "nodeType": "Literal",
+                          "src": "457:1:0",
+                          "subdenomination": null,
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_rational_0_by_1",
+                            "typeString": "int_const 0"
+                          },
+                          "value": "0"
+                        },
+                        "functionReturnParameters": 7,
+                        "id": 9,
+                        "nodeType": "Return",
+                        "src": "450:8:0"
+                      }
+                    ]
+                  },
+                  "documentation": null,
+                  "id": 11,
+                  "implemented": true,
+                  "kind": "function",
+                  "modifiers": [],
+                  "name": "checkBalance",
+                  "nodeType": "FunctionDefinition",
+                  "parameters": {
+                    "id": 4,
+                    "nodeType": "ParameterList",
+                    "parameters": [
+                      {
+                        "constant": false,
+                        "id": 3,
+                        "name": "",
+                        "nodeType": "VariableDeclaration",
+                        "scope": 11,
+                        "src": "384:7:0",
+                        "stateVariable": false,
+                        "storageLocation": "default",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        },
+                        "typeName": {
+                          "id": 2,
+                          "name": "address",
+                          "nodeType": "ElementaryTypeName",
+                          "src": "384:7:0",
+                          "stateMutability": "nonpayable",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        },
+                        "value": null,
+                        "visibility": "internal"
+                      }
+                    ],
+                    "src": "383:21:0"
+                  },
+                  "returnParameters": {
+                    "id": 7,
+                    "nodeType": "ParameterList",
+                    "parameters": [
+                      {
+                        "constant": false,
+                        "id": 6,
+                        "name": "balance",
+                        "nodeType": "VariableDeclaration",
+                        "scope": 11,
+                        "src": "423:15:0",
+                        "stateVariable": false,
+                        "storageLocation": "default",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        },
+                        "typeName": {
+                          "id": 5,
+                          "name": "uint256",
+                          "nodeType": "ElementaryTypeName",
+                          "src": "423:7:0",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          }
+                        },
+                        "value": null,
+                        "visibility": "internal"
+                      }
+                    ],
+                    "src": "422:17:0"
+                  },
+                  "scope": 12,
+                  "src": "362:103:0",
+                  "stateMutability": "nonpayable",
+                  "superFunction": null,
+                  "visibility": "external"
+                }
+              ],
+              "scope": 13,
+              "src": "330:137:0"
+            }
+          ],
+          "src": "0:467:0"
+        },
+        "id": 0
+      }
+    }
+  }
+}

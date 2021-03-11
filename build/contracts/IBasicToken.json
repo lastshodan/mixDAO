@@ -1,0 +1,228 @@
+{
+  "contractName": "IBasicToken",
+  "abi": [
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "decimals",
+      "outputs": [
+        {
+          "internalType": "uint8",
+          "name": "",
+          "type": "uint8"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.5.16+commit.9c3226ce\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":true,\"inputs\":[],\"name\":\"decimals\",\"outputs\":[{\"internalType\":\"uint8\",\"name\":\"\",\"type\":\"uint8\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/Volumes/sdxc/ETHEREUM/CODE/mStable-v1-edit/contracts/shared/IBasicToken.sol\":\"IBasicToken\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Volumes/sdxc/ETHEREUM/CODE/mStable-v1-edit/contracts/shared/IBasicToken.sol\":{\"keccak256\":\"0x7d505a6f3c24d5da06858f6da65ca04e15e2798c9ca9bb24624311fc10c35825\",\"urls\":[\"bzz-raw://937dd232b4bd4e49718279c406ba9c98627a38980dbb26d2f932f66815dd67b9\",\"dweb:/ipfs/Qmbg2N2PX46VCqBe224vmuNHv3YvaJBrH1gguspnz4acLd\"]}},\"version\":1}",
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "sourceMap": "",
+  "deployedSourceMap": "",
+  "source": "pragma solidity 0.5.16;\n\ninterface IBasicToken {\n    function decimals() external view returns (uint8);\n}\n",
+  "sourcePath": "/Volumes/sdxc/ETHEREUM/CODE/mStable-v1-edit/contracts/shared/IBasicToken.sol",
+  "ast": {
+    "absolutePath": "/Volumes/sdxc/ETHEREUM/CODE/mStable-v1-edit/contracts/shared/IBasicToken.sol",
+    "exportedSymbols": {
+      "IBasicToken": [
+        20699
+      ]
+    },
+    "id": 20700,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 20693,
+        "literals": [
+          "solidity",
+          "0.5",
+          ".16"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:51"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "documentation": null,
+        "fullyImplemented": false,
+        "id": 20699,
+        "linearizedBaseContracts": [
+          20699
+        ],
+        "name": "IBasicToken",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": null,
+            "documentation": null,
+            "id": 20698,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "decimals",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 20694,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "70:2:51"
+            },
+            "returnParameters": {
+              "id": 20697,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 20696,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 20698,
+                  "src": "96:5:51",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint8",
+                    "typeString": "uint8"
+                  },
+                  "typeName": {
+                    "id": 20695,
+                    "name": "uint8",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "96:5:51",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint8",
+                      "typeString": "uint8"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "95:7:51"
+            },
+            "scope": 20699,
+            "src": "53:50:51",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "external"
+          }
+        ],
+        "scope": 20700,
+        "src": "25:80:51"
+      }
+    ],
+    "src": "0:106:51"
+  },
+  "legacyAST": {
+    "absolutePath": "/Volumes/sdxc/ETHEREUM/CODE/mStable-v1-edit/contracts/shared/IBasicToken.sol",
+    "exportedSymbols": {
+      "IBasicToken": [
+        20699
+      ]
+    },
+    "id": 20700,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 20693,
+        "literals": [
+          "solidity",
+          "0.5",
+          ".16"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:51"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "documentation": null,
+        "fullyImplemented": false,
+        "id": 20699,
+        "linearizedBaseContracts": [
+          20699
+        ],
+        "name": "IBasicToken",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": null,
+            "documentation": null,
+            "id": 20698,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "decimals",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 20694,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "70:2:51"
+            },
+            "returnParameters": {
+              "id": 20697,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 20696,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 20698,
+                  "src": "96:5:51",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint8",
+                    "typeString": "uint8"
+                  },
+                  "typeName": {
+                    "id": 20695,
+                    "name": "uint8",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "96:5:51",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint8",
+                      "typeString": "uint8"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "95:7:51"
+            },
+            "scope": 20699,
+            "src": "53:50:51",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "external"
+          }
+        ],
+        "scope": 20700,
+        "src": "25:80:51"
+      }
+    ],
+    "src": "0:106:51"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.16+commit.9c3226ce.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.1.0",
+  "updatedAt": "2021-03-11T05:43:16.266Z",
+  "devdoc": {
+    "methods": {}
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}

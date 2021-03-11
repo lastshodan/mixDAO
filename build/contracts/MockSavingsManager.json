@@ -1,0 +1,256 @@
+{
+  "contractName": "MockSavingsManager",
+  "abi": [
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "name": "collectAndDistributeInterest",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.5.16+commit.9c3226ce\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":false,\"inputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"name\":\"collectAndDistributeInterest\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/Volumes/sdxc/ETHEREUM/CODE/mStable-v1-edit/contracts/z_mocks/savings/MockSavingsManager.sol\":\"MockSavingsManager\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Volumes/sdxc/ETHEREUM/CODE/mStable-v1-edit/contracts/z_mocks/savings/MockSavingsManager.sol\":{\"keccak256\":\"0xaf10e08ceee2e209753c1bcc1bd5ee0d306d62b8a614c42e184f76fbdcf723bb\",\"urls\":[\"bzz-raw://1047486e28d8e820924e9db5f0800f8c58ca617143ac81912e77e0657b5dd814\",\"dweb:/ipfs/QmV5xY5Vvpz8EMsVcVA7mFZdMjPV81kbjkpVL9vpUK7WE4\"]}},\"version\":1}",
+  "bytecode": "0x6080604052348015600f57600080fd5b50608a8061001e6000396000f3fe6080604052348015600f57600080fd5b506004361060285760003560e01c8063ca2bdfe614602d575b600080fd5b605060048036036020811015604157600080fd5b50356001600160a01b03166052565b005b5056fea265627a7a72315820e660cfdf5c0d7df9d071a580cebfed75c97ac86616951813eac8d50bb40731d764736f6c63430005100032",
+  "deployedBytecode": "0x6080604052348015600f57600080fd5b506004361060285760003560e01c8063ca2bdfe614602d575b600080fd5b605060048036036020811015604157600080fd5b50356001600160a01b03166052565b005b5056fea265627a7a72315820e660cfdf5c0d7df9d071a580cebfed75c97ac86616951813eac8d50bb40731d764736f6c63430005100032",
+  "sourceMap": "25:123:89:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;25:123:89;;;;;;;",
+  "deployedSourceMap": "25:123:89:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;25:123:89;;;;;;;;;;;;;;;;;;;59:87;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;-1:-1;59:87:89;-1:-1:-1;;;;;59:87:89;;:::i;:::-;;;;:::o",
+  "source": "pragma solidity 0.5.16;\n\ncontract MockSavingsManager {\n    function collectAndDistributeInterest(address /* _mIx*/) public {\n        return;\n    }\n}",
+  "sourcePath": "/Volumes/sdxc/ETHEREUM/CODE/mStable-v1-edit/contracts/z_mocks/savings/MockSavingsManager.sol",
+  "ast": {
+    "absolutePath": "/Volumes/sdxc/ETHEREUM/CODE/mStable-v1-edit/contracts/z_mocks/savings/MockSavingsManager.sol",
+    "exportedSymbols": {
+      "MockSavingsManager": [
+        27284
+      ]
+    },
+    "id": 27285,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 27276,
+        "literals": [
+          "solidity",
+          "0.5",
+          ".16"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:89"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 27284,
+        "linearizedBaseContracts": [
+          27284
+        ],
+        "name": "MockSavingsManager",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": {
+              "id": 27282,
+              "nodeType": "Block",
+              "src": "123:23:89",
+              "statements": [
+                {
+                  "expression": null,
+                  "functionReturnParameters": 27280,
+                  "id": 27281,
+                  "nodeType": "Return",
+                  "src": "133:7:89"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 27283,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "collectAndDistributeInterest",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 27279,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 27278,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 27283,
+                  "src": "97:7:89",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 27277,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "97:7:89",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "96:19:89"
+            },
+            "returnParameters": {
+              "id": 27280,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "123:0:89"
+            },
+            "scope": 27284,
+            "src": "59:87:89",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 27285,
+        "src": "25:123:89"
+      }
+    ],
+    "src": "0:148:89"
+  },
+  "legacyAST": {
+    "absolutePath": "/Volumes/sdxc/ETHEREUM/CODE/mStable-v1-edit/contracts/z_mocks/savings/MockSavingsManager.sol",
+    "exportedSymbols": {
+      "MockSavingsManager": [
+        27284
+      ]
+    },
+    "id": 27285,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 27276,
+        "literals": [
+          "solidity",
+          "0.5",
+          ".16"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:89"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 27284,
+        "linearizedBaseContracts": [
+          27284
+        ],
+        "name": "MockSavingsManager",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": {
+              "id": 27282,
+              "nodeType": "Block",
+              "src": "123:23:89",
+              "statements": [
+                {
+                  "expression": null,
+                  "functionReturnParameters": 27280,
+                  "id": 27281,
+                  "nodeType": "Return",
+                  "src": "133:7:89"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 27283,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "collectAndDistributeInterest",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 27279,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 27278,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 27283,
+                  "src": "97:7:89",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 27277,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "97:7:89",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "96:19:89"
+            },
+            "returnParameters": {
+              "id": 27280,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "123:0:89"
+            },
+            "scope": 27284,
+            "src": "59:87:89",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 27285,
+        "src": "25:123:89"
+      }
+    ],
+    "src": "0:148:89"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.16+commit.9c3226ce.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.1.0",
+  "updatedAt": "2021-03-11T05:43:17.324Z",
+  "devdoc": {
+    "methods": {}
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}

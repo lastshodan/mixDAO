@@ -1,0 +1,26 @@
+{
+  "_format": "hh-sol-artifact-1",
+  "contractName": "ICurve_ExchangeMUSD",
+  "sourceName": "contracts/z_mocks/savings/Connector_yVault_mUSD3Pool.sol",
+  "abi": [
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "get_virtual_price",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "linkReferences": {},
+  "deployedLinkReferences": {}
+}

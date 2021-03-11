@@ -1,0 +1,882 @@
+{
+  "contractName": "ModuleKeys",
+  "abi": [],
+  "metadata": "{\"compiler\":{\"version\":\"0.5.16+commit.9c3226ce\"},\"language\":\"Solidity\",\"output\":{\"abi\":[],\"devdoc\":{\"author\":\"Stability Labs Pty. Ltd.\",\"details\":\"keccak256() values are hardcoded to avoid re-evaluation of the constants at runtime.\",\"methods\":{},\"title\":\"ModuleKeys\"},\"userdoc\":{\"methods\":{},\"notice\":\"Provides system wide access to the byte32 represntations of system modules        This allows each system module to be able to reference and update one another in a        friendly way\"}},\"settings\":{\"compilationTarget\":{\"/Volumes/sdxc/ETHEREUM/CODE/mStable-v1-edit/contracts/shared/ModuleKeys.sol\":\"ModuleKeys\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Volumes/sdxc/ETHEREUM/CODE/mStable-v1-edit/contracts/shared/ModuleKeys.sol\":{\"keccak256\":\"0x67a677fcada4984d2c024b4237c81842ce626ce878850e33c8dade620f6384a0\",\"urls\":[\"bzz-raw://4ca1e1ec22572eb7e6a3c77cc15d8dd0bd207ea63813c91ccd57806691555be1\",\"dweb:/ipfs/QmNcm6KNabQAYEo6YCgqF1ehCUuvz4VAedxNYkKsVncv7b\"]}},\"version\":1}",
+  "bytecode": "0x6080604052348015600f57600080fd5b50603e80601d6000396000f3fe6080604052600080fdfea265627a7a72315820f0c1dfdb12c7b5dfb10072030fa89ab59c8ad20e78de541f683acaaef6b2333864736f6c63430005100032",
+  "deployedBytecode": "0x6080604052600080fdfea265627a7a72315820f0c1dfdb12c7b5dfb10072030fa89ab59c8ad20e78de541f683acaaef6b2333864736f6c63430005100032",
+  "sourceMap": "398:1419:61:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;398:1419:61;;;;;;;",
+  "deployedSourceMap": "398:1419:61:-;;;;;",
+  "source": "pragma solidity 0.5.16;\n\n/**\n  * @title  ModuleKeys\n  * @author Stability Labs Pty. Ltd.\n  * @notice Provides system wide access to the byte32 represntations of system modules\n  *         This allows each system module to be able to reference and update one another in a\n  *         friendly way\n  * @dev    keccak256() values are hardcoded to avoid re-evaluation of the constants at runtime.\n  */\ncontract ModuleKeys {\n\n    // Governance\n    // ===========\n    // keccak256(\"Governance\");\n    bytes32 internal constant KEY_GOVERNANCE = 0x9409903de1e6fd852dfc61c9dacb48196c48535b60e25abf92acc92dd689078d;\n    //keccak256(\"Staking\");\n    bytes32 internal constant KEY_STAKING = 0x1df41cd916959d1163dc8f0671a666ea8a3e434c13e40faef527133b5d167034;\n    //keccak256(\"ProxyAdmin\");\n    bytes32 internal constant KEY_PROXY_ADMIN = 0x96ed0203eb7e975a4cbcaa23951943fa35c5d8288117d50c12b3d48b0fab48d1;\n\n    // mStable\n    // =======\n    // keccak256(\"OracleHub\");\n    bytes32 internal constant KEY_ORACLE_HUB = 0x8ae3a082c61a7379e2280f3356a5131507d9829d222d853bfa7c9fe1200dd040;\n    // keccak256(\"Manager\");\n    bytes32 internal constant KEY_MANAGER = 0x6d439300980e333f0256d64be2c9f67e86f4493ce25f82498d6db7f4be3d9e6f;\n    //keccak256(\"Recollateraliser\");\n    bytes32 internal constant KEY_RECOLLATERALISER = 0x39e3ed1fc335ce346a8cbe3e64dd525cf22b37f1e2104a755e761c3c1eb4734f;\n    //keccak256(\"BildToken\");\n    bytes32 internal constant KEY_BILD_TOKEN = 0xea7469b14936af748ee93c53b2fe510b9928edbdccac3963321efca7eb1a57a2;\n    // keccak256(\"SavingsManager\");\n    bytes32 internal constant KEY_SAVINGS_MANAGER = 0x12fe936c77a1e196473c4314f3bed8eeac1d757b319abb85bdda70df35511bf1;\n    // keccak256(\"Liquidator\");\n    bytes32 internal constant KEY_LIQUIDATOR = 0x1e9cb14d7560734a61fa5ff9273953e971ff3cd9283c03d8346e3264617933d4;\n}\n",
+  "sourcePath": "/Volumes/sdxc/ETHEREUM/CODE/mStable-v1-edit/contracts/shared/ModuleKeys.sol",
+  "ast": {
+    "absolutePath": "/Volumes/sdxc/ETHEREUM/CODE/mStable-v1-edit/contracts/shared/ModuleKeys.sol",
+    "exportedSymbols": {
+      "ModuleKeys": [
+        21622
+      ]
+    },
+    "id": 21623,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 21594,
+        "literals": [
+          "solidity",
+          "0.5",
+          ".16"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:61"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": "@title  ModuleKeys\n@author Stability Labs Pty. Ltd.\n@notice Provides system wide access to the byte32 represntations of system modules\n        This allows each system module to be able to reference and update one another in a\n        friendly way\n@dev    keccak256() values are hardcoded to avoid re-evaluation of the constants at runtime.",
+        "fullyImplemented": true,
+        "id": 21622,
+        "linearizedBaseContracts": [
+          21622
+        ],
+        "name": "ModuleKeys",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": true,
+            "id": 21597,
+            "name": "KEY_GOVERNANCE",
+            "nodeType": "VariableDeclaration",
+            "scope": 21622,
+            "src": "494:109:61",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_bytes32",
+              "typeString": "bytes32"
+            },
+            "typeName": {
+              "id": 21595,
+              "name": "bytes32",
+              "nodeType": "ElementaryTypeName",
+              "src": "494:7:61",
+              "typeDescriptions": {
+                "typeIdentifier": "t_bytes32",
+                "typeString": "bytes32"
+              }
+            },
+            "value": {
+              "argumentTypes": null,
+              "hexValue": "307839343039393033646531653666643835326466633631633964616362343831393663343835333562363065323561626639326163633932646436383930373864",
+              "id": 21596,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "number",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "537:66:61",
+              "subdenomination": null,
+              "typeDescriptions": {
+                "typeIdentifier": "t_rational_66959198733727405004371278331821850209649414188207473351650840016066817099661_by_1",
+                "typeString": "int_const 6695...(69 digits omitted)...9661"
+              },
+              "value": "0x9409903de1e6fd852dfc61c9dacb48196c48535b60e25abf92acc92dd689078d"
+            },
+            "visibility": "internal"
+          },
+          {
+            "constant": true,
+            "id": 21600,
+            "name": "KEY_STAKING",
+            "nodeType": "VariableDeclaration",
+            "scope": 21622,
+            "src": "637:106:61",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_bytes32",
+              "typeString": "bytes32"
+            },
+            "typeName": {
+              "id": 21598,
+              "name": "bytes32",
+              "nodeType": "ElementaryTypeName",
+              "src": "637:7:61",
+              "typeDescriptions": {
+                "typeIdentifier": "t_bytes32",
+                "typeString": "bytes32"
+              }
+            },
+            "value": {
+              "argumentTypes": null,
+              "hexValue": "307831646634316364393136393539643131363364633866303637316136363665613861336534333463313365343066616566353237313333623564313637303334",
+              "id": 21599,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "number",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "677:66:61",
+              "subdenomination": null,
+              "typeDescriptions": {
+                "typeIdentifier": "t_rational_13548382394305205806620358309562669106876141577781988137882483834848166703156_by_1",
+                "typeString": "int_const 1354...(69 digits omitted)...3156"
+              },
+              "value": "0x1df41cd916959d1163dc8f0671a666ea8a3e434c13e40faef527133b5d167034"
+            },
+            "visibility": "internal"
+          },
+          {
+            "constant": true,
+            "id": 21603,
+            "name": "KEY_PROXY_ADMIN",
+            "nodeType": "VariableDeclaration",
+            "scope": 21622,
+            "src": "780:110:61",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_bytes32",
+              "typeString": "bytes32"
+            },
+            "typeName": {
+              "id": 21601,
+              "name": "bytes32",
+              "nodeType": "ElementaryTypeName",
+              "src": "780:7:61",
+              "typeDescriptions": {
+                "typeIdentifier": "t_bytes32",
+                "typeString": "bytes32"
+              }
+            },
+            "value": {
+              "argumentTypes": null,
+              "hexValue": "307839366564303230336562376539373561346362636161323339353139343366613335633564383238383131376435306331326233643438623066616234386431",
+              "id": 21602,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "number",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "824:66:61",
+              "subdenomination": null,
+              "typeDescriptions": {
+                "typeIdentifier": "t_rational_68265683951015434074821341003241518186020395774207313441674020034179488237777_by_1",
+                "typeString": "int_const 6826...(69 digits omitted)...7777"
+              },
+              "value": "0x96ed0203eb7e975a4cbcaa23951943fa35c5d8288117d50c12b3d48b0fab48d1"
+            },
+            "visibility": "internal"
+          },
+          {
+            "constant": true,
+            "id": 21606,
+            "name": "KEY_ORACLE_HUB",
+            "nodeType": "VariableDeclaration",
+            "scope": 21622,
+            "src": "958:109:61",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_bytes32",
+              "typeString": "bytes32"
+            },
+            "typeName": {
+              "id": 21604,
+              "name": "bytes32",
+              "nodeType": "ElementaryTypeName",
+              "src": "958:7:61",
+              "typeDescriptions": {
+                "typeIdentifier": "t_bytes32",
+                "typeString": "bytes32"
+              }
+            },
+            "value": {
+              "argumentTypes": null,
+              "hexValue": "307838616533613038326336316137333739653232383066333335366135313331353037643938323964323232643835336266613763396665313230306464303430",
+              "id": 21605,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "number",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "1001:66:61",
+              "subdenomination": null,
+              "typeDescriptions": {
+                "typeIdentifier": "t_rational_62821355193266723151069956879516974177746415105446816967213132611012065611840_by_1",
+                "typeString": "int_const 6282...(69 digits omitted)...1840"
+              },
+              "value": "0x8ae3a082c61a7379e2280f3356a5131507d9829d222d853bfa7c9fe1200dd040"
+            },
+            "visibility": "internal"
+          },
+          {
+            "constant": true,
+            "id": 21609,
+            "name": "KEY_MANAGER",
+            "nodeType": "VariableDeclaration",
+            "scope": 21622,
+            "src": "1102:106:61",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_bytes32",
+              "typeString": "bytes32"
+            },
+            "typeName": {
+              "id": 21607,
+              "name": "bytes32",
+              "nodeType": "ElementaryTypeName",
+              "src": "1102:7:61",
+              "typeDescriptions": {
+                "typeIdentifier": "t_bytes32",
+                "typeString": "bytes32"
+              }
+            },
+            "value": {
+              "argumentTypes": null,
+              "hexValue": "307836643433393330303938306533333366303235366436346265326339663637653836663434393363653235663832343938643664623766346265336439653666",
+              "id": 21608,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "number",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "1142:66:61",
+              "subdenomination": null,
+              "typeDescriptions": {
+                "typeIdentifier": "t_rational_49421493821642476244577507638140872659483089639323406415360070334623451553391_by_1",
+                "typeString": "int_const 4942...(69 digits omitted)...3391"
+              },
+              "value": "0x6d439300980e333f0256d64be2c9f67e86f4493ce25f82498d6db7f4be3d9e6f"
+            },
+            "visibility": "internal"
+          },
+          {
+            "constant": true,
+            "id": 21612,
+            "name": "KEY_RECOLLATERALISER",
+            "nodeType": "VariableDeclaration",
+            "scope": 21622,
+            "src": "1251:115:61",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_bytes32",
+              "typeString": "bytes32"
+            },
+            "typeName": {
+              "id": 21610,
+              "name": "bytes32",
+              "nodeType": "ElementaryTypeName",
+              "src": "1251:7:61",
+              "typeDescriptions": {
+                "typeIdentifier": "t_bytes32",
+                "typeString": "bytes32"
+              }
+            },
+            "value": {
+              "argumentTypes": null,
+              "hexValue": "307833396533656431666333333563653334366138636265336536346464353235636632326233376631653231303461373535653736316333633165623437333466",
+              "id": 21611,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "number",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "1300:66:61",
+              "subdenomination": null,
+              "typeDescriptions": {
+                "typeIdentifier": "t_rational_26184543223151444594394499265502566979851852556086732170002532024838889173839_by_1",
+                "typeString": "int_const 2618...(69 digits omitted)...3839"
+              },
+              "value": "0x39e3ed1fc335ce346a8cbe3e64dd525cf22b37f1e2104a755e761c3c1eb4734f"
+            },
+            "visibility": "internal"
+          },
+          {
+            "constant": true,
+            "id": 21615,
+            "name": "KEY_BILD_TOKEN",
+            "nodeType": "VariableDeclaration",
+            "scope": 21622,
+            "src": "1402:109:61",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_bytes32",
+              "typeString": "bytes32"
+            },
+            "typeName": {
+              "id": 21613,
+              "name": "bytes32",
+              "nodeType": "ElementaryTypeName",
+              "src": "1402:7:61",
+              "typeDescriptions": {
+                "typeIdentifier": "t_bytes32",
+                "typeString": "bytes32"
+              }
+            },
+            "value": {
+              "argumentTypes": null,
+              "hexValue": "307865613734363962313439333661663734386565393363353362326665353130623939323865646264636361633339363333323165666361376562316135376132",
+              "id": 21614,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "number",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "1445:66:61",
+              "subdenomination": null,
+              "typeDescriptions": {
+                "typeIdentifier": "t_rational_106046890290985894105584667244840291463655613490605622186651407626324644878242_by_1",
+                "typeString": "int_const 1060...(70 digits omitted)...8242"
+              },
+              "value": "0xea7469b14936af748ee93c53b2fe510b9928edbdccac3963321efca7eb1a57a2"
+            },
+            "visibility": "internal"
+          },
+          {
+            "constant": true,
+            "id": 21618,
+            "name": "KEY_SAVINGS_MANAGER",
+            "nodeType": "VariableDeclaration",
+            "scope": 21622,
+            "src": "1553:114:61",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_bytes32",
+              "typeString": "bytes32"
+            },
+            "typeName": {
+              "id": 21616,
+              "name": "bytes32",
+              "nodeType": "ElementaryTypeName",
+              "src": "1553:7:61",
+              "typeDescriptions": {
+                "typeIdentifier": "t_bytes32",
+                "typeString": "bytes32"
+              }
+            },
+            "value": {
+              "argumentTypes": null,
+              "hexValue": "307831326665393336633737613165313936343733633433313466336265643865656163316437353762333139616262383562646461373064663335353131626631",
+              "id": 21617,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "number",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "1601:66:61",
+              "subdenomination": null,
+              "typeDescriptions": {
+                "typeIdentifier": "t_rational_8591427909938479646942232413824102134555250821688297939988064366145423088625_by_1",
+                "typeString": "int_const 8591...(68 digits omitted)...8625"
+              },
+              "value": "0x12fe936c77a1e196473c4314f3bed8eeac1d757b319abb85bdda70df35511bf1"
+            },
+            "visibility": "internal"
+          },
+          {
+            "constant": true,
+            "id": 21621,
+            "name": "KEY_LIQUIDATOR",
+            "nodeType": "VariableDeclaration",
+            "scope": 21622,
+            "src": "1705:109:61",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_bytes32",
+              "typeString": "bytes32"
+            },
+            "typeName": {
+              "id": 21619,
+              "name": "bytes32",
+              "nodeType": "ElementaryTypeName",
+              "src": "1705:7:61",
+              "typeDescriptions": {
+                "typeIdentifier": "t_bytes32",
+                "typeString": "bytes32"
+              }
+            },
+            "value": {
+              "argumentTypes": null,
+              "hexValue": "307831653963623134643735363037333461363166613566663932373339353365393731666633636439323833633033643833343665333236343631373933336434",
+              "id": 21620,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "number",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "1748:66:61",
+              "subdenomination": null,
+              "typeDescriptions": {
+                "typeIdentifier": "t_rational_13846237296983910406384291578241032269733962030547075075173128163381692937172_by_1",
+                "typeString": "int_const 1384...(69 digits omitted)...7172"
+              },
+              "value": "0x1e9cb14d7560734a61fa5ff9273953e971ff3cd9283c03d8346e3264617933d4"
+            },
+            "visibility": "internal"
+          }
+        ],
+        "scope": 21623,
+        "src": "398:1419:61"
+      }
+    ],
+    "src": "0:1818:61"
+  },
+  "legacyAST": {
+    "absolutePath": "/Volumes/sdxc/ETHEREUM/CODE/mStable-v1-edit/contracts/shared/ModuleKeys.sol",
+    "exportedSymbols": {
+      "ModuleKeys": [
+        21622
+      ]
+    },
+    "id": 21623,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 21594,
+        "literals": [
+          "solidity",
+          "0.5",
+          ".16"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:61"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": "@title  ModuleKeys\n@author Stability Labs Pty. Ltd.\n@notice Provides system wide access to the byte32 represntations of system modules\n        This allows each system module to be able to reference and update one another in a\n        friendly way\n@dev    keccak256() values are hardcoded to avoid re-evaluation of the constants at runtime.",
+        "fullyImplemented": true,
+        "id": 21622,
+        "linearizedBaseContracts": [
+          21622
+        ],
+        "name": "ModuleKeys",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": true,
+            "id": 21597,
+            "name": "KEY_GOVERNANCE",
+            "nodeType": "VariableDeclaration",
+            "scope": 21622,
+            "src": "494:109:61",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_bytes32",
+              "typeString": "bytes32"
+            },
+            "typeName": {
+              "id": 21595,
+              "name": "bytes32",
+              "nodeType": "ElementaryTypeName",
+              "src": "494:7:61",
+              "typeDescriptions": {
+                "typeIdentifier": "t_bytes32",
+                "typeString": "bytes32"
+              }
+            },
+            "value": {
+              "argumentTypes": null,
+              "hexValue": "307839343039393033646531653666643835326466633631633964616362343831393663343835333562363065323561626639326163633932646436383930373864",
+              "id": 21596,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "number",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "537:66:61",
+              "subdenomination": null,
+              "typeDescriptions": {
+                "typeIdentifier": "t_rational_66959198733727405004371278331821850209649414188207473351650840016066817099661_by_1",
+                "typeString": "int_const 6695...(69 digits omitted)...9661"
+              },
+              "value": "0x9409903de1e6fd852dfc61c9dacb48196c48535b60e25abf92acc92dd689078d"
+            },
+            "visibility": "internal"
+          },
+          {
+            "constant": true,
+            "id": 21600,
+            "name": "KEY_STAKING",
+            "nodeType": "VariableDeclaration",
+            "scope": 21622,
+            "src": "637:106:61",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_bytes32",
+              "typeString": "bytes32"
+            },
+            "typeName": {
+              "id": 21598,
+              "name": "bytes32",
+              "nodeType": "ElementaryTypeName",
+              "src": "637:7:61",
+              "typeDescriptions": {
+                "typeIdentifier": "t_bytes32",
+                "typeString": "bytes32"
+              }
+            },
+            "value": {
+              "argumentTypes": null,
+              "hexValue": "307831646634316364393136393539643131363364633866303637316136363665613861336534333463313365343066616566353237313333623564313637303334",
+              "id": 21599,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "number",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "677:66:61",
+              "subdenomination": null,
+              "typeDescriptions": {
+                "typeIdentifier": "t_rational_13548382394305205806620358309562669106876141577781988137882483834848166703156_by_1",
+                "typeString": "int_const 1354...(69 digits omitted)...3156"
+              },
+              "value": "0x1df41cd916959d1163dc8f0671a666ea8a3e434c13e40faef527133b5d167034"
+            },
+            "visibility": "internal"
+          },
+          {
+            "constant": true,
+            "id": 21603,
+            "name": "KEY_PROXY_ADMIN",
+            "nodeType": "VariableDeclaration",
+            "scope": 21622,
+            "src": "780:110:61",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_bytes32",
+              "typeString": "bytes32"
+            },
+            "typeName": {
+              "id": 21601,
+              "name": "bytes32",
+              "nodeType": "ElementaryTypeName",
+              "src": "780:7:61",
+              "typeDescriptions": {
+                "typeIdentifier": "t_bytes32",
+                "typeString": "bytes32"
+              }
+            },
+            "value": {
+              "argumentTypes": null,
+              "hexValue": "307839366564303230336562376539373561346362636161323339353139343366613335633564383238383131376435306331326233643438623066616234386431",
+              "id": 21602,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "number",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "824:66:61",
+              "subdenomination": null,
+              "typeDescriptions": {
+                "typeIdentifier": "t_rational_68265683951015434074821341003241518186020395774207313441674020034179488237777_by_1",
+                "typeString": "int_const 6826...(69 digits omitted)...7777"
+              },
+              "value": "0x96ed0203eb7e975a4cbcaa23951943fa35c5d8288117d50c12b3d48b0fab48d1"
+            },
+            "visibility": "internal"
+          },
+          {
+            "constant": true,
+            "id": 21606,
+            "name": "KEY_ORACLE_HUB",
+            "nodeType": "VariableDeclaration",
+            "scope": 21622,
+            "src": "958:109:61",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_bytes32",
+              "typeString": "bytes32"
+            },
+            "typeName": {
+              "id": 21604,
+              "name": "bytes32",
+              "nodeType": "ElementaryTypeName",
+              "src": "958:7:61",
+              "typeDescriptions": {
+                "typeIdentifier": "t_bytes32",
+                "typeString": "bytes32"
+              }
+            },
+            "value": {
+              "argumentTypes": null,
+              "hexValue": "307838616533613038326336316137333739653232383066333335366135313331353037643938323964323232643835336266613763396665313230306464303430",
+              "id": 21605,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "number",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "1001:66:61",
+              "subdenomination": null,
+              "typeDescriptions": {
+                "typeIdentifier": "t_rational_62821355193266723151069956879516974177746415105446816967213132611012065611840_by_1",
+                "typeString": "int_const 6282...(69 digits omitted)...1840"
+              },
+              "value": "0x8ae3a082c61a7379e2280f3356a5131507d9829d222d853bfa7c9fe1200dd040"
+            },
+            "visibility": "internal"
+          },
+          {
+            "constant": true,
+            "id": 21609,
+            "name": "KEY_MANAGER",
+            "nodeType": "VariableDeclaration",
+            "scope": 21622,
+            "src": "1102:106:61",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_bytes32",
+              "typeString": "bytes32"
+            },
+            "typeName": {
+              "id": 21607,
+              "name": "bytes32",
+              "nodeType": "ElementaryTypeName",
+              "src": "1102:7:61",
+              "typeDescriptions": {
+                "typeIdentifier": "t_bytes32",
+                "typeString": "bytes32"
+              }
+            },
+            "value": {
+              "argumentTypes": null,
+              "hexValue": "307836643433393330303938306533333366303235366436346265326339663637653836663434393363653235663832343938643664623766346265336439653666",
+              "id": 21608,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "number",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "1142:66:61",
+              "subdenomination": null,
+              "typeDescriptions": {
+                "typeIdentifier": "t_rational_49421493821642476244577507638140872659483089639323406415360070334623451553391_by_1",
+                "typeString": "int_const 4942...(69 digits omitted)...3391"
+              },
+              "value": "0x6d439300980e333f0256d64be2c9f67e86f4493ce25f82498d6db7f4be3d9e6f"
+            },
+            "visibility": "internal"
+          },
+          {
+            "constant": true,
+            "id": 21612,
+            "name": "KEY_RECOLLATERALISER",
+            "nodeType": "VariableDeclaration",
+            "scope": 21622,
+            "src": "1251:115:61",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_bytes32",
+              "typeString": "bytes32"
+            },
+            "typeName": {
+              "id": 21610,
+              "name": "bytes32",
+              "nodeType": "ElementaryTypeName",
+              "src": "1251:7:61",
+              "typeDescriptions": {
+                "typeIdentifier": "t_bytes32",
+                "typeString": "bytes32"
+              }
+            },
+            "value": {
+              "argumentTypes": null,
+              "hexValue": "307833396533656431666333333563653334366138636265336536346464353235636632326233376631653231303461373535653736316333633165623437333466",
+              "id": 21611,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "number",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "1300:66:61",
+              "subdenomination": null,
+              "typeDescriptions": {
+                "typeIdentifier": "t_rational_26184543223151444594394499265502566979851852556086732170002532024838889173839_by_1",
+                "typeString": "int_const 2618...(69 digits omitted)...3839"
+              },
+              "value": "0x39e3ed1fc335ce346a8cbe3e64dd525cf22b37f1e2104a755e761c3c1eb4734f"
+            },
+            "visibility": "internal"
+          },
+          {
+            "constant": true,
+            "id": 21615,
+            "name": "KEY_BILD_TOKEN",
+            "nodeType": "VariableDeclaration",
+            "scope": 21622,
+            "src": "1402:109:61",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_bytes32",
+              "typeString": "bytes32"
+            },
+            "typeName": {
+              "id": 21613,
+              "name": "bytes32",
+              "nodeType": "ElementaryTypeName",
+              "src": "1402:7:61",
+              "typeDescriptions": {
+                "typeIdentifier": "t_bytes32",
+                "typeString": "bytes32"
+              }
+            },
+            "value": {
+              "argumentTypes": null,
+              "hexValue": "307865613734363962313439333661663734386565393363353362326665353130623939323865646264636361633339363333323165666361376562316135376132",
+              "id": 21614,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "number",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "1445:66:61",
+              "subdenomination": null,
+              "typeDescriptions": {
+                "typeIdentifier": "t_rational_106046890290985894105584667244840291463655613490605622186651407626324644878242_by_1",
+                "typeString": "int_const 1060...(70 digits omitted)...8242"
+              },
+              "value": "0xea7469b14936af748ee93c53b2fe510b9928edbdccac3963321efca7eb1a57a2"
+            },
+            "visibility": "internal"
+          },
+          {
+            "constant": true,
+            "id": 21618,
+            "name": "KEY_SAVINGS_MANAGER",
+            "nodeType": "VariableDeclaration",
+            "scope": 21622,
+            "src": "1553:114:61",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_bytes32",
+              "typeString": "bytes32"
+            },
+            "typeName": {
+              "id": 21616,
+              "name": "bytes32",
+              "nodeType": "ElementaryTypeName",
+              "src": "1553:7:61",
+              "typeDescriptions": {
+                "typeIdentifier": "t_bytes32",
+                "typeString": "bytes32"
+              }
+            },
+            "value": {
+              "argumentTypes": null,
+              "hexValue": "307831326665393336633737613165313936343733633433313466336265643865656163316437353762333139616262383562646461373064663335353131626631",
+              "id": 21617,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "number",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "1601:66:61",
+              "subdenomination": null,
+              "typeDescriptions": {
+                "typeIdentifier": "t_rational_8591427909938479646942232413824102134555250821688297939988064366145423088625_by_1",
+                "typeString": "int_const 8591...(68 digits omitted)...8625"
+              },
+              "value": "0x12fe936c77a1e196473c4314f3bed8eeac1d757b319abb85bdda70df35511bf1"
+            },
+            "visibility": "internal"
+          },
+          {
+            "constant": true,
+            "id": 21621,
+            "name": "KEY_LIQUIDATOR",
+            "nodeType": "VariableDeclaration",
+            "scope": 21622,
+            "src": "1705:109:61",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_bytes32",
+              "typeString": "bytes32"
+            },
+            "typeName": {
+              "id": 21619,
+              "name": "bytes32",
+              "nodeType": "ElementaryTypeName",
+              "src": "1705:7:61",
+              "typeDescriptions": {
+                "typeIdentifier": "t_bytes32",
+                "typeString": "bytes32"
+              }
+            },
+            "value": {
+              "argumentTypes": null,
+              "hexValue": "307831653963623134643735363037333461363166613566663932373339353365393731666633636439323833633033643833343665333236343631373933336434",
+              "id": 21620,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "number",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "1748:66:61",
+              "subdenomination": null,
+              "typeDescriptions": {
+                "typeIdentifier": "t_rational_13846237296983910406384291578241032269733962030547075075173128163381692937172_by_1",
+                "typeString": "int_const 1384...(69 digits omitted)...7172"
+              },
+              "value": "0x1e9cb14d7560734a61fa5ff9273953e971ff3cd9283c03d8346e3264617933d4"
+            },
+            "visibility": "internal"
+          }
+        ],
+        "scope": 21623,
+        "src": "398:1419:61"
+      }
+    ],
+    "src": "0:1818:61"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.16+commit.9c3226ce.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.1.0",
+  "updatedAt": "2021-03-11T05:43:16.335Z",
+  "devdoc": {
+    "author": "Stability Labs Pty. Ltd.",
+    "details": "keccak256() values are hardcoded to avoid re-evaluation of the constants at runtime.",
+    "methods": {},
+    "title": "ModuleKeys"
+  },
+  "userdoc": {
+    "methods": {},
+    "notice": "Provides system wide access to the byte32 represntations of system modules        This allows each system module to be able to reference and update one another in a        friendly way"
+  }
+}

@@ -1,0 +1,2166 @@
+{
+  "contractName": "IBoostedVaultWithLockup",
+  "abi": [
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_beneficiary",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "_amount",
+          "type": "uint256"
+        }
+      ],
+      "name": "stake",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "_amount",
+          "type": "uint256"
+        }
+      ],
+      "name": "stake",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "_first",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "_last",
+          "type": "uint256"
+        }
+      ],
+      "name": "exit",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [],
+      "name": "exit",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "_amount",
+          "type": "uint256"
+        }
+      ],
+      "name": "withdraw",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [],
+      "name": "claimReward",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [],
+      "name": "claimRewards",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "_first",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "_last",
+          "type": "uint256"
+        }
+      ],
+      "name": "claimRewards",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_account",
+          "type": "address"
+        }
+      ],
+      "name": "pokeBoost",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "getRewardToken",
+      "outputs": [
+        {
+          "internalType": "contract IERC20",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "lastTimeRewardApplicable",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "rewardPerToken",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_account",
+          "type": "address"
+        }
+      ],
+      "name": "earned",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_account",
+          "type": "address"
+        }
+      ],
+      "name": "unclaimedRewards",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "amount",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "first",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "last",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.5.16+commit.9c3226ce\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":false,\"inputs\":[],\"name\":\"claimReward\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[],\"name\":\"claimRewards\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"_first\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"_last\",\"type\":\"uint256\"}],\"name\":\"claimRewards\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"internalType\":\"address\",\"name\":\"_account\",\"type\":\"address\"}],\"name\":\"earned\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"_first\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"_last\",\"type\":\"uint256\"}],\"name\":\"exit\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[],\"name\":\"exit\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"getRewardToken\",\"outputs\":[{\"internalType\":\"contract IERC20\",\"name\":\"\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"lastTimeRewardApplicable\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"address\",\"name\":\"_account\",\"type\":\"address\"}],\"name\":\"pokeBoost\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"rewardPerToken\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"_amount\",\"type\":\"uint256\"}],\"name\":\"stake\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"address\",\"name\":\"_beneficiary\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"_amount\",\"type\":\"uint256\"}],\"name\":\"stake\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"internalType\":\"address\",\"name\":\"_account\",\"type\":\"address\"}],\"name\":\"unclaimedRewards\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"first\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"last\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"_amount\",\"type\":\"uint256\"}],\"name\":\"withdraw\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{\"claimReward()\":{\"details\":\"Claims only the tokens that have been immediately unlocked, not including those that are in the lockers.\"},\"claimRewards()\":{\"details\":\"Claims all unlocked rewards for sender. Note, this function is costly - the args for _claimRewards should be determined off chain and then passed to other fn\"},\"claimRewards(uint256,uint256)\":{\"details\":\"Claims all unlocked rewards for sender. Both immediately unlocked rewards and also locked rewards past their time lock.\",\"params\":{\"_first\":\"Index of the first array element to claim\",\"_last\":\"Index of the last array element to claim\"}},\"earned(address)\":{\"details\":\"Returned the units of IMMEDIATELY claimable rewards a user has to receive. Note - this does NOT include the majority of rewards which will be locked up.\",\"params\":{\"_account\":\"User address\"},\"return\":\"Total reward amount earned\"},\"exit()\":{\"details\":\"Withdraws stake from pool and claims any unlocked rewards. Note, this function is costly - the args for _claimRewards should be determined off chain and then passed to other fn\"},\"exit(uint256,uint256)\":{\"details\":\"Withdraws stake from pool and claims any unlocked rewards.\",\"params\":{\"_first\":\"Index of the first array element to claim\",\"_last\":\"Index of the last array element to claim\"}},\"getRewardToken()\":{\"details\":\"Gets the RewardsToken\"},\"lastTimeRewardApplicable()\":{\"details\":\"Gets the last applicable timestamp for this reward period\"},\"pokeBoost(address)\":{\"details\":\"Pokes a given account to reset the boost\"},\"rewardPerToken()\":{\"details\":\"Calculates the amount of unclaimed rewards per token since last update, and sums with stored to give the new cumulative reward per token\",\"return\":\"'Reward' per staked token\"},\"stake(address,uint256)\":{\"details\":\"Stakes a given amount of the StakingToken for a given beneficiary\",\"params\":{\"_amount\":\"Units of StakingToken\",\"_beneficiary\":\"Staked tokens are credited to this address\"}},\"stake(uint256)\":{\"details\":\"Stakes a given amount of the StakingToken for the sender\",\"params\":{\"_amount\":\"Units of StakingToken\"}},\"unclaimedRewards(address)\":{\"details\":\"Calculates all unclaimed reward data, finding both immediately unlocked rewards and those that have passed their time lock.\",\"params\":{\"_account\":\"User address\"},\"return\":\"amount Total units of unclaimed rewardsfirst Index of the first userReward that has unlockedlast Index of the last userReward that has unlocked\"},\"withdraw(uint256)\":{\"details\":\"Withdraws given stake amount from the pool\",\"params\":{\"_amount\":\"Units of the staked token to withdraw\"}}}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/Volumes/sdxc/ETHEREUM/CODE/mStable-v1-edit/contracts/interfaces/IBoostedVaultWithLockup.sol\":\"IBoostedVaultWithLockup\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Volumes/sdxc/ETHEREUM/CODE/mStable-v1-edit/contracts/interfaces/IBoostedVaultWithLockup.sol\":{\"keccak256\":\"0xe612adbcf38235ac9e22b57a915dfbf24ff54c4b541cb100a6b67bc1d27fba8a\",\"urls\":[\"bzz-raw://45d579a82f963d7d7d348cf8b9bb872a54b5752ed481223b2aadea7c20ee29f1\",\"dweb:/ipfs/QmNX1NDsPTQLpPKbYDRDeRniLbpDzuS4M4yWetW1GhJP7K\"]},\"@openzeppelin/contracts/token/ERC20/IERC20.sol\":{\"keccak256\":\"0xe5bb0f57cff3e299f360052ba50f1ea0fff046df2be070b6943e0e3c3fdad8a9\",\"urls\":[\"bzz-raw://59fd025151435da35faa8093a5c7a17de02de9d08ad27275c5cdf05050820d91\",\"dweb:/ipfs/QmQMvwEcPhoRXzbXyrdoeRtvLoifUW9Qh7Luho7bmUPRkc\"]}},\"version\":1}",
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "sourceMap": "",
+  "deployedSourceMap": "",
+  "source": "pragma solidity 0.5.16;\n\nimport { IERC20 } from \"@openzeppelin/contracts/token/ERC20/IERC20.sol\";\n\ninterface IBoostedVaultWithLockup {\n\n    /**\n     * @dev Stakes a given amount of the StakingToken for the sender\n     * @param _amount Units of StakingToken\n     */\n    function stake(uint256 _amount) external;\n\n    /**\n     * @dev Stakes a given amount of the StakingToken for a given beneficiary\n     * @param _beneficiary Staked tokens are credited to this address\n     * @param _amount      Units of StakingToken\n     */\n    function stake(address _beneficiary, uint256 _amount) external;\n\n    /**\n     * @dev Withdraws stake from pool and claims any unlocked rewards.\n     * Note, this function is costly - the args for _claimRewards\n     * should be determined off chain and then passed to other fn\n     */\n    function exit() external;\n\n    /**\n     * @dev Withdraws stake from pool and claims any unlocked rewards.\n     * @param _first    Index of the first array element to claim\n     * @param _last     Index of the last array element to claim\n     */\n    function exit(uint256 _first, uint256 _last) external;\n\n    /**\n     * @dev Withdraws given stake amount from the pool\n     * @param _amount Units of the staked token to withdraw\n     */\n    function withdraw(uint256 _amount) external;\n\n    /**\n     * @dev Claims only the tokens that have been immediately unlocked, not including\n     * those that are in the lockers.\n     */\n    function claimReward() external;\n\n    /**\n     * @dev Claims all unlocked rewards for sender.\n     * Note, this function is costly - the args for _claimRewards\n     * should be determined off chain and then passed to other fn\n     */\n    function claimRewards() external;\n\n    /**\n     * @dev Claims all unlocked rewards for sender. Both immediately unlocked\n     * rewards and also locked rewards past their time lock.\n     * @param _first    Index of the first array element to claim\n     * @param _last     Index of the last array element to claim\n     */\n    function claimRewards(uint256 _first, uint256 _last) external;\n\n    /**\n     * @dev Pokes a given account to reset the boost\n     */\n    function pokeBoost(address _account) external;\n\n    /**\n     * @dev Gets the RewardsToken\n     */\n    function getRewardToken() external view returns (IERC20);\n\n    /**\n     * @dev Gets the last applicable timestamp for this reward period\n     */\n    function lastTimeRewardApplicable() external view returns (uint256);\n\n    /**\n     * @dev Calculates the amount of unclaimed rewards per token since last update,\n     * and sums with stored to give the new cumulative reward per token\n     * @return 'Reward' per staked token\n     */\n    function rewardPerToken() external view returns (uint256);\n\n    /**\n     * @dev Returned the units of IMMEDIATELY claimable rewards a user has to receive. Note - this\n     * does NOT include the majority of rewards which will be locked up.\n     * @param _account User address\n     * @return Total reward amount earned\n     */\n    function earned(address _account) external view  returns (uint256);\n\n    /**\n     * @dev Calculates all unclaimed reward data, finding both immediately unlocked rewards\n     * and those that have passed their time lock.\n     * @param _account User address\n     * @return amount Total units of unclaimed rewards\n     * @return first Index of the first userReward that has unlocked\n     * @return last Index of the last userReward that has unlocked\n     */\n    function unclaimedRewards(address _account) external view returns (uint256 amount, uint256 first, uint256 last);\n}",
+  "sourcePath": "/Volumes/sdxc/ETHEREUM/CODE/mStable-v1-edit/contracts/interfaces/IBoostedVaultWithLockup.sol",
+  "ast": {
+    "absolutePath": "/Volumes/sdxc/ETHEREUM/CODE/mStable-v1-edit/contracts/interfaces/IBoostedVaultWithLockup.sol",
+    "exportedSymbols": {
+      "IBoostedVaultWithLockup": [
+        3506
+      ]
+    },
+    "id": 3507,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 3425,
+        "literals": [
+          "solidity",
+          "0.5",
+          ".16"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:10"
+      },
+      {
+        "absolutePath": "@openzeppelin/contracts/token/ERC20/IERC20.sol",
+        "file": "@openzeppelin/contracts/token/ERC20/IERC20.sol",
+        "id": 3427,
+        "nodeType": "ImportDirective",
+        "scope": 3507,
+        "sourceUnit": 35245,
+        "src": "25:72:10",
+        "symbolAliases": [
+          {
+            "foreign": 3426,
+            "local": null
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "documentation": null,
+        "fullyImplemented": false,
+        "id": 3506,
+        "linearizedBaseContracts": [
+          3506
+        ],
+        "name": "IBoostedVaultWithLockup",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": null,
+            "documentation": "@dev Stakes a given amount of the StakingToken for the sender\n@param _amount Units of StakingToken",
+            "id": 3432,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "stake",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 3430,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3429,
+                  "name": "_amount",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3432,
+                  "src": "284:15:10",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 3428,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "284:7:10",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "283:17:10"
+            },
+            "returnParameters": {
+              "id": 3431,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "309:0:10"
+            },
+            "scope": 3506,
+            "src": "269:41:10",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": "@dev Stakes a given amount of the StakingToken for a given beneficiary\n@param _beneficiary Staked tokens are credited to this address\n@param _amount      Units of StakingToken",
+            "id": 3439,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "stake",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 3437,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3434,
+                  "name": "_beneficiary",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3439,
+                  "src": "544:20:10",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 3433,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "544:7:10",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 3436,
+                  "name": "_amount",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3439,
+                  "src": "566:15:10",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 3435,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "566:7:10",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "543:39:10"
+            },
+            "returnParameters": {
+              "id": 3438,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "591:0:10"
+            },
+            "scope": 3506,
+            "src": "529:63:10",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": "@dev Withdraws stake from pool and claims any unlocked rewards.\nNote, this function is costly - the args for _claimRewards\nshould be determined off chain and then passed to other fn",
+            "id": 3442,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "exit",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 3440,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "830:2:10"
+            },
+            "returnParameters": {
+              "id": 3441,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "841:0:10"
+            },
+            "scope": 3506,
+            "src": "817:25:10",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": "@dev Withdraws stake from pool and claims any unlocked rewards.\n@param _first    Index of the first array element to claim\n@param _last     Index of the last array element to claim",
+            "id": 3449,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "exit",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 3447,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3444,
+                  "name": "_first",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3449,
+                  "src": "1080:14:10",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 3443,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1080:7:10",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 3446,
+                  "name": "_last",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3449,
+                  "src": "1096:13:10",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 3445,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1096:7:10",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1079:31:10"
+            },
+            "returnParameters": {
+              "id": 3448,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1119:0:10"
+            },
+            "scope": 3506,
+            "src": "1066:54:10",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": "@dev Withdraws given stake amount from the pool\n@param _amount Units of the staked token to withdraw",
+            "id": 3454,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "withdraw",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 3452,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3451,
+                  "name": "_amount",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3454,
+                  "src": "1275:15:10",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 3450,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1275:7:10",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1274:17:10"
+            },
+            "returnParameters": {
+              "id": 3453,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1300:0:10"
+            },
+            "scope": 3506,
+            "src": "1257:44:10",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": "@dev Claims only the tokens that have been immediately unlocked, not including\nthose that are in the lockers.",
+            "id": 3457,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "claimReward",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 3455,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1467:2:10"
+            },
+            "returnParameters": {
+              "id": 3456,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1478:0:10"
+            },
+            "scope": 3506,
+            "src": "1447:32:10",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": "@dev Claims all unlocked rewards for sender.\nNote, this function is costly - the args for _claimRewards\nshould be determined off chain and then passed to other fn",
+            "id": 3460,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "claimRewards",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 3458,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1706:2:10"
+            },
+            "returnParameters": {
+              "id": 3459,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1717:0:10"
+            },
+            "scope": 3506,
+            "src": "1685:33:10",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": "@dev Claims all unlocked rewards for sender. Both immediately unlocked\nrewards and also locked rewards past their time lock.\n@param _first    Index of the first array element to claim\n@param _last     Index of the last array element to claim",
+            "id": 3467,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "claimRewards",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 3465,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3462,
+                  "name": "_first",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3467,
+                  "src": "2032:14:10",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 3461,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2032:7:10",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 3464,
+                  "name": "_last",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3467,
+                  "src": "2048:13:10",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 3463,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2048:7:10",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2031:31:10"
+            },
+            "returnParameters": {
+              "id": 3466,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "2071:0:10"
+            },
+            "scope": 3506,
+            "src": "2010:62:10",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": "@dev Pokes a given account to reset the boost",
+            "id": 3472,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "pokeBoost",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 3470,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3469,
+                  "name": "_account",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3472,
+                  "src": "2166:16:10",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 3468,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2166:7:10",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2165:18:10"
+            },
+            "returnParameters": {
+              "id": 3471,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "2192:0:10"
+            },
+            "scope": 3506,
+            "src": "2147:46:10",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": "@dev Gets the RewardsToken",
+            "id": 3477,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getRewardToken",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 3473,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "2272:2:10"
+            },
+            "returnParameters": {
+              "id": 3476,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3475,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3477,
+                  "src": "2298:6:10",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_IERC20_$35244",
+                    "typeString": "contract IERC20"
+                  },
+                  "typeName": {
+                    "contractScope": null,
+                    "id": 3474,
+                    "name": "IERC20",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 35244,
+                    "src": "2298:6:10",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_IERC20_$35244",
+                      "typeString": "contract IERC20"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2297:8:10"
+            },
+            "scope": 3506,
+            "src": "2249:57:10",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": "@dev Gets the last applicable timestamp for this reward period",
+            "id": 3482,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "lastTimeRewardApplicable",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 3478,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "2431:2:10"
+            },
+            "returnParameters": {
+              "id": 3481,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3480,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3482,
+                  "src": "2457:7:10",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 3479,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2457:7:10",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2456:9:10"
+            },
+            "scope": 3506,
+            "src": "2398:68:10",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": "@dev Calculates the amount of unclaimed rewards per token since last update,\nand sums with stored to give the new cumulative reward per token\n@return 'Reward' per staked token",
+            "id": 3487,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "rewardPerToken",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 3483,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "2708:2:10"
+            },
+            "returnParameters": {
+              "id": 3486,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3485,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3487,
+                  "src": "2734:7:10",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 3484,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2734:7:10",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2733:9:10"
+            },
+            "scope": 3506,
+            "src": "2685:58:10",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": "@dev Returned the units of IMMEDIATELY claimable rewards a user has to receive. Note - this\ndoes NOT include the majority of rewards which will be locked up.\n@param _account User address\n@return Total reward amount earned",
+            "id": 3494,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "earned",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 3490,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3489,
+                  "name": "_account",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3494,
+                  "src": "3031:16:10",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 3488,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3031:7:10",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "3030:18:10"
+            },
+            "returnParameters": {
+              "id": 3493,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3492,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3494,
+                  "src": "3073:7:10",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 3491,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3073:7:10",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "3072:9:10"
+            },
+            "scope": 3506,
+            "src": "3015:67:10",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": "@dev Calculates all unclaimed reward data, finding both immediately unlocked rewards\nand those that have passed their time lock.\n@param _account User address\n@return amount Total units of unclaimed rewards\n@return first Index of the first userReward that has unlocked\n@return last Index of the last userReward that has unlocked",
+            "id": 3505,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "unclaimedRewards",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 3497,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3496,
+                  "name": "_account",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3505,
+                  "src": "3500:16:10",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 3495,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3500:7:10",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "3499:18:10"
+            },
+            "returnParameters": {
+              "id": 3504,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3499,
+                  "name": "amount",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3505,
+                  "src": "3541:14:10",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 3498,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3541:7:10",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 3501,
+                  "name": "first",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3505,
+                  "src": "3557:13:10",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 3500,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3557:7:10",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 3503,
+                  "name": "last",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3505,
+                  "src": "3572:12:10",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 3502,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3572:7:10",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "3540:45:10"
+            },
+            "scope": 3506,
+            "src": "3474:112:10",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "external"
+          }
+        ],
+        "scope": 3507,
+        "src": "99:3489:10"
+      }
+    ],
+    "src": "0:3588:10"
+  },
+  "legacyAST": {
+    "absolutePath": "/Volumes/sdxc/ETHEREUM/CODE/mStable-v1-edit/contracts/interfaces/IBoostedVaultWithLockup.sol",
+    "exportedSymbols": {
+      "IBoostedVaultWithLockup": [
+        3506
+      ]
+    },
+    "id": 3507,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 3425,
+        "literals": [
+          "solidity",
+          "0.5",
+          ".16"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:10"
+      },
+      {
+        "absolutePath": "@openzeppelin/contracts/token/ERC20/IERC20.sol",
+        "file": "@openzeppelin/contracts/token/ERC20/IERC20.sol",
+        "id": 3427,
+        "nodeType": "ImportDirective",
+        "scope": 3507,
+        "sourceUnit": 35245,
+        "src": "25:72:10",
+        "symbolAliases": [
+          {
+            "foreign": 3426,
+            "local": null
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "documentation": null,
+        "fullyImplemented": false,
+        "id": 3506,
+        "linearizedBaseContracts": [
+          3506
+        ],
+        "name": "IBoostedVaultWithLockup",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": null,
+            "documentation": "@dev Stakes a given amount of the StakingToken for the sender\n@param _amount Units of StakingToken",
+            "id": 3432,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "stake",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 3430,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3429,
+                  "name": "_amount",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3432,
+                  "src": "284:15:10",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 3428,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "284:7:10",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "283:17:10"
+            },
+            "returnParameters": {
+              "id": 3431,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "309:0:10"
+            },
+            "scope": 3506,
+            "src": "269:41:10",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": "@dev Stakes a given amount of the StakingToken for a given beneficiary\n@param _beneficiary Staked tokens are credited to this address\n@param _amount      Units of StakingToken",
+            "id": 3439,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "stake",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 3437,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3434,
+                  "name": "_beneficiary",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3439,
+                  "src": "544:20:10",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 3433,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "544:7:10",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 3436,
+                  "name": "_amount",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3439,
+                  "src": "566:15:10",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 3435,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "566:7:10",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "543:39:10"
+            },
+            "returnParameters": {
+              "id": 3438,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "591:0:10"
+            },
+            "scope": 3506,
+            "src": "529:63:10",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": "@dev Withdraws stake from pool and claims any unlocked rewards.\nNote, this function is costly - the args for _claimRewards\nshould be determined off chain and then passed to other fn",
+            "id": 3442,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "exit",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 3440,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "830:2:10"
+            },
+            "returnParameters": {
+              "id": 3441,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "841:0:10"
+            },
+            "scope": 3506,
+            "src": "817:25:10",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": "@dev Withdraws stake from pool and claims any unlocked rewards.\n@param _first    Index of the first array element to claim\n@param _last     Index of the last array element to claim",
+            "id": 3449,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "exit",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 3447,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3444,
+                  "name": "_first",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3449,
+                  "src": "1080:14:10",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 3443,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1080:7:10",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 3446,
+                  "name": "_last",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3449,
+                  "src": "1096:13:10",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 3445,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1096:7:10",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1079:31:10"
+            },
+            "returnParameters": {
+              "id": 3448,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1119:0:10"
+            },
+            "scope": 3506,
+            "src": "1066:54:10",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": "@dev Withdraws given stake amount from the pool\n@param _amount Units of the staked token to withdraw",
+            "id": 3454,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "withdraw",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 3452,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3451,
+                  "name": "_amount",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3454,
+                  "src": "1275:15:10",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 3450,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1275:7:10",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1274:17:10"
+            },
+            "returnParameters": {
+              "id": 3453,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1300:0:10"
+            },
+            "scope": 3506,
+            "src": "1257:44:10",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": "@dev Claims only the tokens that have been immediately unlocked, not including\nthose that are in the lockers.",
+            "id": 3457,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "claimReward",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 3455,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1467:2:10"
+            },
+            "returnParameters": {
+              "id": 3456,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1478:0:10"
+            },
+            "scope": 3506,
+            "src": "1447:32:10",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": "@dev Claims all unlocked rewards for sender.\nNote, this function is costly - the args for _claimRewards\nshould be determined off chain and then passed to other fn",
+            "id": 3460,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "claimRewards",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 3458,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1706:2:10"
+            },
+            "returnParameters": {
+              "id": 3459,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1717:0:10"
+            },
+            "scope": 3506,
+            "src": "1685:33:10",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": "@dev Claims all unlocked rewards for sender. Both immediately unlocked\nrewards and also locked rewards past their time lock.\n@param _first    Index of the first array element to claim\n@param _last     Index of the last array element to claim",
+            "id": 3467,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "claimRewards",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 3465,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3462,
+                  "name": "_first",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3467,
+                  "src": "2032:14:10",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 3461,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2032:7:10",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 3464,
+                  "name": "_last",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3467,
+                  "src": "2048:13:10",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 3463,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2048:7:10",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2031:31:10"
+            },
+            "returnParameters": {
+              "id": 3466,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "2071:0:10"
+            },
+            "scope": 3506,
+            "src": "2010:62:10",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": "@dev Pokes a given account to reset the boost",
+            "id": 3472,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "pokeBoost",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 3470,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3469,
+                  "name": "_account",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3472,
+                  "src": "2166:16:10",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 3468,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2166:7:10",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2165:18:10"
+            },
+            "returnParameters": {
+              "id": 3471,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "2192:0:10"
+            },
+            "scope": 3506,
+            "src": "2147:46:10",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": "@dev Gets the RewardsToken",
+            "id": 3477,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getRewardToken",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 3473,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "2272:2:10"
+            },
+            "returnParameters": {
+              "id": 3476,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3475,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3477,
+                  "src": "2298:6:10",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_IERC20_$35244",
+                    "typeString": "contract IERC20"
+                  },
+                  "typeName": {
+                    "contractScope": null,
+                    "id": 3474,
+                    "name": "IERC20",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 35244,
+                    "src": "2298:6:10",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_IERC20_$35244",
+                      "typeString": "contract IERC20"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2297:8:10"
+            },
+            "scope": 3506,
+            "src": "2249:57:10",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": "@dev Gets the last applicable timestamp for this reward period",
+            "id": 3482,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "lastTimeRewardApplicable",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 3478,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "2431:2:10"
+            },
+            "returnParameters": {
+              "id": 3481,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3480,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3482,
+                  "src": "2457:7:10",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 3479,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2457:7:10",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2456:9:10"
+            },
+            "scope": 3506,
+            "src": "2398:68:10",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": "@dev Calculates the amount of unclaimed rewards per token since last update,\nand sums with stored to give the new cumulative reward per token\n@return 'Reward' per staked token",
+            "id": 3487,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "rewardPerToken",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 3483,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "2708:2:10"
+            },
+            "returnParameters": {
+              "id": 3486,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3485,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3487,
+                  "src": "2734:7:10",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 3484,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2734:7:10",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2733:9:10"
+            },
+            "scope": 3506,
+            "src": "2685:58:10",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": "@dev Returned the units of IMMEDIATELY claimable rewards a user has to receive. Note - this\ndoes NOT include the majority of rewards which will be locked up.\n@param _account User address\n@return Total reward amount earned",
+            "id": 3494,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "earned",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 3490,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3489,
+                  "name": "_account",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3494,
+                  "src": "3031:16:10",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 3488,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3031:7:10",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "3030:18:10"
+            },
+            "returnParameters": {
+              "id": 3493,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3492,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3494,
+                  "src": "3073:7:10",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 3491,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3073:7:10",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "3072:9:10"
+            },
+            "scope": 3506,
+            "src": "3015:67:10",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": "@dev Calculates all unclaimed reward data, finding both immediately unlocked rewards\nand those that have passed their time lock.\n@param _account User address\n@return amount Total units of unclaimed rewards\n@return first Index of the first userReward that has unlocked\n@return last Index of the last userReward that has unlocked",
+            "id": 3505,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "unclaimedRewards",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 3497,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3496,
+                  "name": "_account",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3505,
+                  "src": "3500:16:10",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 3495,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3500:7:10",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "3499:18:10"
+            },
+            "returnParameters": {
+              "id": 3504,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3499,
+                  "name": "amount",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3505,
+                  "src": "3541:14:10",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 3498,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3541:7:10",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 3501,
+                  "name": "first",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3505,
+                  "src": "3557:13:10",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 3500,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3557:7:10",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 3503,
+                  "name": "last",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3505,
+                  "src": "3572:12:10",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 3502,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3572:7:10",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "3540:45:10"
+            },
+            "scope": 3506,
+            "src": "3474:112:10",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "external"
+          }
+        ],
+        "scope": 3507,
+        "src": "99:3489:10"
+      }
+    ],
+    "src": "0:3588:10"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.16+commit.9c3226ce.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.1.0",
+  "updatedAt": "2021-03-11T05:43:15.068Z",
+  "devdoc": {
+    "methods": {
+      "claimReward()": {
+        "details": "Claims only the tokens that have been immediately unlocked, not including those that are in the lockers."
+      },
+      "claimRewards()": {
+        "details": "Claims all unlocked rewards for sender. Note, this function is costly - the args for _claimRewards should be determined off chain and then passed to other fn"
+      },
+      "claimRewards(uint256,uint256)": {
+        "details": "Claims all unlocked rewards for sender. Both immediately unlocked rewards and also locked rewards past their time lock.",
+        "params": {
+          "_first": "Index of the first array element to claim",
+          "_last": "Index of the last array element to claim"
+        }
+      },
+      "earned(address)": {
+        "details": "Returned the units of IMMEDIATELY claimable rewards a user has to receive. Note - this does NOT include the majority of rewards which will be locked up.",
+        "params": {
+          "_account": "User address"
+        },
+        "return": "Total reward amount earned"
+      },
+      "exit()": {
+        "details": "Withdraws stake from pool and claims any unlocked rewards. Note, this function is costly - the args for _claimRewards should be determined off chain and then passed to other fn"
+      },
+      "exit(uint256,uint256)": {
+        "details": "Withdraws stake from pool and claims any unlocked rewards.",
+        "params": {
+          "_first": "Index of the first array element to claim",
+          "_last": "Index of the last array element to claim"
+        }
+      },
+      "getRewardToken()": {
+        "details": "Gets the RewardsToken"
+      },
+      "lastTimeRewardApplicable()": {
+        "details": "Gets the last applicable timestamp for this reward period"
+      },
+      "pokeBoost(address)": {
+        "details": "Pokes a given account to reset the boost"
+      },
+      "rewardPerToken()": {
+        "details": "Calculates the amount of unclaimed rewards per token since last update, and sums with stored to give the new cumulative reward per token",
+        "return": "'Reward' per staked token"
+      },
+      "stake(address,uint256)": {
+        "details": "Stakes a given amount of the StakingToken for a given beneficiary",
+        "params": {
+          "_amount": "Units of StakingToken",
+          "_beneficiary": "Staked tokens are credited to this address"
+        }
+      },
+      "stake(uint256)": {
+        "details": "Stakes a given amount of the StakingToken for the sender",
+        "params": {
+          "_amount": "Units of StakingToken"
+        }
+      },
+      "unclaimedRewards(address)": {
+        "details": "Calculates all unclaimed reward data, finding both immediately unlocked rewards and those that have passed their time lock.",
+        "params": {
+          "_account": "User address"
+        },
+        "return": "amount Total units of unclaimed rewardsfirst Index of the first userReward that has unlockedlast Index of the last userReward that has unlocked"
+      },
+      "withdraw(uint256)": {
+        "details": "Withdraws given stake amount from the pool",
+        "params": {
+          "_amount": "Units of the staked token to withdraw"
+        }
+      }
+    }
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}

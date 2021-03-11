@@ -1,0 +1,56 @@
+{
+  "_format": "hh-sol-artifact-1",
+  "contractName": "ICurve_DepositMUSD",
+  "sourceName": "contracts/z_mocks/savings/Connector_yVault_mUSD3Pool.sol",
+  "abi": [
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "internalType": "uint256[]",
+          "name": "amounts",
+          "type": "uint256[]"
+        },
+        {
+          "internalType": "uint256",
+          "name": "min_mint_amount",
+          "type": "uint256"
+        }
+      ],
+      "name": "add_liquidity",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "_token_amount",
+          "type": "uint256"
+        },
+        {
+          "internalType": "int128",
+          "name": "i",
+          "type": "int128"
+        },
+        {
+          "internalType": "uint256",
+          "name": "min_amount",
+          "type": "uint256"
+        }
+      ],
+      "name": "remove_liquidity_one_coin",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "linkReferences": {},
+  "deployedLinkReferences": {}
+}

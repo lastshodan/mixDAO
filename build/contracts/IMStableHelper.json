@@ -1,0 +1,2224 @@
+{
+  "contractName": "IMStableHelper",
+  "abi": [
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_mIx",
+          "type": "address"
+        }
+      ],
+      "name": "suggestMintAsset",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        },
+        {
+          "internalType": "string",
+          "name": "",
+          "type": "string"
+        },
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_mIx",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "_input",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "_output",
+          "type": "address"
+        }
+      ],
+      "name": "getMaxSwap",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        },
+        {
+          "internalType": "string",
+          "name": "",
+          "type": "string"
+        },
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_mIx",
+          "type": "address"
+        }
+      ],
+      "name": "suggestRedeemIx",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        },
+        {
+          "internalType": "string",
+          "name": "",
+          "type": "string"
+        },
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_mIx",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "_mIxQuantity",
+          "type": "uint256"
+        },
+        {
+          "internalType": "address",
+          "name": "_outputBasset",
+          "type": "address"
+        }
+      ],
+      "name": "getRedeemValidity",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        },
+        {
+          "internalType": "string",
+          "name": "",
+          "type": "string"
+        },
+        {
+          "internalType": "uint256",
+          "name": "output",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "bassetQuantityArg",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "internalType": "contract ISavingsContractV1",
+          "name": "_save",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "_user",
+          "type": "address"
+        }
+      ],
+      "name": "getSaveBalance",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "internalType": "contract ISavingsContractV1",
+          "name": "_save",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "_amount",
+          "type": "uint256"
+        }
+      ],
+      "name": "getSaveRedeemInput",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.5.16+commit.9c3226ce\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":true,\"inputs\":[{\"internalType\":\"address\",\"name\":\"_mIx\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"_input\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"_output\",\"type\":\"address\"}],\"name\":\"getMaxSwap\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"},{\"internalType\":\"string\",\"name\":\"\",\"type\":\"string\"},{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"internalType\":\"address\",\"name\":\"_mIx\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"_mIxQuantity\",\"type\":\"uint256\"},{\"internalType\":\"address\",\"name\":\"_outputBasset\",\"type\":\"address\"}],\"name\":\"getRedeemValidity\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"},{\"internalType\":\"string\",\"name\":\"\",\"type\":\"string\"},{\"internalType\":\"uint256\",\"name\":\"output\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"bassetQuantityArg\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"internalType\":\"contract ISavingsContractV1\",\"name\":\"_save\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"_user\",\"type\":\"address\"}],\"name\":\"getSaveBalance\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"internalType\":\"contract ISavingsContractV1\",\"name\":\"_save\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"_amount\",\"type\":\"uint256\"}],\"name\":\"getSaveRedeemInput\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"internalType\":\"address\",\"name\":\"_mIx\",\"type\":\"address\"}],\"name\":\"suggestMintAsset\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"},{\"internalType\":\"string\",\"name\":\"\",\"type\":\"string\"},{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"internalType\":\"address\",\"name\":\"_mIx\",\"type\":\"address\"}],\"name\":\"suggestRedeemIx\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"},{\"internalType\":\"string\",\"name\":\"\",\"type\":\"string\"},{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{\"getMaxSwap(address,address,address)\":{\"details\":\"Gets the maximum input for a valid swap pair\",\"params\":{\"_input\":\"Asset to input only bAssets accepted\",\"_mIx\":\"mIx address (e.g. mUSD)\",\"_output\":\"Either a bAsset or the mIx\"},\"return\":\"validvalidity reasonmax input units (in native decimals)how much output this input would produce (in native decimals, after any fee)\"},\"getRedeemValidity(address,uint256,address)\":{\"details\":\"Determines if a given Redemption is valid\",\"params\":{\"_mIx\":\"Address of the given mIx (e.g. mUSD)\",\"_mIxQuantity\":\"Amount of mIx to redeem (in mUSD units)\",\"_outputBasset\":\"Desired output bAsset\"},\"return\":\"validvalidity reasonoutput in bAsset unitsbAssetQuantityArg - required input argument to the 'redeem' call\"},\"getSaveBalance(address,address)\":{\"details\":\"Gets the users savings balance in Mix terms\",\"params\":{\"_save\":\"SAVE contract address\",\"_user\":\"Address of the user\"},\"return\":\"balance in Mix units\"},\"getSaveRedeemInput(address,uint256)\":{\"details\":\"Returns the 'credit' units required to withdraw a certain amount of Mix from the SAVE contract\",\"params\":{\"_amount\":\"Amount of mIx to redeem from SAVE\",\"_save\":\"SAVE contract address\"},\"return\":\"input for the redeem function (ie. credit units to redeem)\"},\"suggestMintAsset(address)\":{\"details\":\"Returns a valid bAsset with which to mint\",\"params\":{\"_mIx\":\"Mix addr\"},\"return\":\"valid boolstring messageaddress of bAsset to mint\"},\"suggestRedeemIx(address)\":{\"details\":\"Returns a valid bAsset to redeem\",\"params\":{\"_mIx\":\"Mix addr\"},\"return\":\"valid boolstring messageaddress of bAsset to redeem\"}}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/Volumes/sdxc/ETHEREUM/CODE/mStable-v1-edit/contracts/interfaces/IMStableHelper.sol\":\"IMStableHelper\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Volumes/sdxc/ETHEREUM/CODE/mStable-v1-edit/contracts/interfaces/IMStableHelper.sol\":{\"keccak256\":\"0x0b838b46d73390d496e2050abad5d199989db948660cb2ee9bad511648bc27c9\",\"urls\":[\"bzz-raw://2c93ca84d870877054c26f8ce778e883d10bedf49530ae0c08cf1f6fe01cd7e3\",\"dweb:/ipfs/QmUffkLojCaYFsZ7p8nPWseY3BSkfMTxpxrppMrmL5aivA\"]},\"/Volumes/sdxc/ETHEREUM/CODE/mStable-v1-edit/contracts/interfaces/ISavingsContract.sol\":{\"keccak256\":\"0xe407b18abcfc88493f9aa83f823a2311040710365fcf898b3421e5369d0bb9ee\",\"urls\":[\"bzz-raw://82914701efc92716269a67496179d86a80d019512e3292e6d4ffbb76a4a0fbbe\",\"dweb:/ipfs/QmSvhJWr1LumFTdqWV7zpTD4K8ETM7HPJSvmiKtrNJzY3Y\"]}},\"version\":1}",
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "sourceMap": "",
+  "deployedSourceMap": "",
+  "source": "pragma solidity 0.5.16;\n\nimport { ISavingsContractV1 } from \"./ISavingsContract.sol\";\n\ninterface IMStableHelper {\n\n    /**\n     * @dev Returns a valid bAsset with which to mint\n     * @param _mIx Mix addr\n     * @return valid bool\n     * @return string message\n     * @return address of bAsset to mint\n     */\n    function suggestMintAsset(\n        address _mIx\n    )\n        external\n        view\n        returns (\n            bool,\n            string memory,\n            address\n        );\n\n    /**\n     * @dev Gets the maximum input for a valid swap pair\n     * @param _mIx mIx address (e.g. mUSD)\n     * @param _input Asset to input only bAssets accepted\n     * @param _output Either a bAsset or the mIx\n     * @return valid\n     * @return validity reason\n     * @return max input units (in native decimals)\n     * @return how much output this input would produce (in native decimals, after any fee)\n     */\n    function getMaxSwap(\n        address _mIx,\n        address _input,\n        address _output\n    )\n        external\n        view\n        returns (\n            bool,\n            string memory,\n            uint256,\n            uint256\n        );\n\n\n    /**\n     * @dev Returns a valid bAsset to redeem\n     * @param _mIx Mix addr\n     * @return valid bool\n     * @return string message\n     * @return address of bAsset to redeem\n     */\n    function suggestRedeemIx(\n        address _mIx\n    )\n        external\n        view\n        returns (\n            bool,\n            string memory,\n            address\n        );\n\n    /**\n     * @dev Determines if a given Redemption is valid\n     * @param _mIx Address of the given mIx (e.g. mUSD)\n     * @param _mIxQuantity Amount of mIx to redeem (in mUSD units)\n     * @param _outputBasset Desired output bAsset\n     * @return valid\n     * @return validity reason\n     * @return output in bAsset units\n     * @return bAssetQuantityArg - required input argument to the 'redeem' call\n     */\n    function getRedeemValidity(\n        address _mIx,\n        uint256 _mIxQuantity,\n        address _outputBasset\n    )\n        external\n        view\n        returns (\n            bool,\n            string memory,\n            uint256 output,\n            uint256 bassetQuantityArg\n        );\n\n    /**\n     * @dev Gets the users savings balance in Mix terms\n     * @param _save SAVE contract address\n     * @param _user Address of the user\n     * @return balance in Mix units\n     */\n    function getSaveBalance(\n        ISavingsContractV1 _save,\n        address _user\n    )\n        external\n        view\n        returns (\n            uint256\n        );\n\n    /**\n     * @dev Returns the 'credit' units required to withdraw a certain\n     * amount of Mix from the SAVE contract\n     * @param _save SAVE contract address\n     * @param _amount Amount of mIx to redeem from SAVE\n     * @return input for the redeem function (ie. credit units to redeem)\n     */\n    function getSaveRedeemInput(\n        ISavingsContractV1 _save,\n        uint256 _amount\n    )\n        external\n        view\n        returns (\n            uint256\n        );\n}",
+  "sourcePath": "/Volumes/sdxc/ETHEREUM/CODE/mStable-v1-edit/contracts/interfaces/IMStableHelper.sol",
+  "ast": {
+    "absolutePath": "/Volumes/sdxc/ETHEREUM/CODE/mStable-v1-edit/contracts/interfaces/IMStableHelper.sol",
+    "exportedSymbols": {
+      "IMStableHelper": [
+        3641
+      ]
+    },
+    "id": 3642,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 3564,
+        "literals": [
+          "solidity",
+          "0.5",
+          ".16"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:12"
+      },
+      {
+        "absolutePath": "/Volumes/sdxc/ETHEREUM/CODE/mStable-v1-edit/contracts/interfaces/ISavingsContract.sol",
+        "file": "./ISavingsContract.sol",
+        "id": 3566,
+        "nodeType": "ImportDirective",
+        "scope": 3642,
+        "sourceUnit": 4033,
+        "src": "25:60:12",
+        "symbolAliases": [
+          {
+            "foreign": 3565,
+            "local": null
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "documentation": null,
+        "fullyImplemented": false,
+        "id": 3641,
+        "linearizedBaseContracts": [
+          3641
+        ],
+        "name": "IMStableHelper",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": null,
+            "documentation": "@dev Returns a valid bAsset with which to mint\n@param _mIx Mix addr\n@return valid bool\n@return string message\n@return address of bAsset to mint",
+            "id": 3577,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "suggestMintAsset",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 3569,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3568,
+                  "name": "_mIx",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3577,
+                  "src": "349:12:12",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 3567,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "349:7:12",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "339:28:12"
+            },
+            "returnParameters": {
+              "id": 3576,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3571,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3577,
+                  "src": "428:4:12",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 3570,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "428:4:12",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 3573,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3577,
+                  "src": "446:13:12",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 3572,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "446:6:12",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 3575,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3577,
+                  "src": "473:7:12",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 3574,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "473:7:12",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "414:76:12"
+            },
+            "scope": 3641,
+            "src": "314:177:12",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": "@dev Gets the maximum input for a valid swap pair\n@param _mIx mIx address (e.g. mUSD)\n@param _input Asset to input only bAssets accepted\n@param _output Either a bAsset or the mIx\n@return valid\n@return validity reason\n@return max input units (in native decimals)\n@return how much output this input would produce (in native decimals, after any fee)",
+            "id": 3594,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getMaxSwap",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 3584,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3579,
+                  "name": "_mIx",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3594,
+                  "src": "945:12:12",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 3578,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "945:7:12",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 3581,
+                  "name": "_input",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3594,
+                  "src": "967:14:12",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 3580,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "967:7:12",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 3583,
+                  "name": "_output",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3594,
+                  "src": "991:15:12",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 3582,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "991:7:12",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "935:77:12"
+            },
+            "returnParameters": {
+              "id": 3593,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3586,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3594,
+                  "src": "1073:4:12",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 3585,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1073:4:12",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 3588,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3594,
+                  "src": "1091:13:12",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 3587,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1091:6:12",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 3590,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3594,
+                  "src": "1118:7:12",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 3589,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1118:7:12",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 3592,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3594,
+                  "src": "1139:7:12",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 3591,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1139:7:12",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1059:97:12"
+            },
+            "scope": 3641,
+            "src": "916:241:12",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": "@dev Returns a valid bAsset to redeem\n@param _mIx Mix addr\n@return valid bool\n@return string message\n@return address of bAsset to redeem",
+            "id": 3605,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "suggestRedeemIx",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 3597,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3596,
+                  "name": "_mIx",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3605,
+                  "src": "1386:12:12",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 3595,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1386:7:12",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1376:28:12"
+            },
+            "returnParameters": {
+              "id": 3604,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3599,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3605,
+                  "src": "1465:4:12",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 3598,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1465:4:12",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 3601,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3605,
+                  "src": "1483:13:12",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 3600,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1483:6:12",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 3603,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3605,
+                  "src": "1510:7:12",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 3602,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1510:7:12",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1451:76:12"
+            },
+            "scope": 3641,
+            "src": "1352:176:12",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": "@dev Determines if a given Redemption is valid\n@param _mIx Address of the given mIx (e.g. mUSD)\n@param _mIxQuantity Amount of mIx to redeem (in mUSD units)\n@param _outputBasset Desired output bAsset\n@return valid\n@return validity reason\n@return output in bAsset units\n@return bAssetQuantityArg - required input argument to the 'redeem' call",
+            "id": 3622,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getRedeemValidity",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 3612,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3607,
+                  "name": "_mIx",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3622,
+                  "src": "1983:12:12",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 3606,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1983:7:12",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 3609,
+                  "name": "_mIxQuantity",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3622,
+                  "src": "2005:20:12",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 3608,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2005:7:12",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 3611,
+                  "name": "_outputBasset",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3622,
+                  "src": "2035:21:12",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 3610,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2035:7:12",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1973:89:12"
+            },
+            "returnParameters": {
+              "id": 3621,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3614,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3622,
+                  "src": "2123:4:12",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 3613,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2123:4:12",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 3616,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3622,
+                  "src": "2141:13:12",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 3615,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2141:6:12",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 3618,
+                  "name": "output",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3622,
+                  "src": "2168:14:12",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 3617,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2168:7:12",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 3620,
+                  "name": "bassetQuantityArg",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3622,
+                  "src": "2196:25:12",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 3619,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2196:7:12",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2109:122:12"
+            },
+            "scope": 3641,
+            "src": "1947:285:12",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": "@dev Gets the users savings balance in Mix terms\n@param _save SAVE contract address\n@param _user Address of the user\n@return balance in Mix units",
+            "id": 3631,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getSaveBalance",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 3627,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3624,
+                  "name": "_save",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3631,
+                  "src": "2461:24:12",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_ISavingsContractV1_$3956",
+                    "typeString": "contract ISavingsContractV1"
+                  },
+                  "typeName": {
+                    "contractScope": null,
+                    "id": 3623,
+                    "name": "ISavingsContractV1",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 3956,
+                    "src": "2461:18:12",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_ISavingsContractV1_$3956",
+                      "typeString": "contract ISavingsContractV1"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 3626,
+                  "name": "_user",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3631,
+                  "src": "2495:13:12",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 3625,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2495:7:12",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2451:63:12"
+            },
+            "returnParameters": {
+              "id": 3630,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3629,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3631,
+                  "src": "2575:7:12",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 3628,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2575:7:12",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2561:31:12"
+            },
+            "scope": 3641,
+            "src": "2428:165:12",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": "@dev Returns the 'credit' units required to withdraw a certain\namount of Mix from the SAVE contract\n@param _save SAVE contract address\n@param _amount Amount of mIx to redeem from SAVE\n@return input for the redeem function (ie. credit units to redeem)",
+            "id": 3640,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getSaveRedeemInput",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 3636,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3633,
+                  "name": "_save",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3640,
+                  "src": "2938:24:12",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_ISavingsContractV1_$3956",
+                    "typeString": "contract ISavingsContractV1"
+                  },
+                  "typeName": {
+                    "contractScope": null,
+                    "id": 3632,
+                    "name": "ISavingsContractV1",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 3956,
+                    "src": "2938:18:12",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_ISavingsContractV1_$3956",
+                      "typeString": "contract ISavingsContractV1"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 3635,
+                  "name": "_amount",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3640,
+                  "src": "2972:15:12",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 3634,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2972:7:12",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2928:65:12"
+            },
+            "returnParameters": {
+              "id": 3639,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3638,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3640,
+                  "src": "3054:7:12",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 3637,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3054:7:12",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "3040:31:12"
+            },
+            "scope": 3641,
+            "src": "2901:171:12",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "external"
+          }
+        ],
+        "scope": 3642,
+        "src": "87:2987:12"
+      }
+    ],
+    "src": "0:3074:12"
+  },
+  "legacyAST": {
+    "absolutePath": "/Volumes/sdxc/ETHEREUM/CODE/mStable-v1-edit/contracts/interfaces/IMStableHelper.sol",
+    "exportedSymbols": {
+      "IMStableHelper": [
+        3641
+      ]
+    },
+    "id": 3642,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 3564,
+        "literals": [
+          "solidity",
+          "0.5",
+          ".16"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:12"
+      },
+      {
+        "absolutePath": "/Volumes/sdxc/ETHEREUM/CODE/mStable-v1-edit/contracts/interfaces/ISavingsContract.sol",
+        "file": "./ISavingsContract.sol",
+        "id": 3566,
+        "nodeType": "ImportDirective",
+        "scope": 3642,
+        "sourceUnit": 4033,
+        "src": "25:60:12",
+        "symbolAliases": [
+          {
+            "foreign": 3565,
+            "local": null
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "documentation": null,
+        "fullyImplemented": false,
+        "id": 3641,
+        "linearizedBaseContracts": [
+          3641
+        ],
+        "name": "IMStableHelper",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": null,
+            "documentation": "@dev Returns a valid bAsset with which to mint\n@param _mIx Mix addr\n@return valid bool\n@return string message\n@return address of bAsset to mint",
+            "id": 3577,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "suggestMintAsset",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 3569,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3568,
+                  "name": "_mIx",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3577,
+                  "src": "349:12:12",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 3567,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "349:7:12",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "339:28:12"
+            },
+            "returnParameters": {
+              "id": 3576,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3571,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3577,
+                  "src": "428:4:12",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 3570,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "428:4:12",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 3573,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3577,
+                  "src": "446:13:12",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 3572,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "446:6:12",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 3575,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3577,
+                  "src": "473:7:12",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 3574,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "473:7:12",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "414:76:12"
+            },
+            "scope": 3641,
+            "src": "314:177:12",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": "@dev Gets the maximum input for a valid swap pair\n@param _mIx mIx address (e.g. mUSD)\n@param _input Asset to input only bAssets accepted\n@param _output Either a bAsset or the mIx\n@return valid\n@return validity reason\n@return max input units (in native decimals)\n@return how much output this input would produce (in native decimals, after any fee)",
+            "id": 3594,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getMaxSwap",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 3584,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3579,
+                  "name": "_mIx",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3594,
+                  "src": "945:12:12",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 3578,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "945:7:12",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 3581,
+                  "name": "_input",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3594,
+                  "src": "967:14:12",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 3580,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "967:7:12",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 3583,
+                  "name": "_output",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3594,
+                  "src": "991:15:12",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 3582,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "991:7:12",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "935:77:12"
+            },
+            "returnParameters": {
+              "id": 3593,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3586,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3594,
+                  "src": "1073:4:12",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 3585,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1073:4:12",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 3588,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3594,
+                  "src": "1091:13:12",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 3587,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1091:6:12",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 3590,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3594,
+                  "src": "1118:7:12",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 3589,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1118:7:12",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 3592,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3594,
+                  "src": "1139:7:12",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 3591,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1139:7:12",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1059:97:12"
+            },
+            "scope": 3641,
+            "src": "916:241:12",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": "@dev Returns a valid bAsset to redeem\n@param _mIx Mix addr\n@return valid bool\n@return string message\n@return address of bAsset to redeem",
+            "id": 3605,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "suggestRedeemIx",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 3597,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3596,
+                  "name": "_mIx",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3605,
+                  "src": "1386:12:12",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 3595,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1386:7:12",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1376:28:12"
+            },
+            "returnParameters": {
+              "id": 3604,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3599,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3605,
+                  "src": "1465:4:12",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 3598,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1465:4:12",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 3601,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3605,
+                  "src": "1483:13:12",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 3600,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1483:6:12",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 3603,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3605,
+                  "src": "1510:7:12",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 3602,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1510:7:12",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1451:76:12"
+            },
+            "scope": 3641,
+            "src": "1352:176:12",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": "@dev Determines if a given Redemption is valid\n@param _mIx Address of the given mIx (e.g. mUSD)\n@param _mIxQuantity Amount of mIx to redeem (in mUSD units)\n@param _outputBasset Desired output bAsset\n@return valid\n@return validity reason\n@return output in bAsset units\n@return bAssetQuantityArg - required input argument to the 'redeem' call",
+            "id": 3622,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getRedeemValidity",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 3612,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3607,
+                  "name": "_mIx",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3622,
+                  "src": "1983:12:12",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 3606,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1983:7:12",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 3609,
+                  "name": "_mIxQuantity",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3622,
+                  "src": "2005:20:12",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 3608,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2005:7:12",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 3611,
+                  "name": "_outputBasset",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3622,
+                  "src": "2035:21:12",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 3610,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2035:7:12",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1973:89:12"
+            },
+            "returnParameters": {
+              "id": 3621,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3614,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3622,
+                  "src": "2123:4:12",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 3613,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2123:4:12",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 3616,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3622,
+                  "src": "2141:13:12",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 3615,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2141:6:12",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 3618,
+                  "name": "output",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3622,
+                  "src": "2168:14:12",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 3617,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2168:7:12",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 3620,
+                  "name": "bassetQuantityArg",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3622,
+                  "src": "2196:25:12",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 3619,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2196:7:12",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2109:122:12"
+            },
+            "scope": 3641,
+            "src": "1947:285:12",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": "@dev Gets the users savings balance in Mix terms\n@param _save SAVE contract address\n@param _user Address of the user\n@return balance in Mix units",
+            "id": 3631,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getSaveBalance",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 3627,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3624,
+                  "name": "_save",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3631,
+                  "src": "2461:24:12",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_ISavingsContractV1_$3956",
+                    "typeString": "contract ISavingsContractV1"
+                  },
+                  "typeName": {
+                    "contractScope": null,
+                    "id": 3623,
+                    "name": "ISavingsContractV1",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 3956,
+                    "src": "2461:18:12",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_ISavingsContractV1_$3956",
+                      "typeString": "contract ISavingsContractV1"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 3626,
+                  "name": "_user",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3631,
+                  "src": "2495:13:12",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 3625,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2495:7:12",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2451:63:12"
+            },
+            "returnParameters": {
+              "id": 3630,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3629,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3631,
+                  "src": "2575:7:12",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 3628,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2575:7:12",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2561:31:12"
+            },
+            "scope": 3641,
+            "src": "2428:165:12",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": "@dev Returns the 'credit' units required to withdraw a certain\namount of Mix from the SAVE contract\n@param _save SAVE contract address\n@param _amount Amount of mIx to redeem from SAVE\n@return input for the redeem function (ie. credit units to redeem)",
+            "id": 3640,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getSaveRedeemInput",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 3636,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3633,
+                  "name": "_save",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3640,
+                  "src": "2938:24:12",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_ISavingsContractV1_$3956",
+                    "typeString": "contract ISavingsContractV1"
+                  },
+                  "typeName": {
+                    "contractScope": null,
+                    "id": 3632,
+                    "name": "ISavingsContractV1",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 3956,
+                    "src": "2938:18:12",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_ISavingsContractV1_$3956",
+                      "typeString": "contract ISavingsContractV1"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 3635,
+                  "name": "_amount",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3640,
+                  "src": "2972:15:12",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 3634,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2972:7:12",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2928:65:12"
+            },
+            "returnParameters": {
+              "id": 3639,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3638,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3640,
+                  "src": "3054:7:12",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 3637,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3054:7:12",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "3040:31:12"
+            },
+            "scope": 3641,
+            "src": "2901:171:12",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "external"
+          }
+        ],
+        "scope": 3642,
+        "src": "87:2987:12"
+      }
+    ],
+    "src": "0:3074:12"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.16+commit.9c3226ce.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.1.0",
+  "updatedAt": "2021-03-11T05:43:15.080Z",
+  "devdoc": {
+    "methods": {
+      "getMaxSwap(address,address,address)": {
+        "details": "Gets the maximum input for a valid swap pair",
+        "params": {
+          "_input": "Asset to input only bAssets accepted",
+          "_mIx": "mIx address (e.g. mUSD)",
+          "_output": "Either a bAsset or the mIx"
+        },
+        "return": "validvalidity reasonmax input units (in native decimals)how much output this input would produce (in native decimals, after any fee)"
+      },
+      "getRedeemValidity(address,uint256,address)": {
+        "details": "Determines if a given Redemption is valid",
+        "params": {
+          "_mIx": "Address of the given mIx (e.g. mUSD)",
+          "_mIxQuantity": "Amount of mIx to redeem (in mUSD units)",
+          "_outputBasset": "Desired output bAsset"
+        },
+        "return": "validvalidity reasonoutput in bAsset unitsbAssetQuantityArg - required input argument to the 'redeem' call"
+      },
+      "getSaveBalance(address,address)": {
+        "details": "Gets the users savings balance in Mix terms",
+        "params": {
+          "_save": "SAVE contract address",
+          "_user": "Address of the user"
+        },
+        "return": "balance in Mix units"
+      },
+      "getSaveRedeemInput(address,uint256)": {
+        "details": "Returns the 'credit' units required to withdraw a certain amount of Mix from the SAVE contract",
+        "params": {
+          "_amount": "Amount of mIx to redeem from SAVE",
+          "_save": "SAVE contract address"
+        },
+        "return": "input for the redeem function (ie. credit units to redeem)"
+      },
+      "suggestMintAsset(address)": {
+        "details": "Returns a valid bAsset with which to mint",
+        "params": {
+          "_mIx": "Mix addr"
+        },
+        "return": "valid boolstring messageaddress of bAsset to mint"
+      },
+      "suggestRedeemIx(address)": {
+        "details": "Returns a valid bAsset to redeem",
+        "params": {
+          "_mIx": "Mix addr"
+        },
+        "return": "valid boolstring messageaddress of bAsset to redeem"
+      }
+    }
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}

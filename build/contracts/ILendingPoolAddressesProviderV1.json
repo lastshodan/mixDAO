@@ -1,0 +1,1814 @@
+{
+  "contractName": "ILendingPoolAddressesProviderV1",
+  "abi": [
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "getLendingPool",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "getLendingPoolCore",
+      "outputs": [
+        {
+          "internalType": "address payable",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.5.16+commit.9c3226ce\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":true,\"inputs\":[],\"name\":\"getLendingPool\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"getLendingPoolCore\",\"outputs\":[{\"internalType\":\"address payable\",\"name\":\"\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"details\":\"Interface for Aaves Lending Pool Documentation: https://developers.aave.com/#lendingpooladdressesprovider\",\"methods\":{\"getLendingPool()\":{\"details\":\"Lending pool is the core contract on which to call deposit\"},\"getLendingPoolCore()\":{\"details\":\"IMPORTANT - this is where _reserve must be approved before deposit\"}}},\"userdoc\":{\"methods\":{\"getLendingPool()\":{\"notice\":\"Get the current address for Aave LendingPool\"},\"getLendingPoolCore()\":{\"notice\":\"Get the address for lendingPoolCore\"}}}},\"settings\":{\"compilationTarget\":{\"/Volumes/sdxc/ETHEREUM/CODE/mStable-v1-edit/contracts/mix/platform-integrations/IAave.sol\":\"ILendingPoolAddressesProviderV1\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Volumes/sdxc/ETHEREUM/CODE/mStable-v1-edit/contracts/mix/platform-integrations/IAave.sol\":{\"keccak256\":\"0xfc55fd969b48bceb085751d4699bf2e35e5e7f4d8be4b61fbed255760a99828b\",\"urls\":[\"bzz-raw://bbd9dcf7961c09826c4388a1c64fca0bc38eb8c2bd613adc2a87dd7f89db75b5\",\"dweb:/ipfs/QmemCw9VPWhNfSuF6HxyvDY4TXyDPKFnabWsD6TiS4TWLV\"]}},\"version\":1}",
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "sourceMap": "",
+  "deployedSourceMap": "",
+  "source": "pragma solidity 0.5.16;\n\n/**\n * @dev Interface for Aaves A Token\n * Documentation: https://developers.aave.com/#atokens\n */\ninterface IAaveATokenV1 {\n\n    /**\n     * @notice Non-standard ERC20 function to redeem an _amount of aTokens for the underlying\n     * asset, burning the aTokens during the process.\n     * @param _amount Amount of aTokens\n     */\n    function redeem(uint256 _amount) external;\n\n    /**\n     * @notice returns the current total aToken balance of _user all interest collected included.\n     * To obtain the user asset principal balance with interests excluded , ERC20 non-standard\n     * method principalBalanceOf() can be used.\n     */\n    function balanceOf(address _user) external view returns(uint256);\n}\n\n/**\n * @dev Interface for Aaves Lending Pool\n * Documentation: https://developers.aave.com/#lendingpool\n */\ninterface IAaveLendingPoolV1 {\n\n    /**\n     * @notice Deposits a certain _amount of an asset specified by the _reserve parameter.\n     * @dev The caller receives a certain amount of corresponding aTokens in exchange.\n     * The amount of aTokens received depends on the corresponding aToken exchange rate.\n     * LendingPoolCore must be approved to spend this reserve\n     */\n    function deposit(address _reserve, uint256 _amount, uint16 _referralCode) external;\n\n}\n/**\n * @dev Interface for Aaves Lending Pool\n * Documentation: https://developers.aave.com/#lendingpooladdressesprovider\n */\ninterface ILendingPoolAddressesProviderV1 {\n\n    /**\n     * @notice Get the current address for Aave LendingPool\n     * @dev Lending pool is the core contract on which to call deposit\n     */\n    function getLendingPool() external view returns (address);\n\n    /**\n     * @notice Get the address for lendingPoolCore\n     * @dev IMPORTANT - this is where _reserve must be approved before deposit\n     */\n    function getLendingPoolCore() external view returns (address payable);\n\n}\n\n/**\n * @dev Interface for Aaves Lending Pool\n * Documentation: https://developers.aave.com/#lendingpooladdressesprovider\n */\ninterface ILendingPoolAddressesProviderV2 {\n\n    /**\n     * @notice Get the current address for Aave LendingPool\n     * @dev Lending pool is the core contract on which to call deposit\n     */\n    function getLendingPool() external view returns (address);\n}\n\n/**\n * @dev Interface for Aaves A Token\n * Documentation: https://developers.aave.com/#atokens\n */\ninterface IAaveATokenV2 {\n\n    /**\n     * @notice returns the current total aToken balance of _user all interest collected included.\n     * To obtain the user asset principal balance with interests excluded , ERC20 non-standard\n     * method principalBalanceOf() can be used.\n     */\n    function balanceOf(address _user) external view returns(uint256);\n}\n\n\ninterface IAaveLendingPoolV2 {\n\n    /**\n    * @dev deposits The underlying asset into the reserve. A corresponding amount of the overlying asset (aTokens)\n    * is minted.\n    * @param reserve the address of the reserve\n    * @param amount the amount to be deposited\n    * @param referralCode integrators are assigned a referral code and can potentially receive rewards.\n    **/\n    function deposit(\n        address reserve,\n        uint256 amount,\n        address onBehalfOf,\n        uint16 referralCode\n    ) external;\n\n    /**\n    * @dev withdraws the assets of user.\n    * @param reserve the address of the reserve\n    * @param amount the underlying amount to be redeemed\n    * @param to address that will receive the underlying\n    **/\n    function withdraw(\n        address reserve,\n        uint256 amount,\n        address to\n    ) external;\n}",
+  "sourcePath": "/Volumes/sdxc/ETHEREUM/CODE/mStable-v1-edit/contracts/mix/platform-integrations/IAave.sol",
+  "ast": {
+    "absolutePath": "/Volumes/sdxc/ETHEREUM/CODE/mStable-v1-edit/contracts/mix/platform-integrations/IAave.sol",
+    "exportedSymbols": {
+      "IAaveATokenV1": [
+        11874
+      ],
+      "IAaveATokenV2": [
+        11909
+      ],
+      "IAaveLendingPoolV1": [
+        11884
+      ],
+      "IAaveLendingPoolV2": [
+        11930
+      ],
+      "ILendingPoolAddressesProviderV1": [
+        11895
+      ],
+      "ILendingPoolAddressesProviderV2": [
+        11901
+      ]
+    },
+    "id": 11931,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 11861,
+        "literals": [
+          "solidity",
+          "0.5",
+          ".16"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:30"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "documentation": "@dev Interface for Aaves A Token\nDocumentation: https://developers.aave.com/#atokens",
+        "fullyImplemented": false,
+        "id": 11874,
+        "linearizedBaseContracts": [
+          11874
+        ],
+        "name": "IAaveATokenV1",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": null,
+            "documentation": "@notice Non-standard ERC20 function to redeem an _amount of aTokens for the underlying\nasset, burning the aTokens during the process.\n@param _amount Amount of aTokens",
+            "id": 11866,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "redeem",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 11864,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 11863,
+                  "name": "_amount",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 11866,
+                  "src": "375:15:30",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 11862,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "375:7:30",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "374:17:30"
+            },
+            "returnParameters": {
+              "id": 11865,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "400:0:30"
+            },
+            "scope": 11874,
+            "src": "359:42:30",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": "@notice returns the current total aToken balance of _user all interest collected included.\nTo obtain the user asset principal balance with interests excluded , ERC20 non-standard\nmethod principalBalanceOf() can be used.",
+            "id": 11873,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "balanceOf",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 11869,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 11868,
+                  "name": "_user",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 11873,
+                  "src": "683:13:30",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 11867,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "683:7:30",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "682:15:30"
+            },
+            "returnParameters": {
+              "id": 11872,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 11871,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 11873,
+                  "src": "720:7:30",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 11870,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "720:7:30",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "719:9:30"
+            },
+            "scope": 11874,
+            "src": "664:65:30",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "external"
+          }
+        ],
+        "scope": 11931,
+        "src": "124:607:30"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "documentation": "@dev Interface for Aaves Lending Pool\nDocumentation: https://developers.aave.com/#lendingpool",
+        "fullyImplemented": false,
+        "id": 11884,
+        "linearizedBaseContracts": [
+          11884
+        ],
+        "name": "IAaveLendingPoolV1",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": null,
+            "documentation": "@notice Deposits a certain _amount of an asset specified by the _reserve parameter.\n@dev The caller receives a certain amount of corresponding aTokens in exchange.\nThe amount of aTokens received depends on the corresponding aToken exchange rate.\nLendingPoolCore must be approved to spend this reserve",
+            "id": 11883,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "deposit",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 11881,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 11876,
+                  "name": "_reserve",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 11883,
+                  "src": "1239:16:30",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 11875,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1239:7:30",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 11878,
+                  "name": "_amount",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 11883,
+                  "src": "1257:15:30",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 11877,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1257:7:30",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 11880,
+                  "name": "_referralCode",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 11883,
+                  "src": "1274:20:30",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint16",
+                    "typeString": "uint16"
+                  },
+                  "typeName": {
+                    "id": 11879,
+                    "name": "uint16",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1274:6:30",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint16",
+                      "typeString": "uint16"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1238:57:30"
+            },
+            "returnParameters": {
+              "id": 11882,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1304:0:30"
+            },
+            "scope": 11884,
+            "src": "1222:83:30",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "external"
+          }
+        ],
+        "scope": 11931,
+        "src": "841:467:30"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "documentation": "@dev Interface for Aaves Lending Pool\nDocumentation: https://developers.aave.com/#lendingpooladdressesprovider",
+        "fullyImplemented": false,
+        "id": 11895,
+        "linearizedBaseContracts": [
+          11895
+        ],
+        "name": "ILendingPoolAddressesProviderV1",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": null,
+            "documentation": "@notice Get the current address for Aave LendingPool\n@dev Lending pool is the core contract on which to call deposit",
+            "id": 11889,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getLendingPool",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 11885,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1653:2:30"
+            },
+            "returnParameters": {
+              "id": 11888,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 11887,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 11889,
+                  "src": "1679:7:30",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 11886,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1679:7:30",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1678:9:30"
+            },
+            "scope": 11895,
+            "src": "1630:58:30",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": "@notice Get the address for lendingPoolCore\n@dev IMPORTANT - this is where _reserve must be approved before deposit",
+            "id": 11894,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getLendingPoolCore",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 11890,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1867:2:30"
+            },
+            "returnParameters": {
+              "id": 11893,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 11892,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 11894,
+                  "src": "1893:15:30",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address_payable",
+                    "typeString": "address payable"
+                  },
+                  "typeName": {
+                    "id": 11891,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1893:15:30",
+                    "stateMutability": "payable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address_payable",
+                      "typeString": "address payable"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1892:17:30"
+            },
+            "scope": 11895,
+            "src": "1840:70:30",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "external"
+          }
+        ],
+        "scope": 11931,
+        "src": "1434:479:30"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "documentation": "@dev Interface for Aaves Lending Pool\nDocumentation: https://developers.aave.com/#lendingpooladdressesprovider",
+        "fullyImplemented": false,
+        "id": 11901,
+        "linearizedBaseContracts": [
+          11901
+        ],
+        "name": "ILendingPoolAddressesProviderV2",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": null,
+            "documentation": "@notice Get the current address for Aave LendingPool\n@dev Lending pool is the core contract on which to call deposit",
+            "id": 11900,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getLendingPool",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 11896,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "2259:2:30"
+            },
+            "returnParameters": {
+              "id": 11899,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 11898,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 11900,
+                  "src": "2285:7:30",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 11897,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2285:7:30",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2284:9:30"
+            },
+            "scope": 11901,
+            "src": "2236:58:30",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "external"
+          }
+        ],
+        "scope": 11931,
+        "src": "2040:256:30"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "documentation": "@dev Interface for Aaves A Token\nDocumentation: https://developers.aave.com/#atokens",
+        "fullyImplemented": false,
+        "id": 11909,
+        "linearizedBaseContracts": [
+          11909
+        ],
+        "name": "IAaveATokenV2",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": null,
+            "documentation": "@notice returns the current total aToken balance of _user all interest collected included.\nTo obtain the user asset principal balance with interests excluded , ERC20 non-standard\nmethod principalBalanceOf() can be used.",
+            "id": 11908,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "balanceOf",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 11904,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 11903,
+                  "name": "_user",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 11908,
+                  "src": "2704:13:30",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 11902,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2704:7:30",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2703:15:30"
+            },
+            "returnParameters": {
+              "id": 11907,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 11906,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 11908,
+                  "src": "2741:7:30",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 11905,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2741:7:30",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2740:9:30"
+            },
+            "scope": 11909,
+            "src": "2685:65:30",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "external"
+          }
+        ],
+        "scope": 11931,
+        "src": "2397:355:30"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "documentation": null,
+        "fullyImplemented": false,
+        "id": 11930,
+        "linearizedBaseContracts": [
+          11930
+        ],
+        "name": "IAaveLendingPoolV2",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": null,
+            "documentation": "@dev deposits The underlying asset into the reserve. A corresponding amount of the overlying asset (aTokens)\nis minted.\n@param reserve the address of the reserve\n@param amount the amount to be deposited\n@param referralCode integrators are assigned a referral code and can potentially receive rewards.*",
+            "id": 11920,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "deposit",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 11918,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 11911,
+                  "name": "reserve",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 11920,
+                  "src": "3164:15:30",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 11910,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3164:7:30",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 11913,
+                  "name": "amount",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 11920,
+                  "src": "3189:14:30",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 11912,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3189:7:30",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 11915,
+                  "name": "onBehalfOf",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 11920,
+                  "src": "3213:18:30",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 11914,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3213:7:30",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 11917,
+                  "name": "referralCode",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 11920,
+                  "src": "3241:19:30",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint16",
+                    "typeString": "uint16"
+                  },
+                  "typeName": {
+                    "id": 11916,
+                    "name": "uint16",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3241:6:30",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint16",
+                      "typeString": "uint16"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "3154:112:30"
+            },
+            "returnParameters": {
+              "id": 11919,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "3275:0:30"
+            },
+            "scope": 11930,
+            "src": "3138:138:30",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": "@dev withdraws the assets of user.\n@param reserve the address of the reserve\n@param amount the underlying amount to be redeemed\n@param to address that will receive the underlying*",
+            "id": 11929,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "withdraw",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 11927,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 11922,
+                  "name": "reserve",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 11929,
+                  "src": "3528:15:30",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 11921,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3528:7:30",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 11924,
+                  "name": "amount",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 11929,
+                  "src": "3553:14:30",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 11923,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3553:7:30",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 11926,
+                  "name": "to",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 11929,
+                  "src": "3577:10:30",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 11925,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3577:7:30",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "3518:75:30"
+            },
+            "returnParameters": {
+              "id": 11928,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "3602:0:30"
+            },
+            "scope": 11930,
+            "src": "3501:102:30",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "external"
+          }
+        ],
+        "scope": 11931,
+        "src": "2755:850:30"
+      }
+    ],
+    "src": "0:3605:30"
+  },
+  "legacyAST": {
+    "absolutePath": "/Volumes/sdxc/ETHEREUM/CODE/mStable-v1-edit/contracts/mix/platform-integrations/IAave.sol",
+    "exportedSymbols": {
+      "IAaveATokenV1": [
+        11874
+      ],
+      "IAaveATokenV2": [
+        11909
+      ],
+      "IAaveLendingPoolV1": [
+        11884
+      ],
+      "IAaveLendingPoolV2": [
+        11930
+      ],
+      "ILendingPoolAddressesProviderV1": [
+        11895
+      ],
+      "ILendingPoolAddressesProviderV2": [
+        11901
+      ]
+    },
+    "id": 11931,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 11861,
+        "literals": [
+          "solidity",
+          "0.5",
+          ".16"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:30"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "documentation": "@dev Interface for Aaves A Token\nDocumentation: https://developers.aave.com/#atokens",
+        "fullyImplemented": false,
+        "id": 11874,
+        "linearizedBaseContracts": [
+          11874
+        ],
+        "name": "IAaveATokenV1",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": null,
+            "documentation": "@notice Non-standard ERC20 function to redeem an _amount of aTokens for the underlying\nasset, burning the aTokens during the process.\n@param _amount Amount of aTokens",
+            "id": 11866,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "redeem",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 11864,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 11863,
+                  "name": "_amount",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 11866,
+                  "src": "375:15:30",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 11862,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "375:7:30",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "374:17:30"
+            },
+            "returnParameters": {
+              "id": 11865,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "400:0:30"
+            },
+            "scope": 11874,
+            "src": "359:42:30",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": "@notice returns the current total aToken balance of _user all interest collected included.\nTo obtain the user asset principal balance with interests excluded , ERC20 non-standard\nmethod principalBalanceOf() can be used.",
+            "id": 11873,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "balanceOf",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 11869,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 11868,
+                  "name": "_user",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 11873,
+                  "src": "683:13:30",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 11867,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "683:7:30",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "682:15:30"
+            },
+            "returnParameters": {
+              "id": 11872,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 11871,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 11873,
+                  "src": "720:7:30",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 11870,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "720:7:30",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "719:9:30"
+            },
+            "scope": 11874,
+            "src": "664:65:30",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "external"
+          }
+        ],
+        "scope": 11931,
+        "src": "124:607:30"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "documentation": "@dev Interface for Aaves Lending Pool\nDocumentation: https://developers.aave.com/#lendingpool",
+        "fullyImplemented": false,
+        "id": 11884,
+        "linearizedBaseContracts": [
+          11884
+        ],
+        "name": "IAaveLendingPoolV1",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": null,
+            "documentation": "@notice Deposits a certain _amount of an asset specified by the _reserve parameter.\n@dev The caller receives a certain amount of corresponding aTokens in exchange.\nThe amount of aTokens received depends on the corresponding aToken exchange rate.\nLendingPoolCore must be approved to spend this reserve",
+            "id": 11883,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "deposit",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 11881,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 11876,
+                  "name": "_reserve",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 11883,
+                  "src": "1239:16:30",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 11875,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1239:7:30",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 11878,
+                  "name": "_amount",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 11883,
+                  "src": "1257:15:30",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 11877,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1257:7:30",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 11880,
+                  "name": "_referralCode",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 11883,
+                  "src": "1274:20:30",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint16",
+                    "typeString": "uint16"
+                  },
+                  "typeName": {
+                    "id": 11879,
+                    "name": "uint16",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1274:6:30",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint16",
+                      "typeString": "uint16"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1238:57:30"
+            },
+            "returnParameters": {
+              "id": 11882,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1304:0:30"
+            },
+            "scope": 11884,
+            "src": "1222:83:30",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "external"
+          }
+        ],
+        "scope": 11931,
+        "src": "841:467:30"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "documentation": "@dev Interface for Aaves Lending Pool\nDocumentation: https://developers.aave.com/#lendingpooladdressesprovider",
+        "fullyImplemented": false,
+        "id": 11895,
+        "linearizedBaseContracts": [
+          11895
+        ],
+        "name": "ILendingPoolAddressesProviderV1",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": null,
+            "documentation": "@notice Get the current address for Aave LendingPool\n@dev Lending pool is the core contract on which to call deposit",
+            "id": 11889,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getLendingPool",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 11885,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1653:2:30"
+            },
+            "returnParameters": {
+              "id": 11888,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 11887,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 11889,
+                  "src": "1679:7:30",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 11886,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1679:7:30",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1678:9:30"
+            },
+            "scope": 11895,
+            "src": "1630:58:30",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": "@notice Get the address for lendingPoolCore\n@dev IMPORTANT - this is where _reserve must be approved before deposit",
+            "id": 11894,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getLendingPoolCore",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 11890,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1867:2:30"
+            },
+            "returnParameters": {
+              "id": 11893,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 11892,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 11894,
+                  "src": "1893:15:30",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address_payable",
+                    "typeString": "address payable"
+                  },
+                  "typeName": {
+                    "id": 11891,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1893:15:30",
+                    "stateMutability": "payable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address_payable",
+                      "typeString": "address payable"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1892:17:30"
+            },
+            "scope": 11895,
+            "src": "1840:70:30",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "external"
+          }
+        ],
+        "scope": 11931,
+        "src": "1434:479:30"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "documentation": "@dev Interface for Aaves Lending Pool\nDocumentation: https://developers.aave.com/#lendingpooladdressesprovider",
+        "fullyImplemented": false,
+        "id": 11901,
+        "linearizedBaseContracts": [
+          11901
+        ],
+        "name": "ILendingPoolAddressesProviderV2",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": null,
+            "documentation": "@notice Get the current address for Aave LendingPool\n@dev Lending pool is the core contract on which to call deposit",
+            "id": 11900,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getLendingPool",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 11896,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "2259:2:30"
+            },
+            "returnParameters": {
+              "id": 11899,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 11898,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 11900,
+                  "src": "2285:7:30",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 11897,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2285:7:30",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2284:9:30"
+            },
+            "scope": 11901,
+            "src": "2236:58:30",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "external"
+          }
+        ],
+        "scope": 11931,
+        "src": "2040:256:30"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "documentation": "@dev Interface for Aaves A Token\nDocumentation: https://developers.aave.com/#atokens",
+        "fullyImplemented": false,
+        "id": 11909,
+        "linearizedBaseContracts": [
+          11909
+        ],
+        "name": "IAaveATokenV2",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": null,
+            "documentation": "@notice returns the current total aToken balance of _user all interest collected included.\nTo obtain the user asset principal balance with interests excluded , ERC20 non-standard\nmethod principalBalanceOf() can be used.",
+            "id": 11908,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "balanceOf",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 11904,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 11903,
+                  "name": "_user",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 11908,
+                  "src": "2704:13:30",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 11902,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2704:7:30",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2703:15:30"
+            },
+            "returnParameters": {
+              "id": 11907,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 11906,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 11908,
+                  "src": "2741:7:30",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 11905,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2741:7:30",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2740:9:30"
+            },
+            "scope": 11909,
+            "src": "2685:65:30",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "external"
+          }
+        ],
+        "scope": 11931,
+        "src": "2397:355:30"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "documentation": null,
+        "fullyImplemented": false,
+        "id": 11930,
+        "linearizedBaseContracts": [
+          11930
+        ],
+        "name": "IAaveLendingPoolV2",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": null,
+            "documentation": "@dev deposits The underlying asset into the reserve. A corresponding amount of the overlying asset (aTokens)\nis minted.\n@param reserve the address of the reserve\n@param amount the amount to be deposited\n@param referralCode integrators are assigned a referral code and can potentially receive rewards.*",
+            "id": 11920,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "deposit",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 11918,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 11911,
+                  "name": "reserve",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 11920,
+                  "src": "3164:15:30",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 11910,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3164:7:30",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 11913,
+                  "name": "amount",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 11920,
+                  "src": "3189:14:30",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 11912,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3189:7:30",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 11915,
+                  "name": "onBehalfOf",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 11920,
+                  "src": "3213:18:30",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 11914,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3213:7:30",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 11917,
+                  "name": "referralCode",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 11920,
+                  "src": "3241:19:30",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint16",
+                    "typeString": "uint16"
+                  },
+                  "typeName": {
+                    "id": 11916,
+                    "name": "uint16",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3241:6:30",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint16",
+                      "typeString": "uint16"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "3154:112:30"
+            },
+            "returnParameters": {
+              "id": 11919,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "3275:0:30"
+            },
+            "scope": 11930,
+            "src": "3138:138:30",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": "@dev withdraws the assets of user.\n@param reserve the address of the reserve\n@param amount the underlying amount to be redeemed\n@param to address that will receive the underlying*",
+            "id": 11929,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "withdraw",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 11927,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 11922,
+                  "name": "reserve",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 11929,
+                  "src": "3528:15:30",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 11921,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3528:7:30",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 11924,
+                  "name": "amount",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 11929,
+                  "src": "3553:14:30",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 11923,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3553:7:30",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 11926,
+                  "name": "to",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 11929,
+                  "src": "3577:10:30",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 11925,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3577:7:30",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "3518:75:30"
+            },
+            "returnParameters": {
+              "id": 11928,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "3602:0:30"
+            },
+            "scope": 11930,
+            "src": "3501:102:30",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "external"
+          }
+        ],
+        "scope": 11931,
+        "src": "2755:850:30"
+      }
+    ],
+    "src": "0:3605:30"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.16+commit.9c3226ce.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.1.0",
+  "updatedAt": "2021-03-11T05:43:15.744Z",
+  "devdoc": {
+    "details": "Interface for Aaves Lending Pool Documentation: https://developers.aave.com/#lendingpooladdressesprovider",
+    "methods": {
+      "getLendingPool()": {
+        "details": "Lending pool is the core contract on which to call deposit"
+      },
+      "getLendingPoolCore()": {
+        "details": "IMPORTANT - this is where _reserve must be approved before deposit"
+      }
+    }
+  },
+  "userdoc": {
+    "methods": {
+      "getLendingPool()": {
+        "notice": "Get the current address for Aave LendingPool"
+      },
+      "getLendingPoolCore()": {
+        "notice": "Get the address for lendingPoolCore"
+      }
+    }
+  }
+}

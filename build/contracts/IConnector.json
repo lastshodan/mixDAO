@@ -1,0 +1,564 @@
+{
+  "contractName": "IConnector",
+  "abi": [
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "_amount",
+          "type": "uint256"
+        }
+      ],
+      "name": "deposit",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "_amount",
+          "type": "uint256"
+        }
+      ],
+      "name": "withdraw",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [],
+      "name": "withdrawAll",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "checkBalance",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.5.16+commit.9c3226ce\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":true,\"inputs\":[],\"name\":\"checkBalance\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"_amount\",\"type\":\"uint256\"}],\"name\":\"deposit\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"_amount\",\"type\":\"uint256\"}],\"name\":\"withdraw\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[],\"name\":\"withdrawAll\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{\"checkBalance()\":{\"return\":\"Balance of mIx in the connector\"},\"deposit(uint256)\":{\"params\":{\"_amount\":\"Units of mIx to receive and deposit\"}},\"withdraw(uint256)\":{\"params\":{\"_amount\":\"Units of mIx to withdraw\"}}}},\"userdoc\":{\"methods\":{\"checkBalance()\":{\"notice\":\"Returns the available balance in the connector. In connections where there is likely to be an initial dip in value due to conservative exchange rates (e.g. with Curves `get_virtual_price`), it should return max(deposited, balance) to avoid temporary negative yield. Any negative yield should be corrected during a withdrawal or over time.\"},\"deposit(uint256)\":{\"notice\":\"Deposits the mIx into the connector\"},\"withdraw(uint256)\":{\"notice\":\"Withdraws a specific amount of mIx from the connector\"},\"withdrawAll()\":{\"notice\":\"Withdraws all mIx from the connector\"}}}},\"settings\":{\"compilationTarget\":{\"/Volumes/sdxc/ETHEREUM/CODE/mStable-v1-edit/contracts/savings/peripheral/IConnector.sol\":\"IConnector\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Volumes/sdxc/ETHEREUM/CODE/mStable-v1-edit/contracts/savings/peripheral/IConnector.sol\":{\"keccak256\":\"0xde2bb2acba3e7b958ec4375c4092ae62130de78fa2174cae5c89bd41b088958d\",\"urls\":[\"bzz-raw://fb60dfb13c80afddcd2127a70149df8b61c4dc5a6154b0cd1c13809d2c120a69\",\"dweb:/ipfs/QmaaEWehNJB7ANkF2f9A1R1HbABNw1M9XYwLZVqudUkhcH\"]}},\"version\":1}",
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "sourceMap": "",
+  "deployedSourceMap": "",
+  "source": "pragma solidity 0.5.16;\n\n\ninterface IConnector {\n\n  /**\n   * @notice Deposits the mIx into the connector\n   * @param _amount Units of mIx to receive and deposit\n   */\n  function deposit(uint256 _amount) external;\n\n  /**\n   * @notice Withdraws a specific amount of mIx from the connector\n   * @param _amount Units of mIx to withdraw\n   */\n  function withdraw(uint256 _amount) external;\n\n  /**\n   * @notice Withdraws all mIx from the connector\n   */\n  function withdrawAll() external;\n\n  /**\n   * @notice Returns the available balance in the connector. In connections\n   * where there is likely to be an initial dip in value due to conservative\n   * exchange rates (e.g. with Curves `get_virtual_price`), it should return\n   * max(deposited, balance) to avoid temporary negative yield. Any negative yield\n   * should be corrected during a withdrawal or over time.\n   * @return Balance of mIx in the connector\n   */\n  function checkBalance() external view returns (uint256);\n}",
+  "sourcePath": "/Volumes/sdxc/ETHEREUM/CODE/mStable-v1-edit/contracts/savings/peripheral/IConnector.sol",
+  "ast": {
+    "absolutePath": "/Volumes/sdxc/ETHEREUM/CODE/mStable-v1-edit/contracts/savings/peripheral/IConnector.sol",
+    "exportedSymbols": {
+      "IConnector": [
+        20162
+      ]
+    },
+    "id": 20163,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 20143,
+        "literals": [
+          "solidity",
+          "0.5",
+          ".16"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:48"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "documentation": null,
+        "fullyImplemented": false,
+        "id": 20162,
+        "linearizedBaseContracts": [
+          20162
+        ],
+        "name": "IConnector",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": null,
+            "documentation": "@notice Deposits the mIx into the connector\n@param _amount Units of mIx to receive and deposit",
+            "id": 20148,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "deposit",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 20146,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 20145,
+                  "name": "_amount",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 20148,
+                  "src": "186:15:48",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 20144,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "186:7:48",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "185:17:48"
+            },
+            "returnParameters": {
+              "id": 20147,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "211:0:48"
+            },
+            "scope": 20162,
+            "src": "169:43:48",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": "@notice Withdraws a specific amount of mIx from the connector\n@param _amount Units of mIx to withdraw",
+            "id": 20153,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "withdraw",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 20151,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 20150,
+                  "name": "_amount",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 20153,
+                  "src": "358:15:48",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 20149,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "358:7:48",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "357:17:48"
+            },
+            "returnParameters": {
+              "id": 20152,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "383:0:48"
+            },
+            "scope": 20162,
+            "src": "340:44:48",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": "@notice Withdraws all mIx from the connector",
+            "id": 20156,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "withdrawAll",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 20154,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "470:2:48"
+            },
+            "returnParameters": {
+              "id": 20155,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "481:0:48"
+            },
+            "scope": 20162,
+            "src": "450:32:48",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": "@notice Returns the available balance in the connector. In connections\nwhere there is likely to be an initial dip in value due to conservative\nexchange rates (e.g. with Curves `get_virtual_price`), it should return\nmax(deposited, balance) to avoid temporary negative yield. Any negative yield\nshould be corrected during a withdrawal or over time.\n@return Balance of mIx in the connector",
+            "id": 20161,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "checkBalance",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 20157,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "936:2:48"
+            },
+            "returnParameters": {
+              "id": 20160,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 20159,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 20161,
+                  "src": "962:7:48",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 20158,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "962:7:48",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "961:9:48"
+            },
+            "scope": 20162,
+            "src": "915:56:48",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "external"
+          }
+        ],
+        "scope": 20163,
+        "src": "26:947:48"
+      }
+    ],
+    "src": "0:973:48"
+  },
+  "legacyAST": {
+    "absolutePath": "/Volumes/sdxc/ETHEREUM/CODE/mStable-v1-edit/contracts/savings/peripheral/IConnector.sol",
+    "exportedSymbols": {
+      "IConnector": [
+        20162
+      ]
+    },
+    "id": 20163,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 20143,
+        "literals": [
+          "solidity",
+          "0.5",
+          ".16"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:48"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "documentation": null,
+        "fullyImplemented": false,
+        "id": 20162,
+        "linearizedBaseContracts": [
+          20162
+        ],
+        "name": "IConnector",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": null,
+            "documentation": "@notice Deposits the mIx into the connector\n@param _amount Units of mIx to receive and deposit",
+            "id": 20148,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "deposit",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 20146,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 20145,
+                  "name": "_amount",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 20148,
+                  "src": "186:15:48",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 20144,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "186:7:48",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "185:17:48"
+            },
+            "returnParameters": {
+              "id": 20147,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "211:0:48"
+            },
+            "scope": 20162,
+            "src": "169:43:48",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": "@notice Withdraws a specific amount of mIx from the connector\n@param _amount Units of mIx to withdraw",
+            "id": 20153,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "withdraw",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 20151,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 20150,
+                  "name": "_amount",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 20153,
+                  "src": "358:15:48",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 20149,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "358:7:48",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "357:17:48"
+            },
+            "returnParameters": {
+              "id": 20152,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "383:0:48"
+            },
+            "scope": 20162,
+            "src": "340:44:48",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": "@notice Withdraws all mIx from the connector",
+            "id": 20156,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "withdrawAll",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 20154,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "470:2:48"
+            },
+            "returnParameters": {
+              "id": 20155,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "481:0:48"
+            },
+            "scope": 20162,
+            "src": "450:32:48",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": "@notice Returns the available balance in the connector. In connections\nwhere there is likely to be an initial dip in value due to conservative\nexchange rates (e.g. with Curves `get_virtual_price`), it should return\nmax(deposited, balance) to avoid temporary negative yield. Any negative yield\nshould be corrected during a withdrawal or over time.\n@return Balance of mIx in the connector",
+            "id": 20161,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "checkBalance",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 20157,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "936:2:48"
+            },
+            "returnParameters": {
+              "id": 20160,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 20159,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 20161,
+                  "src": "962:7:48",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 20158,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "962:7:48",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "961:9:48"
+            },
+            "scope": 20162,
+            "src": "915:56:48",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "external"
+          }
+        ],
+        "scope": 20163,
+        "src": "26:947:48"
+      }
+    ],
+    "src": "0:973:48"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.16+commit.9c3226ce.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.1.0",
+  "updatedAt": "2021-03-11T05:43:16.184Z",
+  "devdoc": {
+    "methods": {
+      "checkBalance()": {
+        "return": "Balance of mIx in the connector"
+      },
+      "deposit(uint256)": {
+        "params": {
+          "_amount": "Units of mIx to receive and deposit"
+        }
+      },
+      "withdraw(uint256)": {
+        "params": {
+          "_amount": "Units of mIx to withdraw"
+        }
+      }
+    }
+  },
+  "userdoc": {
+    "methods": {
+      "checkBalance()": {
+        "notice": "Returns the available balance in the connector. In connections where there is likely to be an initial dip in value due to conservative exchange rates (e.g. with Curves `get_virtual_price`), it should return max(deposited, balance) to avoid temporary negative yield. Any negative yield should be corrected during a withdrawal or over time."
+      },
+      "deposit(uint256)": {
+        "notice": "Deposits the mIx into the connector"
+      },
+      "withdraw(uint256)": {
+        "notice": "Withdraws a specific amount of mIx from the connector"
+      },
+      "withdrawAll()": {
+        "notice": "Withdraws all mIx from the connector"
+      }
+    }
+  }
+}

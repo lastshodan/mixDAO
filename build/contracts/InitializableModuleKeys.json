@@ -1,0 +1,1982 @@
+{
+  "contractName": "InitializableModuleKeys",
+  "abi": [],
+  "metadata": "{\"compiler\":{\"version\":\"0.5.16+commit.9c3226ce\"},\"language\":\"Solidity\",\"output\":{\"abi\":[],\"devdoc\":{\"author\":\"Stability Labs Pty. Ltd.\",\"details\":\"The contract is a replica of ModuleKeys.sol        The following variables are to be assigned only once from initialize() function.        Hence, the variable names are declared in UPPER_CASE to indicate constants.\",\"methods\":{},\"title\":\"InitializableModuleKeys\"},\"userdoc\":{\"methods\":{},\"notice\":\"Provides system wide access to the byte32 represntations of system modules        This allows each system module to be able to reference and update one another in a        friendly way. Contract is used for upgradable proxy contracts.\"}},\"settings\":{\"compilationTarget\":{\"/Volumes/sdxc/ETHEREUM/CODE/mStable-v1-edit/contracts/shared/InitializableModuleKeys.sol\":\"InitializableModuleKeys\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Volumes/sdxc/ETHEREUM/CODE/mStable-v1-edit/contracts/shared/InitializableModuleKeys.sol\":{\"keccak256\":\"0x6e30ee844194c37d586269196cc4c6d32718baec2cad7f64c9e1470759060f19\",\"urls\":[\"bzz-raw://d2313e50e8002b63eb8279834946fdbfa93684b98cebd21e0ea6d7cb71e92a76\",\"dweb:/ipfs/QmbGtNGqvRn6T9jMvuHRHcTkdTe8gxyJzgGc6SibVZqAsM\"]}},\"version\":1}",
+  "bytecode": "0x6080604052348015600f57600080fd5b50603e80601d6000396000f3fe6080604052600080fdfea265627a7a72315820057bb1068955a208c102cd46458b6eba22b5c469247f475f29e24dca4fd1678364736f6c63430005100032",
+  "deployedBytecode": "0x6080604052600080fdfea265627a7a72315820057bb1068955a208c102cd46458b6eba22b5c469247f475f29e24dca4fd1678364736f6c63430005100032",
+  "sourceMap": "592:1330:56:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;592:1330:56;;;;;;;",
+  "deployedSourceMap": "592:1330:56:-;;;;;",
+  "source": "pragma solidity 0.5.16;\n\n/**\n * @title  InitializableModuleKeys\n * @author Stability Labs Pty. Ltd.\n * @notice Provides system wide access to the byte32 represntations of system modules\n *         This allows each system module to be able to reference and update one another in a\n *         friendly way. Contract is used for upgradable proxy contracts.\n * @dev    The contract is a replica of ModuleKeys.sol\n *         The following variables are to be assigned only once from initialize() function.\n *         Hence, the variable names are declared in UPPER_CASE to indicate constants.\n */\ncontract InitializableModuleKeys {\n\n    // Governance                             // Phases\n    bytes32 internal KEY_GOVERNANCE;          // 2.x\n    bytes32 internal KEY_STAKING;             // 1.2\n    bytes32 internal KEY_PROXY_ADMIN;         // 1.0\n\n    // mStable\n    bytes32 internal KEY_ORACLE_HUB;          // 1.2\n    bytes32 internal KEY_MANAGER;             // 1.2\n    bytes32 internal KEY_RECOLLATERALISER;    // 2.x\n    bytes32 internal KEY_BILD_TOKEN;          // 1.1\n    bytes32 internal KEY_SAVINGS_MANAGER;     // 1.0\n\n    /**\n     * @dev Initialize function for upgradable proxy contracts. This function should be called\n     *      via Proxy to initialize constants in the Proxy contract.\n     */\n    function _initialize() internal {\n        // keccak256() values are evaluated only once at the time of this function call.\n        // Hence, no need to assign hard-coded values to these variables.\n        KEY_GOVERNANCE = keccak256(\"Governance\");\n        KEY_STAKING = keccak256(\"Staking\");\n        KEY_PROXY_ADMIN = keccak256(\"ProxyAdmin\");\n\n        KEY_ORACLE_HUB = keccak256(\"OracleHub\");\n        KEY_MANAGER = keccak256(\"Manager\");\n        KEY_RECOLLATERALISER = keccak256(\"Recollateraliser\");\n        KEY_BILD_TOKEN = keccak256(\"BildToken\");\n        KEY_SAVINGS_MANAGER = keccak256(\"SavingsManager\");\n    }\n}",
+  "sourcePath": "/Volumes/sdxc/ETHEREUM/CODE/mStable-v1-edit/contracts/shared/InitializableModuleKeys.sol",
+  "ast": {
+    "absolutePath": "/Volumes/sdxc/ETHEREUM/CODE/mStable-v1-edit/contracts/shared/InitializableModuleKeys.sol",
+    "exportedSymbols": {
+      "InitializableModuleKeys": [
+        21241
+      ]
+    },
+    "id": 21242,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 21172,
+        "literals": [
+          "solidity",
+          "0.5",
+          ".16"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:56"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": "@title  InitializableModuleKeys\n@author Stability Labs Pty. Ltd.\n@notice Provides system wide access to the byte32 represntations of system modules\n        This allows each system module to be able to reference and update one another in a\n        friendly way. Contract is used for upgradable proxy contracts.\n@dev    The contract is a replica of ModuleKeys.sol\n        The following variables are to be assigned only once from initialize() function.\n        Hence, the variable names are declared in UPPER_CASE to indicate constants.",
+        "fullyImplemented": true,
+        "id": 21241,
+        "linearizedBaseContracts": [
+          21241
+        ],
+        "name": "InitializableModuleKeys",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "id": 21174,
+            "name": "KEY_GOVERNANCE",
+            "nodeType": "VariableDeclaration",
+            "scope": 21241,
+            "src": "688:31:56",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_bytes32",
+              "typeString": "bytes32"
+            },
+            "typeName": {
+              "id": 21173,
+              "name": "bytes32",
+              "nodeType": "ElementaryTypeName",
+              "src": "688:7:56",
+              "typeDescriptions": {
+                "typeIdentifier": "t_bytes32",
+                "typeString": "bytes32"
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 21176,
+            "name": "KEY_STAKING",
+            "nodeType": "VariableDeclaration",
+            "scope": 21241,
+            "src": "741:28:56",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_bytes32",
+              "typeString": "bytes32"
+            },
+            "typeName": {
+              "id": 21175,
+              "name": "bytes32",
+              "nodeType": "ElementaryTypeName",
+              "src": "741:7:56",
+              "typeDescriptions": {
+                "typeIdentifier": "t_bytes32",
+                "typeString": "bytes32"
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 21178,
+            "name": "KEY_PROXY_ADMIN",
+            "nodeType": "VariableDeclaration",
+            "scope": 21241,
+            "src": "794:32:56",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_bytes32",
+              "typeString": "bytes32"
+            },
+            "typeName": {
+              "id": 21177,
+              "name": "bytes32",
+              "nodeType": "ElementaryTypeName",
+              "src": "794:7:56",
+              "typeDescriptions": {
+                "typeIdentifier": "t_bytes32",
+                "typeString": "bytes32"
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 21180,
+            "name": "KEY_ORACLE_HUB",
+            "nodeType": "VariableDeclaration",
+            "scope": 21241,
+            "src": "863:31:56",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_bytes32",
+              "typeString": "bytes32"
+            },
+            "typeName": {
+              "id": 21179,
+              "name": "bytes32",
+              "nodeType": "ElementaryTypeName",
+              "src": "863:7:56",
+              "typeDescriptions": {
+                "typeIdentifier": "t_bytes32",
+                "typeString": "bytes32"
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 21182,
+            "name": "KEY_MANAGER",
+            "nodeType": "VariableDeclaration",
+            "scope": 21241,
+            "src": "916:28:56",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_bytes32",
+              "typeString": "bytes32"
+            },
+            "typeName": {
+              "id": 21181,
+              "name": "bytes32",
+              "nodeType": "ElementaryTypeName",
+              "src": "916:7:56",
+              "typeDescriptions": {
+                "typeIdentifier": "t_bytes32",
+                "typeString": "bytes32"
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 21184,
+            "name": "KEY_RECOLLATERALISER",
+            "nodeType": "VariableDeclaration",
+            "scope": 21241,
+            "src": "969:37:56",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_bytes32",
+              "typeString": "bytes32"
+            },
+            "typeName": {
+              "id": 21183,
+              "name": "bytes32",
+              "nodeType": "ElementaryTypeName",
+              "src": "969:7:56",
+              "typeDescriptions": {
+                "typeIdentifier": "t_bytes32",
+                "typeString": "bytes32"
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 21186,
+            "name": "KEY_BILD_TOKEN",
+            "nodeType": "VariableDeclaration",
+            "scope": 21241,
+            "src": "1022:31:56",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_bytes32",
+              "typeString": "bytes32"
+            },
+            "typeName": {
+              "id": 21185,
+              "name": "bytes32",
+              "nodeType": "ElementaryTypeName",
+              "src": "1022:7:56",
+              "typeDescriptions": {
+                "typeIdentifier": "t_bytes32",
+                "typeString": "bytes32"
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 21188,
+            "name": "KEY_SAVINGS_MANAGER",
+            "nodeType": "VariableDeclaration",
+            "scope": 21241,
+            "src": "1075:36:56",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_bytes32",
+              "typeString": "bytes32"
+            },
+            "typeName": {
+              "id": 21187,
+              "name": "bytes32",
+              "nodeType": "ElementaryTypeName",
+              "src": "1075:7:56",
+              "typeDescriptions": {
+                "typeIdentifier": "t_bytes32",
+                "typeString": "bytes32"
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          },
+          {
+            "body": {
+              "id": 21239,
+              "nodeType": "Block",
+              "src": "1341:579:56",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 21195,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 21191,
+                      "name": "KEY_GOVERNANCE",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 21174,
+                      "src": "1514:14:56",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bytes32",
+                        "typeString": "bytes32"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "arguments": [
+                        {
+                          "argumentTypes": null,
+                          "hexValue": "476f7665726e616e6365",
+                          "id": 21193,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": true,
+                          "kind": "string",
+                          "lValueRequested": false,
+                          "nodeType": "Literal",
+                          "src": "1541:12:56",
+                          "subdenomination": null,
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_stringliteral_9409903de1e6fd852dfc61c9dacb48196c48535b60e25abf92acc92dd689078d",
+                            "typeString": "literal_string \"Governance\""
+                          },
+                          "value": "Governance"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": [
+                          {
+                            "typeIdentifier": "t_stringliteral_9409903de1e6fd852dfc61c9dacb48196c48535b60e25abf92acc92dd689078d",
+                            "typeString": "literal_string \"Governance\""
+                          }
+                        ],
+                        "id": 21192,
+                        "name": "keccak256",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 36226,
+                        "src": "1531:9:56",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_function_keccak256_pure$_t_bytes_memory_ptr_$returns$_t_bytes32_$",
+                          "typeString": "function (bytes memory) pure returns (bytes32)"
+                        }
+                      },
+                      "id": 21194,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "functionCall",
+                      "lValueRequested": false,
+                      "names": [],
+                      "nodeType": "FunctionCall",
+                      "src": "1531:23:56",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bytes32",
+                        "typeString": "bytes32"
+                      }
+                    },
+                    "src": "1514:40:56",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "id": 21196,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1514:40:56"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 21201,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 21197,
+                      "name": "KEY_STAKING",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 21176,
+                      "src": "1564:11:56",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bytes32",
+                        "typeString": "bytes32"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "arguments": [
+                        {
+                          "argumentTypes": null,
+                          "hexValue": "5374616b696e67",
+                          "id": 21199,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": true,
+                          "kind": "string",
+                          "lValueRequested": false,
+                          "nodeType": "Literal",
+                          "src": "1588:9:56",
+                          "subdenomination": null,
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_stringliteral_1df41cd916959d1163dc8f0671a666ea8a3e434c13e40faef527133b5d167034",
+                            "typeString": "literal_string \"Staking\""
+                          },
+                          "value": "Staking"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": [
+                          {
+                            "typeIdentifier": "t_stringliteral_1df41cd916959d1163dc8f0671a666ea8a3e434c13e40faef527133b5d167034",
+                            "typeString": "literal_string \"Staking\""
+                          }
+                        ],
+                        "id": 21198,
+                        "name": "keccak256",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 36226,
+                        "src": "1578:9:56",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_function_keccak256_pure$_t_bytes_memory_ptr_$returns$_t_bytes32_$",
+                          "typeString": "function (bytes memory) pure returns (bytes32)"
+                        }
+                      },
+                      "id": 21200,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "functionCall",
+                      "lValueRequested": false,
+                      "names": [],
+                      "nodeType": "FunctionCall",
+                      "src": "1578:20:56",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bytes32",
+                        "typeString": "bytes32"
+                      }
+                    },
+                    "src": "1564:34:56",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "id": 21202,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1564:34:56"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 21207,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 21203,
+                      "name": "KEY_PROXY_ADMIN",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 21178,
+                      "src": "1608:15:56",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bytes32",
+                        "typeString": "bytes32"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "arguments": [
+                        {
+                          "argumentTypes": null,
+                          "hexValue": "50726f787941646d696e",
+                          "id": 21205,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": true,
+                          "kind": "string",
+                          "lValueRequested": false,
+                          "nodeType": "Literal",
+                          "src": "1636:12:56",
+                          "subdenomination": null,
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_stringliteral_96ed0203eb7e975a4cbcaa23951943fa35c5d8288117d50c12b3d48b0fab48d1",
+                            "typeString": "literal_string \"ProxyAdmin\""
+                          },
+                          "value": "ProxyAdmin"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": [
+                          {
+                            "typeIdentifier": "t_stringliteral_96ed0203eb7e975a4cbcaa23951943fa35c5d8288117d50c12b3d48b0fab48d1",
+                            "typeString": "literal_string \"ProxyAdmin\""
+                          }
+                        ],
+                        "id": 21204,
+                        "name": "keccak256",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 36226,
+                        "src": "1626:9:56",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_function_keccak256_pure$_t_bytes_memory_ptr_$returns$_t_bytes32_$",
+                          "typeString": "function (bytes memory) pure returns (bytes32)"
+                        }
+                      },
+                      "id": 21206,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "functionCall",
+                      "lValueRequested": false,
+                      "names": [],
+                      "nodeType": "FunctionCall",
+                      "src": "1626:23:56",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bytes32",
+                        "typeString": "bytes32"
+                      }
+                    },
+                    "src": "1608:41:56",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "id": 21208,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1608:41:56"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 21213,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 21209,
+                      "name": "KEY_ORACLE_HUB",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 21180,
+                      "src": "1660:14:56",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bytes32",
+                        "typeString": "bytes32"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "arguments": [
+                        {
+                          "argumentTypes": null,
+                          "hexValue": "4f7261636c65487562",
+                          "id": 21211,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": true,
+                          "kind": "string",
+                          "lValueRequested": false,
+                          "nodeType": "Literal",
+                          "src": "1687:11:56",
+                          "subdenomination": null,
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_stringliteral_8ae3a082c61a7379e2280f3356a5131507d9829d222d853bfa7c9fe1200dd040",
+                            "typeString": "literal_string \"OracleHub\""
+                          },
+                          "value": "OracleHub"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": [
+                          {
+                            "typeIdentifier": "t_stringliteral_8ae3a082c61a7379e2280f3356a5131507d9829d222d853bfa7c9fe1200dd040",
+                            "typeString": "literal_string \"OracleHub\""
+                          }
+                        ],
+                        "id": 21210,
+                        "name": "keccak256",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 36226,
+                        "src": "1677:9:56",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_function_keccak256_pure$_t_bytes_memory_ptr_$returns$_t_bytes32_$",
+                          "typeString": "function (bytes memory) pure returns (bytes32)"
+                        }
+                      },
+                      "id": 21212,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "functionCall",
+                      "lValueRequested": false,
+                      "names": [],
+                      "nodeType": "FunctionCall",
+                      "src": "1677:22:56",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bytes32",
+                        "typeString": "bytes32"
+                      }
+                    },
+                    "src": "1660:39:56",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "id": 21214,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1660:39:56"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 21219,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 21215,
+                      "name": "KEY_MANAGER",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 21182,
+                      "src": "1709:11:56",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bytes32",
+                        "typeString": "bytes32"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "arguments": [
+                        {
+                          "argumentTypes": null,
+                          "hexValue": "4d616e61676572",
+                          "id": 21217,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": true,
+                          "kind": "string",
+                          "lValueRequested": false,
+                          "nodeType": "Literal",
+                          "src": "1733:9:56",
+                          "subdenomination": null,
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_stringliteral_6d439300980e333f0256d64be2c9f67e86f4493ce25f82498d6db7f4be3d9e6f",
+                            "typeString": "literal_string \"Manager\""
+                          },
+                          "value": "Manager"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": [
+                          {
+                            "typeIdentifier": "t_stringliteral_6d439300980e333f0256d64be2c9f67e86f4493ce25f82498d6db7f4be3d9e6f",
+                            "typeString": "literal_string \"Manager\""
+                          }
+                        ],
+                        "id": 21216,
+                        "name": "keccak256",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 36226,
+                        "src": "1723:9:56",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_function_keccak256_pure$_t_bytes_memory_ptr_$returns$_t_bytes32_$",
+                          "typeString": "function (bytes memory) pure returns (bytes32)"
+                        }
+                      },
+                      "id": 21218,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "functionCall",
+                      "lValueRequested": false,
+                      "names": [],
+                      "nodeType": "FunctionCall",
+                      "src": "1723:20:56",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bytes32",
+                        "typeString": "bytes32"
+                      }
+                    },
+                    "src": "1709:34:56",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "id": 21220,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1709:34:56"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 21225,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 21221,
+                      "name": "KEY_RECOLLATERALISER",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 21184,
+                      "src": "1753:20:56",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bytes32",
+                        "typeString": "bytes32"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "arguments": [
+                        {
+                          "argumentTypes": null,
+                          "hexValue": "5265636f6c6c61746572616c69736572",
+                          "id": 21223,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": true,
+                          "kind": "string",
+                          "lValueRequested": false,
+                          "nodeType": "Literal",
+                          "src": "1786:18:56",
+                          "subdenomination": null,
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_stringliteral_39e3ed1fc335ce346a8cbe3e64dd525cf22b37f1e2104a755e761c3c1eb4734f",
+                            "typeString": "literal_string \"Recollateraliser\""
+                          },
+                          "value": "Recollateraliser"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": [
+                          {
+                            "typeIdentifier": "t_stringliteral_39e3ed1fc335ce346a8cbe3e64dd525cf22b37f1e2104a755e761c3c1eb4734f",
+                            "typeString": "literal_string \"Recollateraliser\""
+                          }
+                        ],
+                        "id": 21222,
+                        "name": "keccak256",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 36226,
+                        "src": "1776:9:56",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_function_keccak256_pure$_t_bytes_memory_ptr_$returns$_t_bytes32_$",
+                          "typeString": "function (bytes memory) pure returns (bytes32)"
+                        }
+                      },
+                      "id": 21224,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "functionCall",
+                      "lValueRequested": false,
+                      "names": [],
+                      "nodeType": "FunctionCall",
+                      "src": "1776:29:56",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bytes32",
+                        "typeString": "bytes32"
+                      }
+                    },
+                    "src": "1753:52:56",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "id": 21226,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1753:52:56"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 21231,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 21227,
+                      "name": "KEY_BILD_TOKEN",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 21186,
+                      "src": "1815:14:56",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bytes32",
+                        "typeString": "bytes32"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "arguments": [
+                        {
+                          "argumentTypes": null,
+                          "hexValue": "42696c64546f6b656e",
+                          "id": 21229,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": true,
+                          "kind": "string",
+                          "lValueRequested": false,
+                          "nodeType": "Literal",
+                          "src": "1842:11:56",
+                          "subdenomination": null,
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_stringliteral_f4257a39172586b5e2ff1e99b53ac68fe7c2c6b00bc374ff6613f7713e7ebb0d",
+                            "typeString": "literal_string \"BildToken\""
+                          },
+                          "value": "BildToken"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": [
+                          {
+                            "typeIdentifier": "t_stringliteral_f4257a39172586b5e2ff1e99b53ac68fe7c2c6b00bc374ff6613f7713e7ebb0d",
+                            "typeString": "literal_string \"BildToken\""
+                          }
+                        ],
+                        "id": 21228,
+                        "name": "keccak256",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 36226,
+                        "src": "1832:9:56",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_function_keccak256_pure$_t_bytes_memory_ptr_$returns$_t_bytes32_$",
+                          "typeString": "function (bytes memory) pure returns (bytes32)"
+                        }
+                      },
+                      "id": 21230,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "functionCall",
+                      "lValueRequested": false,
+                      "names": [],
+                      "nodeType": "FunctionCall",
+                      "src": "1832:22:56",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bytes32",
+                        "typeString": "bytes32"
+                      }
+                    },
+                    "src": "1815:39:56",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "id": 21232,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1815:39:56"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 21237,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 21233,
+                      "name": "KEY_SAVINGS_MANAGER",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 21188,
+                      "src": "1864:19:56",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bytes32",
+                        "typeString": "bytes32"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "arguments": [
+                        {
+                          "argumentTypes": null,
+                          "hexValue": "536176696e67734d616e61676572",
+                          "id": 21235,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": true,
+                          "kind": "string",
+                          "lValueRequested": false,
+                          "nodeType": "Literal",
+                          "src": "1896:16:56",
+                          "subdenomination": null,
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_stringliteral_12fe936c77a1e196473c4314f3bed8eeac1d757b319abb85bdda70df35511bf1",
+                            "typeString": "literal_string \"SavingsManager\""
+                          },
+                          "value": "SavingsManager"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": [
+                          {
+                            "typeIdentifier": "t_stringliteral_12fe936c77a1e196473c4314f3bed8eeac1d757b319abb85bdda70df35511bf1",
+                            "typeString": "literal_string \"SavingsManager\""
+                          }
+                        ],
+                        "id": 21234,
+                        "name": "keccak256",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 36226,
+                        "src": "1886:9:56",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_function_keccak256_pure$_t_bytes_memory_ptr_$returns$_t_bytes32_$",
+                          "typeString": "function (bytes memory) pure returns (bytes32)"
+                        }
+                      },
+                      "id": 21236,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "functionCall",
+                      "lValueRequested": false,
+                      "names": [],
+                      "nodeType": "FunctionCall",
+                      "src": "1886:27:56",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bytes32",
+                        "typeString": "bytes32"
+                      }
+                    },
+                    "src": "1864:49:56",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "id": 21238,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1864:49:56"
+                }
+              ]
+            },
+            "documentation": "@dev Initialize function for upgradable proxy contracts. This function should be called\n     via Proxy to initialize constants in the Proxy contract.",
+            "id": 21240,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "_initialize",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 21189,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1329:2:56"
+            },
+            "returnParameters": {
+              "id": 21190,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1341:0:56"
+            },
+            "scope": 21241,
+            "src": "1309:611:56",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "internal"
+          }
+        ],
+        "scope": 21242,
+        "src": "592:1330:56"
+      }
+    ],
+    "src": "0:1922:56"
+  },
+  "legacyAST": {
+    "absolutePath": "/Volumes/sdxc/ETHEREUM/CODE/mStable-v1-edit/contracts/shared/InitializableModuleKeys.sol",
+    "exportedSymbols": {
+      "InitializableModuleKeys": [
+        21241
+      ]
+    },
+    "id": 21242,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 21172,
+        "literals": [
+          "solidity",
+          "0.5",
+          ".16"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:56"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": "@title  InitializableModuleKeys\n@author Stability Labs Pty. Ltd.\n@notice Provides system wide access to the byte32 represntations of system modules\n        This allows each system module to be able to reference and update one another in a\n        friendly way. Contract is used for upgradable proxy contracts.\n@dev    The contract is a replica of ModuleKeys.sol\n        The following variables are to be assigned only once from initialize() function.\n        Hence, the variable names are declared in UPPER_CASE to indicate constants.",
+        "fullyImplemented": true,
+        "id": 21241,
+        "linearizedBaseContracts": [
+          21241
+        ],
+        "name": "InitializableModuleKeys",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "id": 21174,
+            "name": "KEY_GOVERNANCE",
+            "nodeType": "VariableDeclaration",
+            "scope": 21241,
+            "src": "688:31:56",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_bytes32",
+              "typeString": "bytes32"
+            },
+            "typeName": {
+              "id": 21173,
+              "name": "bytes32",
+              "nodeType": "ElementaryTypeName",
+              "src": "688:7:56",
+              "typeDescriptions": {
+                "typeIdentifier": "t_bytes32",
+                "typeString": "bytes32"
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 21176,
+            "name": "KEY_STAKING",
+            "nodeType": "VariableDeclaration",
+            "scope": 21241,
+            "src": "741:28:56",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_bytes32",
+              "typeString": "bytes32"
+            },
+            "typeName": {
+              "id": 21175,
+              "name": "bytes32",
+              "nodeType": "ElementaryTypeName",
+              "src": "741:7:56",
+              "typeDescriptions": {
+                "typeIdentifier": "t_bytes32",
+                "typeString": "bytes32"
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 21178,
+            "name": "KEY_PROXY_ADMIN",
+            "nodeType": "VariableDeclaration",
+            "scope": 21241,
+            "src": "794:32:56",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_bytes32",
+              "typeString": "bytes32"
+            },
+            "typeName": {
+              "id": 21177,
+              "name": "bytes32",
+              "nodeType": "ElementaryTypeName",
+              "src": "794:7:56",
+              "typeDescriptions": {
+                "typeIdentifier": "t_bytes32",
+                "typeString": "bytes32"
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 21180,
+            "name": "KEY_ORACLE_HUB",
+            "nodeType": "VariableDeclaration",
+            "scope": 21241,
+            "src": "863:31:56",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_bytes32",
+              "typeString": "bytes32"
+            },
+            "typeName": {
+              "id": 21179,
+              "name": "bytes32",
+              "nodeType": "ElementaryTypeName",
+              "src": "863:7:56",
+              "typeDescriptions": {
+                "typeIdentifier": "t_bytes32",
+                "typeString": "bytes32"
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 21182,
+            "name": "KEY_MANAGER",
+            "nodeType": "VariableDeclaration",
+            "scope": 21241,
+            "src": "916:28:56",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_bytes32",
+              "typeString": "bytes32"
+            },
+            "typeName": {
+              "id": 21181,
+              "name": "bytes32",
+              "nodeType": "ElementaryTypeName",
+              "src": "916:7:56",
+              "typeDescriptions": {
+                "typeIdentifier": "t_bytes32",
+                "typeString": "bytes32"
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 21184,
+            "name": "KEY_RECOLLATERALISER",
+            "nodeType": "VariableDeclaration",
+            "scope": 21241,
+            "src": "969:37:56",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_bytes32",
+              "typeString": "bytes32"
+            },
+            "typeName": {
+              "id": 21183,
+              "name": "bytes32",
+              "nodeType": "ElementaryTypeName",
+              "src": "969:7:56",
+              "typeDescriptions": {
+                "typeIdentifier": "t_bytes32",
+                "typeString": "bytes32"
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 21186,
+            "name": "KEY_BILD_TOKEN",
+            "nodeType": "VariableDeclaration",
+            "scope": 21241,
+            "src": "1022:31:56",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_bytes32",
+              "typeString": "bytes32"
+            },
+            "typeName": {
+              "id": 21185,
+              "name": "bytes32",
+              "nodeType": "ElementaryTypeName",
+              "src": "1022:7:56",
+              "typeDescriptions": {
+                "typeIdentifier": "t_bytes32",
+                "typeString": "bytes32"
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 21188,
+            "name": "KEY_SAVINGS_MANAGER",
+            "nodeType": "VariableDeclaration",
+            "scope": 21241,
+            "src": "1075:36:56",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_bytes32",
+              "typeString": "bytes32"
+            },
+            "typeName": {
+              "id": 21187,
+              "name": "bytes32",
+              "nodeType": "ElementaryTypeName",
+              "src": "1075:7:56",
+              "typeDescriptions": {
+                "typeIdentifier": "t_bytes32",
+                "typeString": "bytes32"
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          },
+          {
+            "body": {
+              "id": 21239,
+              "nodeType": "Block",
+              "src": "1341:579:56",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 21195,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 21191,
+                      "name": "KEY_GOVERNANCE",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 21174,
+                      "src": "1514:14:56",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bytes32",
+                        "typeString": "bytes32"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "arguments": [
+                        {
+                          "argumentTypes": null,
+                          "hexValue": "476f7665726e616e6365",
+                          "id": 21193,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": true,
+                          "kind": "string",
+                          "lValueRequested": false,
+                          "nodeType": "Literal",
+                          "src": "1541:12:56",
+                          "subdenomination": null,
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_stringliteral_9409903de1e6fd852dfc61c9dacb48196c48535b60e25abf92acc92dd689078d",
+                            "typeString": "literal_string \"Governance\""
+                          },
+                          "value": "Governance"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": [
+                          {
+                            "typeIdentifier": "t_stringliteral_9409903de1e6fd852dfc61c9dacb48196c48535b60e25abf92acc92dd689078d",
+                            "typeString": "literal_string \"Governance\""
+                          }
+                        ],
+                        "id": 21192,
+                        "name": "keccak256",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 36226,
+                        "src": "1531:9:56",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_function_keccak256_pure$_t_bytes_memory_ptr_$returns$_t_bytes32_$",
+                          "typeString": "function (bytes memory) pure returns (bytes32)"
+                        }
+                      },
+                      "id": 21194,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "functionCall",
+                      "lValueRequested": false,
+                      "names": [],
+                      "nodeType": "FunctionCall",
+                      "src": "1531:23:56",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bytes32",
+                        "typeString": "bytes32"
+                      }
+                    },
+                    "src": "1514:40:56",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "id": 21196,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1514:40:56"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 21201,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 21197,
+                      "name": "KEY_STAKING",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 21176,
+                      "src": "1564:11:56",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bytes32",
+                        "typeString": "bytes32"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "arguments": [
+                        {
+                          "argumentTypes": null,
+                          "hexValue": "5374616b696e67",
+                          "id": 21199,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": true,
+                          "kind": "string",
+                          "lValueRequested": false,
+                          "nodeType": "Literal",
+                          "src": "1588:9:56",
+                          "subdenomination": null,
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_stringliteral_1df41cd916959d1163dc8f0671a666ea8a3e434c13e40faef527133b5d167034",
+                            "typeString": "literal_string \"Staking\""
+                          },
+                          "value": "Staking"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": [
+                          {
+                            "typeIdentifier": "t_stringliteral_1df41cd916959d1163dc8f0671a666ea8a3e434c13e40faef527133b5d167034",
+                            "typeString": "literal_string \"Staking\""
+                          }
+                        ],
+                        "id": 21198,
+                        "name": "keccak256",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 36226,
+                        "src": "1578:9:56",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_function_keccak256_pure$_t_bytes_memory_ptr_$returns$_t_bytes32_$",
+                          "typeString": "function (bytes memory) pure returns (bytes32)"
+                        }
+                      },
+                      "id": 21200,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "functionCall",
+                      "lValueRequested": false,
+                      "names": [],
+                      "nodeType": "FunctionCall",
+                      "src": "1578:20:56",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bytes32",
+                        "typeString": "bytes32"
+                      }
+                    },
+                    "src": "1564:34:56",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "id": 21202,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1564:34:56"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 21207,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 21203,
+                      "name": "KEY_PROXY_ADMIN",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 21178,
+                      "src": "1608:15:56",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bytes32",
+                        "typeString": "bytes32"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "arguments": [
+                        {
+                          "argumentTypes": null,
+                          "hexValue": "50726f787941646d696e",
+                          "id": 21205,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": true,
+                          "kind": "string",
+                          "lValueRequested": false,
+                          "nodeType": "Literal",
+                          "src": "1636:12:56",
+                          "subdenomination": null,
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_stringliteral_96ed0203eb7e975a4cbcaa23951943fa35c5d8288117d50c12b3d48b0fab48d1",
+                            "typeString": "literal_string \"ProxyAdmin\""
+                          },
+                          "value": "ProxyAdmin"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": [
+                          {
+                            "typeIdentifier": "t_stringliteral_96ed0203eb7e975a4cbcaa23951943fa35c5d8288117d50c12b3d48b0fab48d1",
+                            "typeString": "literal_string \"ProxyAdmin\""
+                          }
+                        ],
+                        "id": 21204,
+                        "name": "keccak256",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 36226,
+                        "src": "1626:9:56",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_function_keccak256_pure$_t_bytes_memory_ptr_$returns$_t_bytes32_$",
+                          "typeString": "function (bytes memory) pure returns (bytes32)"
+                        }
+                      },
+                      "id": 21206,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "functionCall",
+                      "lValueRequested": false,
+                      "names": [],
+                      "nodeType": "FunctionCall",
+                      "src": "1626:23:56",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bytes32",
+                        "typeString": "bytes32"
+                      }
+                    },
+                    "src": "1608:41:56",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "id": 21208,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1608:41:56"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 21213,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 21209,
+                      "name": "KEY_ORACLE_HUB",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 21180,
+                      "src": "1660:14:56",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bytes32",
+                        "typeString": "bytes32"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "arguments": [
+                        {
+                          "argumentTypes": null,
+                          "hexValue": "4f7261636c65487562",
+                          "id": 21211,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": true,
+                          "kind": "string",
+                          "lValueRequested": false,
+                          "nodeType": "Literal",
+                          "src": "1687:11:56",
+                          "subdenomination": null,
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_stringliteral_8ae3a082c61a7379e2280f3356a5131507d9829d222d853bfa7c9fe1200dd040",
+                            "typeString": "literal_string \"OracleHub\""
+                          },
+                          "value": "OracleHub"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": [
+                          {
+                            "typeIdentifier": "t_stringliteral_8ae3a082c61a7379e2280f3356a5131507d9829d222d853bfa7c9fe1200dd040",
+                            "typeString": "literal_string \"OracleHub\""
+                          }
+                        ],
+                        "id": 21210,
+                        "name": "keccak256",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 36226,
+                        "src": "1677:9:56",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_function_keccak256_pure$_t_bytes_memory_ptr_$returns$_t_bytes32_$",
+                          "typeString": "function (bytes memory) pure returns (bytes32)"
+                        }
+                      },
+                      "id": 21212,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "functionCall",
+                      "lValueRequested": false,
+                      "names": [],
+                      "nodeType": "FunctionCall",
+                      "src": "1677:22:56",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bytes32",
+                        "typeString": "bytes32"
+                      }
+                    },
+                    "src": "1660:39:56",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "id": 21214,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1660:39:56"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 21219,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 21215,
+                      "name": "KEY_MANAGER",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 21182,
+                      "src": "1709:11:56",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bytes32",
+                        "typeString": "bytes32"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "arguments": [
+                        {
+                          "argumentTypes": null,
+                          "hexValue": "4d616e61676572",
+                          "id": 21217,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": true,
+                          "kind": "string",
+                          "lValueRequested": false,
+                          "nodeType": "Literal",
+                          "src": "1733:9:56",
+                          "subdenomination": null,
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_stringliteral_6d439300980e333f0256d64be2c9f67e86f4493ce25f82498d6db7f4be3d9e6f",
+                            "typeString": "literal_string \"Manager\""
+                          },
+                          "value": "Manager"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": [
+                          {
+                            "typeIdentifier": "t_stringliteral_6d439300980e333f0256d64be2c9f67e86f4493ce25f82498d6db7f4be3d9e6f",
+                            "typeString": "literal_string \"Manager\""
+                          }
+                        ],
+                        "id": 21216,
+                        "name": "keccak256",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 36226,
+                        "src": "1723:9:56",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_function_keccak256_pure$_t_bytes_memory_ptr_$returns$_t_bytes32_$",
+                          "typeString": "function (bytes memory) pure returns (bytes32)"
+                        }
+                      },
+                      "id": 21218,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "functionCall",
+                      "lValueRequested": false,
+                      "names": [],
+                      "nodeType": "FunctionCall",
+                      "src": "1723:20:56",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bytes32",
+                        "typeString": "bytes32"
+                      }
+                    },
+                    "src": "1709:34:56",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "id": 21220,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1709:34:56"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 21225,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 21221,
+                      "name": "KEY_RECOLLATERALISER",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 21184,
+                      "src": "1753:20:56",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bytes32",
+                        "typeString": "bytes32"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "arguments": [
+                        {
+                          "argumentTypes": null,
+                          "hexValue": "5265636f6c6c61746572616c69736572",
+                          "id": 21223,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": true,
+                          "kind": "string",
+                          "lValueRequested": false,
+                          "nodeType": "Literal",
+                          "src": "1786:18:56",
+                          "subdenomination": null,
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_stringliteral_39e3ed1fc335ce346a8cbe3e64dd525cf22b37f1e2104a755e761c3c1eb4734f",
+                            "typeString": "literal_string \"Recollateraliser\""
+                          },
+                          "value": "Recollateraliser"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": [
+                          {
+                            "typeIdentifier": "t_stringliteral_39e3ed1fc335ce346a8cbe3e64dd525cf22b37f1e2104a755e761c3c1eb4734f",
+                            "typeString": "literal_string \"Recollateraliser\""
+                          }
+                        ],
+                        "id": 21222,
+                        "name": "keccak256",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 36226,
+                        "src": "1776:9:56",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_function_keccak256_pure$_t_bytes_memory_ptr_$returns$_t_bytes32_$",
+                          "typeString": "function (bytes memory) pure returns (bytes32)"
+                        }
+                      },
+                      "id": 21224,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "functionCall",
+                      "lValueRequested": false,
+                      "names": [],
+                      "nodeType": "FunctionCall",
+                      "src": "1776:29:56",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bytes32",
+                        "typeString": "bytes32"
+                      }
+                    },
+                    "src": "1753:52:56",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "id": 21226,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1753:52:56"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 21231,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 21227,
+                      "name": "KEY_BILD_TOKEN",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 21186,
+                      "src": "1815:14:56",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bytes32",
+                        "typeString": "bytes32"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "arguments": [
+                        {
+                          "argumentTypes": null,
+                          "hexValue": "42696c64546f6b656e",
+                          "id": 21229,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": true,
+                          "kind": "string",
+                          "lValueRequested": false,
+                          "nodeType": "Literal",
+                          "src": "1842:11:56",
+                          "subdenomination": null,
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_stringliteral_f4257a39172586b5e2ff1e99b53ac68fe7c2c6b00bc374ff6613f7713e7ebb0d",
+                            "typeString": "literal_string \"BildToken\""
+                          },
+                          "value": "BildToken"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": [
+                          {
+                            "typeIdentifier": "t_stringliteral_f4257a39172586b5e2ff1e99b53ac68fe7c2c6b00bc374ff6613f7713e7ebb0d",
+                            "typeString": "literal_string \"BildToken\""
+                          }
+                        ],
+                        "id": 21228,
+                        "name": "keccak256",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 36226,
+                        "src": "1832:9:56",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_function_keccak256_pure$_t_bytes_memory_ptr_$returns$_t_bytes32_$",
+                          "typeString": "function (bytes memory) pure returns (bytes32)"
+                        }
+                      },
+                      "id": 21230,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "functionCall",
+                      "lValueRequested": false,
+                      "names": [],
+                      "nodeType": "FunctionCall",
+                      "src": "1832:22:56",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bytes32",
+                        "typeString": "bytes32"
+                      }
+                    },
+                    "src": "1815:39:56",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "id": 21232,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1815:39:56"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 21237,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 21233,
+                      "name": "KEY_SAVINGS_MANAGER",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 21188,
+                      "src": "1864:19:56",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bytes32",
+                        "typeString": "bytes32"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "arguments": [
+                        {
+                          "argumentTypes": null,
+                          "hexValue": "536176696e67734d616e61676572",
+                          "id": 21235,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": true,
+                          "kind": "string",
+                          "lValueRequested": false,
+                          "nodeType": "Literal",
+                          "src": "1896:16:56",
+                          "subdenomination": null,
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_stringliteral_12fe936c77a1e196473c4314f3bed8eeac1d757b319abb85bdda70df35511bf1",
+                            "typeString": "literal_string \"SavingsManager\""
+                          },
+                          "value": "SavingsManager"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": [
+                          {
+                            "typeIdentifier": "t_stringliteral_12fe936c77a1e196473c4314f3bed8eeac1d757b319abb85bdda70df35511bf1",
+                            "typeString": "literal_string \"SavingsManager\""
+                          }
+                        ],
+                        "id": 21234,
+                        "name": "keccak256",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 36226,
+                        "src": "1886:9:56",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_function_keccak256_pure$_t_bytes_memory_ptr_$returns$_t_bytes32_$",
+                          "typeString": "function (bytes memory) pure returns (bytes32)"
+                        }
+                      },
+                      "id": 21236,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "functionCall",
+                      "lValueRequested": false,
+                      "names": [],
+                      "nodeType": "FunctionCall",
+                      "src": "1886:27:56",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bytes32",
+                        "typeString": "bytes32"
+                      }
+                    },
+                    "src": "1864:49:56",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "id": 21238,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1864:49:56"
+                }
+              ]
+            },
+            "documentation": "@dev Initialize function for upgradable proxy contracts. This function should be called\n     via Proxy to initialize constants in the Proxy contract.",
+            "id": 21240,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "_initialize",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 21189,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1329:2:56"
+            },
+            "returnParameters": {
+              "id": 21190,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1341:0:56"
+            },
+            "scope": 21241,
+            "src": "1309:611:56",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "internal"
+          }
+        ],
+        "scope": 21242,
+        "src": "592:1330:56"
+      }
+    ],
+    "src": "0:1922:56"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.16+commit.9c3226ce.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.1.0",
+  "updatedAt": "2021-03-11T05:43:16.296Z",
+  "devdoc": {
+    "author": "Stability Labs Pty. Ltd.",
+    "details": "The contract is a replica of ModuleKeys.sol        The following variables are to be assigned only once from initialize() function.        Hence, the variable names are declared in UPPER_CASE to indicate constants.",
+    "methods": {},
+    "title": "InitializableModuleKeys"
+  },
+  "userdoc": {
+    "methods": {},
+    "notice": "Provides system wide access to the byte32 represntations of system modules        This allows each system module to be able to reference and update one another in a        friendly way. Contract is used for upgradable proxy contracts."
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "_format": "hh-sol-artifact-1",
+  "contractName": "MockStakingContract",
+  "sourceName": "contracts/z_mocks/savings/MockStakingContract.sol",
+  "abi": [
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "account",
+          "type": "address"
+        }
+      ],
+      "name": "balanceOf",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "account",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "balance",
+          "type": "uint256"
+        }
+      ],
+      "name": "setBalanceOf",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "bytecode": "0x608060405234801561001057600080fd5b50610103806100206000396000f3fe6080604052348015600f57600080fd5b506004361060325760003560e01c806370a08231146037578063b46310f614606c575b600080fd5b605a60048036036020811015604b57600080fd5b50356001600160a01b03166097565b60408051918252519081900360200190f35b609560048036036040811015608057600080fd5b506001600160a01b03813516906020013560b2565b005b6001600160a01b031660009081526020819052604090205490565b6001600160a01b0390911660009081526020819052604090205556fea265627a7a72315820ab563a5fcba1bb64053810320b3dc885ec29b6c820a99adb6681eda8738597bf64736f6c63430005100032",
+  "deployedBytecode": "0x6080604052348015600f57600080fd5b506004361060325760003560e01c806370a08231146037578063b46310f614606c575b600080fd5b605a60048036036020811015604b57600080fd5b50356001600160a01b03166097565b60408051918252519081900360200190f35b609560048036036040811015608057600080fd5b506001600160a01b03813516906020013560b2565b005b6001600160a01b031660009081526020819052604090205490565b6001600160a01b0390911660009081526020819052604090205556fea265627a7a72315820ab563a5fcba1bb64053810320b3dc885ec29b6c820a99adb6681eda8738597bf64736f6c63430005100032",
+  "linkReferences": {},
+  "deployedLinkReferences": {}
+}

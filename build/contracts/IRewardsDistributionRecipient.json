@@ -1,0 +1,387 @@
+{
+  "contractName": "IRewardsDistributionRecipient",
+  "abi": [
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "reward",
+          "type": "uint256"
+        }
+      ],
+      "name": "notifyRewardAmount",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "getRewardToken",
+      "outputs": [
+        {
+          "internalType": "contract IERC20",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.5.16+commit.9c3226ce\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":true,\"inputs\":[],\"name\":\"getRewardToken\",\"outputs\":[{\"internalType\":\"contract IERC20\",\"name\":\"\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"reward\",\"type\":\"uint256\"}],\"name\":\"notifyRewardAmount\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/Volumes/sdxc/ETHEREUM/CODE/mStable-v1-edit/contracts/interfaces/IRewardsDistributionRecipient.sol\":\"IRewardsDistributionRecipient\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Volumes/sdxc/ETHEREUM/CODE/mStable-v1-edit/contracts/interfaces/IRewardsDistributionRecipient.sol\":{\"keccak256\":\"0x65193e00149e1a0eedf592c24e61ed9f84e62edfe7bba7a43b8e0bd9406112ec\",\"urls\":[\"bzz-raw://8fe8fdc3491504d38c6619cddfb5286d5a47fb0532170083e057c35b1675e78f\",\"dweb:/ipfs/QmTQ9QaHJUqdEhiibTNodz7Pw1zWZHNEZWgj9NR2r9F4RP\"]},\"@openzeppelin/contracts/token/ERC20/IERC20.sol\":{\"keccak256\":\"0xe5bb0f57cff3e299f360052ba50f1ea0fff046df2be070b6943e0e3c3fdad8a9\",\"urls\":[\"bzz-raw://59fd025151435da35faa8093a5c7a17de02de9d08ad27275c5cdf05050820d91\",\"dweb:/ipfs/QmQMvwEcPhoRXzbXyrdoeRtvLoifUW9Qh7Luho7bmUPRkc\"]}},\"version\":1}",
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "sourceMap": "",
+  "deployedSourceMap": "",
+  "source": "pragma solidity 0.5.16;\n\nimport { IERC20 } from \"@openzeppelin/contracts/token/ERC20/IERC20.sol\";\n\ninterface IRewardsDistributionRecipient {\n    function notifyRewardAmount(uint256 reward) external;\n    function getRewardToken() external view returns (IERC20);\n}",
+  "sourcePath": "/Volumes/sdxc/ETHEREUM/CODE/mStable-v1-edit/contracts/interfaces/IRewardsDistributionRecipient.sol",
+  "ast": {
+    "absolutePath": "/Volumes/sdxc/ETHEREUM/CODE/mStable-v1-edit/contracts/interfaces/IRewardsDistributionRecipient.sol",
+    "exportedSymbols": {
+      "IRewardsDistributionRecipient": [
+        3922
+      ]
+    },
+    "id": 3923,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 3909,
+        "literals": [
+          "solidity",
+          "0.5",
+          ".16"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:16"
+      },
+      {
+        "absolutePath": "@openzeppelin/contracts/token/ERC20/IERC20.sol",
+        "file": "@openzeppelin/contracts/token/ERC20/IERC20.sol",
+        "id": 3911,
+        "nodeType": "ImportDirective",
+        "scope": 3923,
+        "sourceUnit": 35245,
+        "src": "25:72:16",
+        "symbolAliases": [
+          {
+            "foreign": 3910,
+            "local": null
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "documentation": null,
+        "fullyImplemented": false,
+        "id": 3922,
+        "linearizedBaseContracts": [
+          3922
+        ],
+        "name": "IRewardsDistributionRecipient",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": null,
+            "documentation": null,
+            "id": 3916,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "notifyRewardAmount",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 3914,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3913,
+                  "name": "reward",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3916,
+                  "src": "173:14:16",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 3912,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "173:7:16",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "172:16:16"
+            },
+            "returnParameters": {
+              "id": 3915,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "197:0:16"
+            },
+            "scope": 3922,
+            "src": "145:53:16",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": null,
+            "id": 3921,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getRewardToken",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 3917,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "226:2:16"
+            },
+            "returnParameters": {
+              "id": 3920,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3919,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3921,
+                  "src": "252:6:16",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_IERC20_$35244",
+                    "typeString": "contract IERC20"
+                  },
+                  "typeName": {
+                    "contractScope": null,
+                    "id": 3918,
+                    "name": "IERC20",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 35244,
+                    "src": "252:6:16",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_IERC20_$35244",
+                      "typeString": "contract IERC20"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "251:8:16"
+            },
+            "scope": 3922,
+            "src": "203:57:16",
+            "stateMutability": "view",
+            "superFunction": 3477,
+            "visibility": "external"
+          }
+        ],
+        "scope": 3923,
+        "src": "99:163:16"
+      }
+    ],
+    "src": "0:262:16"
+  },
+  "legacyAST": {
+    "absolutePath": "/Volumes/sdxc/ETHEREUM/CODE/mStable-v1-edit/contracts/interfaces/IRewardsDistributionRecipient.sol",
+    "exportedSymbols": {
+      "IRewardsDistributionRecipient": [
+        3922
+      ]
+    },
+    "id": 3923,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 3909,
+        "literals": [
+          "solidity",
+          "0.5",
+          ".16"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:16"
+      },
+      {
+        "absolutePath": "@openzeppelin/contracts/token/ERC20/IERC20.sol",
+        "file": "@openzeppelin/contracts/token/ERC20/IERC20.sol",
+        "id": 3911,
+        "nodeType": "ImportDirective",
+        "scope": 3923,
+        "sourceUnit": 35245,
+        "src": "25:72:16",
+        "symbolAliases": [
+          {
+            "foreign": 3910,
+            "local": null
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "documentation": null,
+        "fullyImplemented": false,
+        "id": 3922,
+        "linearizedBaseContracts": [
+          3922
+        ],
+        "name": "IRewardsDistributionRecipient",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": null,
+            "documentation": null,
+            "id": 3916,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "notifyRewardAmount",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 3914,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3913,
+                  "name": "reward",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3916,
+                  "src": "173:14:16",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 3912,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "173:7:16",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "172:16:16"
+            },
+            "returnParameters": {
+              "id": 3915,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "197:0:16"
+            },
+            "scope": 3922,
+            "src": "145:53:16",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": null,
+            "id": 3921,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getRewardToken",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 3917,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "226:2:16"
+            },
+            "returnParameters": {
+              "id": 3920,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3919,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3921,
+                  "src": "252:6:16",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_IERC20_$35244",
+                    "typeString": "contract IERC20"
+                  },
+                  "typeName": {
+                    "contractScope": null,
+                    "id": 3918,
+                    "name": "IERC20",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 35244,
+                    "src": "252:6:16",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_IERC20_$35244",
+                      "typeString": "contract IERC20"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "251:8:16"
+            },
+            "scope": 3922,
+            "src": "203:57:16",
+            "stateMutability": "view",
+            "superFunction": 3477,
+            "visibility": "external"
+          }
+        ],
+        "scope": 3923,
+        "src": "99:163:16"
+      }
+    ],
+    "src": "0:262:16"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.16+commit.9c3226ce.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.1.0",
+  "updatedAt": "2021-03-11T05:43:15.113Z",
+  "devdoc": {
+    "methods": {}
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}

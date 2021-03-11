@@ -1,0 +1,3843 @@
+{
+  "contractName": "AbstractBuyAndMint",
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "address[]",
+          "name": "_mIxs",
+          "type": "address[]"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "mIx",
+          "type": "address"
+        }
+      ],
+      "name": "MixAdded",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "previousOwner",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "newOwner",
+          "type": "address"
+        }
+      ],
+      "name": "OwnershipTransferred",
+      "type": "event"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "isOwner",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "name": "mIxs",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "owner",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [],
+      "name": "renounceOwnership",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "newOwner",
+          "type": "address"
+        }
+      ],
+      "name": "transferOwnership",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_mIx",
+          "type": "address"
+        },
+        {
+          "internalType": "address[]",
+          "name": "_bAssets",
+          "type": "address[]"
+        }
+      ],
+      "name": "infiniteApprove",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_mIx",
+          "type": "address"
+        }
+      ],
+      "name": "addMix",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.5.16+commit.9c3226ce\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"address[]\",\"name\":\"_mIxs\",\"type\":\"address[]\"}],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"mIx\",\"type\":\"address\"}],\"name\":\"MixAdded\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"previousOwner\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"newOwner\",\"type\":\"address\"}],\"name\":\"OwnershipTransferred\",\"type\":\"event\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"address\",\"name\":\"_mIx\",\"type\":\"address\"}],\"name\":\"addMix\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"address\",\"name\":\"_mIx\",\"type\":\"address\"},{\"internalType\":\"address[]\",\"name\":\"_bAssets\",\"type\":\"address[]\"}],\"name\":\"infiniteApprove\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"isOwner\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"name\":\"mIxs\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"owner\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[],\"name\":\"renounceOwnership\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"address\",\"name\":\"newOwner\",\"type\":\"address\"}],\"name\":\"transferOwnership\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"author\":\"Stability Labs Pty. Ltd.\",\"methods\":{\"addMix(address)\":{\"details\":\"The Owner of the contract allowed to add a new supported mIx.\",\"params\":{\"_mIx\":\"Address of the mIx\"}},\"constructor\":{\"details\":\"Abstarct constructor\",\"params\":{\"_mIxs\":\"Array of valid mIx addresses allowed to mint.\"}},\"infiniteApprove(address,address[])\":{\"details\":\"Anyone can call and perform infinite approval for bAssets\",\"params\":{\"_bAssets\":\"An array containing bAssets addresses\"}},\"isOwner()\":{\"details\":\"Returns true if the caller is the current owner.\"},\"owner()\":{\"details\":\"Returns the address of the current owner.\"},\"renounceOwnership()\":{\"details\":\"Leaves the contract without owner. It will not be possible to call `onlyOwner` functions anymore. Can only be called by the current owner.     * NOTE: Renouncing ownership will leave the contract without an owner, thereby removing any functionality that is only available to the owner.\"},\"transferOwnership(address)\":{\"details\":\"Transfers ownership of the contract to a new account (`newOwner`). Can only be called by the current owner.\"}},\"title\":\"AbstractBuyAndMint\"},\"userdoc\":{\"methods\":{},\"notice\":\"Abstract contract to allow buy bAsset tokens with ETH and mint mIxs tokens         from mStable.\"}},\"settings\":{\"compilationTarget\":{\"/Volumes/sdxc/ETHEREUM/CODE/mStable-v1-edit/contracts/z_mocks/integrations/AbstractBuyAndMint.sol\":\"AbstractBuyAndMint\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Volumes/sdxc/ETHEREUM/CODE/mStable-v1-edit/contracts/mix/shared/MixHelpers.sol\":{\"keccak256\":\"0x099f87d7aaf63cda690c046a80d1ec49740da40cae2473ee7cb69cbc252447ec\",\"urls\":[\"bzz-raw://1df9d14f56d4445364749e66b807953fe3e2b31729a0200a0862813dfa89d04b\",\"dweb:/ipfs/QmNSRHeJGeCTQg5sPVjD7QZpqfpwY52BHx6mLMLKk99ThH\"]},\"/Volumes/sdxc/ETHEREUM/CODE/mStable-v1-edit/contracts/shared/StableMath.sol\":{\"keccak256\":\"0x08d17d7581628d72ac3233f042e1b6d4e6cbc050a991672f9b69a85380a6158f\",\"urls\":[\"bzz-raw://a0305949a756551cd30719caf13465bdfa17dbcfdba67955c16152e3a5e89a93\",\"dweb:/ipfs/QmZmX1FuaArqk3MCfUBFoDTJTVZfFnhteAnMPpA3AMbTom\"]},\"/Volumes/sdxc/ETHEREUM/CODE/mStable-v1-edit/contracts/z_mocks/integrations/AbstractBuyAndMint.sol\":{\"keccak256\":\"0x3e2fcc192b5a84b704ff0d598eaa5d0f7bd6477da6fcdbe35bdb0fffc418d402\",\"urls\":[\"bzz-raw://c96eb6e57e071c491992387d69578a53f4752f29d63d7d87417999b8e957c8ad\",\"dweb:/ipfs/QmYLDfSuFTY4CLypeD9Ftoxoszw8UazyYfhUtNDLUBzcLS\"]},\"@openzeppelin/contracts/GSN/Context.sol\":{\"keccak256\":\"0x90a3995645af7562d84b9d69363ffa5ae7217714ab61e951bf7bc450f40e4061\",\"urls\":[\"bzz-raw://216ef9d6b614db4eb46970b4e84903f2534a45572dd30a79f0041f1a5830f436\",\"dweb:/ipfs/QmNPrJ4MWKUAWzKXpUqeyKRUfosaoANZAqXgvepdrCwZAG\"]},\"@openzeppelin/contracts/math/SafeMath.sol\":{\"keccak256\":\"0x640b6dee7a4b830bdfd52b5031a07fc2b12209f5b2e29e5d364a7d37f69d8076\",\"urls\":[\"bzz-raw://31113152e1ddb78fe7a4197f247591ca894e93f916867beb708d8e747b6cc74f\",\"dweb:/ipfs/QmbZaJyXdpsYGykVhHH9qpVGQg9DGCxE2QufbCUy3daTgq\"]},\"@openzeppelin/contracts/ownership/Ownable.sol\":{\"keccak256\":\"0x6fb9d7889769d7cc161225f9ef7a90e468ba9788b253816f8d8b6894d3472c24\",\"urls\":[\"bzz-raw://cf4c00fc3c37cc5acf0c82ec6fd97bab67d72c2567fdc0ebf023d9c09b30a08e\",\"dweb:/ipfs/Qmb7TChG6DsEDX7LooJ4vmxot19f7VXX8S1zUGPeJTWbwZ\"]},\"@openzeppelin/contracts/token/ERC20/IERC20.sol\":{\"keccak256\":\"0xe5bb0f57cff3e299f360052ba50f1ea0fff046df2be070b6943e0e3c3fdad8a9\",\"urls\":[\"bzz-raw://59fd025151435da35faa8093a5c7a17de02de9d08ad27275c5cdf05050820d91\",\"dweb:/ipfs/QmQMvwEcPhoRXzbXyrdoeRtvLoifUW9Qh7Luho7bmUPRkc\"]},\"@openzeppelin/contracts/token/ERC20/SafeERC20.sol\":{\"keccak256\":\"0x6f2c9955d65c522b80f4b8792f076512d2df947d2112cbc4d98a4781ed42ede2\",\"urls\":[\"bzz-raw://7d8ec81683520c06baeef3f7e06cd82bd6fd5fa611f26857f475f6c829540aff\",\"dweb:/ipfs/QmTDkFzKnrpiV1UKnSoiZAHPuguWzokrr4pFbSPvyaSo56\"]},\"@openzeppelin/contracts/utils/Address.sol\":{\"keccak256\":\"0x1a8e5072509c5ea7365eb1d48030b9be865140c8fb779968da0a459a0e174a11\",\"urls\":[\"bzz-raw://03335b7b07c7c8c8d613cfdd8ec39a0b5ec133ee510bf2fe6cc5a496767bef4b\",\"dweb:/ipfs/Qmebp4nzPja645c9yXSdJkGq96oU3am3LUnG2K3R7XxyKf\"]}},\"version\":1}",
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "sourceMap": "",
+  "deployedSourceMap": "",
+  "source": "pragma solidity 0.5.16;\n\n// Internal\nimport { MixHelpers } from \"../../mix/shared/MixHelpers.sol\";\n\n// Library\nimport { Ownable } from \"@openzeppelin/contracts/ownership/Ownable.sol\";\n\n/**\n * @title   AbstractBuyAndMint\n * @author  Stability Labs Pty. Ltd.\n * @notice  Abstract contract to allow buy bAsset tokens with ETH and mint mIxs tokens\n *          from mStable.\n */\ncontract AbstractBuyAndMint is Ownable {\n\n    using MixHelpers for address;\n\n    event MixAdded(address indexed mIx);\n\n    // mIx address => exists\n    mapping(address => bool) public mIxs;\n\n    /**\n     * @dev Abstarct constructor\n     * @param _mIxs Array of valid mIx addresses allowed to mint.\n     */\n    constructor(address[] memory _mIxs) internal {\n        require(_mIxs.length > 0, \"No mIxs provided\");\n        for(uint256 i = 0; i < _mIxs.length; i++) {\n            _addMix(_mIxs[i]);\n        }\n    }\n\n    /**\n     * @dev Anyone can call and perform infinite approval for bAssets\n     * @param _bAssets An array containing bAssets addresses\n     */\n    function infiniteApprove(address _mIx, address[] calldata _bAssets) external {\n        for(uint256 i = 0; i < _bAssets.length; i++) {\n            _bAssets[i].safeInfiniteApprove(_mIx);\n        }\n    }\n\n    /**\n     * @dev The Owner of the contract allowed to add a new supported mIx.\n     * @param _mIx Address of the mIx\n     */\n    function addMix(address _mIx) external onlyOwner {\n        _addMix(_mIx);\n    }\n\n    /**\n     * @dev Add a new mIx to the supported mIxs list\n     * @param _mIx Address of the mIx\n     */\n    function _addMix(address _mIx) internal {\n        require(_mIx != address(0), \"mIx address is zero\");\n        require(!_mixExists(_mIx), \"mIx already exists\");\n        mIxs[_mIx] = true;\n        emit MixAdded(_mIx);\n    }\n\n    /**\n     * @dev     Validate that the given mIx supported by this contract.\n     * @notice  Only validate mIx address. As bAsset gets validated during minting process.\n     * @param _mIx mIx address to validate\n     */\n    function _mixExists(address _mIx) internal view returns (bool) {\n        return mIxs[_mIx];\n    }\n\n    /**\n     * @dev Abstract function to get the external DEX contract address\n     */\n    function _externalDexAddress() internal view returns(address);\n}",
+  "sourcePath": "/Volumes/sdxc/ETHEREUM/CODE/mStable-v1-edit/contracts/z_mocks/integrations/AbstractBuyAndMint.sol",
+  "ast": {
+    "absolutePath": "/Volumes/sdxc/ETHEREUM/CODE/mStable-v1-edit/contracts/z_mocks/integrations/AbstractBuyAndMint.sol",
+    "exportedSymbols": {
+      "AbstractBuyAndMint": [
+        22804
+      ]
+    },
+    "id": 22805,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 22661,
+        "literals": [
+          "solidity",
+          "0.5",
+          ".16"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:70"
+      },
+      {
+        "absolutePath": "/Volumes/sdxc/ETHEREUM/CODE/mStable-v1-edit/contracts/mix/shared/MixHelpers.sol",
+        "file": "../../mix/shared/MixHelpers.sol",
+        "id": 22663,
+        "nodeType": "ImportDirective",
+        "scope": 22805,
+        "sourceUnit": 13561,
+        "src": "37:61:70",
+        "symbolAliases": [
+          {
+            "foreign": 22662,
+            "local": null
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "@openzeppelin/contracts/ownership/Ownable.sol",
+        "file": "@openzeppelin/contracts/ownership/Ownable.sol",
+        "id": 22665,
+        "nodeType": "ImportDirective",
+        "scope": 22805,
+        "sourceUnit": 34651,
+        "src": "111:72:70",
+        "symbolAliases": [
+          {
+            "foreign": 22664,
+            "local": null
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 22666,
+              "name": "Ownable",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 34650,
+              "src": "405:7:70",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_Ownable_$34650",
+                "typeString": "contract Ownable"
+              }
+            },
+            "id": 22667,
+            "nodeType": "InheritanceSpecifier",
+            "src": "405:7:70"
+          }
+        ],
+        "contractDependencies": [
+          34157,
+          34650
+        ],
+        "contractKind": "contract",
+        "documentation": "@title   AbstractBuyAndMint\n@author  Stability Labs Pty. Ltd.\n@notice  Abstract contract to allow buy bAsset tokens with ETH and mint mIxs tokens\n         from mStable.",
+        "fullyImplemented": false,
+        "id": 22804,
+        "linearizedBaseContracts": [
+          22804,
+          34650,
+          34157
+        ],
+        "name": "AbstractBuyAndMint",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "id": 22670,
+            "libraryName": {
+              "contractScope": null,
+              "id": 22668,
+              "name": "MixHelpers",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 13560,
+              "src": "426:10:70",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_MixHelpers_$13560",
+                "typeString": "library MixHelpers"
+              }
+            },
+            "nodeType": "UsingForDirective",
+            "src": "420:29:70",
+            "typeName": {
+              "id": 22669,
+              "name": "address",
+              "nodeType": "ElementaryTypeName",
+              "src": "441:7:70",
+              "stateMutability": "nonpayable",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              }
+            }
+          },
+          {
+            "anonymous": false,
+            "documentation": null,
+            "id": 22674,
+            "name": "MixAdded",
+            "nodeType": "EventDefinition",
+            "parameters": {
+              "id": 22673,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 22672,
+                  "indexed": true,
+                  "name": "mIx",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 22674,
+                  "src": "470:19:70",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 22671,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "470:7:70",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "469:21:70"
+            },
+            "src": "455:36:70"
+          },
+          {
+            "constant": false,
+            "id": 22678,
+            "name": "mIxs",
+            "nodeType": "VariableDeclaration",
+            "scope": 22804,
+            "src": "526:36:70",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_address_$_t_bool_$",
+              "typeString": "mapping(address => bool)"
+            },
+            "typeName": {
+              "id": 22677,
+              "keyType": {
+                "id": 22675,
+                "name": "address",
+                "nodeType": "ElementaryTypeName",
+                "src": "534:7:70",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "526:24:70",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_address_$_t_bool_$",
+                "typeString": "mapping(address => bool)"
+              },
+              "valueType": {
+                "id": 22676,
+                "name": "bool",
+                "nodeType": "ElementaryTypeName",
+                "src": "545:4:70",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bool",
+                  "typeString": "bool"
+                }
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 22711,
+              "nodeType": "Block",
+              "src": "729:155:70",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "commonType": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        },
+                        "id": 22688,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "leftExpression": {
+                          "argumentTypes": null,
+                          "expression": {
+                            "argumentTypes": null,
+                            "id": 22685,
+                            "name": "_mIxs",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 22681,
+                            "src": "747:5:70",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_array$_t_address_$dyn_memory_ptr",
+                              "typeString": "address[] memory"
+                            }
+                          },
+                          "id": 22686,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "memberName": "length",
+                          "nodeType": "MemberAccess",
+                          "referencedDeclaration": null,
+                          "src": "747:12:70",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          }
+                        },
+                        "nodeType": "BinaryOperation",
+                        "operator": ">",
+                        "rightExpression": {
+                          "argumentTypes": null,
+                          "hexValue": "30",
+                          "id": 22687,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": true,
+                          "kind": "number",
+                          "lValueRequested": false,
+                          "nodeType": "Literal",
+                          "src": "762:1:70",
+                          "subdenomination": null,
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_rational_0_by_1",
+                            "typeString": "int_const 0"
+                          },
+                          "value": "0"
+                        },
+                        "src": "747:16:70",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "hexValue": "4e6f206d4978732070726f7669646564",
+                        "id": 22689,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "string",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "765:18:70",
+                        "subdenomination": null,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_stringliteral_da6537199d748df19c62c2163c61268517d7784c98219825be1d3d27a7cfcd99",
+                          "typeString": "literal_string \"No mIxs provided\""
+                        },
+                        "value": "No mIxs provided"
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        },
+                        {
+                          "typeIdentifier": "t_stringliteral_da6537199d748df19c62c2163c61268517d7784c98219825be1d3d27a7cfcd99",
+                          "typeString": "literal_string \"No mIxs provided\""
+                        }
+                      ],
+                      "id": 22684,
+                      "name": "require",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [
+                        36235,
+                        36236
+                      ],
+                      "referencedDeclaration": 36236,
+                      "src": "739:7:70",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
+                        "typeString": "function (bool,string memory) pure"
+                      }
+                    },
+                    "id": 22690,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "739:45:70",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 22691,
+                  "nodeType": "ExpressionStatement",
+                  "src": "739:45:70"
+                },
+                {
+                  "body": {
+                    "id": 22709,
+                    "nodeType": "Block",
+                    "src": "836:42:70",
+                    "statements": [
+                      {
+                        "expression": {
+                          "argumentTypes": null,
+                          "arguments": [
+                            {
+                              "argumentTypes": null,
+                              "baseExpression": {
+                                "argumentTypes": null,
+                                "id": 22704,
+                                "name": "_mIxs",
+                                "nodeType": "Identifier",
+                                "overloadedDeclarations": [],
+                                "referencedDeclaration": 22681,
+                                "src": "858:5:70",
+                                "typeDescriptions": {
+                                  "typeIdentifier": "t_array$_t_address_$dyn_memory_ptr",
+                                  "typeString": "address[] memory"
+                                }
+                              },
+                              "id": 22706,
+                              "indexExpression": {
+                                "argumentTypes": null,
+                                "id": 22705,
+                                "name": "i",
+                                "nodeType": "Identifier",
+                                "overloadedDeclarations": [],
+                                "referencedDeclaration": 22693,
+                                "src": "864:1:70",
+                                "typeDescriptions": {
+                                  "typeIdentifier": "t_uint256",
+                                  "typeString": "uint256"
+                                }
+                              },
+                              "isConstant": false,
+                              "isLValue": true,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "nodeType": "IndexAccess",
+                              "src": "858:8:70",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_address",
+                                "typeString": "address"
+                              }
+                            }
+                          ],
+                          "expression": {
+                            "argumentTypes": [
+                              {
+                                "typeIdentifier": "t_address",
+                                "typeString": "address"
+                              }
+                            ],
+                            "id": 22703,
+                            "name": "_addMix",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 22786,
+                            "src": "850:7:70",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_function_internal_nonpayable$_t_address_$returns$__$",
+                              "typeString": "function (address)"
+                            }
+                          },
+                          "id": 22707,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "kind": "functionCall",
+                          "lValueRequested": false,
+                          "names": [],
+                          "nodeType": "FunctionCall",
+                          "src": "850:17:70",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_tuple$__$",
+                            "typeString": "tuple()"
+                          }
+                        },
+                        "id": 22708,
+                        "nodeType": "ExpressionStatement",
+                        "src": "850:17:70"
+                      }
+                    ]
+                  },
+                  "condition": {
+                    "argumentTypes": null,
+                    "commonType": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    },
+                    "id": 22699,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftExpression": {
+                      "argumentTypes": null,
+                      "id": 22696,
+                      "name": "i",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 22693,
+                      "src": "813:1:70",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "BinaryOperation",
+                    "operator": "<",
+                    "rightExpression": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 22697,
+                        "name": "_mIxs",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 22681,
+                        "src": "817:5:70",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_array$_t_address_$dyn_memory_ptr",
+                          "typeString": "address[] memory"
+                        }
+                      },
+                      "id": 22698,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "length",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": null,
+                      "src": "817:12:70",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "src": "813:16:70",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "id": 22710,
+                  "initializationExpression": {
+                    "assignments": [
+                      22693
+                    ],
+                    "declarations": [
+                      {
+                        "constant": false,
+                        "id": 22693,
+                        "name": "i",
+                        "nodeType": "VariableDeclaration",
+                        "scope": 22710,
+                        "src": "798:9:70",
+                        "stateVariable": false,
+                        "storageLocation": "default",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        },
+                        "typeName": {
+                          "id": 22692,
+                          "name": "uint256",
+                          "nodeType": "ElementaryTypeName",
+                          "src": "798:7:70",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          }
+                        },
+                        "value": null,
+                        "visibility": "internal"
+                      }
+                    ],
+                    "id": 22695,
+                    "initialValue": {
+                      "argumentTypes": null,
+                      "hexValue": "30",
+                      "id": 22694,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "number",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "810:1:70",
+                      "subdenomination": null,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_rational_0_by_1",
+                        "typeString": "int_const 0"
+                      },
+                      "value": "0"
+                    },
+                    "nodeType": "VariableDeclarationStatement",
+                    "src": "798:13:70"
+                  },
+                  "loopExpression": {
+                    "expression": {
+                      "argumentTypes": null,
+                      "id": 22701,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "nodeType": "UnaryOperation",
+                      "operator": "++",
+                      "prefix": false,
+                      "src": "831:3:70",
+                      "subExpression": {
+                        "argumentTypes": null,
+                        "id": 22700,
+                        "name": "i",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 22693,
+                        "src": "831:1:70",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "id": 22702,
+                    "nodeType": "ExpressionStatement",
+                    "src": "831:3:70"
+                  },
+                  "nodeType": "ForStatement",
+                  "src": "794:84:70"
+                }
+              ]
+            },
+            "documentation": "@dev Abstarct constructor\n@param _mIxs Array of valid mIx addresses allowed to mint.",
+            "id": 22712,
+            "implemented": true,
+            "kind": "constructor",
+            "modifiers": [],
+            "name": "",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 22682,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 22681,
+                  "name": "_mIxs",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 22712,
+                  "src": "696:22:70",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_address_$dyn_memory_ptr",
+                    "typeString": "address[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 22679,
+                      "name": "address",
+                      "nodeType": "ElementaryTypeName",
+                      "src": "696:7:70",
+                      "stateMutability": "nonpayable",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "id": 22680,
+                    "length": null,
+                    "nodeType": "ArrayTypeName",
+                    "src": "696:9:70",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_address_$dyn_storage_ptr",
+                      "typeString": "address[]"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "695:24:70"
+            },
+            "returnParameters": {
+              "id": 22683,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "729:0:70"
+            },
+            "scope": 22804,
+            "src": "684:200:70",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "internal"
+          },
+          {
+            "body": {
+              "id": 22740,
+              "nodeType": "Block",
+              "src": "1114:123:70",
+              "statements": [
+                {
+                  "body": {
+                    "id": 22738,
+                    "nodeType": "Block",
+                    "src": "1169:62:70",
+                    "statements": [
+                      {
+                        "expression": {
+                          "argumentTypes": null,
+                          "arguments": [
+                            {
+                              "argumentTypes": null,
+                              "id": 22735,
+                              "name": "_mIx",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": 22714,
+                              "src": "1215:4:70",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_address",
+                                "typeString": "address"
+                              }
+                            }
+                          ],
+                          "expression": {
+                            "argumentTypes": [
+                              {
+                                "typeIdentifier": "t_address",
+                                "typeString": "address"
+                              }
+                            ],
+                            "expression": {
+                              "argumentTypes": null,
+                              "baseExpression": {
+                                "argumentTypes": null,
+                                "id": 22731,
+                                "name": "_bAssets",
+                                "nodeType": "Identifier",
+                                "overloadedDeclarations": [],
+                                "referencedDeclaration": 22717,
+                                "src": "1183:8:70",
+                                "typeDescriptions": {
+                                  "typeIdentifier": "t_array$_t_address_$dyn_calldata_ptr",
+                                  "typeString": "address[] calldata"
+                                }
+                              },
+                              "id": 22733,
+                              "indexExpression": {
+                                "argumentTypes": null,
+                                "id": 22732,
+                                "name": "i",
+                                "nodeType": "Identifier",
+                                "overloadedDeclarations": [],
+                                "referencedDeclaration": 22721,
+                                "src": "1192:1:70",
+                                "typeDescriptions": {
+                                  "typeIdentifier": "t_uint256",
+                                  "typeString": "uint256"
+                                }
+                              },
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "nodeType": "IndexAccess",
+                              "src": "1183:11:70",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_address",
+                                "typeString": "address"
+                              }
+                            },
+                            "id": 22734,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": false,
+                            "lValueRequested": false,
+                            "memberName": "safeInfiniteApprove",
+                            "nodeType": "MemberAccess",
+                            "referencedDeclaration": 13559,
+                            "src": "1183:31:70",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_function_internal_nonpayable$_t_address_$_t_address_$returns$__$bound_to$_t_address_$",
+                              "typeString": "function (address,address)"
+                            }
+                          },
+                          "id": 22736,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "kind": "functionCall",
+                          "lValueRequested": false,
+                          "names": [],
+                          "nodeType": "FunctionCall",
+                          "src": "1183:37:70",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_tuple$__$",
+                            "typeString": "tuple()"
+                          }
+                        },
+                        "id": 22737,
+                        "nodeType": "ExpressionStatement",
+                        "src": "1183:37:70"
+                      }
+                    ]
+                  },
+                  "condition": {
+                    "argumentTypes": null,
+                    "commonType": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    },
+                    "id": 22727,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftExpression": {
+                      "argumentTypes": null,
+                      "id": 22724,
+                      "name": "i",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 22721,
+                      "src": "1143:1:70",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "BinaryOperation",
+                    "operator": "<",
+                    "rightExpression": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 22725,
+                        "name": "_bAssets",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 22717,
+                        "src": "1147:8:70",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_array$_t_address_$dyn_calldata_ptr",
+                          "typeString": "address[] calldata"
+                        }
+                      },
+                      "id": 22726,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "length",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": null,
+                      "src": "1147:15:70",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "src": "1143:19:70",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "id": 22739,
+                  "initializationExpression": {
+                    "assignments": [
+                      22721
+                    ],
+                    "declarations": [
+                      {
+                        "constant": false,
+                        "id": 22721,
+                        "name": "i",
+                        "nodeType": "VariableDeclaration",
+                        "scope": 22739,
+                        "src": "1128:9:70",
+                        "stateVariable": false,
+                        "storageLocation": "default",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        },
+                        "typeName": {
+                          "id": 22720,
+                          "name": "uint256",
+                          "nodeType": "ElementaryTypeName",
+                          "src": "1128:7:70",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          }
+                        },
+                        "value": null,
+                        "visibility": "internal"
+                      }
+                    ],
+                    "id": 22723,
+                    "initialValue": {
+                      "argumentTypes": null,
+                      "hexValue": "30",
+                      "id": 22722,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "number",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "1140:1:70",
+                      "subdenomination": null,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_rational_0_by_1",
+                        "typeString": "int_const 0"
+                      },
+                      "value": "0"
+                    },
+                    "nodeType": "VariableDeclarationStatement",
+                    "src": "1128:13:70"
+                  },
+                  "loopExpression": {
+                    "expression": {
+                      "argumentTypes": null,
+                      "id": 22729,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "nodeType": "UnaryOperation",
+                      "operator": "++",
+                      "prefix": false,
+                      "src": "1164:3:70",
+                      "subExpression": {
+                        "argumentTypes": null,
+                        "id": 22728,
+                        "name": "i",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 22721,
+                        "src": "1164:1:70",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "id": 22730,
+                    "nodeType": "ExpressionStatement",
+                    "src": "1164:3:70"
+                  },
+                  "nodeType": "ForStatement",
+                  "src": "1124:107:70"
+                }
+              ]
+            },
+            "documentation": "@dev Anyone can call and perform infinite approval for bAssets\n@param _bAssets An array containing bAssets addresses",
+            "id": 22741,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "infiniteApprove",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 22718,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 22714,
+                  "name": "_mIx",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 22741,
+                  "src": "1062:12:70",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 22713,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1062:7:70",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 22717,
+                  "name": "_bAssets",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 22741,
+                  "src": "1076:27:70",
+                  "stateVariable": false,
+                  "storageLocation": "calldata",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_address_$dyn_calldata_ptr",
+                    "typeString": "address[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 22715,
+                      "name": "address",
+                      "nodeType": "ElementaryTypeName",
+                      "src": "1076:7:70",
+                      "stateMutability": "nonpayable",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "id": 22716,
+                    "length": null,
+                    "nodeType": "ArrayTypeName",
+                    "src": "1076:9:70",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_address_$dyn_storage_ptr",
+                      "typeString": "address[]"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1061:43:70"
+            },
+            "returnParameters": {
+              "id": 22719,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1114:0:70"
+            },
+            "scope": 22804,
+            "src": "1037:200:70",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "external"
+          },
+          {
+            "body": {
+              "id": 22752,
+              "nodeType": "Block",
+              "src": "1420:30:70",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 22749,
+                        "name": "_mIx",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 22743,
+                        "src": "1438:4:70",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      ],
+                      "id": 22748,
+                      "name": "_addMix",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 22786,
+                      "src": "1430:7:70",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_nonpayable$_t_address_$returns$__$",
+                        "typeString": "function (address)"
+                      }
+                    },
+                    "id": 22750,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1430:13:70",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 22751,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1430:13:70"
+                }
+              ]
+            },
+            "documentation": "@dev The Owner of the contract allowed to add a new supported mIx.\n@param _mIx Address of the mIx",
+            "id": 22753,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [
+              {
+                "arguments": null,
+                "id": 22746,
+                "modifierName": {
+                  "argumentTypes": null,
+                  "id": 22745,
+                  "name": "onlyOwner",
+                  "nodeType": "Identifier",
+                  "overloadedDeclarations": [],
+                  "referencedDeclaration": 34583,
+                  "src": "1410:9:70",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_modifier$__$",
+                    "typeString": "modifier ()"
+                  }
+                },
+                "nodeType": "ModifierInvocation",
+                "src": "1410:9:70"
+              }
+            ],
+            "name": "addMix",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 22744,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 22743,
+                  "name": "_mIx",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 22753,
+                  "src": "1387:12:70",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 22742,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1387:7:70",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1386:14:70"
+            },
+            "returnParameters": {
+              "id": 22747,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1420:0:70"
+            },
+            "scope": 22804,
+            "src": "1371:79:70",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "external"
+          },
+          {
+            "body": {
+              "id": 22785,
+              "nodeType": "Block",
+              "src": "1603:181:70",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "commonType": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        },
+                        "id": 22763,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "leftExpression": {
+                          "argumentTypes": null,
+                          "id": 22759,
+                          "name": "_mIx",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 22755,
+                          "src": "1621:4:70",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        },
+                        "nodeType": "BinaryOperation",
+                        "operator": "!=",
+                        "rightExpression": {
+                          "argumentTypes": null,
+                          "arguments": [
+                            {
+                              "argumentTypes": null,
+                              "hexValue": "30",
+                              "id": 22761,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": true,
+                              "kind": "number",
+                              "lValueRequested": false,
+                              "nodeType": "Literal",
+                              "src": "1637:1:70",
+                              "subdenomination": null,
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_rational_0_by_1",
+                                "typeString": "int_const 0"
+                              },
+                              "value": "0"
+                            }
+                          ],
+                          "expression": {
+                            "argumentTypes": [
+                              {
+                                "typeIdentifier": "t_rational_0_by_1",
+                                "typeString": "int_const 0"
+                              }
+                            ],
+                            "id": 22760,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": true,
+                            "lValueRequested": false,
+                            "nodeType": "ElementaryTypeNameExpression",
+                            "src": "1629:7:70",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_type$_t_address_$",
+                              "typeString": "type(address)"
+                            },
+                            "typeName": "address"
+                          },
+                          "id": 22762,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": true,
+                          "kind": "typeConversion",
+                          "lValueRequested": false,
+                          "names": [],
+                          "nodeType": "FunctionCall",
+                          "src": "1629:10:70",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address_payable",
+                            "typeString": "address payable"
+                          }
+                        },
+                        "src": "1621:18:70",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "hexValue": "6d49782061646472657373206973207a65726f",
+                        "id": 22764,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "string",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "1641:21:70",
+                        "subdenomination": null,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_stringliteral_e91ef7de4647b0dee930ffc2644e59e565b2924d827e1c92e73cba32f58a224d",
+                          "typeString": "literal_string \"mIx address is zero\""
+                        },
+                        "value": "mIx address is zero"
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        },
+                        {
+                          "typeIdentifier": "t_stringliteral_e91ef7de4647b0dee930ffc2644e59e565b2924d827e1c92e73cba32f58a224d",
+                          "typeString": "literal_string \"mIx address is zero\""
+                        }
+                      ],
+                      "id": 22758,
+                      "name": "require",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [
+                        36235,
+                        36236
+                      ],
+                      "referencedDeclaration": 36236,
+                      "src": "1613:7:70",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
+                        "typeString": "function (bool,string memory) pure"
+                      }
+                    },
+                    "id": 22765,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1613:50:70",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 22766,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1613:50:70"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 22771,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "nodeType": "UnaryOperation",
+                        "operator": "!",
+                        "prefix": true,
+                        "src": "1681:17:70",
+                        "subExpression": {
+                          "argumentTypes": null,
+                          "arguments": [
+                            {
+                              "argumentTypes": null,
+                              "id": 22769,
+                              "name": "_mIx",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": 22755,
+                              "src": "1693:4:70",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_address",
+                                "typeString": "address"
+                              }
+                            }
+                          ],
+                          "expression": {
+                            "argumentTypes": [
+                              {
+                                "typeIdentifier": "t_address",
+                                "typeString": "address"
+                              }
+                            ],
+                            "id": 22768,
+                            "name": "_mixExists",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 22798,
+                            "src": "1682:10:70",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_function_internal_view$_t_address_$returns$_t_bool_$",
+                              "typeString": "function (address) view returns (bool)"
+                            }
+                          },
+                          "id": 22770,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "kind": "functionCall",
+                          "lValueRequested": false,
+                          "names": [],
+                          "nodeType": "FunctionCall",
+                          "src": "1682:16:70",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_bool",
+                            "typeString": "bool"
+                          }
+                        },
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "hexValue": "6d497820616c726561647920657869737473",
+                        "id": 22772,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "string",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "1700:20:70",
+                        "subdenomination": null,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_stringliteral_6012d573f6cabcce3acd1b9515636ba699781b78e472c5311450cfacc9085b2b",
+                          "typeString": "literal_string \"mIx already exists\""
+                        },
+                        "value": "mIx already exists"
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        },
+                        {
+                          "typeIdentifier": "t_stringliteral_6012d573f6cabcce3acd1b9515636ba699781b78e472c5311450cfacc9085b2b",
+                          "typeString": "literal_string \"mIx already exists\""
+                        }
+                      ],
+                      "id": 22767,
+                      "name": "require",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [
+                        36235,
+                        36236
+                      ],
+                      "referencedDeclaration": 36236,
+                      "src": "1673:7:70",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
+                        "typeString": "function (bool,string memory) pure"
+                      }
+                    },
+                    "id": 22773,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1673:48:70",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 22774,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1673:48:70"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 22779,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "baseExpression": {
+                        "argumentTypes": null,
+                        "id": 22775,
+                        "name": "mIxs",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 22678,
+                        "src": "1731:4:70",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_mapping$_t_address_$_t_bool_$",
+                          "typeString": "mapping(address => bool)"
+                        }
+                      },
+                      "id": 22777,
+                      "indexExpression": {
+                        "argumentTypes": null,
+                        "id": 22776,
+                        "name": "_mIx",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 22755,
+                        "src": "1736:4:70",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      },
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "nodeType": "IndexAccess",
+                      "src": "1731:10:70",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bool",
+                        "typeString": "bool"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "hexValue": "74727565",
+                      "id": 22778,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "bool",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "1744:4:70",
+                      "subdenomination": null,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bool",
+                        "typeString": "bool"
+                      },
+                      "value": "true"
+                    },
+                    "src": "1731:17:70",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "id": 22780,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1731:17:70"
+                },
+                {
+                  "eventCall": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 22782,
+                        "name": "_mIx",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 22755,
+                        "src": "1772:4:70",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      ],
+                      "id": 22781,
+                      "name": "MixAdded",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 22674,
+                      "src": "1763:8:70",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_event_nonpayable$_t_address_$returns$__$",
+                        "typeString": "function (address)"
+                      }
+                    },
+                    "id": 22783,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1763:14:70",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 22784,
+                  "nodeType": "EmitStatement",
+                  "src": "1758:19:70"
+                }
+              ]
+            },
+            "documentation": "@dev Add a new mIx to the supported mIxs list\n@param _mIx Address of the mIx",
+            "id": 22786,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "_addMix",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 22756,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 22755,
+                  "name": "_mIx",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 22786,
+                  "src": "1580:12:70",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 22754,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1580:7:70",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1579:14:70"
+            },
+            "returnParameters": {
+              "id": 22757,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1603:0:70"
+            },
+            "scope": 22804,
+            "src": "1563:221:70",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "internal"
+          },
+          {
+            "body": {
+              "id": 22797,
+              "nodeType": "Block",
+              "src": "2076:34:70",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "baseExpression": {
+                      "argumentTypes": null,
+                      "id": 22793,
+                      "name": "mIxs",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 22678,
+                      "src": "2093:4:70",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_mapping$_t_address_$_t_bool_$",
+                        "typeString": "mapping(address => bool)"
+                      }
+                    },
+                    "id": 22795,
+                    "indexExpression": {
+                      "argumentTypes": null,
+                      "id": 22794,
+                      "name": "_mIx",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 22788,
+                      "src": "2098:4:70",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "isConstant": false,
+                    "isLValue": true,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "nodeType": "IndexAccess",
+                    "src": "2093:10:70",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "functionReturnParameters": 22792,
+                  "id": 22796,
+                  "nodeType": "Return",
+                  "src": "2086:17:70"
+                }
+              ]
+            },
+            "documentation": "@dev     Validate that the given mIx supported by this contract.\n@notice  Only validate mIx address. As bAsset gets validated during minting process.\n@param _mIx mIx address to validate",
+            "id": 22798,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "_mixExists",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 22789,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 22788,
+                  "name": "_mIx",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 22798,
+                  "src": "2033:12:70",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 22787,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2033:7:70",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2032:14:70"
+            },
+            "returnParameters": {
+              "id": 22792,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 22791,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 22798,
+                  "src": "2070:4:70",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 22790,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2070:4:70",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2069:6:70"
+            },
+            "scope": 22804,
+            "src": "2013:97:70",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "internal"
+          },
+          {
+            "body": null,
+            "documentation": "@dev Abstract function to get the external DEX contract address",
+            "id": 22803,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "_externalDexAddress",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 22799,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "2231:2:70"
+            },
+            "returnParameters": {
+              "id": 22802,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 22801,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 22803,
+                  "src": "2256:7:70",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 22800,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2256:7:70",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2255:9:70"
+            },
+            "scope": 22804,
+            "src": "2203:62:70",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "internal"
+          }
+        ],
+        "scope": 22805,
+        "src": "374:1893:70"
+      }
+    ],
+    "src": "0:2267:70"
+  },
+  "legacyAST": {
+    "absolutePath": "/Volumes/sdxc/ETHEREUM/CODE/mStable-v1-edit/contracts/z_mocks/integrations/AbstractBuyAndMint.sol",
+    "exportedSymbols": {
+      "AbstractBuyAndMint": [
+        22804
+      ]
+    },
+    "id": 22805,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 22661,
+        "literals": [
+          "solidity",
+          "0.5",
+          ".16"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:70"
+      },
+      {
+        "absolutePath": "/Volumes/sdxc/ETHEREUM/CODE/mStable-v1-edit/contracts/mix/shared/MixHelpers.sol",
+        "file": "../../mix/shared/MixHelpers.sol",
+        "id": 22663,
+        "nodeType": "ImportDirective",
+        "scope": 22805,
+        "sourceUnit": 13561,
+        "src": "37:61:70",
+        "symbolAliases": [
+          {
+            "foreign": 22662,
+            "local": null
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "@openzeppelin/contracts/ownership/Ownable.sol",
+        "file": "@openzeppelin/contracts/ownership/Ownable.sol",
+        "id": 22665,
+        "nodeType": "ImportDirective",
+        "scope": 22805,
+        "sourceUnit": 34651,
+        "src": "111:72:70",
+        "symbolAliases": [
+          {
+            "foreign": 22664,
+            "local": null
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 22666,
+              "name": "Ownable",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 34650,
+              "src": "405:7:70",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_Ownable_$34650",
+                "typeString": "contract Ownable"
+              }
+            },
+            "id": 22667,
+            "nodeType": "InheritanceSpecifier",
+            "src": "405:7:70"
+          }
+        ],
+        "contractDependencies": [
+          34157,
+          34650
+        ],
+        "contractKind": "contract",
+        "documentation": "@title   AbstractBuyAndMint\n@author  Stability Labs Pty. Ltd.\n@notice  Abstract contract to allow buy bAsset tokens with ETH and mint mIxs tokens\n         from mStable.",
+        "fullyImplemented": false,
+        "id": 22804,
+        "linearizedBaseContracts": [
+          22804,
+          34650,
+          34157
+        ],
+        "name": "AbstractBuyAndMint",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "id": 22670,
+            "libraryName": {
+              "contractScope": null,
+              "id": 22668,
+              "name": "MixHelpers",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 13560,
+              "src": "426:10:70",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_MixHelpers_$13560",
+                "typeString": "library MixHelpers"
+              }
+            },
+            "nodeType": "UsingForDirective",
+            "src": "420:29:70",
+            "typeName": {
+              "id": 22669,
+              "name": "address",
+              "nodeType": "ElementaryTypeName",
+              "src": "441:7:70",
+              "stateMutability": "nonpayable",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              }
+            }
+          },
+          {
+            "anonymous": false,
+            "documentation": null,
+            "id": 22674,
+            "name": "MixAdded",
+            "nodeType": "EventDefinition",
+            "parameters": {
+              "id": 22673,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 22672,
+                  "indexed": true,
+                  "name": "mIx",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 22674,
+                  "src": "470:19:70",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 22671,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "470:7:70",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "469:21:70"
+            },
+            "src": "455:36:70"
+          },
+          {
+            "constant": false,
+            "id": 22678,
+            "name": "mIxs",
+            "nodeType": "VariableDeclaration",
+            "scope": 22804,
+            "src": "526:36:70",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_address_$_t_bool_$",
+              "typeString": "mapping(address => bool)"
+            },
+            "typeName": {
+              "id": 22677,
+              "keyType": {
+                "id": 22675,
+                "name": "address",
+                "nodeType": "ElementaryTypeName",
+                "src": "534:7:70",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "526:24:70",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_address_$_t_bool_$",
+                "typeString": "mapping(address => bool)"
+              },
+              "valueType": {
+                "id": 22676,
+                "name": "bool",
+                "nodeType": "ElementaryTypeName",
+                "src": "545:4:70",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bool",
+                  "typeString": "bool"
+                }
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 22711,
+              "nodeType": "Block",
+              "src": "729:155:70",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "commonType": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        },
+                        "id": 22688,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "leftExpression": {
+                          "argumentTypes": null,
+                          "expression": {
+                            "argumentTypes": null,
+                            "id": 22685,
+                            "name": "_mIxs",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 22681,
+                            "src": "747:5:70",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_array$_t_address_$dyn_memory_ptr",
+                              "typeString": "address[] memory"
+                            }
+                          },
+                          "id": 22686,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "memberName": "length",
+                          "nodeType": "MemberAccess",
+                          "referencedDeclaration": null,
+                          "src": "747:12:70",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          }
+                        },
+                        "nodeType": "BinaryOperation",
+                        "operator": ">",
+                        "rightExpression": {
+                          "argumentTypes": null,
+                          "hexValue": "30",
+                          "id": 22687,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": true,
+                          "kind": "number",
+                          "lValueRequested": false,
+                          "nodeType": "Literal",
+                          "src": "762:1:70",
+                          "subdenomination": null,
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_rational_0_by_1",
+                            "typeString": "int_const 0"
+                          },
+                          "value": "0"
+                        },
+                        "src": "747:16:70",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "hexValue": "4e6f206d4978732070726f7669646564",
+                        "id": 22689,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "string",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "765:18:70",
+                        "subdenomination": null,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_stringliteral_da6537199d748df19c62c2163c61268517d7784c98219825be1d3d27a7cfcd99",
+                          "typeString": "literal_string \"No mIxs provided\""
+                        },
+                        "value": "No mIxs provided"
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        },
+                        {
+                          "typeIdentifier": "t_stringliteral_da6537199d748df19c62c2163c61268517d7784c98219825be1d3d27a7cfcd99",
+                          "typeString": "literal_string \"No mIxs provided\""
+                        }
+                      ],
+                      "id": 22684,
+                      "name": "require",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [
+                        36235,
+                        36236
+                      ],
+                      "referencedDeclaration": 36236,
+                      "src": "739:7:70",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
+                        "typeString": "function (bool,string memory) pure"
+                      }
+                    },
+                    "id": 22690,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "739:45:70",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 22691,
+                  "nodeType": "ExpressionStatement",
+                  "src": "739:45:70"
+                },
+                {
+                  "body": {
+                    "id": 22709,
+                    "nodeType": "Block",
+                    "src": "836:42:70",
+                    "statements": [
+                      {
+                        "expression": {
+                          "argumentTypes": null,
+                          "arguments": [
+                            {
+                              "argumentTypes": null,
+                              "baseExpression": {
+                                "argumentTypes": null,
+                                "id": 22704,
+                                "name": "_mIxs",
+                                "nodeType": "Identifier",
+                                "overloadedDeclarations": [],
+                                "referencedDeclaration": 22681,
+                                "src": "858:5:70",
+                                "typeDescriptions": {
+                                  "typeIdentifier": "t_array$_t_address_$dyn_memory_ptr",
+                                  "typeString": "address[] memory"
+                                }
+                              },
+                              "id": 22706,
+                              "indexExpression": {
+                                "argumentTypes": null,
+                                "id": 22705,
+                                "name": "i",
+                                "nodeType": "Identifier",
+                                "overloadedDeclarations": [],
+                                "referencedDeclaration": 22693,
+                                "src": "864:1:70",
+                                "typeDescriptions": {
+                                  "typeIdentifier": "t_uint256",
+                                  "typeString": "uint256"
+                                }
+                              },
+                              "isConstant": false,
+                              "isLValue": true,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "nodeType": "IndexAccess",
+                              "src": "858:8:70",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_address",
+                                "typeString": "address"
+                              }
+                            }
+                          ],
+                          "expression": {
+                            "argumentTypes": [
+                              {
+                                "typeIdentifier": "t_address",
+                                "typeString": "address"
+                              }
+                            ],
+                            "id": 22703,
+                            "name": "_addMix",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 22786,
+                            "src": "850:7:70",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_function_internal_nonpayable$_t_address_$returns$__$",
+                              "typeString": "function (address)"
+                            }
+                          },
+                          "id": 22707,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "kind": "functionCall",
+                          "lValueRequested": false,
+                          "names": [],
+                          "nodeType": "FunctionCall",
+                          "src": "850:17:70",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_tuple$__$",
+                            "typeString": "tuple()"
+                          }
+                        },
+                        "id": 22708,
+                        "nodeType": "ExpressionStatement",
+                        "src": "850:17:70"
+                      }
+                    ]
+                  },
+                  "condition": {
+                    "argumentTypes": null,
+                    "commonType": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    },
+                    "id": 22699,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftExpression": {
+                      "argumentTypes": null,
+                      "id": 22696,
+                      "name": "i",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 22693,
+                      "src": "813:1:70",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "BinaryOperation",
+                    "operator": "<",
+                    "rightExpression": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 22697,
+                        "name": "_mIxs",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 22681,
+                        "src": "817:5:70",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_array$_t_address_$dyn_memory_ptr",
+                          "typeString": "address[] memory"
+                        }
+                      },
+                      "id": 22698,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "length",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": null,
+                      "src": "817:12:70",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "src": "813:16:70",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "id": 22710,
+                  "initializationExpression": {
+                    "assignments": [
+                      22693
+                    ],
+                    "declarations": [
+                      {
+                        "constant": false,
+                        "id": 22693,
+                        "name": "i",
+                        "nodeType": "VariableDeclaration",
+                        "scope": 22710,
+                        "src": "798:9:70",
+                        "stateVariable": false,
+                        "storageLocation": "default",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        },
+                        "typeName": {
+                          "id": 22692,
+                          "name": "uint256",
+                          "nodeType": "ElementaryTypeName",
+                          "src": "798:7:70",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          }
+                        },
+                        "value": null,
+                        "visibility": "internal"
+                      }
+                    ],
+                    "id": 22695,
+                    "initialValue": {
+                      "argumentTypes": null,
+                      "hexValue": "30",
+                      "id": 22694,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "number",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "810:1:70",
+                      "subdenomination": null,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_rational_0_by_1",
+                        "typeString": "int_const 0"
+                      },
+                      "value": "0"
+                    },
+                    "nodeType": "VariableDeclarationStatement",
+                    "src": "798:13:70"
+                  },
+                  "loopExpression": {
+                    "expression": {
+                      "argumentTypes": null,
+                      "id": 22701,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "nodeType": "UnaryOperation",
+                      "operator": "++",
+                      "prefix": false,
+                      "src": "831:3:70",
+                      "subExpression": {
+                        "argumentTypes": null,
+                        "id": 22700,
+                        "name": "i",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 22693,
+                        "src": "831:1:70",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "id": 22702,
+                    "nodeType": "ExpressionStatement",
+                    "src": "831:3:70"
+                  },
+                  "nodeType": "ForStatement",
+                  "src": "794:84:70"
+                }
+              ]
+            },
+            "documentation": "@dev Abstarct constructor\n@param _mIxs Array of valid mIx addresses allowed to mint.",
+            "id": 22712,
+            "implemented": true,
+            "kind": "constructor",
+            "modifiers": [],
+            "name": "",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 22682,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 22681,
+                  "name": "_mIxs",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 22712,
+                  "src": "696:22:70",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_address_$dyn_memory_ptr",
+                    "typeString": "address[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 22679,
+                      "name": "address",
+                      "nodeType": "ElementaryTypeName",
+                      "src": "696:7:70",
+                      "stateMutability": "nonpayable",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "id": 22680,
+                    "length": null,
+                    "nodeType": "ArrayTypeName",
+                    "src": "696:9:70",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_address_$dyn_storage_ptr",
+                      "typeString": "address[]"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "695:24:70"
+            },
+            "returnParameters": {
+              "id": 22683,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "729:0:70"
+            },
+            "scope": 22804,
+            "src": "684:200:70",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "internal"
+          },
+          {
+            "body": {
+              "id": 22740,
+              "nodeType": "Block",
+              "src": "1114:123:70",
+              "statements": [
+                {
+                  "body": {
+                    "id": 22738,
+                    "nodeType": "Block",
+                    "src": "1169:62:70",
+                    "statements": [
+                      {
+                        "expression": {
+                          "argumentTypes": null,
+                          "arguments": [
+                            {
+                              "argumentTypes": null,
+                              "id": 22735,
+                              "name": "_mIx",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": 22714,
+                              "src": "1215:4:70",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_address",
+                                "typeString": "address"
+                              }
+                            }
+                          ],
+                          "expression": {
+                            "argumentTypes": [
+                              {
+                                "typeIdentifier": "t_address",
+                                "typeString": "address"
+                              }
+                            ],
+                            "expression": {
+                              "argumentTypes": null,
+                              "baseExpression": {
+                                "argumentTypes": null,
+                                "id": 22731,
+                                "name": "_bAssets",
+                                "nodeType": "Identifier",
+                                "overloadedDeclarations": [],
+                                "referencedDeclaration": 22717,
+                                "src": "1183:8:70",
+                                "typeDescriptions": {
+                                  "typeIdentifier": "t_array$_t_address_$dyn_calldata_ptr",
+                                  "typeString": "address[] calldata"
+                                }
+                              },
+                              "id": 22733,
+                              "indexExpression": {
+                                "argumentTypes": null,
+                                "id": 22732,
+                                "name": "i",
+                                "nodeType": "Identifier",
+                                "overloadedDeclarations": [],
+                                "referencedDeclaration": 22721,
+                                "src": "1192:1:70",
+                                "typeDescriptions": {
+                                  "typeIdentifier": "t_uint256",
+                                  "typeString": "uint256"
+                                }
+                              },
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "nodeType": "IndexAccess",
+                              "src": "1183:11:70",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_address",
+                                "typeString": "address"
+                              }
+                            },
+                            "id": 22734,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": false,
+                            "lValueRequested": false,
+                            "memberName": "safeInfiniteApprove",
+                            "nodeType": "MemberAccess",
+                            "referencedDeclaration": 13559,
+                            "src": "1183:31:70",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_function_internal_nonpayable$_t_address_$_t_address_$returns$__$bound_to$_t_address_$",
+                              "typeString": "function (address,address)"
+                            }
+                          },
+                          "id": 22736,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "kind": "functionCall",
+                          "lValueRequested": false,
+                          "names": [],
+                          "nodeType": "FunctionCall",
+                          "src": "1183:37:70",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_tuple$__$",
+                            "typeString": "tuple()"
+                          }
+                        },
+                        "id": 22737,
+                        "nodeType": "ExpressionStatement",
+                        "src": "1183:37:70"
+                      }
+                    ]
+                  },
+                  "condition": {
+                    "argumentTypes": null,
+                    "commonType": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    },
+                    "id": 22727,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftExpression": {
+                      "argumentTypes": null,
+                      "id": 22724,
+                      "name": "i",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 22721,
+                      "src": "1143:1:70",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "BinaryOperation",
+                    "operator": "<",
+                    "rightExpression": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 22725,
+                        "name": "_bAssets",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 22717,
+                        "src": "1147:8:70",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_array$_t_address_$dyn_calldata_ptr",
+                          "typeString": "address[] calldata"
+                        }
+                      },
+                      "id": 22726,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "length",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": null,
+                      "src": "1147:15:70",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "src": "1143:19:70",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "id": 22739,
+                  "initializationExpression": {
+                    "assignments": [
+                      22721
+                    ],
+                    "declarations": [
+                      {
+                        "constant": false,
+                        "id": 22721,
+                        "name": "i",
+                        "nodeType": "VariableDeclaration",
+                        "scope": 22739,
+                        "src": "1128:9:70",
+                        "stateVariable": false,
+                        "storageLocation": "default",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        },
+                        "typeName": {
+                          "id": 22720,
+                          "name": "uint256",
+                          "nodeType": "ElementaryTypeName",
+                          "src": "1128:7:70",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          }
+                        },
+                        "value": null,
+                        "visibility": "internal"
+                      }
+                    ],
+                    "id": 22723,
+                    "initialValue": {
+                      "argumentTypes": null,
+                      "hexValue": "30",
+                      "id": 22722,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "number",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "1140:1:70",
+                      "subdenomination": null,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_rational_0_by_1",
+                        "typeString": "int_const 0"
+                      },
+                      "value": "0"
+                    },
+                    "nodeType": "VariableDeclarationStatement",
+                    "src": "1128:13:70"
+                  },
+                  "loopExpression": {
+                    "expression": {
+                      "argumentTypes": null,
+                      "id": 22729,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "nodeType": "UnaryOperation",
+                      "operator": "++",
+                      "prefix": false,
+                      "src": "1164:3:70",
+                      "subExpression": {
+                        "argumentTypes": null,
+                        "id": 22728,
+                        "name": "i",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 22721,
+                        "src": "1164:1:70",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "id": 22730,
+                    "nodeType": "ExpressionStatement",
+                    "src": "1164:3:70"
+                  },
+                  "nodeType": "ForStatement",
+                  "src": "1124:107:70"
+                }
+              ]
+            },
+            "documentation": "@dev Anyone can call and perform infinite approval for bAssets\n@param _bAssets An array containing bAssets addresses",
+            "id": 22741,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "infiniteApprove",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 22718,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 22714,
+                  "name": "_mIx",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 22741,
+                  "src": "1062:12:70",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 22713,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1062:7:70",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 22717,
+                  "name": "_bAssets",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 22741,
+                  "src": "1076:27:70",
+                  "stateVariable": false,
+                  "storageLocation": "calldata",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_address_$dyn_calldata_ptr",
+                    "typeString": "address[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 22715,
+                      "name": "address",
+                      "nodeType": "ElementaryTypeName",
+                      "src": "1076:7:70",
+                      "stateMutability": "nonpayable",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "id": 22716,
+                    "length": null,
+                    "nodeType": "ArrayTypeName",
+                    "src": "1076:9:70",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_address_$dyn_storage_ptr",
+                      "typeString": "address[]"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1061:43:70"
+            },
+            "returnParameters": {
+              "id": 22719,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1114:0:70"
+            },
+            "scope": 22804,
+            "src": "1037:200:70",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "external"
+          },
+          {
+            "body": {
+              "id": 22752,
+              "nodeType": "Block",
+              "src": "1420:30:70",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 22749,
+                        "name": "_mIx",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 22743,
+                        "src": "1438:4:70",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      ],
+                      "id": 22748,
+                      "name": "_addMix",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 22786,
+                      "src": "1430:7:70",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_nonpayable$_t_address_$returns$__$",
+                        "typeString": "function (address)"
+                      }
+                    },
+                    "id": 22750,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1430:13:70",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 22751,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1430:13:70"
+                }
+              ]
+            },
+            "documentation": "@dev The Owner of the contract allowed to add a new supported mIx.\n@param _mIx Address of the mIx",
+            "id": 22753,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [
+              {
+                "arguments": null,
+                "id": 22746,
+                "modifierName": {
+                  "argumentTypes": null,
+                  "id": 22745,
+                  "name": "onlyOwner",
+                  "nodeType": "Identifier",
+                  "overloadedDeclarations": [],
+                  "referencedDeclaration": 34583,
+                  "src": "1410:9:70",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_modifier$__$",
+                    "typeString": "modifier ()"
+                  }
+                },
+                "nodeType": "ModifierInvocation",
+                "src": "1410:9:70"
+              }
+            ],
+            "name": "addMix",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 22744,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 22743,
+                  "name": "_mIx",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 22753,
+                  "src": "1387:12:70",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 22742,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1387:7:70",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1386:14:70"
+            },
+            "returnParameters": {
+              "id": 22747,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1420:0:70"
+            },
+            "scope": 22804,
+            "src": "1371:79:70",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "external"
+          },
+          {
+            "body": {
+              "id": 22785,
+              "nodeType": "Block",
+              "src": "1603:181:70",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "commonType": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        },
+                        "id": 22763,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "leftExpression": {
+                          "argumentTypes": null,
+                          "id": 22759,
+                          "name": "_mIx",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 22755,
+                          "src": "1621:4:70",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        },
+                        "nodeType": "BinaryOperation",
+                        "operator": "!=",
+                        "rightExpression": {
+                          "argumentTypes": null,
+                          "arguments": [
+                            {
+                              "argumentTypes": null,
+                              "hexValue": "30",
+                              "id": 22761,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": true,
+                              "kind": "number",
+                              "lValueRequested": false,
+                              "nodeType": "Literal",
+                              "src": "1637:1:70",
+                              "subdenomination": null,
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_rational_0_by_1",
+                                "typeString": "int_const 0"
+                              },
+                              "value": "0"
+                            }
+                          ],
+                          "expression": {
+                            "argumentTypes": [
+                              {
+                                "typeIdentifier": "t_rational_0_by_1",
+                                "typeString": "int_const 0"
+                              }
+                            ],
+                            "id": 22760,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": true,
+                            "lValueRequested": false,
+                            "nodeType": "ElementaryTypeNameExpression",
+                            "src": "1629:7:70",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_type$_t_address_$",
+                              "typeString": "type(address)"
+                            },
+                            "typeName": "address"
+                          },
+                          "id": 22762,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": true,
+                          "kind": "typeConversion",
+                          "lValueRequested": false,
+                          "names": [],
+                          "nodeType": "FunctionCall",
+                          "src": "1629:10:70",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address_payable",
+                            "typeString": "address payable"
+                          }
+                        },
+                        "src": "1621:18:70",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "hexValue": "6d49782061646472657373206973207a65726f",
+                        "id": 22764,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "string",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "1641:21:70",
+                        "subdenomination": null,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_stringliteral_e91ef7de4647b0dee930ffc2644e59e565b2924d827e1c92e73cba32f58a224d",
+                          "typeString": "literal_string \"mIx address is zero\""
+                        },
+                        "value": "mIx address is zero"
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        },
+                        {
+                          "typeIdentifier": "t_stringliteral_e91ef7de4647b0dee930ffc2644e59e565b2924d827e1c92e73cba32f58a224d",
+                          "typeString": "literal_string \"mIx address is zero\""
+                        }
+                      ],
+                      "id": 22758,
+                      "name": "require",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [
+                        36235,
+                        36236
+                      ],
+                      "referencedDeclaration": 36236,
+                      "src": "1613:7:70",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
+                        "typeString": "function (bool,string memory) pure"
+                      }
+                    },
+                    "id": 22765,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1613:50:70",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 22766,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1613:50:70"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 22771,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "nodeType": "UnaryOperation",
+                        "operator": "!",
+                        "prefix": true,
+                        "src": "1681:17:70",
+                        "subExpression": {
+                          "argumentTypes": null,
+                          "arguments": [
+                            {
+                              "argumentTypes": null,
+                              "id": 22769,
+                              "name": "_mIx",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": 22755,
+                              "src": "1693:4:70",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_address",
+                                "typeString": "address"
+                              }
+                            }
+                          ],
+                          "expression": {
+                            "argumentTypes": [
+                              {
+                                "typeIdentifier": "t_address",
+                                "typeString": "address"
+                              }
+                            ],
+                            "id": 22768,
+                            "name": "_mixExists",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 22798,
+                            "src": "1682:10:70",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_function_internal_view$_t_address_$returns$_t_bool_$",
+                              "typeString": "function (address) view returns (bool)"
+                            }
+                          },
+                          "id": 22770,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "kind": "functionCall",
+                          "lValueRequested": false,
+                          "names": [],
+                          "nodeType": "FunctionCall",
+                          "src": "1682:16:70",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_bool",
+                            "typeString": "bool"
+                          }
+                        },
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "hexValue": "6d497820616c726561647920657869737473",
+                        "id": 22772,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "string",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "1700:20:70",
+                        "subdenomination": null,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_stringliteral_6012d573f6cabcce3acd1b9515636ba699781b78e472c5311450cfacc9085b2b",
+                          "typeString": "literal_string \"mIx already exists\""
+                        },
+                        "value": "mIx already exists"
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        },
+                        {
+                          "typeIdentifier": "t_stringliteral_6012d573f6cabcce3acd1b9515636ba699781b78e472c5311450cfacc9085b2b",
+                          "typeString": "literal_string \"mIx already exists\""
+                        }
+                      ],
+                      "id": 22767,
+                      "name": "require",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [
+                        36235,
+                        36236
+                      ],
+                      "referencedDeclaration": 36236,
+                      "src": "1673:7:70",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
+                        "typeString": "function (bool,string memory) pure"
+                      }
+                    },
+                    "id": 22773,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1673:48:70",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 22774,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1673:48:70"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 22779,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "baseExpression": {
+                        "argumentTypes": null,
+                        "id": 22775,
+                        "name": "mIxs",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 22678,
+                        "src": "1731:4:70",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_mapping$_t_address_$_t_bool_$",
+                          "typeString": "mapping(address => bool)"
+                        }
+                      },
+                      "id": 22777,
+                      "indexExpression": {
+                        "argumentTypes": null,
+                        "id": 22776,
+                        "name": "_mIx",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 22755,
+                        "src": "1736:4:70",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      },
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "nodeType": "IndexAccess",
+                      "src": "1731:10:70",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bool",
+                        "typeString": "bool"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "hexValue": "74727565",
+                      "id": 22778,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "bool",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "1744:4:70",
+                      "subdenomination": null,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bool",
+                        "typeString": "bool"
+                      },
+                      "value": "true"
+                    },
+                    "src": "1731:17:70",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "id": 22780,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1731:17:70"
+                },
+                {
+                  "eventCall": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 22782,
+                        "name": "_mIx",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 22755,
+                        "src": "1772:4:70",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      ],
+                      "id": 22781,
+                      "name": "MixAdded",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 22674,
+                      "src": "1763:8:70",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_event_nonpayable$_t_address_$returns$__$",
+                        "typeString": "function (address)"
+                      }
+                    },
+                    "id": 22783,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1763:14:70",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 22784,
+                  "nodeType": "EmitStatement",
+                  "src": "1758:19:70"
+                }
+              ]
+            },
+            "documentation": "@dev Add a new mIx to the supported mIxs list\n@param _mIx Address of the mIx",
+            "id": 22786,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "_addMix",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 22756,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 22755,
+                  "name": "_mIx",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 22786,
+                  "src": "1580:12:70",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 22754,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1580:7:70",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1579:14:70"
+            },
+            "returnParameters": {
+              "id": 22757,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1603:0:70"
+            },
+            "scope": 22804,
+            "src": "1563:221:70",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "internal"
+          },
+          {
+            "body": {
+              "id": 22797,
+              "nodeType": "Block",
+              "src": "2076:34:70",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "baseExpression": {
+                      "argumentTypes": null,
+                      "id": 22793,
+                      "name": "mIxs",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 22678,
+                      "src": "2093:4:70",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_mapping$_t_address_$_t_bool_$",
+                        "typeString": "mapping(address => bool)"
+                      }
+                    },
+                    "id": 22795,
+                    "indexExpression": {
+                      "argumentTypes": null,
+                      "id": 22794,
+                      "name": "_mIx",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 22788,
+                      "src": "2098:4:70",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "isConstant": false,
+                    "isLValue": true,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "nodeType": "IndexAccess",
+                    "src": "2093:10:70",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "functionReturnParameters": 22792,
+                  "id": 22796,
+                  "nodeType": "Return",
+                  "src": "2086:17:70"
+                }
+              ]
+            },
+            "documentation": "@dev     Validate that the given mIx supported by this contract.\n@notice  Only validate mIx address. As bAsset gets validated during minting process.\n@param _mIx mIx address to validate",
+            "id": 22798,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "_mixExists",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 22789,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 22788,
+                  "name": "_mIx",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 22798,
+                  "src": "2033:12:70",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 22787,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2033:7:70",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2032:14:70"
+            },
+            "returnParameters": {
+              "id": 22792,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 22791,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 22798,
+                  "src": "2070:4:70",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 22790,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2070:4:70",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2069:6:70"
+            },
+            "scope": 22804,
+            "src": "2013:97:70",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "internal"
+          },
+          {
+            "body": null,
+            "documentation": "@dev Abstract function to get the external DEX contract address",
+            "id": 22803,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "_externalDexAddress",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 22799,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "2231:2:70"
+            },
+            "returnParameters": {
+              "id": 22802,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 22801,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 22803,
+                  "src": "2256:7:70",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 22800,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2256:7:70",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2255:9:70"
+            },
+            "scope": 22804,
+            "src": "2203:62:70",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "internal"
+          }
+        ],
+        "scope": 22805,
+        "src": "374:1893:70"
+      }
+    ],
+    "src": "0:2267:70"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.16+commit.9c3226ce.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.1.0",
+  "updatedAt": "2021-03-11T05:43:16.438Z",
+  "devdoc": {
+    "author": "Stability Labs Pty. Ltd.",
+    "methods": {
+      "addMix(address)": {
+        "details": "The Owner of the contract allowed to add a new supported mIx.",
+        "params": {
+          "_mIx": "Address of the mIx"
+        }
+      },
+      "constructor": {
+        "details": "Abstarct constructor",
+        "params": {
+          "_mIxs": "Array of valid mIx addresses allowed to mint."
+        }
+      },
+      "infiniteApprove(address,address[])": {
+        "details": "Anyone can call and perform infinite approval for bAssets",
+        "params": {
+          "_bAssets": "An array containing bAssets addresses"
+        }
+      },
+      "isOwner()": {
+        "details": "Returns true if the caller is the current owner."
+      },
+      "owner()": {
+        "details": "Returns the address of the current owner."
+      },
+      "renounceOwnership()": {
+        "details": "Leaves the contract without owner. It will not be possible to call `onlyOwner` functions anymore. Can only be called by the current owner.     * NOTE: Renouncing ownership will leave the contract without an owner, thereby removing any functionality that is only available to the owner."
+      },
+      "transferOwnership(address)": {
+        "details": "Transfers ownership of the contract to a new account (`newOwner`). Can only be called by the current owner."
+      }
+    },
+    "title": "AbstractBuyAndMint"
+  },
+  "userdoc": {
+    "methods": {},
+    "notice": "Abstract contract to allow buy bAsset tokens with ETH and mint mIxs tokens         from mStable."
+  }
+}

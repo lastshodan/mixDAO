@@ -1,0 +1,351 @@
+{
+  "contractName": "DeadIntegration",
+  "abi": [
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "name": "checkBalance",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "balance",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.5.16+commit.9c3226ce\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":false,\"inputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"name\":\"checkBalance\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"balance\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"details\":\"This file is used purely to allow the instantiation of BasketManagers initialize function with dead data. This stops attackers calling the func and initializing the contract with data. Even though this is the implementation contract of a proxy and the storage will not be used.\",\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/Volumes/sdxc/ETHEREUM/CODE/mStable-v1-edit/contracts/z_mocks/mix/platform-integrations/DeadIntegration.sol\":\"DeadIntegration\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Volumes/sdxc/ETHEREUM/CODE/mStable-v1-edit/contracts/z_mocks/mix/platform-integrations/DeadIntegration.sol\":{\"keccak256\":\"0x9cad0a81a6345f08384e55d92551c4e6a3abb42c18a336042950c9a02dbe3003\",\"urls\":[\"bzz-raw://6f393bb27b56986d6df502723e0b9136fb418303605daa9822a2a27cb5afc7a3\",\"dweb:/ipfs/QmRJYhhMRuPC5XJxNMg87AHLqfm7fuws9bnXZw1YxRp95k\"]}},\"version\":1}",
+  "bytecode": "0x6080604052348015600f57600080fd5b50609d8061001e6000396000f3fe6080604052348015600f57600080fd5b506004361060285760003560e01c80635f51522614602d575b600080fd5b605060048036036020811015604157600080fd5b50356001600160a01b03166062565b60408051918252519081900360200190f35b5060009056fea265627a7a7231582035047fab24500884cdf9408abf15b379985ab629533d9470abfef779fe57899a64736f6c63430005100032",
+  "deployedBytecode": "0x6080604052348015600f57600080fd5b506004361060285760003560e01c80635f51522614602d575b600080fd5b605060048036036020811015604157600080fd5b50356001600160a01b03166062565b60408051918252519081900360200190f35b5060009056fea265627a7a7231582035047fab24500884cdf9408abf15b379985ab629533d9470abfef779fe57899a64736f6c63430005100032",
+  "sourceMap": "330:137:75:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;330:137:75;;;;;;;",
+  "deployedSourceMap": "330:137:75:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;330:137:75;;;;;;;;;;;;;;;;;;;362:103;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;-1:-1;362:103:75;-1:-1:-1;;;;;362:103:75;;:::i;:::-;;;;;;;;;;;;;;;;;-1:-1:-1;423:15:75;;362:103::o",
+  "source": "pragma solidity 0.5.16;\n\n\n\n/**\n * @dev This file is used purely to allow the instantiation of BasketManagers\n * initialize function with dead data. This stops attackers calling the func\n * and initializing the contract with data. Even though this is the implementation\n * contract of a proxy and the storage will not be used.\n */\ncontract DeadIntegration {\n\n    function checkBalance(address /*_bAsset*/) external returns (uint256 balance) {\n        return 0;\n    }\n}",
+  "sourcePath": "/Volumes/sdxc/ETHEREUM/CODE/mStable-v1-edit/contracts/z_mocks/mix/platform-integrations/DeadIntegration.sol",
+  "ast": {
+    "absolutePath": "/Volumes/sdxc/ETHEREUM/CODE/mStable-v1-edit/contracts/z_mocks/mix/platform-integrations/DeadIntegration.sol",
+    "exportedSymbols": {
+      "DeadIntegration": [
+        23962
+      ]
+    },
+    "id": 23963,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 23951,
+        "literals": [
+          "solidity",
+          "0.5",
+          ".16"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:75"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": "@dev This file is used purely to allow the instantiation of BasketManagers\ninitialize function with dead data. This stops attackers calling the func\nand initializing the contract with data. Even though this is the implementation\ncontract of a proxy and the storage will not be used.",
+        "fullyImplemented": true,
+        "id": 23962,
+        "linearizedBaseContracts": [
+          23962
+        ],
+        "name": "DeadIntegration",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": {
+              "id": 23960,
+              "nodeType": "Block",
+              "src": "440:25:75",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "hexValue": "30",
+                    "id": 23958,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": true,
+                    "kind": "number",
+                    "lValueRequested": false,
+                    "nodeType": "Literal",
+                    "src": "457:1:75",
+                    "subdenomination": null,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_rational_0_by_1",
+                      "typeString": "int_const 0"
+                    },
+                    "value": "0"
+                  },
+                  "functionReturnParameters": 23957,
+                  "id": 23959,
+                  "nodeType": "Return",
+                  "src": "450:8:75"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 23961,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "checkBalance",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 23954,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 23953,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 23961,
+                  "src": "384:7:75",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 23952,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "384:7:75",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "383:21:75"
+            },
+            "returnParameters": {
+              "id": 23957,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 23956,
+                  "name": "balance",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 23961,
+                  "src": "423:15:75",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 23955,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "423:7:75",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "422:17:75"
+            },
+            "scope": 23962,
+            "src": "362:103:75",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "external"
+          }
+        ],
+        "scope": 23963,
+        "src": "330:137:75"
+      }
+    ],
+    "src": "0:467:75"
+  },
+  "legacyAST": {
+    "absolutePath": "/Volumes/sdxc/ETHEREUM/CODE/mStable-v1-edit/contracts/z_mocks/mix/platform-integrations/DeadIntegration.sol",
+    "exportedSymbols": {
+      "DeadIntegration": [
+        23962
+      ]
+    },
+    "id": 23963,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 23951,
+        "literals": [
+          "solidity",
+          "0.5",
+          ".16"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:75"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": "@dev This file is used purely to allow the instantiation of BasketManagers\ninitialize function with dead data. This stops attackers calling the func\nand initializing the contract with data. Even though this is the implementation\ncontract of a proxy and the storage will not be used.",
+        "fullyImplemented": true,
+        "id": 23962,
+        "linearizedBaseContracts": [
+          23962
+        ],
+        "name": "DeadIntegration",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": {
+              "id": 23960,
+              "nodeType": "Block",
+              "src": "440:25:75",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "hexValue": "30",
+                    "id": 23958,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": true,
+                    "kind": "number",
+                    "lValueRequested": false,
+                    "nodeType": "Literal",
+                    "src": "457:1:75",
+                    "subdenomination": null,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_rational_0_by_1",
+                      "typeString": "int_const 0"
+                    },
+                    "value": "0"
+                  },
+                  "functionReturnParameters": 23957,
+                  "id": 23959,
+                  "nodeType": "Return",
+                  "src": "450:8:75"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 23961,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "checkBalance",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 23954,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 23953,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 23961,
+                  "src": "384:7:75",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 23952,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "384:7:75",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "383:21:75"
+            },
+            "returnParameters": {
+              "id": 23957,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 23956,
+                  "name": "balance",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 23961,
+                  "src": "423:15:75",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 23955,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "423:7:75",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "422:17:75"
+            },
+            "scope": 23962,
+            "src": "362:103:75",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "external"
+          }
+        ],
+        "scope": 23963,
+        "src": "330:137:75"
+      }
+    ],
+    "src": "0:467:75"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.16+commit.9c3226ce.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.1.0",
+  "updatedAt": "2021-03-11T05:43:16.631Z",
+  "devdoc": {
+    "details": "This file is used purely to allow the instantiation of BasketManagers initialize function with dead data. This stops attackers calling the func and initializing the contract with data. Even though this is the implementation contract of a proxy and the storage will not be used.",
+    "methods": {}
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}

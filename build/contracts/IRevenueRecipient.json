@@ -1,0 +1,823 @@
+{
+  "contractName": "IRevenueRecipient",
+  "abi": [
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_mIx",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "_amount",
+          "type": "uint256"
+        }
+      ],
+      "name": "notifyRedistributionAmount",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.5.16+commit.9c3226ce\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":false,\"inputs\":[{\"internalType\":\"address\",\"name\":\"_mIx\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"_amount\",\"type\":\"uint256\"}],\"name\":\"notifyRedistributionAmount\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{\"notifyRedistributionAmount(address,uint256)\":{\"details\":\"Recipient \"}}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/Volumes/sdxc/ETHEREUM/CODE/mStable-v1-edit/contracts/interfaces/ISavingsManager.sol\":\"IRevenueRecipient\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Volumes/sdxc/ETHEREUM/CODE/mStable-v1-edit/contracts/interfaces/ISavingsManager.sol\":{\"keccak256\":\"0xad8136142690266e699adef0327fd06573c8b748ea5c6270d91b2252ecf5741e\",\"urls\":[\"bzz-raw://e6a9aac286acb485aacb2a52ab206c78c51652531b430d5cc6eeb913ae58a35a\",\"dweb:/ipfs/QmWNjkifGQChBXRqruyodqoEV2RTzHVQkSC31wh52YEVyZ\"]}},\"version\":1}",
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "sourceMap": "",
+  "deployedSourceMap": "",
+  "source": "pragma solidity 0.5.16;\n\n/**\n * @title ISavingsManager\n */\ninterface ISavingsManager {\n\n    /** @dev Admin privs */\n    function distributeUnallocatedInterest(address _mIx) external;\n\n    /** @dev Liquidator */\n    function depositLiquidation(address _mIx, uint256 _liquidation) external;\n\n    /** @dev Liquidator */\n    function collectAndStreamInterest(address _mIx) external;\n\n    /** @dev Public privs */\n    function collectAndDistributeInterest(address _mIx) external;\n}\n\ninterface IRevenueRecipient {\n\n    /** @dev Recipient */\n    function notifyRedistributionAmount(address _mIx, uint256 _amount) external;\n}",
+  "sourcePath": "/Volumes/sdxc/ETHEREUM/CODE/mStable-v1-edit/contracts/interfaces/ISavingsManager.sol",
+  "ast": {
+    "absolutePath": "/Volumes/sdxc/ETHEREUM/CODE/mStable-v1-edit/contracts/interfaces/ISavingsManager.sol",
+    "exportedSymbols": {
+      "IRevenueRecipient": [
+        4065
+      ],
+      "ISavingsManager": [
+        4057
+      ]
+    },
+    "id": 4066,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 4034,
+        "literals": [
+          "solidity",
+          "0.5",
+          ".16"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:18"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "documentation": "@title ISavingsManager",
+        "fullyImplemented": false,
+        "id": 4057,
+        "linearizedBaseContracts": [
+          4057
+        ],
+        "name": "ISavingsManager",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": null,
+            "documentation": "@dev Admin privs ",
+            "id": 4039,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "distributeUnallocatedInterest",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 4037,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 4036,
+                  "name": "_mIx",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 4039,
+                  "src": "159:12:18",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 4035,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "159:7:18",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "158:14:18"
+            },
+            "returnParameters": {
+              "id": 4038,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "181:0:18"
+            },
+            "scope": 4057,
+            "src": "120:62:18",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": "@dev Liquidator ",
+            "id": 4046,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "depositLiquidation",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 4044,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 4041,
+                  "name": "_mIx",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 4046,
+                  "src": "243:12:18",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 4040,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "243:7:18",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 4043,
+                  "name": "_liquidation",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 4046,
+                  "src": "257:20:18",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 4042,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "257:7:18",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "242:36:18"
+            },
+            "returnParameters": {
+              "id": 4045,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "287:0:18"
+            },
+            "scope": 4057,
+            "src": "215:73:18",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": "@dev Liquidator ",
+            "id": 4051,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "collectAndStreamInterest",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 4049,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 4048,
+                  "name": "_mIx",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 4051,
+                  "src": "355:12:18",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 4047,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "355:7:18",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "354:14:18"
+            },
+            "returnParameters": {
+              "id": 4050,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "377:0:18"
+            },
+            "scope": 4057,
+            "src": "321:57:18",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": "@dev Public privs ",
+            "id": 4056,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "collectAndDistributeInterest",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 4054,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 4053,
+                  "name": "_mIx",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 4056,
+                  "src": "451:12:18",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 4052,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "451:7:18",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "450:14:18"
+            },
+            "returnParameters": {
+              "id": 4055,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "473:0:18"
+            },
+            "scope": 4057,
+            "src": "413:61:18",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "external"
+          }
+        ],
+        "scope": 4066,
+        "src": "59:417:18"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "documentation": null,
+        "fullyImplemented": false,
+        "id": 4065,
+        "linearizedBaseContracts": [
+          4065
+        ],
+        "name": "IRevenueRecipient",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": null,
+            "documentation": "@dev Recipient ",
+            "id": 4064,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "notifyRedistributionAmount",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 4062,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 4059,
+                  "name": "_mIx",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 4064,
+                  "src": "575:12:18",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 4058,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "575:7:18",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 4061,
+                  "name": "_amount",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 4064,
+                  "src": "589:15:18",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 4060,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "589:7:18",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "574:31:18"
+            },
+            "returnParameters": {
+              "id": 4063,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "614:0:18"
+            },
+            "scope": 4065,
+            "src": "539:76:18",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "external"
+          }
+        ],
+        "scope": 4066,
+        "src": "478:139:18"
+      }
+    ],
+    "src": "0:617:18"
+  },
+  "legacyAST": {
+    "absolutePath": "/Volumes/sdxc/ETHEREUM/CODE/mStable-v1-edit/contracts/interfaces/ISavingsManager.sol",
+    "exportedSymbols": {
+      "IRevenueRecipient": [
+        4065
+      ],
+      "ISavingsManager": [
+        4057
+      ]
+    },
+    "id": 4066,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 4034,
+        "literals": [
+          "solidity",
+          "0.5",
+          ".16"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:18"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "documentation": "@title ISavingsManager",
+        "fullyImplemented": false,
+        "id": 4057,
+        "linearizedBaseContracts": [
+          4057
+        ],
+        "name": "ISavingsManager",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": null,
+            "documentation": "@dev Admin privs ",
+            "id": 4039,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "distributeUnallocatedInterest",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 4037,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 4036,
+                  "name": "_mIx",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 4039,
+                  "src": "159:12:18",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 4035,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "159:7:18",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "158:14:18"
+            },
+            "returnParameters": {
+              "id": 4038,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "181:0:18"
+            },
+            "scope": 4057,
+            "src": "120:62:18",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": "@dev Liquidator ",
+            "id": 4046,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "depositLiquidation",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 4044,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 4041,
+                  "name": "_mIx",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 4046,
+                  "src": "243:12:18",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 4040,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "243:7:18",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 4043,
+                  "name": "_liquidation",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 4046,
+                  "src": "257:20:18",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 4042,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "257:7:18",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "242:36:18"
+            },
+            "returnParameters": {
+              "id": 4045,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "287:0:18"
+            },
+            "scope": 4057,
+            "src": "215:73:18",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": "@dev Liquidator ",
+            "id": 4051,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "collectAndStreamInterest",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 4049,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 4048,
+                  "name": "_mIx",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 4051,
+                  "src": "355:12:18",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 4047,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "355:7:18",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "354:14:18"
+            },
+            "returnParameters": {
+              "id": 4050,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "377:0:18"
+            },
+            "scope": 4057,
+            "src": "321:57:18",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": "@dev Public privs ",
+            "id": 4056,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "collectAndDistributeInterest",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 4054,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 4053,
+                  "name": "_mIx",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 4056,
+                  "src": "451:12:18",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 4052,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "451:7:18",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "450:14:18"
+            },
+            "returnParameters": {
+              "id": 4055,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "473:0:18"
+            },
+            "scope": 4057,
+            "src": "413:61:18",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "external"
+          }
+        ],
+        "scope": 4066,
+        "src": "59:417:18"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "documentation": null,
+        "fullyImplemented": false,
+        "id": 4065,
+        "linearizedBaseContracts": [
+          4065
+        ],
+        "name": "IRevenueRecipient",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": null,
+            "documentation": "@dev Recipient ",
+            "id": 4064,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "notifyRedistributionAmount",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 4062,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 4059,
+                  "name": "_mIx",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 4064,
+                  "src": "575:12:18",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 4058,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "575:7:18",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 4061,
+                  "name": "_amount",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 4064,
+                  "src": "589:15:18",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 4060,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "589:7:18",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "574:31:18"
+            },
+            "returnParameters": {
+              "id": 4063,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "614:0:18"
+            },
+            "scope": 4065,
+            "src": "539:76:18",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "external"
+          }
+        ],
+        "scope": 4066,
+        "src": "478:139:18"
+      }
+    ],
+    "src": "0:617:18"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.16+commit.9c3226ce.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.1.0",
+  "updatedAt": "2021-03-11T05:43:15.135Z",
+  "devdoc": {
+    "methods": {
+      "notifyRedistributionAmount(address,uint256)": {
+        "details": "Recipient "
+      }
+    }
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}

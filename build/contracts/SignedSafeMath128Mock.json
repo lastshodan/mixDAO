@@ -1,0 +1,1849 @@
+{
+  "contractName": "SignedSafeMath128Mock",
+  "abi": [
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "internalType": "int128",
+          "name": "a",
+          "type": "int128"
+        },
+        {
+          "internalType": "int128",
+          "name": "b",
+          "type": "int128"
+        }
+      ],
+      "name": "mul",
+      "outputs": [
+        {
+          "internalType": "int128",
+          "name": "",
+          "type": "int128"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "pure",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "internalType": "int128",
+          "name": "a",
+          "type": "int128"
+        },
+        {
+          "internalType": "int128",
+          "name": "b",
+          "type": "int128"
+        }
+      ],
+      "name": "div",
+      "outputs": [
+        {
+          "internalType": "int128",
+          "name": "",
+          "type": "int128"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "pure",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "internalType": "int128",
+          "name": "a",
+          "type": "int128"
+        },
+        {
+          "internalType": "int128",
+          "name": "b",
+          "type": "int128"
+        }
+      ],
+      "name": "sub",
+      "outputs": [
+        {
+          "internalType": "int128",
+          "name": "",
+          "type": "int128"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "pure",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "internalType": "int128",
+          "name": "a",
+          "type": "int128"
+        },
+        {
+          "internalType": "int128",
+          "name": "b",
+          "type": "int128"
+        }
+      ],
+      "name": "add",
+      "outputs": [
+        {
+          "internalType": "int128",
+          "name": "",
+          "type": "int128"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "pure",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.5.16+commit.9c3226ce\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":true,\"inputs\":[{\"internalType\":\"int128\",\"name\":\"a\",\"type\":\"int128\"},{\"internalType\":\"int128\",\"name\":\"b\",\"type\":\"int128\"}],\"name\":\"add\",\"outputs\":[{\"internalType\":\"int128\",\"name\":\"\",\"type\":\"int128\"}],\"payable\":false,\"stateMutability\":\"pure\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"internalType\":\"int128\",\"name\":\"a\",\"type\":\"int128\"},{\"internalType\":\"int128\",\"name\":\"b\",\"type\":\"int128\"}],\"name\":\"div\",\"outputs\":[{\"internalType\":\"int128\",\"name\":\"\",\"type\":\"int128\"}],\"payable\":false,\"stateMutability\":\"pure\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"internalType\":\"int128\",\"name\":\"a\",\"type\":\"int128\"},{\"internalType\":\"int128\",\"name\":\"b\",\"type\":\"int128\"}],\"name\":\"mul\",\"outputs\":[{\"internalType\":\"int128\",\"name\":\"\",\"type\":\"int128\"}],\"payable\":false,\"stateMutability\":\"pure\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"internalType\":\"int128\",\"name\":\"a\",\"type\":\"int128\"},{\"internalType\":\"int128\",\"name\":\"b\",\"type\":\"int128\"}],\"name\":\"sub\",\"outputs\":[{\"internalType\":\"int128\",\"name\":\"\",\"type\":\"int128\"}],\"payable\":false,\"stateMutability\":\"pure\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/Volumes/sdxc/ETHEREUM/CODE/mStable-v1-edit/contracts/z_mocks/shared/SignedSafeMath128Mock.sol\":\"SignedSafeMath128Mock\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Volumes/sdxc/ETHEREUM/CODE/mStable-v1-edit/contracts/shared/SignedSafeMath128.sol\":{\"keccak256\":\"0x2a69f4ee4f7c9b6d5b971bd586e46866bbb222d7d4f5f4a71323c4b279f42d18\",\"urls\":[\"bzz-raw://c9daef70e9381366bd9131f57bb603eff66180521269b8128d6d3f543c80f960\",\"dweb:/ipfs/Qmc6QVDnVtHTK32wUCeRMamnZqMCFjDCBeoWf9awqgXKB4\"]},\"/Volumes/sdxc/ETHEREUM/CODE/mStable-v1-edit/contracts/z_mocks/shared/SignedSafeMath128Mock.sol\":{\"keccak256\":\"0x7d24c3af035a977f656a874bfa14bbdc13509911e2f9a499028e92b774065310\",\"urls\":[\"bzz-raw://b2cb64e902a341d1ab6fcbb7a82b4e37fcb80343978412e3974907bce92301f2\",\"dweb:/ipfs/QmdHRyAW7C6wNgmCsQgHy2pVL7oefQDLwYU1gsQ4URiH9F\"]}},\"version\":1}",
+  "bytecode": "0x608060405234801561001057600080fd5b50610498806100206000396000f3fe608060405234801561001057600080fd5b506004361061004c5760003560e01c806325f39a6314610051578063340ced8c14610094578063a0c9f93b146100be578063b6972146146100e8575b600080fd5b61007b6004803603604081101561006757600080fd5b508035600f90810b9160200135900b610112565b60408051600f92830b90920b8252519081900360200190f35b61007b600480360360408110156100aa57600080fd5b508035600f90810b9160200135900b610127565b61007b600480360360408110156100d457600080fd5b508035600f90810b9160200135900b610133565b61007b600480360360408110156100fe57600080fd5b508035600f90810b9160200135900b61013f565b600061011e838361014b565b90505b92915050565b600061011e838361021b565b600061011e8383610293565b600061011e838361030b565b600081600f0b600014156101a6576040805162461bcd60e51b815260206004820181905260248201527f5369676e6564536166654d6174683a206469766973696f6e206279207a65726f604482015290519081900360640190fd5b81600f0b6000191480156101c55750600f83900b60016001607f1b0319145b156102015760405162461bcd60e51b81526004018080602001828103825260218152602001806103f86021913960400191505060405180910390fd5b600082600f0b84600f0b8161021257fe5b05949350505050565b6000828201600f83900b821380159061023a575083600f0b81600f0b12155b806102585750600083600f0b128015610258575083600f0b81600f0b125b61011e5760405162461bcd60e51b81526004018080602001828103825260218152602001806103d76021913960400191505060405180910390fd5b6000818303600f83900b82138015906102b2575083600f0b81600f0b13155b806102d05750600083600f0b1280156102d0575083600f0b81600f0b135b61011e5760405162461bcd60e51b81526004018080602001828103825260248152602001806104406024913960400191505060405180910390fd5b600082600f0b6000141561032157506000610121565b82600f0b6000191480156103405750600f82900b60016001607f1b0319145b1561037c5760405162461bcd60e51b81526004018080602001828103825260278152602001806104196027913960400191505060405180910390fd5b6000828402905082600f0b84600f0b82600f0b8161039657fe5b05600f0b1461011e5760405162461bcd60e51b81526004018080602001828103825260278152602001806104196027913960400191505060405180910390fdfe5369676e6564536166654d6174683a206164646974696f6e206f766572666c6f775369676e6564536166654d6174683a206469766973696f6e206f766572666c6f775369676e6564536166654d6174683a206d756c7469706c69636174696f6e206f766572666c6f775369676e6564536166654d6174683a207375627472616374696f6e206f766572666c6f77a265627a7a723158205ed49d31abfbc71fc65cf3b11e0e7b92a9ee58669813b6ba565f9eb5769ad6a464736f6c63430005100032",
+  "deployedBytecode": "0x608060405234801561001057600080fd5b506004361061004c5760003560e01c806325f39a6314610051578063340ced8c14610094578063a0c9f93b146100be578063b6972146146100e8575b600080fd5b61007b6004803603604081101561006757600080fd5b508035600f90810b9160200135900b610112565b60408051600f92830b90920b8252519081900360200190f35b61007b600480360360408110156100aa57600080fd5b508035600f90810b9160200135900b610127565b61007b600480360360408110156100d457600080fd5b508035600f90810b9160200135900b610133565b61007b600480360360408110156100fe57600080fd5b508035600f90810b9160200135900b61013f565b600061011e838361014b565b90505b92915050565b600061011e838361021b565b600061011e8383610293565b600061011e838361030b565b600081600f0b600014156101a6576040805162461bcd60e51b815260206004820181905260248201527f5369676e6564536166654d6174683a206469766973696f6e206279207a65726f604482015290519081900360640190fd5b81600f0b6000191480156101c55750600f83900b60016001607f1b0319145b156102015760405162461bcd60e51b81526004018080602001828103825260218152602001806103f86021913960400191505060405180910390fd5b600082600f0b84600f0b8161021257fe5b05949350505050565b6000828201600f83900b821380159061023a575083600f0b81600f0b12155b806102585750600083600f0b128015610258575083600f0b81600f0b125b61011e5760405162461bcd60e51b81526004018080602001828103825260218152602001806103d76021913960400191505060405180910390fd5b6000818303600f83900b82138015906102b2575083600f0b81600f0b13155b806102d05750600083600f0b1280156102d0575083600f0b81600f0b135b61011e5760405162461bcd60e51b81526004018080602001828103825260248152602001806104406024913960400191505060405180910390fd5b600082600f0b6000141561032157506000610121565b82600f0b6000191480156103405750600f82900b60016001607f1b0319145b1561037c5760405162461bcd60e51b81526004018080602001828103825260278152602001806104196027913960400191505060405180910390fd5b6000828402905082600f0b84600f0b82600f0b8161039657fe5b05600f0b1461011e5760405162461bcd60e51b81526004018080602001828103825260278152602001806104196027913960400191505060405180910390fdfe5369676e6564536166654d6174683a206164646974696f6e206f766572666c6f775369676e6564536166654d6174683a206469766973696f6e206f766572666c6f775369676e6564536166654d6174683a206d756c7469706c69636174696f6e206f766572666c6f775369676e6564536166654d6174683a207375627472616374696f6e206f766572666c6f77a265627a7a723158205ed49d31abfbc71fc65cf3b11e0e7b92a9ee58669813b6ba565f9eb5769ad6a464736f6c63430005100032",
+  "sourceMap": "131:509:111:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;131:509:111;;;;;;;",
+  "deployedSourceMap": "131:509:111:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;131:509:111;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;287:113;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;-1:-1;287:113:111;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;525;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;-1:-1;525:113:111;;;;;;;;;;;;;:::i;406:::-;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;-1:-1;406:113:111;;;;;;;;;;;;;:::i;168:::-;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;-1:-1;168:113:111;;;;;;;;;;;;;:::i;287:::-;341:6;366:27;388:1;391;366:21;:27::i;:::-;359:34;;287:113;;;;;:::o;525:::-;579:6;604:27;626:1;629;604:21;:27::i;406:113::-;460:6;485:27;507:1;510;485:21;:27::i;168:113::-;222:6;247:27;269:1;272;247:21;:27::i;1694:264:64:-;1750:6;1776:1;:6;;1781:1;1776:6;;1768:51;;;;;-1:-1:-1;;;1768:51:64;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1839:1;:7;;-1:-1:-1;;1839:7:64;:27;;;;-1:-1:-1;1850:16:64;;;;-1:-1:-1;;;;;;1850:16:64;1839:27;1837:30;1829:76;;;;-1:-1:-1;;;1829:76:64;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1916:8;1931:1;1927:5;;:1;:5;;;;;;;;;1694:264;-1:-1:-1;;;;1694:264:64:o;2643:210::-;2699:6;2728:5;;;2752:6;;;;;-1:-1:-1;2752:6:64;;;:16;;;2767:1;2762:6;;:1;:6;;;;2752:16;2751:38;;;;2778:1;2774;:5;;;:14;;;;;2787:1;2783:5;;:1;:5;;;2774:14;2743:84;;;;-1:-1:-1;;;2743:84:64;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;2197:213;2253:6;2282:5;;;2306:6;;;;;-1:-1:-1;2306:6:64;;;:16;;;2321:1;2316:6;;:1;:6;;;;2306:16;2305:38;;;;2332:1;2328;:5;;;:14;;;;;2341:1;2337:5;;:1;:5;;;2328:14;2297:87;;;;-1:-1:-1;;;2297:87:64;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;680:554;736:6;976:1;:6;;981:1;976:6;972:45;;;-1:-1:-1;1005:1:64;998:8;;972:45;1037:1;:7;;-1:-1:-1;;1037:7:64;:27;;;;-1:-1:-1;1048:16:64;;;;-1:-1:-1;;;;;;1048:16:64;1037:27;1035:30;1027:82;;;;-1:-1:-1;;;1027:82:64;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1120:8;1135:1;1131;:5;1120:16;;1163:1;1154:10;;1158:1;1154:5;;:1;:5;;;;;;;;:10;;;1146:62;;;;-1:-1:-1;;;1146:62:64;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+  "source": "// SPDX-License-Identifier: MIT\n\npragma solidity 0.5.16;\n\nimport { SignedSafeMath128 } from \"../../shared/SignedSafeMath128.sol\";\n\ncontract SignedSafeMath128Mock {\n    function mul(int128 a, int128 b) public pure returns (int128) {\n        return SignedSafeMath128.mul(a, b);\n    }\n\n    function div(int128 a, int128 b) public pure returns (int128) {\n        return SignedSafeMath128.div(a, b);\n    }\n\n    function sub(int128 a, int128 b) public pure returns (int128) {\n        return SignedSafeMath128.sub(a, b);\n    }\n\n    function add(int128 a, int128 b) public pure returns (int128) {\n        return SignedSafeMath128.add(a, b);\n    }\n}\n",
+  "sourcePath": "/Volumes/sdxc/ETHEREUM/CODE/mStable-v1-edit/contracts/z_mocks/shared/SignedSafeMath128Mock.sol",
+  "ast": {
+    "absolutePath": "/Volumes/sdxc/ETHEREUM/CODE/mStable-v1-edit/contracts/z_mocks/shared/SignedSafeMath128Mock.sol",
+    "exportedSymbols": {
+      "SignedSafeMath128Mock": [
+        34009
+      ]
+    },
+    "id": 34010,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 33942,
+        "literals": [
+          "solidity",
+          "0.5",
+          ".16"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "33:23:111"
+      },
+      {
+        "absolutePath": "/Volumes/sdxc/ETHEREUM/CODE/mStable-v1-edit/contracts/shared/SignedSafeMath128.sol",
+        "file": "../../shared/SignedSafeMath128.sol",
+        "id": 33944,
+        "nodeType": "ImportDirective",
+        "scope": 34010,
+        "sourceUnit": 21943,
+        "src": "58:71:111",
+        "symbolAliases": [
+          {
+            "foreign": 33943,
+            "local": null
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 34009,
+        "linearizedBaseContracts": [
+          34009
+        ],
+        "name": "SignedSafeMath128Mock",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": {
+              "id": 33959,
+              "nodeType": "Block",
+              "src": "230:51:111",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 33955,
+                        "name": "a",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 33946,
+                        "src": "269:1:111",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_int128",
+                          "typeString": "int128"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "id": 33956,
+                        "name": "b",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 33948,
+                        "src": "272:1:111",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_int128",
+                          "typeString": "int128"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_int128",
+                          "typeString": "int128"
+                        },
+                        {
+                          "typeIdentifier": "t_int128",
+                          "typeString": "int128"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 33953,
+                        "name": "SignedSafeMath128",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 21942,
+                        "src": "247:17:111",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_type$_t_contract$_SignedSafeMath128_$21942_$",
+                          "typeString": "type(library SignedSafeMath128)"
+                        }
+                      },
+                      "id": 33954,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "mul",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 21824,
+                      "src": "247:21:111",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_pure$_t_int128_$_t_int128_$returns$_t_int128_$",
+                        "typeString": "function (int128,int128) pure returns (int128)"
+                      }
+                    },
+                    "id": 33957,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "247:27:111",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_int128",
+                      "typeString": "int128"
+                    }
+                  },
+                  "functionReturnParameters": 33952,
+                  "id": 33958,
+                  "nodeType": "Return",
+                  "src": "240:34:111"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 33960,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "mul",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 33949,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 33946,
+                  "name": "a",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 33960,
+                  "src": "181:8:111",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_int128",
+                    "typeString": "int128"
+                  },
+                  "typeName": {
+                    "id": 33945,
+                    "name": "int128",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "181:6:111",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_int128",
+                      "typeString": "int128"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 33948,
+                  "name": "b",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 33960,
+                  "src": "191:8:111",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_int128",
+                    "typeString": "int128"
+                  },
+                  "typeName": {
+                    "id": 33947,
+                    "name": "int128",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "191:6:111",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_int128",
+                      "typeString": "int128"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "180:20:111"
+            },
+            "returnParameters": {
+              "id": 33952,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 33951,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 33960,
+                  "src": "222:6:111",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_int128",
+                    "typeString": "int128"
+                  },
+                  "typeName": {
+                    "id": 33950,
+                    "name": "int128",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "222:6:111",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_int128",
+                      "typeString": "int128"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "221:8:111"
+            },
+            "scope": 34009,
+            "src": "168:113:111",
+            "stateMutability": "pure",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 33975,
+              "nodeType": "Block",
+              "src": "349:51:111",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 33971,
+                        "name": "a",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 33962,
+                        "src": "388:1:111",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_int128",
+                          "typeString": "int128"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "id": 33972,
+                        "name": "b",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 33964,
+                        "src": "391:1:111",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_int128",
+                          "typeString": "int128"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_int128",
+                          "typeString": "int128"
+                        },
+                        {
+                          "typeIdentifier": "t_int128",
+                          "typeString": "int128"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 33969,
+                        "name": "SignedSafeMath128",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 21942,
+                        "src": "366:17:111",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_type$_t_contract$_SignedSafeMath128_$21942_$",
+                          "typeString": "type(library SignedSafeMath128)"
+                        }
+                      },
+                      "id": 33970,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "div",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 21863,
+                      "src": "366:21:111",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_pure$_t_int128_$_t_int128_$returns$_t_int128_$",
+                        "typeString": "function (int128,int128) pure returns (int128)"
+                      }
+                    },
+                    "id": 33973,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "366:27:111",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_int128",
+                      "typeString": "int128"
+                    }
+                  },
+                  "functionReturnParameters": 33968,
+                  "id": 33974,
+                  "nodeType": "Return",
+                  "src": "359:34:111"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 33976,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "div",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 33965,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 33962,
+                  "name": "a",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 33976,
+                  "src": "300:8:111",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_int128",
+                    "typeString": "int128"
+                  },
+                  "typeName": {
+                    "id": 33961,
+                    "name": "int128",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "300:6:111",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_int128",
+                      "typeString": "int128"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 33964,
+                  "name": "b",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 33976,
+                  "src": "310:8:111",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_int128",
+                    "typeString": "int128"
+                  },
+                  "typeName": {
+                    "id": 33963,
+                    "name": "int128",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "310:6:111",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_int128",
+                      "typeString": "int128"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "299:20:111"
+            },
+            "returnParameters": {
+              "id": 33968,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 33967,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 33976,
+                  "src": "341:6:111",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_int128",
+                    "typeString": "int128"
+                  },
+                  "typeName": {
+                    "id": 33966,
+                    "name": "int128",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "341:6:111",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_int128",
+                      "typeString": "int128"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "340:8:111"
+            },
+            "scope": 34009,
+            "src": "287:113:111",
+            "stateMutability": "pure",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 33991,
+              "nodeType": "Block",
+              "src": "468:51:111",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 33987,
+                        "name": "a",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 33978,
+                        "src": "507:1:111",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_int128",
+                          "typeString": "int128"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "id": 33988,
+                        "name": "b",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 33980,
+                        "src": "510:1:111",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_int128",
+                          "typeString": "int128"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_int128",
+                          "typeString": "int128"
+                        },
+                        {
+                          "typeIdentifier": "t_int128",
+                          "typeString": "int128"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 33985,
+                        "name": "SignedSafeMath128",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 21942,
+                        "src": "485:17:111",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_type$_t_contract$_SignedSafeMath128_$21942_$",
+                          "typeString": "type(library SignedSafeMath128)"
+                        }
+                      },
+                      "id": 33986,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "sub",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 21902,
+                      "src": "485:21:111",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_pure$_t_int128_$_t_int128_$returns$_t_int128_$",
+                        "typeString": "function (int128,int128) pure returns (int128)"
+                      }
+                    },
+                    "id": 33989,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "485:27:111",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_int128",
+                      "typeString": "int128"
+                    }
+                  },
+                  "functionReturnParameters": 33984,
+                  "id": 33990,
+                  "nodeType": "Return",
+                  "src": "478:34:111"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 33992,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "sub",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 33981,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 33978,
+                  "name": "a",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 33992,
+                  "src": "419:8:111",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_int128",
+                    "typeString": "int128"
+                  },
+                  "typeName": {
+                    "id": 33977,
+                    "name": "int128",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "419:6:111",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_int128",
+                      "typeString": "int128"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 33980,
+                  "name": "b",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 33992,
+                  "src": "429:8:111",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_int128",
+                    "typeString": "int128"
+                  },
+                  "typeName": {
+                    "id": 33979,
+                    "name": "int128",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "429:6:111",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_int128",
+                      "typeString": "int128"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "418:20:111"
+            },
+            "returnParameters": {
+              "id": 33984,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 33983,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 33992,
+                  "src": "460:6:111",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_int128",
+                    "typeString": "int128"
+                  },
+                  "typeName": {
+                    "id": 33982,
+                    "name": "int128",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "460:6:111",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_int128",
+                      "typeString": "int128"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "459:8:111"
+            },
+            "scope": 34009,
+            "src": "406:113:111",
+            "stateMutability": "pure",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 34007,
+              "nodeType": "Block",
+              "src": "587:51:111",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 34003,
+                        "name": "a",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 33994,
+                        "src": "626:1:111",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_int128",
+                          "typeString": "int128"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "id": 34004,
+                        "name": "b",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 33996,
+                        "src": "629:1:111",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_int128",
+                          "typeString": "int128"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_int128",
+                          "typeString": "int128"
+                        },
+                        {
+                          "typeIdentifier": "t_int128",
+                          "typeString": "int128"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 34001,
+                        "name": "SignedSafeMath128",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 21942,
+                        "src": "604:17:111",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_type$_t_contract$_SignedSafeMath128_$21942_$",
+                          "typeString": "type(library SignedSafeMath128)"
+                        }
+                      },
+                      "id": 34002,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "add",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 21941,
+                      "src": "604:21:111",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_pure$_t_int128_$_t_int128_$returns$_t_int128_$",
+                        "typeString": "function (int128,int128) pure returns (int128)"
+                      }
+                    },
+                    "id": 34005,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "604:27:111",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_int128",
+                      "typeString": "int128"
+                    }
+                  },
+                  "functionReturnParameters": 34000,
+                  "id": 34006,
+                  "nodeType": "Return",
+                  "src": "597:34:111"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 34008,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "add",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 33997,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 33994,
+                  "name": "a",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 34008,
+                  "src": "538:8:111",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_int128",
+                    "typeString": "int128"
+                  },
+                  "typeName": {
+                    "id": 33993,
+                    "name": "int128",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "538:6:111",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_int128",
+                      "typeString": "int128"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 33996,
+                  "name": "b",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 34008,
+                  "src": "548:8:111",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_int128",
+                    "typeString": "int128"
+                  },
+                  "typeName": {
+                    "id": 33995,
+                    "name": "int128",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "548:6:111",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_int128",
+                      "typeString": "int128"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "537:20:111"
+            },
+            "returnParameters": {
+              "id": 34000,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 33999,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 34008,
+                  "src": "579:6:111",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_int128",
+                    "typeString": "int128"
+                  },
+                  "typeName": {
+                    "id": 33998,
+                    "name": "int128",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "579:6:111",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_int128",
+                      "typeString": "int128"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "578:8:111"
+            },
+            "scope": 34009,
+            "src": "525:113:111",
+            "stateMutability": "pure",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 34010,
+        "src": "131:509:111"
+      }
+    ],
+    "src": "33:608:111"
+  },
+  "legacyAST": {
+    "absolutePath": "/Volumes/sdxc/ETHEREUM/CODE/mStable-v1-edit/contracts/z_mocks/shared/SignedSafeMath128Mock.sol",
+    "exportedSymbols": {
+      "SignedSafeMath128Mock": [
+        34009
+      ]
+    },
+    "id": 34010,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 33942,
+        "literals": [
+          "solidity",
+          "0.5",
+          ".16"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "33:23:111"
+      },
+      {
+        "absolutePath": "/Volumes/sdxc/ETHEREUM/CODE/mStable-v1-edit/contracts/shared/SignedSafeMath128.sol",
+        "file": "../../shared/SignedSafeMath128.sol",
+        "id": 33944,
+        "nodeType": "ImportDirective",
+        "scope": 34010,
+        "sourceUnit": 21943,
+        "src": "58:71:111",
+        "symbolAliases": [
+          {
+            "foreign": 33943,
+            "local": null
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 34009,
+        "linearizedBaseContracts": [
+          34009
+        ],
+        "name": "SignedSafeMath128Mock",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": {
+              "id": 33959,
+              "nodeType": "Block",
+              "src": "230:51:111",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 33955,
+                        "name": "a",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 33946,
+                        "src": "269:1:111",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_int128",
+                          "typeString": "int128"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "id": 33956,
+                        "name": "b",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 33948,
+                        "src": "272:1:111",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_int128",
+                          "typeString": "int128"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_int128",
+                          "typeString": "int128"
+                        },
+                        {
+                          "typeIdentifier": "t_int128",
+                          "typeString": "int128"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 33953,
+                        "name": "SignedSafeMath128",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 21942,
+                        "src": "247:17:111",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_type$_t_contract$_SignedSafeMath128_$21942_$",
+                          "typeString": "type(library SignedSafeMath128)"
+                        }
+                      },
+                      "id": 33954,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "mul",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 21824,
+                      "src": "247:21:111",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_pure$_t_int128_$_t_int128_$returns$_t_int128_$",
+                        "typeString": "function (int128,int128) pure returns (int128)"
+                      }
+                    },
+                    "id": 33957,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "247:27:111",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_int128",
+                      "typeString": "int128"
+                    }
+                  },
+                  "functionReturnParameters": 33952,
+                  "id": 33958,
+                  "nodeType": "Return",
+                  "src": "240:34:111"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 33960,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "mul",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 33949,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 33946,
+                  "name": "a",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 33960,
+                  "src": "181:8:111",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_int128",
+                    "typeString": "int128"
+                  },
+                  "typeName": {
+                    "id": 33945,
+                    "name": "int128",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "181:6:111",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_int128",
+                      "typeString": "int128"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 33948,
+                  "name": "b",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 33960,
+                  "src": "191:8:111",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_int128",
+                    "typeString": "int128"
+                  },
+                  "typeName": {
+                    "id": 33947,
+                    "name": "int128",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "191:6:111",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_int128",
+                      "typeString": "int128"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "180:20:111"
+            },
+            "returnParameters": {
+              "id": 33952,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 33951,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 33960,
+                  "src": "222:6:111",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_int128",
+                    "typeString": "int128"
+                  },
+                  "typeName": {
+                    "id": 33950,
+                    "name": "int128",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "222:6:111",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_int128",
+                      "typeString": "int128"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "221:8:111"
+            },
+            "scope": 34009,
+            "src": "168:113:111",
+            "stateMutability": "pure",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 33975,
+              "nodeType": "Block",
+              "src": "349:51:111",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 33971,
+                        "name": "a",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 33962,
+                        "src": "388:1:111",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_int128",
+                          "typeString": "int128"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "id": 33972,
+                        "name": "b",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 33964,
+                        "src": "391:1:111",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_int128",
+                          "typeString": "int128"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_int128",
+                          "typeString": "int128"
+                        },
+                        {
+                          "typeIdentifier": "t_int128",
+                          "typeString": "int128"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 33969,
+                        "name": "SignedSafeMath128",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 21942,
+                        "src": "366:17:111",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_type$_t_contract$_SignedSafeMath128_$21942_$",
+                          "typeString": "type(library SignedSafeMath128)"
+                        }
+                      },
+                      "id": 33970,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "div",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 21863,
+                      "src": "366:21:111",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_pure$_t_int128_$_t_int128_$returns$_t_int128_$",
+                        "typeString": "function (int128,int128) pure returns (int128)"
+                      }
+                    },
+                    "id": 33973,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "366:27:111",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_int128",
+                      "typeString": "int128"
+                    }
+                  },
+                  "functionReturnParameters": 33968,
+                  "id": 33974,
+                  "nodeType": "Return",
+                  "src": "359:34:111"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 33976,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "div",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 33965,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 33962,
+                  "name": "a",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 33976,
+                  "src": "300:8:111",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_int128",
+                    "typeString": "int128"
+                  },
+                  "typeName": {
+                    "id": 33961,
+                    "name": "int128",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "300:6:111",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_int128",
+                      "typeString": "int128"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 33964,
+                  "name": "b",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 33976,
+                  "src": "310:8:111",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_int128",
+                    "typeString": "int128"
+                  },
+                  "typeName": {
+                    "id": 33963,
+                    "name": "int128",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "310:6:111",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_int128",
+                      "typeString": "int128"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "299:20:111"
+            },
+            "returnParameters": {
+              "id": 33968,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 33967,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 33976,
+                  "src": "341:6:111",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_int128",
+                    "typeString": "int128"
+                  },
+                  "typeName": {
+                    "id": 33966,
+                    "name": "int128",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "341:6:111",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_int128",
+                      "typeString": "int128"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "340:8:111"
+            },
+            "scope": 34009,
+            "src": "287:113:111",
+            "stateMutability": "pure",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 33991,
+              "nodeType": "Block",
+              "src": "468:51:111",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 33987,
+                        "name": "a",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 33978,
+                        "src": "507:1:111",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_int128",
+                          "typeString": "int128"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "id": 33988,
+                        "name": "b",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 33980,
+                        "src": "510:1:111",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_int128",
+                          "typeString": "int128"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_int128",
+                          "typeString": "int128"
+                        },
+                        {
+                          "typeIdentifier": "t_int128",
+                          "typeString": "int128"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 33985,
+                        "name": "SignedSafeMath128",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 21942,
+                        "src": "485:17:111",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_type$_t_contract$_SignedSafeMath128_$21942_$",
+                          "typeString": "type(library SignedSafeMath128)"
+                        }
+                      },
+                      "id": 33986,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "sub",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 21902,
+                      "src": "485:21:111",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_pure$_t_int128_$_t_int128_$returns$_t_int128_$",
+                        "typeString": "function (int128,int128) pure returns (int128)"
+                      }
+                    },
+                    "id": 33989,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "485:27:111",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_int128",
+                      "typeString": "int128"
+                    }
+                  },
+                  "functionReturnParameters": 33984,
+                  "id": 33990,
+                  "nodeType": "Return",
+                  "src": "478:34:111"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 33992,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "sub",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 33981,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 33978,
+                  "name": "a",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 33992,
+                  "src": "419:8:111",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_int128",
+                    "typeString": "int128"
+                  },
+                  "typeName": {
+                    "id": 33977,
+                    "name": "int128",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "419:6:111",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_int128",
+                      "typeString": "int128"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 33980,
+                  "name": "b",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 33992,
+                  "src": "429:8:111",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_int128",
+                    "typeString": "int128"
+                  },
+                  "typeName": {
+                    "id": 33979,
+                    "name": "int128",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "429:6:111",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_int128",
+                      "typeString": "int128"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "418:20:111"
+            },
+            "returnParameters": {
+              "id": 33984,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 33983,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 33992,
+                  "src": "460:6:111",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_int128",
+                    "typeString": "int128"
+                  },
+                  "typeName": {
+                    "id": 33982,
+                    "name": "int128",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "460:6:111",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_int128",
+                      "typeString": "int128"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "459:8:111"
+            },
+            "scope": 34009,
+            "src": "406:113:111",
+            "stateMutability": "pure",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 34007,
+              "nodeType": "Block",
+              "src": "587:51:111",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 34003,
+                        "name": "a",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 33994,
+                        "src": "626:1:111",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_int128",
+                          "typeString": "int128"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "id": 34004,
+                        "name": "b",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 33996,
+                        "src": "629:1:111",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_int128",
+                          "typeString": "int128"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_int128",
+                          "typeString": "int128"
+                        },
+                        {
+                          "typeIdentifier": "t_int128",
+                          "typeString": "int128"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 34001,
+                        "name": "SignedSafeMath128",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 21942,
+                        "src": "604:17:111",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_type$_t_contract$_SignedSafeMath128_$21942_$",
+                          "typeString": "type(library SignedSafeMath128)"
+                        }
+                      },
+                      "id": 34002,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "add",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 21941,
+                      "src": "604:21:111",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_pure$_t_int128_$_t_int128_$returns$_t_int128_$",
+                        "typeString": "function (int128,int128) pure returns (int128)"
+                      }
+                    },
+                    "id": 34005,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "604:27:111",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_int128",
+                      "typeString": "int128"
+                    }
+                  },
+                  "functionReturnParameters": 34000,
+                  "id": 34006,
+                  "nodeType": "Return",
+                  "src": "597:34:111"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 34008,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "add",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 33997,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 33994,
+                  "name": "a",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 34008,
+                  "src": "538:8:111",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_int128",
+                    "typeString": "int128"
+                  },
+                  "typeName": {
+                    "id": 33993,
+                    "name": "int128",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "538:6:111",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_int128",
+                      "typeString": "int128"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 33996,
+                  "name": "b",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 34008,
+                  "src": "548:8:111",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_int128",
+                    "typeString": "int128"
+                  },
+                  "typeName": {
+                    "id": 33995,
+                    "name": "int128",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "548:6:111",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_int128",
+                      "typeString": "int128"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "537:20:111"
+            },
+            "returnParameters": {
+              "id": 34000,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 33999,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 34008,
+                  "src": "579:6:111",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_int128",
+                    "typeString": "int128"
+                  },
+                  "typeName": {
+                    "id": 33998,
+                    "name": "int128",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "579:6:111",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_int128",
+                      "typeString": "int128"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "578:8:111"
+            },
+            "scope": 34009,
+            "src": "525:113:111",
+            "stateMutability": "pure",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 34010,
+        "src": "131:509:111"
+      }
+    ],
+    "src": "33:608:111"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.16+commit.9c3226ce.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.1.0",
+  "updatedAt": "2021-03-11T05:43:18.493Z",
+  "devdoc": {
+    "methods": {}
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}

@@ -1,0 +1,476 @@
+{
+  "contractName": "MockCommonHelpers",
+  "abi": [
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_token",
+          "type": "address"
+        }
+      ],
+      "name": "getDecimals",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.5.16+commit.9c3226ce\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":true,\"inputs\":[{\"internalType\":\"address\",\"name\":\"_token\",\"type\":\"address\"}],\"name\":\"getDecimals\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/Volumes/sdxc/ETHEREUM/CODE/mStable-v1-edit/contracts/z_mocks/shared/MockCommonHelpers.sol\":\"MockCommonHelpers\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Volumes/sdxc/ETHEREUM/CODE/mStable-v1-edit/contracts/shared/CommonHelpers.sol\":{\"keccak256\":\"0x33e809b4367d394ea2122f363d3c4f82a036fd459e21e0c54f80003055ab9670\",\"urls\":[\"bzz-raw://14a31f4bb72d23a18e3a49ac330114199c0c69ced7d452fbf088c42ef233f636\",\"dweb:/ipfs/QmSD6rjG91CJn4eriTQR9FjLAnn8nD84BFdjgYrrBgM9QX\"]},\"/Volumes/sdxc/ETHEREUM/CODE/mStable-v1-edit/contracts/shared/IBasicToken.sol\":{\"keccak256\":\"0x7d505a6f3c24d5da06858f6da65ca04e15e2798c9ca9bb24624311fc10c35825\",\"urls\":[\"bzz-raw://937dd232b4bd4e49718279c406ba9c98627a38980dbb26d2f932f66815dd67b9\",\"dweb:/ipfs/Qmbg2N2PX46VCqBe224vmuNHv3YvaJBrH1gguspnz4acLd\"]},\"/Volumes/sdxc/ETHEREUM/CODE/mStable-v1-edit/contracts/z_mocks/shared/MockCommonHelpers.sol\":{\"keccak256\":\"0xb62e50d60c18c101f6805c0415adbad0c54209d98c89564630d628e6f5e77585\",\"urls\":[\"bzz-raw://0da25386e8bca3a33d6eb19ea868d524d929c6143a9bec38e3ba14423ddf2908\",\"dweb:/ipfs/QmY84JzqVa9yGrCzUzwQLwNwMyJwggf1tWXE9pfFViMoUt\"]}},\"version\":1}",
+  "bytecode": "0x608060405234801561001057600080fd5b50610191806100206000396000f3fe608060405234801561001057600080fd5b506004361061002b5760003560e01c8063cf54aaa014610030575b600080fd5b6100566004803603602081101561004657600080fd5b50356001600160a01b0316610068565b60408051918252519081900360200190f35b600061007382610079565b92915050565b600080826001600160a01b031663313ce5676040518163ffffffff1660e01b815260040160206040518083038186803b1580156100b557600080fd5b505afa1580156100c9573d6000803e3d6000fd5b505050506040513d60208110156100df57600080fd5b505160ff169050600481108015906100f8575060128111155b6100735760405162461bcd60e51b81526004018080602001828103825260298152602001806101346029913960400191505060405180910390fdfe546f6b656e206d75737420686176652073756666696369656e7420646563696d616c20706c61636573a265627a7a72315820cd02e20a17694890e22c2fafc68a1a48d0aaca87b06f69852d9f38d1f5fdb62664736f6c63430005100032",
+  "deployedBytecode": "0x608060405234801561001057600080fd5b506004361061002b5760003560e01c8063cf54aaa014610030575b600080fd5b6100566004803603602081101561004657600080fd5b50356001600160a01b0316610068565b60408051918252519081900360200190f35b600061007382610079565b92915050565b600080826001600160a01b031663313ce5676040518163ffffffff1660e01b815260040160206040518083038186803b1580156100b557600080fd5b505afa1580156100c9573d6000803e3d6000fd5b505050506040513d60208110156100df57600080fd5b505160ff169050600481108015906100f8575060128111155b6100735760405162461bcd60e51b81526004018080602001828103825260298152602001806101346029913960400191505060405180910390fdfe546f6b656e206d75737420686176652073756666696369656e7420646563696d616c20706c61636573a265627a7a72315820cd02e20a17694890e22c2fafc68a1a48d0aaca87b06f69852d9f38d1f5fdb62664736f6c63430005100032",
+  "sourceMap": "90:172:96:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;90:172:96;;;;;;;",
+  "deployedSourceMap": "90:172:96:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;90:172:96;;;;;;;;;;;;;;;;;;;124:136;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;-1:-1;124:136:96;-1:-1:-1;;;;;124:136:96;;:::i;:::-;;;;;;;;;;;;;;;;;194:7;220:33;246:6;220:25;:33::i;:::-;213:40;124:136;-1:-1:-1;;124:136:96:o;479:268:50:-;551:7;570:16;601:6;-1:-1:-1;;;;;589:28:50;;:30;;;;;;;;;;;;;;;;;;;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;589:30:50;;;;8:9:-1;5:2;;;45:16;42:1;39;24:38;77:16;74:1;67:27;5:2;589:30:50;;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;-1:-1;589:30:50;570:49;;;-1:-1:-1;649:1:50;637:13;;;;;:31;;;666:2;654:8;:14;;637:31;629:85;;;;-1:-1:-1;;;629:85:50;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+  "source": "pragma solidity 0.5.16;\n\nimport { CommonHelpers } from \"../../shared/CommonHelpers.sol\";\n\ncontract MockCommonHelpers {\n\n    function getDecimals(address _token)\n    public\n    view\n    returns (uint256) {\n        return CommonHelpers.getDecimals(_token);\n    }\n}\n\n",
+  "sourcePath": "/Volumes/sdxc/ETHEREUM/CODE/mStable-v1-edit/contracts/z_mocks/shared/MockCommonHelpers.sol",
+  "ast": {
+    "absolutePath": "/Volumes/sdxc/ETHEREUM/CODE/mStable-v1-edit/contracts/z_mocks/shared/MockCommonHelpers.sol",
+    "exportedSymbols": {
+      "MockCommonHelpers": [
+        32151
+      ]
+    },
+    "id": 32152,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 32135,
+        "literals": [
+          "solidity",
+          "0.5",
+          ".16"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:96"
+      },
+      {
+        "absolutePath": "/Volumes/sdxc/ETHEREUM/CODE/mStable-v1-edit/contracts/shared/CommonHelpers.sol",
+        "file": "../../shared/CommonHelpers.sol",
+        "id": 32137,
+        "nodeType": "ImportDirective",
+        "scope": 32152,
+        "sourceUnit": 20692,
+        "src": "25:63:96",
+        "symbolAliases": [
+          {
+            "foreign": 32136,
+            "local": null
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 32151,
+        "linearizedBaseContracts": [
+          32151
+        ],
+        "name": "MockCommonHelpers",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": {
+              "id": 32149,
+              "nodeType": "Block",
+              "src": "203:57:96",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 32146,
+                        "name": "_token",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 32139,
+                        "src": "246:6:96",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 32144,
+                        "name": "CommonHelpers",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 20691,
+                        "src": "220:13:96",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_type$_t_contract$_CommonHelpers_$20691_$",
+                          "typeString": "type(library CommonHelpers)"
+                        }
+                      },
+                      "id": 32145,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "getDecimals",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 20690,
+                      "src": "220:25:96",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_view$_t_address_$returns$_t_uint256_$",
+                        "typeString": "function (address) view returns (uint256)"
+                      }
+                    },
+                    "id": 32147,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "220:33:96",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "functionReturnParameters": 32143,
+                  "id": 32148,
+                  "nodeType": "Return",
+                  "src": "213:40:96"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 32150,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getDecimals",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 32140,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 32139,
+                  "name": "_token",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 32150,
+                  "src": "145:14:96",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 32138,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "145:7:96",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "144:16:96"
+            },
+            "returnParameters": {
+              "id": 32143,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 32142,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 32150,
+                  "src": "194:7:96",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 32141,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "194:7:96",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "193:9:96"
+            },
+            "scope": 32151,
+            "src": "124:136:96",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 32152,
+        "src": "90:172:96"
+      }
+    ],
+    "src": "0:264:96"
+  },
+  "legacyAST": {
+    "absolutePath": "/Volumes/sdxc/ETHEREUM/CODE/mStable-v1-edit/contracts/z_mocks/shared/MockCommonHelpers.sol",
+    "exportedSymbols": {
+      "MockCommonHelpers": [
+        32151
+      ]
+    },
+    "id": 32152,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 32135,
+        "literals": [
+          "solidity",
+          "0.5",
+          ".16"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:96"
+      },
+      {
+        "absolutePath": "/Volumes/sdxc/ETHEREUM/CODE/mStable-v1-edit/contracts/shared/CommonHelpers.sol",
+        "file": "../../shared/CommonHelpers.sol",
+        "id": 32137,
+        "nodeType": "ImportDirective",
+        "scope": 32152,
+        "sourceUnit": 20692,
+        "src": "25:63:96",
+        "symbolAliases": [
+          {
+            "foreign": 32136,
+            "local": null
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 32151,
+        "linearizedBaseContracts": [
+          32151
+        ],
+        "name": "MockCommonHelpers",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": {
+              "id": 32149,
+              "nodeType": "Block",
+              "src": "203:57:96",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 32146,
+                        "name": "_token",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 32139,
+                        "src": "246:6:96",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 32144,
+                        "name": "CommonHelpers",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 20691,
+                        "src": "220:13:96",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_type$_t_contract$_CommonHelpers_$20691_$",
+                          "typeString": "type(library CommonHelpers)"
+                        }
+                      },
+                      "id": 32145,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "getDecimals",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 20690,
+                      "src": "220:25:96",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_view$_t_address_$returns$_t_uint256_$",
+                        "typeString": "function (address) view returns (uint256)"
+                      }
+                    },
+                    "id": 32147,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "220:33:96",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "functionReturnParameters": 32143,
+                  "id": 32148,
+                  "nodeType": "Return",
+                  "src": "213:40:96"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 32150,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getDecimals",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 32140,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 32139,
+                  "name": "_token",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 32150,
+                  "src": "145:14:96",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 32138,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "145:7:96",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "144:16:96"
+            },
+            "returnParameters": {
+              "id": 32143,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 32142,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 32150,
+                  "src": "194:7:96",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 32141,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "194:7:96",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "193:9:96"
+            },
+            "scope": 32151,
+            "src": "124:136:96",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 32152,
+        "src": "90:172:96"
+      }
+    ],
+    "src": "0:264:96"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.16+commit.9c3226ce.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.1.0",
+  "updatedAt": "2021-03-11T05:43:18.313Z",
+  "devdoc": {
+    "methods": {}
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "_format": "hh-sol-artifact-1",
+  "contractName": "MockSavingsManager",
+  "sourceName": "contracts/z_mocks/savings/MockSavingsManager.sol",
+  "abi": [
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "name": "collectAndDistributeInterest",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "bytecode": "0x6080604052348015600f57600080fd5b50608a8061001e6000396000f3fe6080604052348015600f57600080fd5b506004361060285760003560e01c8063ca2bdfe614602d575b600080fd5b605060048036036020811015604157600080fd5b50356001600160a01b03166052565b005b5056fea265627a7a72315820d48b27e5a74701d8d39c9664679fba27a3d94953b6fa513ffc5040d45f99bc9764736f6c63430005100032",
+  "deployedBytecode": "0x6080604052348015600f57600080fd5b506004361060285760003560e01c8063ca2bdfe614602d575b600080fd5b605060048036036020811015604157600080fd5b50356001600160a01b03166052565b005b5056fea265627a7a72315820d48b27e5a74701d8d39c9664679fba27a3d94953b6fa513ffc5040d45f99bc9764736f6c63430005100032",
+  "linkReferences": {},
+  "deployedLinkReferences": {}
+}

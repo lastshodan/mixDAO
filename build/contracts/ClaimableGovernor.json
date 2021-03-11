@@ -1,0 +1,4049 @@
+{
+  "contractName": "ClaimableGovernor",
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_governorAddr",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "governor",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "proposed",
+          "type": "address"
+        }
+      ],
+      "name": "GovernorChangeCancelled",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "proposedGovernor",
+          "type": "address"
+        }
+      ],
+      "name": "GovernorChangeClaimed",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "governor",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "proposed",
+          "type": "address"
+        }
+      ],
+      "name": "GovernorChangeRequested",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "previousGovernor",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "newGovernor",
+          "type": "address"
+        }
+      ],
+      "name": "GovernorChanged",
+      "type": "event"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "governor",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "isGovernor",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "proposedGovernor",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "name": "changeGovernor",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_proposedGovernor",
+          "type": "address"
+        }
+      ],
+      "name": "requestGovernorChange",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [],
+      "name": "cancelGovernorChange",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [],
+      "name": "claimGovernorChange",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.5.16+commit.9c3226ce\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_governorAddr\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"governor\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"proposed\",\"type\":\"address\"}],\"name\":\"GovernorChangeCancelled\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"proposedGovernor\",\"type\":\"address\"}],\"name\":\"GovernorChangeClaimed\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"governor\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"proposed\",\"type\":\"address\"}],\"name\":\"GovernorChangeRequested\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"previousGovernor\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"newGovernor\",\"type\":\"address\"}],\"name\":\"GovernorChanged\",\"type\":\"event\"},{\"constant\":false,\"inputs\":[],\"name\":\"cancelGovernorChange\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"name\":\"changeGovernor\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[],\"name\":\"claimGovernorChange\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"governor\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"isGovernor\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"proposedGovernor\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"address\",\"name\":\"_proposedGovernor\",\"type\":\"address\"}],\"name\":\"requestGovernorChange\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"author\":\"Stability Labs Pty. Ltd.\",\"details\":\"Overrides the public functions in Governable to provide a second step of validation.\",\"methods\":{\"cancelGovernorChange()\":{\"details\":\"Current Governor cancel Governor change request\"},\"claimGovernorChange()\":{\"details\":\"Proposed Governor can claim governance ownership\"},\"governor()\":{\"details\":\"Returns the address of the current Governor.\"},\"isGovernor()\":{\"details\":\"Returns true if the caller is the current Governor.\"},\"requestGovernorChange(address)\":{\"details\":\"Current Governor request to proposes a new Governor\",\"params\":{\"_proposedGovernor\":\"Address of the proposed Governor\"}}},\"title\":\"ClaimableGovernor\"},\"userdoc\":{\"methods\":{},\"notice\":\"2 way handshake for Governance transfer\"}},\"settings\":{\"compilationTarget\":{\"/Volumes/sdxc/ETHEREUM/CODE/mStable-v1-edit/contracts/governance/ClaimableGovernor.sol\":\"ClaimableGovernor\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Volumes/sdxc/ETHEREUM/CODE/mStable-v1-edit/contracts/governance/ClaimableGovernor.sol\":{\"keccak256\":\"0x89b6239ee780827b5ef41377cc3cd66305deb192a6594a6097d4669d00612908\",\"urls\":[\"bzz-raw://5565dd41dbda1560706065374d1ae92d479391e23d682b42a776c3404cd24175\",\"dweb:/ipfs/QmXs93c8g8GjYC9SCNystM3rKdwgp6wRG4oB62tkr7Tqk5\"]},\"/Volumes/sdxc/ETHEREUM/CODE/mStable-v1-edit/contracts/governance/Governable.sol\":{\"keccak256\":\"0x8ac180696e8872f85d4c42df0ed85819375fa5990879a643f9a9fd2efff9e991\",\"urls\":[\"bzz-raw://13d2c48c7b5d02b645bc964d69933ad4b539b796c7e1e016c1d1a517aa6eb7b7\",\"dweb:/ipfs/QmS9WCfyuNmZnb8ZECkXaYSitjtrdqQ1Xc9JKADsgbMj3K\"]}},\"version\":1}",
+  "bytecode": "0x6080604052600180546001600160a01b031916905534801561002057600080fd5b5060405161078e38038061078e8339818101604052602081101561004357600080fd5b5051600080546001600160a01b03191633178082556040516001600160a01b0391909116919060008051602061076e833981519152908290a361008e816001600160e01b0361009416565b50610138565b6001600160a01b0381166100ef576040805162461bcd60e51b815260206004820152601f60248201527f474f563a206e657720476f7665726e6f72206973206164647265737328302900604482015290519081900360640190fd5b600080546040516001600160a01b038085169392169160008051602061076e83398151915291a3600080546001600160a01b0319166001600160a01b0392909216919091179055565b610627806101476000396000f3fe608060405234801561001057600080fd5b506004361061007d5760003560e01c80638c33c19c1161005b5780638c33c19c146100d6578063ad339d7a146100de578063c7af3352146100e6578063e4c0aaf4146101025761007d565b8063099c47bc146100825780630c340a24146100aa5780638a11a370146100ce575b600080fd5b6100a86004803603602081101561009857600080fd5b50356001600160a01b0316610128565b005b6100b2610298565b604080516001600160a01b039092168252519081900360200190f35b6100b26102a7565b6100a86102b6565b6100a86103c7565b6100ee610485565b604080519115158252519081900360200190f35b6100a86004803603602081101561011857600080fd5b50356001600160a01b0316610496565b610130610485565b610181576040805162461bcd60e51b815260206004820152601f60248201527f474f563a2063616c6c6572206973206e6f742074686520476f7665726e6f7200604482015290519081900360640190fd5b6001600160a01b0381166101dc576040805162461bcd60e51b815260206004820152601f60248201527f50726f706f73656420676f7665726e6f72206973206164647265737328302900604482015290519081900360640190fd5b6001546001600160a01b03161561023a576040805162461bcd60e51b815260206004820152601d60248201527f50726f706f73656420676f7665726e6f7220616c726561647920736574000000604482015290519081900360640190fd5b600180546001600160a01b0319166001600160a01b038316908117909155610260610298565b6001600160a01b03167fa48c163cc46eb28aba8bdb525da18f15a83020cc18f439c933d79ea3ad9b50bb60405160405180910390a350565b6000546001600160a01b031690565b6001546001600160a01b031681565b6102be610485565b61030f576040805162461bcd60e51b815260206004820152601f60248201527f474f563a2063616c6c6572206973206e6f742074686520476f7665726e6f7200604482015290519081900360640190fd5b6001546001600160a01b031661036c576040805162461bcd60e51b815260206004820152601960248201527f50726f706f73656420476f7665726e6f72206e6f742073657400000000000000604482015290519081900360640190fd5b6001546001600160a01b0316610380610298565b6001600160a01b03167f2f7bb10f75b8694ea78291d7ca4c9f2a75bc45f0f97046164ad3ee984bdf4bba60405160405180910390a3600180546001600160a01b0319169055565b6001546001600160a01b03163314610426576040805162461bcd60e51b815260206004820152601f60248201527f53656e646572206973206e6f742070726f706f73656420676f7665726e6f7200604482015290519081900360640190fd5b60015461043b906001600160a01b031661053c565b6001546040516001600160a01b03909116907f0ad714cb5607f3b529b5d3292190925ae992a77b291e39ec09c390d4787896ba90600090a2600180546001600160a01b0319169055565b6000546001600160a01b0316331490565b61049e610485565b6104ef576040805162461bcd60e51b815260206004820152601f60248201527f474f563a2063616c6c6572206973206e6f742074686520476f7665726e6f7200604482015290519081900360640190fd5b6040805162461bcd60e51b815260206004820152601960248201527f446972656374206368616e6765206e6f7420616c6c6f77656400000000000000604482015290519081900360640190fd5b6001600160a01b038116610597576040805162461bcd60e51b815260206004820152601f60248201527f474f563a206e657720476f7665726e6f72206973206164647265737328302900604482015290519081900360640190fd5b600080546040516001600160a01b03808516939216917fde4b3f61490b74c0ed6237523974fe299126bbbf8a8a7482fd220104c59b0c8491a3600080546001600160a01b0319166001600160a01b039290921691909117905556fea265627a7a72315820c0eb0c009d795f863b42eca9741349dcdbee7e59a04e95f8f772124b5d90f97a64736f6c63430005100032de4b3f61490b74c0ed6237523974fe299126bbbf8a8a7482fd220104c59b0c84",
+  "deployedBytecode": "0x608060405234801561001057600080fd5b506004361061007d5760003560e01c80638c33c19c1161005b5780638c33c19c146100d6578063ad339d7a146100de578063c7af3352146100e6578063e4c0aaf4146101025761007d565b8063099c47bc146100825780630c340a24146100aa5780638a11a370146100ce575b600080fd5b6100a86004803603602081101561009857600080fd5b50356001600160a01b0316610128565b005b6100b2610298565b604080516001600160a01b039092168252519081900360200190f35b6100b26102a7565b6100a86102b6565b6100a86103c7565b6100ee610485565b604080519115158252519081900360200190f35b6100a86004803603602081101561011857600080fd5b50356001600160a01b0316610496565b610130610485565b610181576040805162461bcd60e51b815260206004820152601f60248201527f474f563a2063616c6c6572206973206e6f742074686520476f7665726e6f7200604482015290519081900360640190fd5b6001600160a01b0381166101dc576040805162461bcd60e51b815260206004820152601f60248201527f50726f706f73656420676f7665726e6f72206973206164647265737328302900604482015290519081900360640190fd5b6001546001600160a01b03161561023a576040805162461bcd60e51b815260206004820152601d60248201527f50726f706f73656420676f7665726e6f7220616c726561647920736574000000604482015290519081900360640190fd5b600180546001600160a01b0319166001600160a01b038316908117909155610260610298565b6001600160a01b03167fa48c163cc46eb28aba8bdb525da18f15a83020cc18f439c933d79ea3ad9b50bb60405160405180910390a350565b6000546001600160a01b031690565b6001546001600160a01b031681565b6102be610485565b61030f576040805162461bcd60e51b815260206004820152601f60248201527f474f563a2063616c6c6572206973206e6f742074686520476f7665726e6f7200604482015290519081900360640190fd5b6001546001600160a01b031661036c576040805162461bcd60e51b815260206004820152601960248201527f50726f706f73656420476f7665726e6f72206e6f742073657400000000000000604482015290519081900360640190fd5b6001546001600160a01b0316610380610298565b6001600160a01b03167f2f7bb10f75b8694ea78291d7ca4c9f2a75bc45f0f97046164ad3ee984bdf4bba60405160405180910390a3600180546001600160a01b0319169055565b6001546001600160a01b03163314610426576040805162461bcd60e51b815260206004820152601f60248201527f53656e646572206973206e6f742070726f706f73656420676f7665726e6f7200604482015290519081900360640190fd5b60015461043b906001600160a01b031661053c565b6001546040516001600160a01b03909116907f0ad714cb5607f3b529b5d3292190925ae992a77b291e39ec09c390d4787896ba90600090a2600180546001600160a01b0319169055565b6000546001600160a01b0316331490565b61049e610485565b6104ef576040805162461bcd60e51b815260206004820152601f60248201527f474f563a2063616c6c6572206973206e6f742074686520476f7665726e6f7200604482015290519081900360640190fd5b6040805162461bcd60e51b815260206004820152601960248201527f446972656374206368616e6765206e6f7420616c6c6f77656400000000000000604482015290519081900360640190fd5b6001600160a01b038116610597576040805162461bcd60e51b815260206004820152601f60248201527f474f563a206e657720476f7665726e6f72206973206164647265737328302900604482015290519081900360640190fd5b600080546040516001600160a01b03808516939216917fde4b3f61490b74c0ed6237523974fe299126bbbf8a8a7482fd220104c59b0c8491a3600080546001600160a01b0319166001600160a01b039290921691909117905556fea265627a7a72315820c0eb0c009d795f863b42eca9741349dcdbee7e59a04e95f8f772124b5d90f97a64736f6c63430005100032",
+  "sourceMap": "300:1926:3:-;;;590:44;;;-1:-1:-1;;;;;;590:44:3;;;875:89;5:2:-1;;;;30:1;27;20:12;5:2;875:89:3;;;;;;;;;;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;-1:-1;875:89:3;666:9:5;:22;;-1:-1:-1;;;;;;666:22:5;678:10;666:22;;;;703:38;;-1:-1:-1;;;;;731:9:5;;;;;666;-1:-1:-1;;;;;;;;;;;703:38:5;666:9;;703:38;927:30:3;943:13;-1:-1:-1;;;;;927:15:3;:30;:::i;:::-;875:89;300:1926;;1773:232:5;-1:-1:-1;;;;;1847:26:5;;1839:70;;;;;-1:-1:-1;;;1839:70:5;;;;;;;;;;;;;;;;;;;;;;;;;;;;1940:9;;;1924:40;;-1:-1:-1;;;;;1924:40:5;;;;1940:9;;;-1:-1:-1;;;;;;;;;;;1924:40:5;;1974:9;:24;;-1:-1:-1;;;;;;1974:24:5;-1:-1:-1;;;;;1974:24:5;;;;;;;;;;1773:232::o;300:1926:3:-;;;;;;;",
+  "deployedSourceMap": "300:1926:3:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;300:1926:3;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1244:368;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;-1:-1;1244:368:3;-1:-1:-1;;;;;1244:368:3;;:::i;:::-;;827:83:5;;;:::i;:::-;;;;-1:-1:-1;;;;;827:83:5;;;;;;;;;;;;;;590:44:3;;;:::i;1694:245::-;;;:::i;2022:202::-;;;:::i;1195:96:5:-;;;:::i;:::-;;;;;;;;;;;;;;;;;;986:107:3;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;-1:-1;986:107:3;-1:-1:-1;;;;;986:107:3;;:::i;1244:368::-;1043:12:5;:10;:12::i;:::-;1035:56;;;;;-1:-1:-1;;;1035:56:5;;;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;;;;;1340:31:3;;1332:75;;;;;-1:-1:-1;;;1332:75:3;;;;;;;;;;;;;;;;;;;;;;;;;;;;1425:16;;-1:-1:-1;;;;;1425:16:3;:30;1417:72;;;;;-1:-1:-1;;;1417:72:3;;;;;;;;;;;;;;;;;;;;;;;;;;;;1500:16;:36;;-1:-1:-1;;;;;;1500:36:3;-1:-1:-1;;;;;1500:36:3;;;;;;;;1575:10;:8;:10::i;:::-;-1:-1:-1;;;;;1551:54:3;;;;;;;;;;;1244:368;:::o;827:83:5:-;868:7;894:9;-1:-1:-1;;;;;894:9:5;827:83;:::o;590:44:3:-;;;-1:-1:-1;;;;;590:44:3;;:::o;1694:245::-;1043:12:5;:10;:12::i;:::-;1035:56;;;;;-1:-1:-1;;;1035:56:5;;;;;;;;;;;;;;;;;;;;;;;;;;;;1764:16:3;;-1:-1:-1;;;;;1764:16:3;1756:68;;;;;-1:-1:-1;;;1756:68:3;;;;;;;;;;;;;;;;;;;;;;;;;;;;1876:16;;-1:-1:-1;;;;;1876:16:3;1864:10;:8;:10::i;:::-;-1:-1:-1;;;;;1840:53:3;;;;;;;;;;;1903:16;:29;;-1:-1:-1;;;;;;1903:29:3;;;1694:245::o;2022:202::-;799:16;;-1:-1:-1;;;;;799:16:3;785:10;:30;777:74;;;;;-1:-1:-1;;;777:74:3;;;;;;;;;;;;;;;;;;;;;;;;;;;;2107:16;;2091:33;;-1:-1:-1;;;;;2107:16:3;2091:15;:33::i;:::-;2161:16;;2139:39;;-1:-1:-1;;;;;2161:16:3;;;;2139:39;;2161:16;;2139:39;2188:16;:29;;-1:-1:-1;;;;;;2188:29:3;;;2022:202::o;1195:96:5:-;1238:4;1275:9;-1:-1:-1;;;;;1275:9:5;1261:10;:23;;1195:96::o;986:107:3:-;1043:12:5;:10;:12::i;:::-;1035:56;;;;;-1:-1:-1;;;1035:56:5;;;;;;;;;;;;;;;;;;;;;;;;;;;;1051:35:3;;;-1:-1:-1;;;1051:35:3;;;;;;;;;;;;;;;;;;;;;;;;;;;1773:232:5;-1:-1:-1;;;;;1847:26:5;;1839:70;;;;;-1:-1:-1;;;1839:70:5;;;;;;;;;;;;;;;;;;;;;;;;;;;;1940:9;;;1924:40;;-1:-1:-1;;;;;1924:40:5;;;;1940:9;;;1924:40;;;1974:9;:24;;-1:-1:-1;;;;;;1974:24:5;-1:-1:-1;;;;;1974:24:5;;;;;;;;;;1773:232::o",
+  "source": "pragma solidity 0.5.16;\n\nimport { Governable } from \"./Governable.sol\";\n\n/**\n * @title   ClaimableGovernor\n * @author  Stability Labs Pty. Ltd.\n * @notice  2 way handshake for Governance transfer\n * @dev     Overrides the public functions in Governable to provide\n * a second step of validation.\n */\ncontract ClaimableGovernor is Governable {\n\n    event GovernorChangeClaimed(address indexed proposedGovernor);\n    event GovernorChangeCancelled(address indexed governor, address indexed proposed);\n    event GovernorChangeRequested(address indexed governor, address indexed proposed);\n\n    address public proposedGovernor = address(0);\n\n    /**\n     * @dev Throws if called by any account other than the Proposed Governor.\n     */\n    modifier onlyProposedGovernor() {\n        require(msg.sender == proposedGovernor, \"Sender is not proposed governor\");\n        _;\n    }\n\n    constructor(address _governorAddr) public {\n        _changeGovernor(_governorAddr);\n    }\n\n    //@override\n    function changeGovernor(address) external onlyGovernor {\n        revert(\"Direct change not allowed\");\n    }\n\n    /**\n     * @dev Current Governor request to proposes a new Governor\n     * @param _proposedGovernor Address of the proposed Governor\n     */\n    function requestGovernorChange(address _proposedGovernor) public onlyGovernor {\n        require(_proposedGovernor != address(0), \"Proposed governor is address(0)\");\n        require(proposedGovernor == address(0), \"Proposed governor already set\");\n\n        proposedGovernor = _proposedGovernor;\n        emit GovernorChangeRequested(governor(), _proposedGovernor);\n    }\n\n    /**\n     * @dev Current Governor cancel Governor change request\n     */\n    function cancelGovernorChange() public onlyGovernor {\n        require(proposedGovernor != address(0), \"Proposed Governor not set\");\n\n        emit GovernorChangeCancelled(governor(), proposedGovernor);\n        proposedGovernor = address(0);\n    }\n\n    /**\n     * @dev Proposed Governor can claim governance ownership\n     */\n    function claimGovernorChange() public onlyProposedGovernor {\n        _changeGovernor(proposedGovernor);\n        emit GovernorChangeClaimed(proposedGovernor);\n        proposedGovernor = address(0);\n    }\n}\n",
+  "sourcePath": "/Volumes/sdxc/ETHEREUM/CODE/mStable-v1-edit/contracts/governance/ClaimableGovernor.sol",
+  "ast": {
+    "absolutePath": "/Volumes/sdxc/ETHEREUM/CODE/mStable-v1-edit/contracts/governance/ClaimableGovernor.sol",
+    "exportedSymbols": {
+      "ClaimableGovernor": [
+        388
+      ]
+    },
+    "id": 389,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 245,
+        "literals": [
+          "solidity",
+          "0.5",
+          ".16"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:3"
+      },
+      {
+        "absolutePath": "/Volumes/sdxc/ETHEREUM/CODE/mStable-v1-edit/contracts/governance/Governable.sol",
+        "file": "./Governable.sol",
+        "id": 247,
+        "nodeType": "ImportDirective",
+        "scope": 389,
+        "sourceUnit": 580,
+        "src": "25:46:3",
+        "symbolAliases": [
+          {
+            "foreign": 246,
+            "local": null
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 248,
+              "name": "Governable",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 579,
+              "src": "330:10:3",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_Governable_$579",
+                "typeString": "contract Governable"
+              }
+            },
+            "id": 249,
+            "nodeType": "InheritanceSpecifier",
+            "src": "330:10:3"
+          }
+        ],
+        "contractDependencies": [
+          579
+        ],
+        "contractKind": "contract",
+        "documentation": "@title   ClaimableGovernor\n@author  Stability Labs Pty. Ltd.\n@notice  2 way handshake for Governance transfer\n@dev     Overrides the public functions in Governable to provide\na second step of validation.",
+        "fullyImplemented": true,
+        "id": 388,
+        "linearizedBaseContracts": [
+          388,
+          579
+        ],
+        "name": "ClaimableGovernor",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "anonymous": false,
+            "documentation": null,
+            "id": 253,
+            "name": "GovernorChangeClaimed",
+            "nodeType": "EventDefinition",
+            "parameters": {
+              "id": 252,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 251,
+                  "indexed": true,
+                  "name": "proposedGovernor",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 253,
+                  "src": "376:32:3",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 250,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "376:7:3",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "375:34:3"
+            },
+            "src": "348:62:3"
+          },
+          {
+            "anonymous": false,
+            "documentation": null,
+            "id": 259,
+            "name": "GovernorChangeCancelled",
+            "nodeType": "EventDefinition",
+            "parameters": {
+              "id": 258,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 255,
+                  "indexed": true,
+                  "name": "governor",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 259,
+                  "src": "445:24:3",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 254,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "445:7:3",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 257,
+                  "indexed": true,
+                  "name": "proposed",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 259,
+                  "src": "471:24:3",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 256,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "471:7:3",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "444:52:3"
+            },
+            "src": "415:82:3"
+          },
+          {
+            "anonymous": false,
+            "documentation": null,
+            "id": 265,
+            "name": "GovernorChangeRequested",
+            "nodeType": "EventDefinition",
+            "parameters": {
+              "id": 264,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 261,
+                  "indexed": true,
+                  "name": "governor",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 265,
+                  "src": "532:24:3",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 260,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "532:7:3",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 263,
+                  "indexed": true,
+                  "name": "proposed",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 265,
+                  "src": "558:24:3",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 262,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "558:7:3",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "531:52:3"
+            },
+            "src": "502:82:3"
+          },
+          {
+            "constant": false,
+            "id": 270,
+            "name": "proposedGovernor",
+            "nodeType": "VariableDeclaration",
+            "scope": 388,
+            "src": "590:44:3",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_address",
+              "typeString": "address"
+            },
+            "typeName": {
+              "id": 266,
+              "name": "address",
+              "nodeType": "ElementaryTypeName",
+              "src": "590:7:3",
+              "stateMutability": "nonpayable",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              }
+            },
+            "value": {
+              "argumentTypes": null,
+              "arguments": [
+                {
+                  "argumentTypes": null,
+                  "hexValue": "30",
+                  "id": 268,
+                  "isConstant": false,
+                  "isLValue": false,
+                  "isPure": true,
+                  "kind": "number",
+                  "lValueRequested": false,
+                  "nodeType": "Literal",
+                  "src": "632:1:3",
+                  "subdenomination": null,
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_rational_0_by_1",
+                    "typeString": "int_const 0"
+                  },
+                  "value": "0"
+                }
+              ],
+              "expression": {
+                "argumentTypes": [
+                  {
+                    "typeIdentifier": "t_rational_0_by_1",
+                    "typeString": "int_const 0"
+                  }
+                ],
+                "id": 267,
+                "isConstant": false,
+                "isLValue": false,
+                "isPure": true,
+                "lValueRequested": false,
+                "nodeType": "ElementaryTypeNameExpression",
+                "src": "624:7:3",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_type$_t_address_$",
+                  "typeString": "type(address)"
+                },
+                "typeName": "address"
+              },
+              "id": 269,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "typeConversion",
+              "lValueRequested": false,
+              "names": [],
+              "nodeType": "FunctionCall",
+              "src": "624:10:3",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address_payable",
+                "typeString": "address payable"
+              }
+            },
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 281,
+              "nodeType": "Block",
+              "src": "767:102:3",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "commonType": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        },
+                        "id": 276,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "leftExpression": {
+                          "argumentTypes": null,
+                          "expression": {
+                            "argumentTypes": null,
+                            "id": 273,
+                            "name": "msg",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 36232,
+                            "src": "785:3:3",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_magic_message",
+                              "typeString": "msg"
+                            }
+                          },
+                          "id": 274,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "memberName": "sender",
+                          "nodeType": "MemberAccess",
+                          "referencedDeclaration": null,
+                          "src": "785:10:3",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address_payable",
+                            "typeString": "address payable"
+                          }
+                        },
+                        "nodeType": "BinaryOperation",
+                        "operator": "==",
+                        "rightExpression": {
+                          "argumentTypes": null,
+                          "id": 275,
+                          "name": "proposedGovernor",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 270,
+                          "src": "799:16:3",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        },
+                        "src": "785:30:3",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "hexValue": "53656e646572206973206e6f742070726f706f73656420676f7665726e6f72",
+                        "id": 277,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "string",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "817:33:3",
+                        "subdenomination": null,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_stringliteral_9f7e68916eb4e1ceb4beebe445dcbbbdf1d771591b4052cd6d2cb761d55a690d",
+                          "typeString": "literal_string \"Sender is not proposed governor\""
+                        },
+                        "value": "Sender is not proposed governor"
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        },
+                        {
+                          "typeIdentifier": "t_stringliteral_9f7e68916eb4e1ceb4beebe445dcbbbdf1d771591b4052cd6d2cb761d55a690d",
+                          "typeString": "literal_string \"Sender is not proposed governor\""
+                        }
+                      ],
+                      "id": 272,
+                      "name": "require",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [
+                        36235,
+                        36236
+                      ],
+                      "referencedDeclaration": 36236,
+                      "src": "777:7:3",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
+                        "typeString": "function (bool,string memory) pure"
+                      }
+                    },
+                    "id": 278,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "777:74:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 279,
+                  "nodeType": "ExpressionStatement",
+                  "src": "777:74:3"
+                },
+                {
+                  "id": 280,
+                  "nodeType": "PlaceholderStatement",
+                  "src": "861:1:3"
+                }
+              ]
+            },
+            "documentation": "@dev Throws if called by any account other than the Proposed Governor.",
+            "id": 282,
+            "name": "onlyProposedGovernor",
+            "nodeType": "ModifierDefinition",
+            "parameters": {
+              "id": 271,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "764:2:3"
+            },
+            "src": "735:134:3",
+            "visibility": "internal"
+          },
+          {
+            "body": {
+              "id": 291,
+              "nodeType": "Block",
+              "src": "917:47:3",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 288,
+                        "name": "_governorAddr",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 284,
+                        "src": "943:13:3",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      ],
+                      "id": 287,
+                      "name": "_changeGovernor",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 578,
+                      "src": "927:15:3",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_nonpayable$_t_address_$returns$__$",
+                        "typeString": "function (address)"
+                      }
+                    },
+                    "id": 289,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "927:30:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 290,
+                  "nodeType": "ExpressionStatement",
+                  "src": "927:30:3"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 292,
+            "implemented": true,
+            "kind": "constructor",
+            "modifiers": [],
+            "name": "",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 285,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 284,
+                  "name": "_governorAddr",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 292,
+                  "src": "887:21:3",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 283,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "887:7:3",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "886:23:3"
+            },
+            "returnParameters": {
+              "id": 286,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "917:0:3"
+            },
+            "scope": 388,
+            "src": "875:89:3",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 303,
+              "nodeType": "Block",
+              "src": "1041:52:3",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "hexValue": "446972656374206368616e6765206e6f7420616c6c6f776564",
+                        "id": 300,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "string",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "1058:27:3",
+                        "subdenomination": null,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_stringliteral_39c3e49c10fa3da10aa3acc63997a199ff2dfd5f0ea199cba91d66c8c9963ec7",
+                          "typeString": "literal_string \"Direct change not allowed\""
+                        },
+                        "value": "Direct change not allowed"
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_stringliteral_39c3e49c10fa3da10aa3acc63997a199ff2dfd5f0ea199cba91d66c8c9963ec7",
+                          "typeString": "literal_string \"Direct change not allowed\""
+                        }
+                      ],
+                      "id": 299,
+                      "name": "revert",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [
+                        36237,
+                        36238
+                      ],
+                      "referencedDeclaration": 36238,
+                      "src": "1051:6:3",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_revert_pure$_t_string_memory_ptr_$returns$__$",
+                        "typeString": "function (string memory) pure"
+                      }
+                    },
+                    "id": 301,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1051:35:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 302,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1051:35:3"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 304,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [
+              {
+                "arguments": null,
+                "id": 297,
+                "modifierName": {
+                  "argumentTypes": null,
+                  "id": 296,
+                  "name": "onlyGovernor",
+                  "nodeType": "Identifier",
+                  "overloadedDeclarations": [],
+                  "referencedDeclaration": 531,
+                  "src": "1028:12:3",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_modifier$__$",
+                    "typeString": "modifier ()"
+                  }
+                },
+                "nodeType": "ModifierInvocation",
+                "src": "1028:12:3"
+              }
+            ],
+            "name": "changeGovernor",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 295,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 294,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 304,
+                  "src": "1010:7:3",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 293,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1010:7:3",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1009:9:3"
+            },
+            "returnParameters": {
+              "id": 298,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1041:0:3"
+            },
+            "scope": 388,
+            "src": "986:107:3",
+            "stateMutability": "nonpayable",
+            "superFunction": 554,
+            "visibility": "external"
+          },
+          {
+            "body": {
+              "id": 339,
+              "nodeType": "Block",
+              "src": "1322:290:3",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "commonType": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        },
+                        "id": 316,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "leftExpression": {
+                          "argumentTypes": null,
+                          "id": 312,
+                          "name": "_proposedGovernor",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 306,
+                          "src": "1340:17:3",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        },
+                        "nodeType": "BinaryOperation",
+                        "operator": "!=",
+                        "rightExpression": {
+                          "argumentTypes": null,
+                          "arguments": [
+                            {
+                              "argumentTypes": null,
+                              "hexValue": "30",
+                              "id": 314,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": true,
+                              "kind": "number",
+                              "lValueRequested": false,
+                              "nodeType": "Literal",
+                              "src": "1369:1:3",
+                              "subdenomination": null,
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_rational_0_by_1",
+                                "typeString": "int_const 0"
+                              },
+                              "value": "0"
+                            }
+                          ],
+                          "expression": {
+                            "argumentTypes": [
+                              {
+                                "typeIdentifier": "t_rational_0_by_1",
+                                "typeString": "int_const 0"
+                              }
+                            ],
+                            "id": 313,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": true,
+                            "lValueRequested": false,
+                            "nodeType": "ElementaryTypeNameExpression",
+                            "src": "1361:7:3",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_type$_t_address_$",
+                              "typeString": "type(address)"
+                            },
+                            "typeName": "address"
+                          },
+                          "id": 315,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": true,
+                          "kind": "typeConversion",
+                          "lValueRequested": false,
+                          "names": [],
+                          "nodeType": "FunctionCall",
+                          "src": "1361:10:3",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address_payable",
+                            "typeString": "address payable"
+                          }
+                        },
+                        "src": "1340:31:3",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "hexValue": "50726f706f73656420676f7665726e6f722069732061646472657373283029",
+                        "id": 317,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "string",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "1373:33:3",
+                        "subdenomination": null,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_stringliteral_70c929d2a50cc3cae70f9988ddf291aa48bfe087ca2ab10343a09d6d2a68c303",
+                          "typeString": "literal_string \"Proposed governor is address(0)\""
+                        },
+                        "value": "Proposed governor is address(0)"
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        },
+                        {
+                          "typeIdentifier": "t_stringliteral_70c929d2a50cc3cae70f9988ddf291aa48bfe087ca2ab10343a09d6d2a68c303",
+                          "typeString": "literal_string \"Proposed governor is address(0)\""
+                        }
+                      ],
+                      "id": 311,
+                      "name": "require",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [
+                        36235,
+                        36236
+                      ],
+                      "referencedDeclaration": 36236,
+                      "src": "1332:7:3",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
+                        "typeString": "function (bool,string memory) pure"
+                      }
+                    },
+                    "id": 318,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1332:75:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 319,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1332:75:3"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "commonType": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        },
+                        "id": 325,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "leftExpression": {
+                          "argumentTypes": null,
+                          "id": 321,
+                          "name": "proposedGovernor",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 270,
+                          "src": "1425:16:3",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        },
+                        "nodeType": "BinaryOperation",
+                        "operator": "==",
+                        "rightExpression": {
+                          "argumentTypes": null,
+                          "arguments": [
+                            {
+                              "argumentTypes": null,
+                              "hexValue": "30",
+                              "id": 323,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": true,
+                              "kind": "number",
+                              "lValueRequested": false,
+                              "nodeType": "Literal",
+                              "src": "1453:1:3",
+                              "subdenomination": null,
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_rational_0_by_1",
+                                "typeString": "int_const 0"
+                              },
+                              "value": "0"
+                            }
+                          ],
+                          "expression": {
+                            "argumentTypes": [
+                              {
+                                "typeIdentifier": "t_rational_0_by_1",
+                                "typeString": "int_const 0"
+                              }
+                            ],
+                            "id": 322,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": true,
+                            "lValueRequested": false,
+                            "nodeType": "ElementaryTypeNameExpression",
+                            "src": "1445:7:3",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_type$_t_address_$",
+                              "typeString": "type(address)"
+                            },
+                            "typeName": "address"
+                          },
+                          "id": 324,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": true,
+                          "kind": "typeConversion",
+                          "lValueRequested": false,
+                          "names": [],
+                          "nodeType": "FunctionCall",
+                          "src": "1445:10:3",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address_payable",
+                            "typeString": "address payable"
+                          }
+                        },
+                        "src": "1425:30:3",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "hexValue": "50726f706f73656420676f7665726e6f7220616c726561647920736574",
+                        "id": 326,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "string",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "1457:31:3",
+                        "subdenomination": null,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_stringliteral_352c7999276795f05649c004a56ef6e4ed77ff1e1bf051373d284807de816bdb",
+                          "typeString": "literal_string \"Proposed governor already set\""
+                        },
+                        "value": "Proposed governor already set"
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        },
+                        {
+                          "typeIdentifier": "t_stringliteral_352c7999276795f05649c004a56ef6e4ed77ff1e1bf051373d284807de816bdb",
+                          "typeString": "literal_string \"Proposed governor already set\""
+                        }
+                      ],
+                      "id": 320,
+                      "name": "require",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [
+                        36235,
+                        36236
+                      ],
+                      "referencedDeclaration": 36236,
+                      "src": "1417:7:3",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
+                        "typeString": "function (bool,string memory) pure"
+                      }
+                    },
+                    "id": 327,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1417:72:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 328,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1417:72:3"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 331,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 329,
+                      "name": "proposedGovernor",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 270,
+                      "src": "1500:16:3",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 330,
+                      "name": "_proposedGovernor",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 306,
+                      "src": "1519:17:3",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "src": "1500:36:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "id": 332,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1500:36:3"
+                },
+                {
+                  "eventCall": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "arguments": [],
+                        "expression": {
+                          "argumentTypes": [],
+                          "id": 334,
+                          "name": "governor",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 521,
+                          "src": "1575:8:3",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_function_internal_view$__$returns$_t_address_$",
+                            "typeString": "function () view returns (address)"
+                          }
+                        },
+                        "id": 335,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "kind": "functionCall",
+                        "lValueRequested": false,
+                        "names": [],
+                        "nodeType": "FunctionCall",
+                        "src": "1575:10:3",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "id": 336,
+                        "name": "_proposedGovernor",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 306,
+                        "src": "1587:17:3",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        },
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      ],
+                      "id": 333,
+                      "name": "GovernorChangeRequested",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 265,
+                      "src": "1551:23:3",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_event_nonpayable$_t_address_$_t_address_$returns$__$",
+                        "typeString": "function (address,address)"
+                      }
+                    },
+                    "id": 337,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1551:54:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 338,
+                  "nodeType": "EmitStatement",
+                  "src": "1546:59:3"
+                }
+              ]
+            },
+            "documentation": "@dev Current Governor request to proposes a new Governor\n@param _proposedGovernor Address of the proposed Governor",
+            "id": 340,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [
+              {
+                "arguments": null,
+                "id": 309,
+                "modifierName": {
+                  "argumentTypes": null,
+                  "id": 308,
+                  "name": "onlyGovernor",
+                  "nodeType": "Identifier",
+                  "overloadedDeclarations": [],
+                  "referencedDeclaration": 531,
+                  "src": "1309:12:3",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_modifier$__$",
+                    "typeString": "modifier ()"
+                  }
+                },
+                "nodeType": "ModifierInvocation",
+                "src": "1309:12:3"
+              }
+            ],
+            "name": "requestGovernorChange",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 307,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 306,
+                  "name": "_proposedGovernor",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 340,
+                  "src": "1275:25:3",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 305,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1275:7:3",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1274:27:3"
+            },
+            "returnParameters": {
+              "id": 310,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1322:0:3"
+            },
+            "scope": 388,
+            "src": "1244:368:3",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 366,
+              "nodeType": "Block",
+              "src": "1746:193:3",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "commonType": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        },
+                        "id": 350,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "leftExpression": {
+                          "argumentTypes": null,
+                          "id": 346,
+                          "name": "proposedGovernor",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 270,
+                          "src": "1764:16:3",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        },
+                        "nodeType": "BinaryOperation",
+                        "operator": "!=",
+                        "rightExpression": {
+                          "argumentTypes": null,
+                          "arguments": [
+                            {
+                              "argumentTypes": null,
+                              "hexValue": "30",
+                              "id": 348,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": true,
+                              "kind": "number",
+                              "lValueRequested": false,
+                              "nodeType": "Literal",
+                              "src": "1792:1:3",
+                              "subdenomination": null,
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_rational_0_by_1",
+                                "typeString": "int_const 0"
+                              },
+                              "value": "0"
+                            }
+                          ],
+                          "expression": {
+                            "argumentTypes": [
+                              {
+                                "typeIdentifier": "t_rational_0_by_1",
+                                "typeString": "int_const 0"
+                              }
+                            ],
+                            "id": 347,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": true,
+                            "lValueRequested": false,
+                            "nodeType": "ElementaryTypeNameExpression",
+                            "src": "1784:7:3",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_type$_t_address_$",
+                              "typeString": "type(address)"
+                            },
+                            "typeName": "address"
+                          },
+                          "id": 349,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": true,
+                          "kind": "typeConversion",
+                          "lValueRequested": false,
+                          "names": [],
+                          "nodeType": "FunctionCall",
+                          "src": "1784:10:3",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address_payable",
+                            "typeString": "address payable"
+                          }
+                        },
+                        "src": "1764:30:3",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "hexValue": "50726f706f73656420476f7665726e6f72206e6f7420736574",
+                        "id": 351,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "string",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "1796:27:3",
+                        "subdenomination": null,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_stringliteral_2d09509665ec523a54f6deea7e003135438aafa411820442a7363e490a87e13c",
+                          "typeString": "literal_string \"Proposed Governor not set\""
+                        },
+                        "value": "Proposed Governor not set"
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        },
+                        {
+                          "typeIdentifier": "t_stringliteral_2d09509665ec523a54f6deea7e003135438aafa411820442a7363e490a87e13c",
+                          "typeString": "literal_string \"Proposed Governor not set\""
+                        }
+                      ],
+                      "id": 345,
+                      "name": "require",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [
+                        36235,
+                        36236
+                      ],
+                      "referencedDeclaration": 36236,
+                      "src": "1756:7:3",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
+                        "typeString": "function (bool,string memory) pure"
+                      }
+                    },
+                    "id": 352,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1756:68:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 353,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1756:68:3"
+                },
+                {
+                  "eventCall": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "arguments": [],
+                        "expression": {
+                          "argumentTypes": [],
+                          "id": 355,
+                          "name": "governor",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 521,
+                          "src": "1864:8:3",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_function_internal_view$__$returns$_t_address_$",
+                            "typeString": "function () view returns (address)"
+                          }
+                        },
+                        "id": 356,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "kind": "functionCall",
+                        "lValueRequested": false,
+                        "names": [],
+                        "nodeType": "FunctionCall",
+                        "src": "1864:10:3",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "id": 357,
+                        "name": "proposedGovernor",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 270,
+                        "src": "1876:16:3",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        },
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      ],
+                      "id": 354,
+                      "name": "GovernorChangeCancelled",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 259,
+                      "src": "1840:23:3",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_event_nonpayable$_t_address_$_t_address_$returns$__$",
+                        "typeString": "function (address,address)"
+                      }
+                    },
+                    "id": 358,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1840:53:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 359,
+                  "nodeType": "EmitStatement",
+                  "src": "1835:58:3"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 364,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 360,
+                      "name": "proposedGovernor",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 270,
+                      "src": "1903:16:3",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "arguments": [
+                        {
+                          "argumentTypes": null,
+                          "hexValue": "30",
+                          "id": 362,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": true,
+                          "kind": "number",
+                          "lValueRequested": false,
+                          "nodeType": "Literal",
+                          "src": "1930:1:3",
+                          "subdenomination": null,
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_rational_0_by_1",
+                            "typeString": "int_const 0"
+                          },
+                          "value": "0"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": [
+                          {
+                            "typeIdentifier": "t_rational_0_by_1",
+                            "typeString": "int_const 0"
+                          }
+                        ],
+                        "id": 361,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "lValueRequested": false,
+                        "nodeType": "ElementaryTypeNameExpression",
+                        "src": "1922:7:3",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_type$_t_address_$",
+                          "typeString": "type(address)"
+                        },
+                        "typeName": "address"
+                      },
+                      "id": 363,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "typeConversion",
+                      "lValueRequested": false,
+                      "names": [],
+                      "nodeType": "FunctionCall",
+                      "src": "1922:10:3",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address_payable",
+                        "typeString": "address payable"
+                      }
+                    },
+                    "src": "1903:29:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "id": 365,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1903:29:3"
+                }
+              ]
+            },
+            "documentation": "@dev Current Governor cancel Governor change request",
+            "id": 367,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [
+              {
+                "arguments": null,
+                "id": 343,
+                "modifierName": {
+                  "argumentTypes": null,
+                  "id": 342,
+                  "name": "onlyGovernor",
+                  "nodeType": "Identifier",
+                  "overloadedDeclarations": [],
+                  "referencedDeclaration": 531,
+                  "src": "1733:12:3",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_modifier$__$",
+                    "typeString": "modifier ()"
+                  }
+                },
+                "nodeType": "ModifierInvocation",
+                "src": "1733:12:3"
+              }
+            ],
+            "name": "cancelGovernorChange",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 341,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1723:2:3"
+            },
+            "returnParameters": {
+              "id": 344,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1746:0:3"
+            },
+            "scope": 388,
+            "src": "1694:245:3",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 386,
+              "nodeType": "Block",
+              "src": "2081:143:3",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 373,
+                        "name": "proposedGovernor",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 270,
+                        "src": "2107:16:3",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      ],
+                      "id": 372,
+                      "name": "_changeGovernor",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 578,
+                      "src": "2091:15:3",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_nonpayable$_t_address_$returns$__$",
+                        "typeString": "function (address)"
+                      }
+                    },
+                    "id": 374,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "2091:33:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 375,
+                  "nodeType": "ExpressionStatement",
+                  "src": "2091:33:3"
+                },
+                {
+                  "eventCall": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 377,
+                        "name": "proposedGovernor",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 270,
+                        "src": "2161:16:3",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      ],
+                      "id": 376,
+                      "name": "GovernorChangeClaimed",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 253,
+                      "src": "2139:21:3",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_event_nonpayable$_t_address_$returns$__$",
+                        "typeString": "function (address)"
+                      }
+                    },
+                    "id": 378,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "2139:39:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 379,
+                  "nodeType": "EmitStatement",
+                  "src": "2134:44:3"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 384,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 380,
+                      "name": "proposedGovernor",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 270,
+                      "src": "2188:16:3",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "arguments": [
+                        {
+                          "argumentTypes": null,
+                          "hexValue": "30",
+                          "id": 382,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": true,
+                          "kind": "number",
+                          "lValueRequested": false,
+                          "nodeType": "Literal",
+                          "src": "2215:1:3",
+                          "subdenomination": null,
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_rational_0_by_1",
+                            "typeString": "int_const 0"
+                          },
+                          "value": "0"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": [
+                          {
+                            "typeIdentifier": "t_rational_0_by_1",
+                            "typeString": "int_const 0"
+                          }
+                        ],
+                        "id": 381,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "lValueRequested": false,
+                        "nodeType": "ElementaryTypeNameExpression",
+                        "src": "2207:7:3",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_type$_t_address_$",
+                          "typeString": "type(address)"
+                        },
+                        "typeName": "address"
+                      },
+                      "id": 383,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "typeConversion",
+                      "lValueRequested": false,
+                      "names": [],
+                      "nodeType": "FunctionCall",
+                      "src": "2207:10:3",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address_payable",
+                        "typeString": "address payable"
+                      }
+                    },
+                    "src": "2188:29:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "id": 385,
+                  "nodeType": "ExpressionStatement",
+                  "src": "2188:29:3"
+                }
+              ]
+            },
+            "documentation": "@dev Proposed Governor can claim governance ownership",
+            "id": 387,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [
+              {
+                "arguments": null,
+                "id": 370,
+                "modifierName": {
+                  "argumentTypes": null,
+                  "id": 369,
+                  "name": "onlyProposedGovernor",
+                  "nodeType": "Identifier",
+                  "overloadedDeclarations": [],
+                  "referencedDeclaration": 282,
+                  "src": "2060:20:3",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_modifier$__$",
+                    "typeString": "modifier ()"
+                  }
+                },
+                "nodeType": "ModifierInvocation",
+                "src": "2060:20:3"
+              }
+            ],
+            "name": "claimGovernorChange",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 368,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "2050:2:3"
+            },
+            "returnParameters": {
+              "id": 371,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "2081:0:3"
+            },
+            "scope": 388,
+            "src": "2022:202:3",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 389,
+        "src": "300:1926:3"
+      }
+    ],
+    "src": "0:2227:3"
+  },
+  "legacyAST": {
+    "absolutePath": "/Volumes/sdxc/ETHEREUM/CODE/mStable-v1-edit/contracts/governance/ClaimableGovernor.sol",
+    "exportedSymbols": {
+      "ClaimableGovernor": [
+        388
+      ]
+    },
+    "id": 389,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 245,
+        "literals": [
+          "solidity",
+          "0.5",
+          ".16"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:3"
+      },
+      {
+        "absolutePath": "/Volumes/sdxc/ETHEREUM/CODE/mStable-v1-edit/contracts/governance/Governable.sol",
+        "file": "./Governable.sol",
+        "id": 247,
+        "nodeType": "ImportDirective",
+        "scope": 389,
+        "sourceUnit": 580,
+        "src": "25:46:3",
+        "symbolAliases": [
+          {
+            "foreign": 246,
+            "local": null
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 248,
+              "name": "Governable",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 579,
+              "src": "330:10:3",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_Governable_$579",
+                "typeString": "contract Governable"
+              }
+            },
+            "id": 249,
+            "nodeType": "InheritanceSpecifier",
+            "src": "330:10:3"
+          }
+        ],
+        "contractDependencies": [
+          579
+        ],
+        "contractKind": "contract",
+        "documentation": "@title   ClaimableGovernor\n@author  Stability Labs Pty. Ltd.\n@notice  2 way handshake for Governance transfer\n@dev     Overrides the public functions in Governable to provide\na second step of validation.",
+        "fullyImplemented": true,
+        "id": 388,
+        "linearizedBaseContracts": [
+          388,
+          579
+        ],
+        "name": "ClaimableGovernor",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "anonymous": false,
+            "documentation": null,
+            "id": 253,
+            "name": "GovernorChangeClaimed",
+            "nodeType": "EventDefinition",
+            "parameters": {
+              "id": 252,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 251,
+                  "indexed": true,
+                  "name": "proposedGovernor",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 253,
+                  "src": "376:32:3",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 250,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "376:7:3",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "375:34:3"
+            },
+            "src": "348:62:3"
+          },
+          {
+            "anonymous": false,
+            "documentation": null,
+            "id": 259,
+            "name": "GovernorChangeCancelled",
+            "nodeType": "EventDefinition",
+            "parameters": {
+              "id": 258,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 255,
+                  "indexed": true,
+                  "name": "governor",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 259,
+                  "src": "445:24:3",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 254,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "445:7:3",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 257,
+                  "indexed": true,
+                  "name": "proposed",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 259,
+                  "src": "471:24:3",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 256,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "471:7:3",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "444:52:3"
+            },
+            "src": "415:82:3"
+          },
+          {
+            "anonymous": false,
+            "documentation": null,
+            "id": 265,
+            "name": "GovernorChangeRequested",
+            "nodeType": "EventDefinition",
+            "parameters": {
+              "id": 264,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 261,
+                  "indexed": true,
+                  "name": "governor",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 265,
+                  "src": "532:24:3",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 260,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "532:7:3",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 263,
+                  "indexed": true,
+                  "name": "proposed",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 265,
+                  "src": "558:24:3",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 262,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "558:7:3",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "531:52:3"
+            },
+            "src": "502:82:3"
+          },
+          {
+            "constant": false,
+            "id": 270,
+            "name": "proposedGovernor",
+            "nodeType": "VariableDeclaration",
+            "scope": 388,
+            "src": "590:44:3",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_address",
+              "typeString": "address"
+            },
+            "typeName": {
+              "id": 266,
+              "name": "address",
+              "nodeType": "ElementaryTypeName",
+              "src": "590:7:3",
+              "stateMutability": "nonpayable",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              }
+            },
+            "value": {
+              "argumentTypes": null,
+              "arguments": [
+                {
+                  "argumentTypes": null,
+                  "hexValue": "30",
+                  "id": 268,
+                  "isConstant": false,
+                  "isLValue": false,
+                  "isPure": true,
+                  "kind": "number",
+                  "lValueRequested": false,
+                  "nodeType": "Literal",
+                  "src": "632:1:3",
+                  "subdenomination": null,
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_rational_0_by_1",
+                    "typeString": "int_const 0"
+                  },
+                  "value": "0"
+                }
+              ],
+              "expression": {
+                "argumentTypes": [
+                  {
+                    "typeIdentifier": "t_rational_0_by_1",
+                    "typeString": "int_const 0"
+                  }
+                ],
+                "id": 267,
+                "isConstant": false,
+                "isLValue": false,
+                "isPure": true,
+                "lValueRequested": false,
+                "nodeType": "ElementaryTypeNameExpression",
+                "src": "624:7:3",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_type$_t_address_$",
+                  "typeString": "type(address)"
+                },
+                "typeName": "address"
+              },
+              "id": 269,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "typeConversion",
+              "lValueRequested": false,
+              "names": [],
+              "nodeType": "FunctionCall",
+              "src": "624:10:3",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address_payable",
+                "typeString": "address payable"
+              }
+            },
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 281,
+              "nodeType": "Block",
+              "src": "767:102:3",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "commonType": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        },
+                        "id": 276,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "leftExpression": {
+                          "argumentTypes": null,
+                          "expression": {
+                            "argumentTypes": null,
+                            "id": 273,
+                            "name": "msg",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 36232,
+                            "src": "785:3:3",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_magic_message",
+                              "typeString": "msg"
+                            }
+                          },
+                          "id": 274,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "memberName": "sender",
+                          "nodeType": "MemberAccess",
+                          "referencedDeclaration": null,
+                          "src": "785:10:3",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address_payable",
+                            "typeString": "address payable"
+                          }
+                        },
+                        "nodeType": "BinaryOperation",
+                        "operator": "==",
+                        "rightExpression": {
+                          "argumentTypes": null,
+                          "id": 275,
+                          "name": "proposedGovernor",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 270,
+                          "src": "799:16:3",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        },
+                        "src": "785:30:3",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "hexValue": "53656e646572206973206e6f742070726f706f73656420676f7665726e6f72",
+                        "id": 277,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "string",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "817:33:3",
+                        "subdenomination": null,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_stringliteral_9f7e68916eb4e1ceb4beebe445dcbbbdf1d771591b4052cd6d2cb761d55a690d",
+                          "typeString": "literal_string \"Sender is not proposed governor\""
+                        },
+                        "value": "Sender is not proposed governor"
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        },
+                        {
+                          "typeIdentifier": "t_stringliteral_9f7e68916eb4e1ceb4beebe445dcbbbdf1d771591b4052cd6d2cb761d55a690d",
+                          "typeString": "literal_string \"Sender is not proposed governor\""
+                        }
+                      ],
+                      "id": 272,
+                      "name": "require",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [
+                        36235,
+                        36236
+                      ],
+                      "referencedDeclaration": 36236,
+                      "src": "777:7:3",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
+                        "typeString": "function (bool,string memory) pure"
+                      }
+                    },
+                    "id": 278,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "777:74:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 279,
+                  "nodeType": "ExpressionStatement",
+                  "src": "777:74:3"
+                },
+                {
+                  "id": 280,
+                  "nodeType": "PlaceholderStatement",
+                  "src": "861:1:3"
+                }
+              ]
+            },
+            "documentation": "@dev Throws if called by any account other than the Proposed Governor.",
+            "id": 282,
+            "name": "onlyProposedGovernor",
+            "nodeType": "ModifierDefinition",
+            "parameters": {
+              "id": 271,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "764:2:3"
+            },
+            "src": "735:134:3",
+            "visibility": "internal"
+          },
+          {
+            "body": {
+              "id": 291,
+              "nodeType": "Block",
+              "src": "917:47:3",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 288,
+                        "name": "_governorAddr",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 284,
+                        "src": "943:13:3",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      ],
+                      "id": 287,
+                      "name": "_changeGovernor",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 578,
+                      "src": "927:15:3",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_nonpayable$_t_address_$returns$__$",
+                        "typeString": "function (address)"
+                      }
+                    },
+                    "id": 289,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "927:30:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 290,
+                  "nodeType": "ExpressionStatement",
+                  "src": "927:30:3"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 292,
+            "implemented": true,
+            "kind": "constructor",
+            "modifiers": [],
+            "name": "",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 285,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 284,
+                  "name": "_governorAddr",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 292,
+                  "src": "887:21:3",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 283,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "887:7:3",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "886:23:3"
+            },
+            "returnParameters": {
+              "id": 286,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "917:0:3"
+            },
+            "scope": 388,
+            "src": "875:89:3",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 303,
+              "nodeType": "Block",
+              "src": "1041:52:3",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "hexValue": "446972656374206368616e6765206e6f7420616c6c6f776564",
+                        "id": 300,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "string",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "1058:27:3",
+                        "subdenomination": null,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_stringliteral_39c3e49c10fa3da10aa3acc63997a199ff2dfd5f0ea199cba91d66c8c9963ec7",
+                          "typeString": "literal_string \"Direct change not allowed\""
+                        },
+                        "value": "Direct change not allowed"
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_stringliteral_39c3e49c10fa3da10aa3acc63997a199ff2dfd5f0ea199cba91d66c8c9963ec7",
+                          "typeString": "literal_string \"Direct change not allowed\""
+                        }
+                      ],
+                      "id": 299,
+                      "name": "revert",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [
+                        36237,
+                        36238
+                      ],
+                      "referencedDeclaration": 36238,
+                      "src": "1051:6:3",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_revert_pure$_t_string_memory_ptr_$returns$__$",
+                        "typeString": "function (string memory) pure"
+                      }
+                    },
+                    "id": 301,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1051:35:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 302,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1051:35:3"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 304,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [
+              {
+                "arguments": null,
+                "id": 297,
+                "modifierName": {
+                  "argumentTypes": null,
+                  "id": 296,
+                  "name": "onlyGovernor",
+                  "nodeType": "Identifier",
+                  "overloadedDeclarations": [],
+                  "referencedDeclaration": 531,
+                  "src": "1028:12:3",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_modifier$__$",
+                    "typeString": "modifier ()"
+                  }
+                },
+                "nodeType": "ModifierInvocation",
+                "src": "1028:12:3"
+              }
+            ],
+            "name": "changeGovernor",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 295,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 294,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 304,
+                  "src": "1010:7:3",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 293,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1010:7:3",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1009:9:3"
+            },
+            "returnParameters": {
+              "id": 298,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1041:0:3"
+            },
+            "scope": 388,
+            "src": "986:107:3",
+            "stateMutability": "nonpayable",
+            "superFunction": 554,
+            "visibility": "external"
+          },
+          {
+            "body": {
+              "id": 339,
+              "nodeType": "Block",
+              "src": "1322:290:3",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "commonType": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        },
+                        "id": 316,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "leftExpression": {
+                          "argumentTypes": null,
+                          "id": 312,
+                          "name": "_proposedGovernor",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 306,
+                          "src": "1340:17:3",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        },
+                        "nodeType": "BinaryOperation",
+                        "operator": "!=",
+                        "rightExpression": {
+                          "argumentTypes": null,
+                          "arguments": [
+                            {
+                              "argumentTypes": null,
+                              "hexValue": "30",
+                              "id": 314,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": true,
+                              "kind": "number",
+                              "lValueRequested": false,
+                              "nodeType": "Literal",
+                              "src": "1369:1:3",
+                              "subdenomination": null,
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_rational_0_by_1",
+                                "typeString": "int_const 0"
+                              },
+                              "value": "0"
+                            }
+                          ],
+                          "expression": {
+                            "argumentTypes": [
+                              {
+                                "typeIdentifier": "t_rational_0_by_1",
+                                "typeString": "int_const 0"
+                              }
+                            ],
+                            "id": 313,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": true,
+                            "lValueRequested": false,
+                            "nodeType": "ElementaryTypeNameExpression",
+                            "src": "1361:7:3",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_type$_t_address_$",
+                              "typeString": "type(address)"
+                            },
+                            "typeName": "address"
+                          },
+                          "id": 315,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": true,
+                          "kind": "typeConversion",
+                          "lValueRequested": false,
+                          "names": [],
+                          "nodeType": "FunctionCall",
+                          "src": "1361:10:3",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address_payable",
+                            "typeString": "address payable"
+                          }
+                        },
+                        "src": "1340:31:3",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "hexValue": "50726f706f73656420676f7665726e6f722069732061646472657373283029",
+                        "id": 317,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "string",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "1373:33:3",
+                        "subdenomination": null,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_stringliteral_70c929d2a50cc3cae70f9988ddf291aa48bfe087ca2ab10343a09d6d2a68c303",
+                          "typeString": "literal_string \"Proposed governor is address(0)\""
+                        },
+                        "value": "Proposed governor is address(0)"
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        },
+                        {
+                          "typeIdentifier": "t_stringliteral_70c929d2a50cc3cae70f9988ddf291aa48bfe087ca2ab10343a09d6d2a68c303",
+                          "typeString": "literal_string \"Proposed governor is address(0)\""
+                        }
+                      ],
+                      "id": 311,
+                      "name": "require",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [
+                        36235,
+                        36236
+                      ],
+                      "referencedDeclaration": 36236,
+                      "src": "1332:7:3",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
+                        "typeString": "function (bool,string memory) pure"
+                      }
+                    },
+                    "id": 318,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1332:75:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 319,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1332:75:3"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "commonType": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        },
+                        "id": 325,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "leftExpression": {
+                          "argumentTypes": null,
+                          "id": 321,
+                          "name": "proposedGovernor",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 270,
+                          "src": "1425:16:3",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        },
+                        "nodeType": "BinaryOperation",
+                        "operator": "==",
+                        "rightExpression": {
+                          "argumentTypes": null,
+                          "arguments": [
+                            {
+                              "argumentTypes": null,
+                              "hexValue": "30",
+                              "id": 323,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": true,
+                              "kind": "number",
+                              "lValueRequested": false,
+                              "nodeType": "Literal",
+                              "src": "1453:1:3",
+                              "subdenomination": null,
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_rational_0_by_1",
+                                "typeString": "int_const 0"
+                              },
+                              "value": "0"
+                            }
+                          ],
+                          "expression": {
+                            "argumentTypes": [
+                              {
+                                "typeIdentifier": "t_rational_0_by_1",
+                                "typeString": "int_const 0"
+                              }
+                            ],
+                            "id": 322,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": true,
+                            "lValueRequested": false,
+                            "nodeType": "ElementaryTypeNameExpression",
+                            "src": "1445:7:3",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_type$_t_address_$",
+                              "typeString": "type(address)"
+                            },
+                            "typeName": "address"
+                          },
+                          "id": 324,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": true,
+                          "kind": "typeConversion",
+                          "lValueRequested": false,
+                          "names": [],
+                          "nodeType": "FunctionCall",
+                          "src": "1445:10:3",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address_payable",
+                            "typeString": "address payable"
+                          }
+                        },
+                        "src": "1425:30:3",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "hexValue": "50726f706f73656420676f7665726e6f7220616c726561647920736574",
+                        "id": 326,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "string",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "1457:31:3",
+                        "subdenomination": null,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_stringliteral_352c7999276795f05649c004a56ef6e4ed77ff1e1bf051373d284807de816bdb",
+                          "typeString": "literal_string \"Proposed governor already set\""
+                        },
+                        "value": "Proposed governor already set"
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        },
+                        {
+                          "typeIdentifier": "t_stringliteral_352c7999276795f05649c004a56ef6e4ed77ff1e1bf051373d284807de816bdb",
+                          "typeString": "literal_string \"Proposed governor already set\""
+                        }
+                      ],
+                      "id": 320,
+                      "name": "require",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [
+                        36235,
+                        36236
+                      ],
+                      "referencedDeclaration": 36236,
+                      "src": "1417:7:3",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
+                        "typeString": "function (bool,string memory) pure"
+                      }
+                    },
+                    "id": 327,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1417:72:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 328,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1417:72:3"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 331,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 329,
+                      "name": "proposedGovernor",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 270,
+                      "src": "1500:16:3",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 330,
+                      "name": "_proposedGovernor",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 306,
+                      "src": "1519:17:3",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "src": "1500:36:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "id": 332,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1500:36:3"
+                },
+                {
+                  "eventCall": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "arguments": [],
+                        "expression": {
+                          "argumentTypes": [],
+                          "id": 334,
+                          "name": "governor",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 521,
+                          "src": "1575:8:3",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_function_internal_view$__$returns$_t_address_$",
+                            "typeString": "function () view returns (address)"
+                          }
+                        },
+                        "id": 335,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "kind": "functionCall",
+                        "lValueRequested": false,
+                        "names": [],
+                        "nodeType": "FunctionCall",
+                        "src": "1575:10:3",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "id": 336,
+                        "name": "_proposedGovernor",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 306,
+                        "src": "1587:17:3",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        },
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      ],
+                      "id": 333,
+                      "name": "GovernorChangeRequested",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 265,
+                      "src": "1551:23:3",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_event_nonpayable$_t_address_$_t_address_$returns$__$",
+                        "typeString": "function (address,address)"
+                      }
+                    },
+                    "id": 337,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1551:54:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 338,
+                  "nodeType": "EmitStatement",
+                  "src": "1546:59:3"
+                }
+              ]
+            },
+            "documentation": "@dev Current Governor request to proposes a new Governor\n@param _proposedGovernor Address of the proposed Governor",
+            "id": 340,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [
+              {
+                "arguments": null,
+                "id": 309,
+                "modifierName": {
+                  "argumentTypes": null,
+                  "id": 308,
+                  "name": "onlyGovernor",
+                  "nodeType": "Identifier",
+                  "overloadedDeclarations": [],
+                  "referencedDeclaration": 531,
+                  "src": "1309:12:3",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_modifier$__$",
+                    "typeString": "modifier ()"
+                  }
+                },
+                "nodeType": "ModifierInvocation",
+                "src": "1309:12:3"
+              }
+            ],
+            "name": "requestGovernorChange",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 307,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 306,
+                  "name": "_proposedGovernor",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 340,
+                  "src": "1275:25:3",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 305,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1275:7:3",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1274:27:3"
+            },
+            "returnParameters": {
+              "id": 310,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1322:0:3"
+            },
+            "scope": 388,
+            "src": "1244:368:3",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 366,
+              "nodeType": "Block",
+              "src": "1746:193:3",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "commonType": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        },
+                        "id": 350,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "leftExpression": {
+                          "argumentTypes": null,
+                          "id": 346,
+                          "name": "proposedGovernor",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 270,
+                          "src": "1764:16:3",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        },
+                        "nodeType": "BinaryOperation",
+                        "operator": "!=",
+                        "rightExpression": {
+                          "argumentTypes": null,
+                          "arguments": [
+                            {
+                              "argumentTypes": null,
+                              "hexValue": "30",
+                              "id": 348,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": true,
+                              "kind": "number",
+                              "lValueRequested": false,
+                              "nodeType": "Literal",
+                              "src": "1792:1:3",
+                              "subdenomination": null,
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_rational_0_by_1",
+                                "typeString": "int_const 0"
+                              },
+                              "value": "0"
+                            }
+                          ],
+                          "expression": {
+                            "argumentTypes": [
+                              {
+                                "typeIdentifier": "t_rational_0_by_1",
+                                "typeString": "int_const 0"
+                              }
+                            ],
+                            "id": 347,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": true,
+                            "lValueRequested": false,
+                            "nodeType": "ElementaryTypeNameExpression",
+                            "src": "1784:7:3",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_type$_t_address_$",
+                              "typeString": "type(address)"
+                            },
+                            "typeName": "address"
+                          },
+                          "id": 349,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": true,
+                          "kind": "typeConversion",
+                          "lValueRequested": false,
+                          "names": [],
+                          "nodeType": "FunctionCall",
+                          "src": "1784:10:3",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address_payable",
+                            "typeString": "address payable"
+                          }
+                        },
+                        "src": "1764:30:3",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "hexValue": "50726f706f73656420476f7665726e6f72206e6f7420736574",
+                        "id": 351,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "string",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "1796:27:3",
+                        "subdenomination": null,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_stringliteral_2d09509665ec523a54f6deea7e003135438aafa411820442a7363e490a87e13c",
+                          "typeString": "literal_string \"Proposed Governor not set\""
+                        },
+                        "value": "Proposed Governor not set"
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        },
+                        {
+                          "typeIdentifier": "t_stringliteral_2d09509665ec523a54f6deea7e003135438aafa411820442a7363e490a87e13c",
+                          "typeString": "literal_string \"Proposed Governor not set\""
+                        }
+                      ],
+                      "id": 345,
+                      "name": "require",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [
+                        36235,
+                        36236
+                      ],
+                      "referencedDeclaration": 36236,
+                      "src": "1756:7:3",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
+                        "typeString": "function (bool,string memory) pure"
+                      }
+                    },
+                    "id": 352,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1756:68:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 353,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1756:68:3"
+                },
+                {
+                  "eventCall": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "arguments": [],
+                        "expression": {
+                          "argumentTypes": [],
+                          "id": 355,
+                          "name": "governor",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 521,
+                          "src": "1864:8:3",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_function_internal_view$__$returns$_t_address_$",
+                            "typeString": "function () view returns (address)"
+                          }
+                        },
+                        "id": 356,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "kind": "functionCall",
+                        "lValueRequested": false,
+                        "names": [],
+                        "nodeType": "FunctionCall",
+                        "src": "1864:10:3",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "id": 357,
+                        "name": "proposedGovernor",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 270,
+                        "src": "1876:16:3",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        },
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      ],
+                      "id": 354,
+                      "name": "GovernorChangeCancelled",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 259,
+                      "src": "1840:23:3",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_event_nonpayable$_t_address_$_t_address_$returns$__$",
+                        "typeString": "function (address,address)"
+                      }
+                    },
+                    "id": 358,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1840:53:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 359,
+                  "nodeType": "EmitStatement",
+                  "src": "1835:58:3"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 364,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 360,
+                      "name": "proposedGovernor",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 270,
+                      "src": "1903:16:3",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "arguments": [
+                        {
+                          "argumentTypes": null,
+                          "hexValue": "30",
+                          "id": 362,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": true,
+                          "kind": "number",
+                          "lValueRequested": false,
+                          "nodeType": "Literal",
+                          "src": "1930:1:3",
+                          "subdenomination": null,
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_rational_0_by_1",
+                            "typeString": "int_const 0"
+                          },
+                          "value": "0"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": [
+                          {
+                            "typeIdentifier": "t_rational_0_by_1",
+                            "typeString": "int_const 0"
+                          }
+                        ],
+                        "id": 361,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "lValueRequested": false,
+                        "nodeType": "ElementaryTypeNameExpression",
+                        "src": "1922:7:3",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_type$_t_address_$",
+                          "typeString": "type(address)"
+                        },
+                        "typeName": "address"
+                      },
+                      "id": 363,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "typeConversion",
+                      "lValueRequested": false,
+                      "names": [],
+                      "nodeType": "FunctionCall",
+                      "src": "1922:10:3",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address_payable",
+                        "typeString": "address payable"
+                      }
+                    },
+                    "src": "1903:29:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "id": 365,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1903:29:3"
+                }
+              ]
+            },
+            "documentation": "@dev Current Governor cancel Governor change request",
+            "id": 367,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [
+              {
+                "arguments": null,
+                "id": 343,
+                "modifierName": {
+                  "argumentTypes": null,
+                  "id": 342,
+                  "name": "onlyGovernor",
+                  "nodeType": "Identifier",
+                  "overloadedDeclarations": [],
+                  "referencedDeclaration": 531,
+                  "src": "1733:12:3",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_modifier$__$",
+                    "typeString": "modifier ()"
+                  }
+                },
+                "nodeType": "ModifierInvocation",
+                "src": "1733:12:3"
+              }
+            ],
+            "name": "cancelGovernorChange",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 341,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1723:2:3"
+            },
+            "returnParameters": {
+              "id": 344,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1746:0:3"
+            },
+            "scope": 388,
+            "src": "1694:245:3",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 386,
+              "nodeType": "Block",
+              "src": "2081:143:3",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 373,
+                        "name": "proposedGovernor",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 270,
+                        "src": "2107:16:3",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      ],
+                      "id": 372,
+                      "name": "_changeGovernor",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 578,
+                      "src": "2091:15:3",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_nonpayable$_t_address_$returns$__$",
+                        "typeString": "function (address)"
+                      }
+                    },
+                    "id": 374,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "2091:33:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 375,
+                  "nodeType": "ExpressionStatement",
+                  "src": "2091:33:3"
+                },
+                {
+                  "eventCall": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 377,
+                        "name": "proposedGovernor",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 270,
+                        "src": "2161:16:3",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      ],
+                      "id": 376,
+                      "name": "GovernorChangeClaimed",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 253,
+                      "src": "2139:21:3",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_event_nonpayable$_t_address_$returns$__$",
+                        "typeString": "function (address)"
+                      }
+                    },
+                    "id": 378,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "2139:39:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 379,
+                  "nodeType": "EmitStatement",
+                  "src": "2134:44:3"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 384,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 380,
+                      "name": "proposedGovernor",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 270,
+                      "src": "2188:16:3",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "arguments": [
+                        {
+                          "argumentTypes": null,
+                          "hexValue": "30",
+                          "id": 382,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": true,
+                          "kind": "number",
+                          "lValueRequested": false,
+                          "nodeType": "Literal",
+                          "src": "2215:1:3",
+                          "subdenomination": null,
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_rational_0_by_1",
+                            "typeString": "int_const 0"
+                          },
+                          "value": "0"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": [
+                          {
+                            "typeIdentifier": "t_rational_0_by_1",
+                            "typeString": "int_const 0"
+                          }
+                        ],
+                        "id": 381,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "lValueRequested": false,
+                        "nodeType": "ElementaryTypeNameExpression",
+                        "src": "2207:7:3",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_type$_t_address_$",
+                          "typeString": "type(address)"
+                        },
+                        "typeName": "address"
+                      },
+                      "id": 383,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "typeConversion",
+                      "lValueRequested": false,
+                      "names": [],
+                      "nodeType": "FunctionCall",
+                      "src": "2207:10:3",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address_payable",
+                        "typeString": "address payable"
+                      }
+                    },
+                    "src": "2188:29:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "id": 385,
+                  "nodeType": "ExpressionStatement",
+                  "src": "2188:29:3"
+                }
+              ]
+            },
+            "documentation": "@dev Proposed Governor can claim governance ownership",
+            "id": 387,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [
+              {
+                "arguments": null,
+                "id": 370,
+                "modifierName": {
+                  "argumentTypes": null,
+                  "id": 369,
+                  "name": "onlyProposedGovernor",
+                  "nodeType": "Identifier",
+                  "overloadedDeclarations": [],
+                  "referencedDeclaration": 282,
+                  "src": "2060:20:3",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_modifier$__$",
+                    "typeString": "modifier ()"
+                  }
+                },
+                "nodeType": "ModifierInvocation",
+                "src": "2060:20:3"
+              }
+            ],
+            "name": "claimGovernorChange",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 368,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "2050:2:3"
+            },
+            "returnParameters": {
+              "id": 371,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "2081:0:3"
+            },
+            "scope": 388,
+            "src": "2022:202:3",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 389,
+        "src": "300:1926:3"
+      }
+    ],
+    "src": "0:2227:3"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.16+commit.9c3226ce.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.1.0",
+  "updatedAt": "2021-03-11T05:43:14.665Z",
+  "devdoc": {
+    "author": "Stability Labs Pty. Ltd.",
+    "details": "Overrides the public functions in Governable to provide a second step of validation.",
+    "methods": {
+      "cancelGovernorChange()": {
+        "details": "Current Governor cancel Governor change request"
+      },
+      "claimGovernorChange()": {
+        "details": "Proposed Governor can claim governance ownership"
+      },
+      "governor()": {
+        "details": "Returns the address of the current Governor."
+      },
+      "isGovernor()": {
+        "details": "Returns true if the caller is the current Governor."
+      },
+      "requestGovernorChange(address)": {
+        "details": "Current Governor request to proposes a new Governor",
+        "params": {
+          "_proposedGovernor": "Address of the proposed Governor"
+        }
+      }
+    },
+    "title": "ClaimableGovernor"
+  },
+  "userdoc": {
+    "methods": {},
+    "notice": "2 way handshake for Governance transfer"
+  }
+}

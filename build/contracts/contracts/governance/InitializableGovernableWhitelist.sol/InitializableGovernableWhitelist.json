@@ -1,0 +1,60 @@
+{
+  "_format": "hh-sol-artifact-1",
+  "contractName": "InitializableGovernableWhitelist",
+  "sourceName": "contracts/governance/InitializableGovernableWhitelist.sol",
+  "abi": [
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "_address",
+          "type": "address"
+        }
+      ],
+      "name": "Whitelisted",
+      "type": "event"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "nexus",
+      "outputs": [
+        {
+          "internalType": "contract INexus",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "name": "whitelist",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "bytecode": "0x608060405234801561001057600080fd5b5060e98061001f6000396000f3fe6080604052348015600f57600080fd5b506004361060325760003560e01c80639b19251a146037578063a3f5c1d214606e575b600080fd5b605a60048036036020811015604b57600080fd5b50356001600160a01b03166090565b604080519115158252519081900360200190f35b607460a5565b604080516001600160a01b039092168252519081900360200190f35b60096020526000908152604090205460ff1681565b6008546001600160a01b03168156fea265627a7a72315820327228c522024a0b87827e76428335785c7c1ac6614d80d106c4c585fd5caaf264736f6c63430005100032",
+  "deployedBytecode": "0x6080604052348015600f57600080fd5b506004361060325760003560e01c80639b19251a146037578063a3f5c1d214606e575b600080fd5b605a60048036036020811015604b57600080fd5b50356001600160a01b03166090565b604080519115158252519081900360200190f35b607460a5565b604080516001600160a01b039092168252519081900360200190f35b60096020526000908152604090205460ff1681565b6008546001600160a01b03168156fea265627a7a72315820327228c522024a0b87827e76428335785c7c1ac6614d80d106c4c585fd5caaf264736f6c63430005100032",
+  "linkReferences": {},
+  "deployedLinkReferences": {}
+}

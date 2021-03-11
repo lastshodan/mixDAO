@@ -1,0 +1,32 @@
+{
+  "_format": "hh-sol-artifact-1",
+  "contractName": "DeadIntegration",
+  "sourceName": "contracts/z_mocks/mix/platform-integrations/DeadIntegration.sol",
+  "abi": [
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "name": "checkBalance",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "balance",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "bytecode": "0x6080604052348015600f57600080fd5b50609d8061001e6000396000f3fe6080604052348015600f57600080fd5b506004361060285760003560e01c80635f51522614602d575b600080fd5b605060048036036020811015604157600080fd5b50356001600160a01b03166062565b60408051918252519081900360200190f35b5060009056fea265627a7a7231582056f47d8d969960ec7bd63e551544237f861bf12870f2463c5903f5e7d0c234a364736f6c63430005100032",
+  "deployedBytecode": "0x6080604052348015600f57600080fd5b506004361060285760003560e01c80635f51522614602d575b600080fd5b605060048036036020811015604157600080fd5b50356001600160a01b03166062565b60408051918252519081900360200190f35b5060009056fea265627a7a7231582056f47d8d969960ec7bd63e551544237f861bf12870f2463c5903f5e7d0c234a364736f6c63430005100032",
+  "linkReferences": {},
+  "deployedLinkReferences": {}
+}

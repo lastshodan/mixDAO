@@ -1,0 +1,475 @@
+{
+  "contractName": "MockTrigger",
+  "abi": [
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "internalType": "contract ILiquidator",
+          "name": "_liq",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "_integration",
+          "type": "address"
+        }
+      ],
+      "name": "trigger",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.5.16+commit.9c3226ce\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":false,\"inputs\":[{\"internalType\":\"contract ILiquidator\",\"name\":\"_liq\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"_integration\",\"type\":\"address\"}],\"name\":\"trigger\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/Volumes/sdxc/ETHEREUM/CODE/mStable-v1-edit/contracts/z_mocks/shared/MockTrigger.sol\":\"MockTrigger\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Volumes/sdxc/ETHEREUM/CODE/mStable-v1-edit/contracts/mix/liquidator/ILiquidator.sol\":{\"keccak256\":\"0x07dc03a22445ba02ff4235a67d54af911ee9087a5476c253957a4bbc42b52a9c\",\"urls\":[\"bzz-raw://b3753b504b3652ba7e3257c614baf554503fe87d8f23c84e5ac9aff33cd46f81\",\"dweb:/ipfs/QmUuiQt93FvmvGrfQz1xCnv8C7F7dfFUQVmJPmHwQ88L5K\"]},\"/Volumes/sdxc/ETHEREUM/CODE/mStable-v1-edit/contracts/z_mocks/shared/MockTrigger.sol\":{\"keccak256\":\"0x15b7a58672ef84cbccb5772f34dd68bed94f47246b6fcbc6e80cceeba49a0860\",\"urls\":[\"bzz-raw://a326bcf5762be2c04b82431428154e373d0fdcff6f65c1400a26d1bb58d335ad\",\"dweb:/ipfs/QmeqZPLLKaupnZU2NFAWTbiGn4xBiQ5fdwAGsFatEMezdP\"]}},\"version\":1}",
+  "bytecode": "0x608060405234801561001057600080fd5b50610101806100206000396000f3fe6080604052348015600f57600080fd5b506004361060285760003560e01c8063b92814d814602d575b600080fd5b605860048036036040811015604157600080fd5b506001600160a01b0381358116916020013516605a565b005b816001600160a01b031663b350df5d826040518263ffffffff1660e01b815260040180826001600160a01b03166001600160a01b03168152602001915050600060405180830381600087803b15801560b157600080fd5b505af115801560c4573d6000803e3d6000fd5b50505050505056fea265627a7a72315820360397d15ea4a63a66968b2fd223d5fb77a2aac19548e3b31ff2c67bf5b8b59e64736f6c63430005100032",
+  "deployedBytecode": "0x6080604052348015600f57600080fd5b506004361060285760003560e01c8063b92814d814602d575b600080fd5b605860048036036040811015604157600080fd5b506001600160a01b0381358116916020013516605a565b005b816001600160a01b031663b350df5d826040518263ffffffff1660e01b815260040180826001600160a01b03166001600160a01b03168152602001915050600060405180830381600087803b15801560b157600080fd5b505af115801560c4573d6000803e3d6000fd5b50505050505056fea265627a7a72315820360397d15ea4a63a66968b2fd223d5fb77a2aac19548e3b31ff2c67bf5b8b59e64736f6c63430005100032",
+  "sourceMap": "95:150:108:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;95:150:108;;;;;;;",
+  "deployedSourceMap": "95:150:108:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;95:150:108;;;;;;;;;;;;;;;;;;;123:120;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;-1:-1;;;;;;123:120:108;;;;;;;;;;:::i;:::-;;;199:4;-1:-1:-1;;;;;199:23:108;;223:12;199:37;;;;;;;;;;;;;-1:-1:-1;;;;;199:37:108;-1:-1:-1;;;;;199:37:108;;;;;;;;;;;;;;;;;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;199:37:108;;;;8:9:-1;5:2;;;45:16;42:1;39;24:38;77:16;74:1;67:27;5:2;199:37:108;;;;123:120;;:::o",
+  "source": "pragma solidity 0.5.16;\n\nimport { ILiquidator } from \"../../mix/liquidator/ILiquidator.sol\";\n\n\ncontract MockTrigger {\n\n    function trigger(ILiquidator _liq, address _integration) external {\n        _liq.triggerLiquidation(_integration);\n    }\n}",
+  "sourcePath": "/Volumes/sdxc/ETHEREUM/CODE/mStable-v1-edit/contracts/z_mocks/shared/MockTrigger.sol",
+  "ast": {
+    "absolutePath": "/Volumes/sdxc/ETHEREUM/CODE/mStable-v1-edit/contracts/z_mocks/shared/MockTrigger.sol",
+    "exportedSymbols": {
+      "MockTrigger": [
+        33555
+      ]
+    },
+    "id": 33556,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 33538,
+        "literals": [
+          "solidity",
+          "0.5",
+          ".16"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:108"
+      },
+      {
+        "absolutePath": "/Volumes/sdxc/ETHEREUM/CODE/mStable-v1-edit/contracts/mix/liquidator/ILiquidator.sol",
+        "file": "../../mix/liquidator/ILiquidator.sol",
+        "id": 33540,
+        "nodeType": "ImportDirective",
+        "scope": 33556,
+        "sourceUnit": 9567,
+        "src": "25:67:108",
+        "symbolAliases": [
+          {
+            "foreign": 33539,
+            "local": null
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 33555,
+        "linearizedBaseContracts": [
+          33555
+        ],
+        "name": "MockTrigger",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": {
+              "id": 33553,
+              "nodeType": "Block",
+              "src": "189:54:108",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 33550,
+                        "name": "_integration",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 33544,
+                        "src": "223:12:108",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 33547,
+                        "name": "_liq",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 33542,
+                        "src": "199:4:108",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_contract$_ILiquidator_$9566",
+                          "typeString": "contract ILiquidator"
+                        }
+                      },
+                      "id": 33549,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "triggerLiquidation",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 9565,
+                      "src": "199:23:108",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_external_nonpayable$_t_address_$returns$__$",
+                        "typeString": "function (address) external"
+                      }
+                    },
+                    "id": 33551,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "199:37:108",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 33552,
+                  "nodeType": "ExpressionStatement",
+                  "src": "199:37:108"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 33554,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "trigger",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 33545,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 33542,
+                  "name": "_liq",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 33554,
+                  "src": "140:16:108",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_ILiquidator_$9566",
+                    "typeString": "contract ILiquidator"
+                  },
+                  "typeName": {
+                    "contractScope": null,
+                    "id": 33541,
+                    "name": "ILiquidator",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 9566,
+                    "src": "140:11:108",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_ILiquidator_$9566",
+                      "typeString": "contract ILiquidator"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 33544,
+                  "name": "_integration",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 33554,
+                  "src": "158:20:108",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 33543,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "158:7:108",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "139:40:108"
+            },
+            "returnParameters": {
+              "id": 33546,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "189:0:108"
+            },
+            "scope": 33555,
+            "src": "123:120:108",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "external"
+          }
+        ],
+        "scope": 33556,
+        "src": "95:150:108"
+      }
+    ],
+    "src": "0:245:108"
+  },
+  "legacyAST": {
+    "absolutePath": "/Volumes/sdxc/ETHEREUM/CODE/mStable-v1-edit/contracts/z_mocks/shared/MockTrigger.sol",
+    "exportedSymbols": {
+      "MockTrigger": [
+        33555
+      ]
+    },
+    "id": 33556,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 33538,
+        "literals": [
+          "solidity",
+          "0.5",
+          ".16"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:108"
+      },
+      {
+        "absolutePath": "/Volumes/sdxc/ETHEREUM/CODE/mStable-v1-edit/contracts/mix/liquidator/ILiquidator.sol",
+        "file": "../../mix/liquidator/ILiquidator.sol",
+        "id": 33540,
+        "nodeType": "ImportDirective",
+        "scope": 33556,
+        "sourceUnit": 9567,
+        "src": "25:67:108",
+        "symbolAliases": [
+          {
+            "foreign": 33539,
+            "local": null
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 33555,
+        "linearizedBaseContracts": [
+          33555
+        ],
+        "name": "MockTrigger",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": {
+              "id": 33553,
+              "nodeType": "Block",
+              "src": "189:54:108",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 33550,
+                        "name": "_integration",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 33544,
+                        "src": "223:12:108",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 33547,
+                        "name": "_liq",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 33542,
+                        "src": "199:4:108",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_contract$_ILiquidator_$9566",
+                          "typeString": "contract ILiquidator"
+                        }
+                      },
+                      "id": 33549,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "triggerLiquidation",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 9565,
+                      "src": "199:23:108",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_external_nonpayable$_t_address_$returns$__$",
+                        "typeString": "function (address) external"
+                      }
+                    },
+                    "id": 33551,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "199:37:108",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 33552,
+                  "nodeType": "ExpressionStatement",
+                  "src": "199:37:108"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 33554,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "trigger",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 33545,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 33542,
+                  "name": "_liq",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 33554,
+                  "src": "140:16:108",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_ILiquidator_$9566",
+                    "typeString": "contract ILiquidator"
+                  },
+                  "typeName": {
+                    "contractScope": null,
+                    "id": 33541,
+                    "name": "ILiquidator",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 9566,
+                    "src": "140:11:108",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_ILiquidator_$9566",
+                      "typeString": "contract ILiquidator"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 33544,
+                  "name": "_integration",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 33554,
+                  "src": "158:20:108",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 33543,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "158:7:108",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "139:40:108"
+            },
+            "returnParameters": {
+              "id": 33546,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "189:0:108"
+            },
+            "scope": 33555,
+            "src": "123:120:108",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "external"
+          }
+        ],
+        "scope": 33556,
+        "src": "95:150:108"
+      }
+    ],
+    "src": "0:245:108"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.16+commit.9c3226ce.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.1.0",
+  "updatedAt": "2021-03-11T05:43:18.444Z",
+  "devdoc": {
+    "methods": {}
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}

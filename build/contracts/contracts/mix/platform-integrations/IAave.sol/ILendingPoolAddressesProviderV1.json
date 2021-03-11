@@ -1,0 +1,41 @@
+{
+  "_format": "hh-sol-artifact-1",
+  "contractName": "ILendingPoolAddressesProviderV1",
+  "sourceName": "contracts/mix/platform-integrations/IAave.sol",
+  "abi": [
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "getLendingPool",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "getLendingPoolCore",
+      "outputs": [
+        {
+          "internalType": "address payable",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "linkReferences": {},
+  "deployedLinkReferences": {}
+}

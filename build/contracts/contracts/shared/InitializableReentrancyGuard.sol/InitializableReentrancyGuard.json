@@ -1,0 +1,10 @@
+{
+  "_format": "hh-sol-artifact-1",
+  "contractName": "InitializableReentrancyGuard",
+  "sourceName": "contracts/shared/InitializableReentrancyGuard.sol",
+  "abi": [],
+  "bytecode": "0x6080604052348015600f57600080fd5b50603e80601d6000396000f3fe6080604052600080fdfea265627a7a72315820363f195a6f086f6ddc941f87107e13d439629e4cc674ad220ab0551bbd165fd264736f6c63430005100032",
+  "deployedBytecode": "0x6080604052600080fdfea265627a7a72315820363f195a6f086f6ddc941f87107e13d439629e4cc674ad220ab0551bbd165fd264736f6c63430005100032",
+  "linkReferences": {},
+  "deployedLinkReferences": {}
+}

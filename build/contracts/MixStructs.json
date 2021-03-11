@@ -1,0 +1,2015 @@
+{
+  "contractName": "MixStructs",
+  "abi": [],
+  "metadata": "{\"compiler\":{\"version\":\"0.5.16+commit.9c3226ce\"},\"language\":\"Solidity\",\"output\":{\"abi\":[],\"devdoc\":{\"author\":\"Stability Labs Pty. Ltd.\",\"methods\":{},\"title\":\"MixStructs\"},\"userdoc\":{\"methods\":{},\"notice\":\"Structs used in the Mix contract and associated Libs\"}},\"settings\":{\"compilationTarget\":{\"/Volumes/sdxc/ETHEREUM/CODE/mStable-v1-edit/contracts/mix/shared/MixStructs.sol\":\"MixStructs\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Volumes/sdxc/ETHEREUM/CODE/mStable-v1-edit/contracts/mix/shared/MixStructs.sol\":{\"keccak256\":\"0xc8d3ed27e2aa2a4e880b1650b9e1327a44a228349ed1c80c29b7ae3eae4c1306\",\"urls\":[\"bzz-raw://f3688f28d8ff87e3c156a432b56535422ad75fe179a249fcbce04df6a1c04fa4\",\"dweb:/ipfs/QmfNZU6L52QkuYf66smbWHpXZMhfXjEyLgYffuhaJKa5jq\"]}},\"version\":1}",
+  "bytecode": "0x6080604052348015600f57600080fd5b50603e80601d6000396000f3fe6080604052600080fdfea265627a7a7231582038cb521853cefa99f9b071d0c84e1741e40c1e5311c76453ccc981e93cfd09c564736f6c63430005100032",
+  "deployedBytecode": "0x6080604052600080fdfea265627a7a7231582038cb521853cefa99f9b071d0c84e1741e40c1e5311c76453ccc981e93cfd09c564736f6c63430005100032",
+  "sourceMap": "158:2758:35:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;158:2758:35;;;;;;;",
+  "deployedSourceMap": "158:2758:35:-;;;;;",
+  "source": "pragma solidity 0.5.16;\n\n/**\n * @title   MixStructs\n * @author  Stability Labs Pty. Ltd.\n * @notice  Structs used in the Mix contract and associated Libs\n */\ninterface MixStructs {\n\n    /** @dev Stores high level basket info */\n    struct Basket {\n\n        /** @dev Array of Bassets currently active */\n        Basset[] bassets;\n\n        /** @dev Max number of bAssets that can be present in any Basket */\n        uint8 maxBassets;\n\n        /** @dev Some bAsset is undergoing re-collateralisation */\n        bool undergoingRecol;\n\n        /**\n         * @dev In the event that we do not raise enough funds from the auctioning of a failed Basset,\n         * The Basket is deemed as failed, and is undercollateralised to a certain degree.\n         * The collateralisation ratio is used to calc Mix burn rate.\n         */\n        bool failed;\n        uint256 collateralisationRatio;\n\n    }\n\n    /** @dev Stores bAsset info. The struct takes 5 storage slots per Basset */\n    struct Basset {\n\n        /** @dev Address of the bAsset */\n        address addr;\n\n        /** @dev Status of the basset,  */\n        BassetStatus status; // takes uint8 datatype (1 byte) in storage\n\n        /** @dev An ERC20 can charge transfer fee, for example USDT, DGX tokens. */\n        bool isTransferFeeCharged; // takes a byte in storage\n\n        /**\n         * @dev 1 Basset * ratio / ratioScale == x Mix (relative value)\n         *      If ratio == 10e8 then 1 bAsset = 10 mIxs\n         *      A ratio is divised as 10^(18-tokenDecimals) * measurementMultiple(relative value of 1 base unit)\n         */\n        uint256 ratio;\n\n        /** @dev Target weights of the Basset (100% == 1e18) */\n        uint256 maxWeight;\n\n        /** @dev Amount of the Basset that is held in Collateral */\n        uint256 vaultBalance;\n\n    }\n\n    /** @dev Status of the Basset - has it broken its peg? */\n    enum BassetStatus {\n        Default,\n        Normal,\n        BrokenBelowPeg,\n        BrokenAbovePeg,\n        Blacklisted,\n        Liquidating,\n        Liquidated,\n        Failed\n    }\n\n    /** @dev Internal details on Basset */\n    struct BassetDetails {\n        Basset bAsset;\n        address integrator;\n        uint8 index;\n    }\n\n    /** @dev All details needed to Forge with multiple bAssets */\n    struct ForgePropsMulti {\n        bool isValid; // Flag to signify that forge bAssets have passed validity check\n        Basset[] bAssets;\n        address[] integrators;\n        uint8[] indexes;\n    }\n    /** @dev All details needed to Forge with multiple bAssets */\n    struct RedeemProps {\n        bool isValid;\n        Basset[] allBassets;\n        Basset[] bAssets;\n        address[] integrators;\n        uint8[] indexes;\n    }\n\n    /** @dev All details needed for proportionate Redemption */\n    struct RedeemPropsMulti {\n        uint256 colRatio;\n        Basset[] bAssets;\n        address[] integrators;\n        uint8[] indexes;\n    }\n}\n",
+  "sourcePath": "/Volumes/sdxc/ETHEREUM/CODE/mStable-v1-edit/contracts/mix/shared/MixStructs.sol",
+  "ast": {
+    "absolutePath": "/Volumes/sdxc/ETHEREUM/CODE/mStable-v1-edit/contracts/mix/shared/MixStructs.sol",
+    "exportedSymbols": {
+      "MixStructs": [
+        13643
+      ]
+    },
+    "id": 13644,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 13562,
+        "literals": [
+          "solidity",
+          "0.5",
+          ".16"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:35"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "documentation": "@title   MixStructs\n@author  Stability Labs Pty. Ltd.\n@notice  Structs used in the Mix contract and associated Libs",
+        "fullyImplemented": true,
+        "id": 13643,
+        "linearizedBaseContracts": [
+          13643
+        ],
+        "name": "MixStructs",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "canonicalName": "MixStructs.Basket",
+            "id": 13574,
+            "members": [
+              {
+                "constant": false,
+                "id": 13565,
+                "name": "bassets",
+                "nodeType": "VariableDeclaration",
+                "scope": 13574,
+                "src": "311:16:35",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_array$_t_struct$_Basset_$13587_storage_$dyn_storage_ptr",
+                  "typeString": "struct MixStructs.Basset[]"
+                },
+                "typeName": {
+                  "baseType": {
+                    "contractScope": null,
+                    "id": 13563,
+                    "name": "Basset",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 13587,
+                    "src": "311:6:35",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_Basset_$13587_storage_ptr",
+                      "typeString": "struct MixStructs.Basset"
+                    }
+                  },
+                  "id": 13564,
+                  "length": null,
+                  "nodeType": "ArrayTypeName",
+                  "src": "311:8:35",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_struct$_Basset_$13587_storage_$dyn_storage_ptr",
+                    "typeString": "struct MixStructs.Basset[]"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 13567,
+                "name": "maxBassets",
+                "nodeType": "VariableDeclaration",
+                "scope": 13574,
+                "src": "414:16:35",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint8",
+                  "typeString": "uint8"
+                },
+                "typeName": {
+                  "id": 13566,
+                  "name": "uint8",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "414:5:35",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint8",
+                    "typeString": "uint8"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 13569,
+                "name": "undergoingRecol",
+                "nodeType": "VariableDeclaration",
+                "scope": 13574,
+                "src": "508:20:35",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bool",
+                  "typeString": "bool"
+                },
+                "typeName": {
+                  "id": 13568,
+                  "name": "bool",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "508:4:35",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 13571,
+                "name": "failed",
+                "nodeType": "VariableDeclaration",
+                "scope": 13574,
+                "src": "827:11:35",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bool",
+                  "typeString": "bool"
+                },
+                "typeName": {
+                  "id": 13570,
+                  "name": "bool",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "827:4:35",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 13573,
+                "name": "collateralisationRatio",
+                "nodeType": "VariableDeclaration",
+                "scope": 13574,
+                "src": "848:30:35",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 13572,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "848:7:35",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              }
+            ],
+            "name": "Basket",
+            "nodeType": "StructDefinition",
+            "scope": 13643,
+            "src": "232:654:35",
+            "visibility": "public"
+          },
+          {
+            "canonicalName": "MixStructs.Basset",
+            "id": 13587,
+            "members": [
+              {
+                "constant": false,
+                "id": 13576,
+                "name": "addr",
+                "nodeType": "VariableDeclaration",
+                "scope": 13587,
+                "src": "1039:12:35",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                },
+                "typeName": {
+                  "id": 13575,
+                  "name": "address",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "1039:7:35",
+                  "stateMutability": "nonpayable",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 13578,
+                "name": "status",
+                "nodeType": "VariableDeclaration",
+                "scope": 13587,
+                "src": "1105:19:35",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_enum$_BassetStatus_$13596",
+                  "typeString": "enum MixStructs.BassetStatus"
+                },
+                "typeName": {
+                  "contractScope": null,
+                  "id": 13577,
+                  "name": "BassetStatus",
+                  "nodeType": "UserDefinedTypeName",
+                  "referencedDeclaration": 13596,
+                  "src": "1105:12:35",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_enum$_BassetStatus_$13596",
+                    "typeString": "enum MixStructs.BassetStatus"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 13580,
+                "name": "isTransferFeeCharged",
+                "nodeType": "VariableDeclaration",
+                "scope": 13587,
+                "src": "1263:25:35",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bool",
+                  "typeString": "bool"
+                },
+                "typeName": {
+                  "id": 13579,
+                  "name": "bool",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "1263:4:35",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 13582,
+                "name": "ratio",
+                "nodeType": "VariableDeclaration",
+                "scope": 13587,
+                "src": "1592:13:35",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 13581,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "1592:7:35",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 13584,
+                "name": "maxWeight",
+                "nodeType": "VariableDeclaration",
+                "scope": 13587,
+                "src": "1680:17:35",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 13583,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "1680:7:35",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 13586,
+                "name": "vaultBalance",
+                "nodeType": "VariableDeclaration",
+                "scope": 13587,
+                "src": "1776:20:35",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 13585,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "1776:7:35",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              }
+            ],
+            "name": "Basset",
+            "nodeType": "StructDefinition",
+            "scope": 13643,
+            "src": "972:832:35",
+            "visibility": "public"
+          },
+          {
+            "canonicalName": "MixStructs.BassetStatus",
+            "id": 13596,
+            "members": [
+              {
+                "id": 13588,
+                "name": "Default",
+                "nodeType": "EnumValue",
+                "src": "1900:7:35"
+              },
+              {
+                "id": 13589,
+                "name": "Normal",
+                "nodeType": "EnumValue",
+                "src": "1917:6:35"
+              },
+              {
+                "id": 13590,
+                "name": "BrokenBelowPeg",
+                "nodeType": "EnumValue",
+                "src": "1933:14:35"
+              },
+              {
+                "id": 13591,
+                "name": "BrokenAbovePeg",
+                "nodeType": "EnumValue",
+                "src": "1957:14:35"
+              },
+              {
+                "id": 13592,
+                "name": "Blacklisted",
+                "nodeType": "EnumValue",
+                "src": "1981:11:35"
+              },
+              {
+                "id": 13593,
+                "name": "Liquidating",
+                "nodeType": "EnumValue",
+                "src": "2002:11:35"
+              },
+              {
+                "id": 13594,
+                "name": "Liquidated",
+                "nodeType": "EnumValue",
+                "src": "2023:10:35"
+              },
+              {
+                "id": 13595,
+                "name": "Failed",
+                "nodeType": "EnumValue",
+                "src": "2043:6:35"
+              }
+            ],
+            "name": "BassetStatus",
+            "nodeType": "EnumDefinition",
+            "src": "1872:183:35"
+          },
+          {
+            "canonicalName": "MixStructs.BassetDetails",
+            "id": 13603,
+            "members": [
+              {
+                "constant": false,
+                "id": 13598,
+                "name": "bAsset",
+                "nodeType": "VariableDeclaration",
+                "scope": 13603,
+                "src": "2135:13:35",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_struct$_Basset_$13587_storage_ptr",
+                  "typeString": "struct MixStructs.Basset"
+                },
+                "typeName": {
+                  "contractScope": null,
+                  "id": 13597,
+                  "name": "Basset",
+                  "nodeType": "UserDefinedTypeName",
+                  "referencedDeclaration": 13587,
+                  "src": "2135:6:35",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_struct$_Basset_$13587_storage_ptr",
+                    "typeString": "struct MixStructs.Basset"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 13600,
+                "name": "integrator",
+                "nodeType": "VariableDeclaration",
+                "scope": 13603,
+                "src": "2158:18:35",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                },
+                "typeName": {
+                  "id": 13599,
+                  "name": "address",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "2158:7:35",
+                  "stateMutability": "nonpayable",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 13602,
+                "name": "index",
+                "nodeType": "VariableDeclaration",
+                "scope": 13603,
+                "src": "2186:11:35",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint8",
+                  "typeString": "uint8"
+                },
+                "typeName": {
+                  "id": 13601,
+                  "name": "uint8",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "2186:5:35",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint8",
+                    "typeString": "uint8"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              }
+            ],
+            "name": "BassetDetails",
+            "nodeType": "StructDefinition",
+            "scope": 13643,
+            "src": "2104:100:35",
+            "visibility": "public"
+          },
+          {
+            "canonicalName": "MixStructs.ForgePropsMulti",
+            "id": 13615,
+            "members": [
+              {
+                "constant": false,
+                "id": 13605,
+                "name": "isValid",
+                "nodeType": "VariableDeclaration",
+                "scope": 13615,
+                "src": "2309:12:35",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bool",
+                  "typeString": "bool"
+                },
+                "typeName": {
+                  "id": 13604,
+                  "name": "bool",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "2309:4:35",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 13608,
+                "name": "bAssets",
+                "nodeType": "VariableDeclaration",
+                "scope": 13615,
+                "src": "2396:16:35",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_array$_t_struct$_Basset_$13587_storage_$dyn_storage_ptr",
+                  "typeString": "struct MixStructs.Basset[]"
+                },
+                "typeName": {
+                  "baseType": {
+                    "contractScope": null,
+                    "id": 13606,
+                    "name": "Basset",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 13587,
+                    "src": "2396:6:35",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_Basset_$13587_storage_ptr",
+                      "typeString": "struct MixStructs.Basset"
+                    }
+                  },
+                  "id": 13607,
+                  "length": null,
+                  "nodeType": "ArrayTypeName",
+                  "src": "2396:8:35",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_struct$_Basset_$13587_storage_$dyn_storage_ptr",
+                    "typeString": "struct MixStructs.Basset[]"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 13611,
+                "name": "integrators",
+                "nodeType": "VariableDeclaration",
+                "scope": 13615,
+                "src": "2422:21:35",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_array$_t_address_$dyn_storage_ptr",
+                  "typeString": "address[]"
+                },
+                "typeName": {
+                  "baseType": {
+                    "id": 13609,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2422:7:35",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "id": 13610,
+                  "length": null,
+                  "nodeType": "ArrayTypeName",
+                  "src": "2422:9:35",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_address_$dyn_storage_ptr",
+                    "typeString": "address[]"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 13614,
+                "name": "indexes",
+                "nodeType": "VariableDeclaration",
+                "scope": 13615,
+                "src": "2453:15:35",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_array$_t_uint8_$dyn_storage_ptr",
+                  "typeString": "uint8[]"
+                },
+                "typeName": {
+                  "baseType": {
+                    "id": 13612,
+                    "name": "uint8",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2453:5:35",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint8",
+                      "typeString": "uint8"
+                    }
+                  },
+                  "id": 13613,
+                  "length": null,
+                  "nodeType": "ArrayTypeName",
+                  "src": "2453:7:35",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_uint8_$dyn_storage_ptr",
+                    "typeString": "uint8[]"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              }
+            ],
+            "name": "ForgePropsMulti",
+            "nodeType": "StructDefinition",
+            "scope": 13643,
+            "src": "2276:199:35",
+            "visibility": "public"
+          },
+          {
+            "canonicalName": "MixStructs.RedeemProps",
+            "id": 13630,
+            "members": [
+              {
+                "constant": false,
+                "id": 13617,
+                "name": "isValid",
+                "nodeType": "VariableDeclaration",
+                "scope": 13630,
+                "src": "2575:12:35",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bool",
+                  "typeString": "bool"
+                },
+                "typeName": {
+                  "id": 13616,
+                  "name": "bool",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "2575:4:35",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 13620,
+                "name": "allBassets",
+                "nodeType": "VariableDeclaration",
+                "scope": 13630,
+                "src": "2597:19:35",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_array$_t_struct$_Basset_$13587_storage_$dyn_storage_ptr",
+                  "typeString": "struct MixStructs.Basset[]"
+                },
+                "typeName": {
+                  "baseType": {
+                    "contractScope": null,
+                    "id": 13618,
+                    "name": "Basset",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 13587,
+                    "src": "2597:6:35",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_Basset_$13587_storage_ptr",
+                      "typeString": "struct MixStructs.Basset"
+                    }
+                  },
+                  "id": 13619,
+                  "length": null,
+                  "nodeType": "ArrayTypeName",
+                  "src": "2597:8:35",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_struct$_Basset_$13587_storage_$dyn_storage_ptr",
+                    "typeString": "struct MixStructs.Basset[]"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 13623,
+                "name": "bAssets",
+                "nodeType": "VariableDeclaration",
+                "scope": 13630,
+                "src": "2626:16:35",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_array$_t_struct$_Basset_$13587_storage_$dyn_storage_ptr",
+                  "typeString": "struct MixStructs.Basset[]"
+                },
+                "typeName": {
+                  "baseType": {
+                    "contractScope": null,
+                    "id": 13621,
+                    "name": "Basset",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 13587,
+                    "src": "2626:6:35",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_Basset_$13587_storage_ptr",
+                      "typeString": "struct MixStructs.Basset"
+                    }
+                  },
+                  "id": 13622,
+                  "length": null,
+                  "nodeType": "ArrayTypeName",
+                  "src": "2626:8:35",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_struct$_Basset_$13587_storage_$dyn_storage_ptr",
+                    "typeString": "struct MixStructs.Basset[]"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 13626,
+                "name": "integrators",
+                "nodeType": "VariableDeclaration",
+                "scope": 13630,
+                "src": "2652:21:35",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_array$_t_address_$dyn_storage_ptr",
+                  "typeString": "address[]"
+                },
+                "typeName": {
+                  "baseType": {
+                    "id": 13624,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2652:7:35",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "id": 13625,
+                  "length": null,
+                  "nodeType": "ArrayTypeName",
+                  "src": "2652:9:35",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_address_$dyn_storage_ptr",
+                    "typeString": "address[]"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 13629,
+                "name": "indexes",
+                "nodeType": "VariableDeclaration",
+                "scope": 13630,
+                "src": "2683:15:35",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_array$_t_uint8_$dyn_storage_ptr",
+                  "typeString": "uint8[]"
+                },
+                "typeName": {
+                  "baseType": {
+                    "id": 13627,
+                    "name": "uint8",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2683:5:35",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint8",
+                      "typeString": "uint8"
+                    }
+                  },
+                  "id": 13628,
+                  "length": null,
+                  "nodeType": "ArrayTypeName",
+                  "src": "2683:7:35",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_uint8_$dyn_storage_ptr",
+                    "typeString": "uint8[]"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              }
+            ],
+            "name": "RedeemProps",
+            "nodeType": "StructDefinition",
+            "scope": 13643,
+            "src": "2546:159:35",
+            "visibility": "public"
+          },
+          {
+            "canonicalName": "MixStructs.RedeemPropsMulti",
+            "id": 13642,
+            "members": [
+              {
+                "constant": false,
+                "id": 13632,
+                "name": "colRatio",
+                "nodeType": "VariableDeclaration",
+                "scope": 13642,
+                "src": "2809:16:35",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 13631,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "2809:7:35",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 13635,
+                "name": "bAssets",
+                "nodeType": "VariableDeclaration",
+                "scope": 13642,
+                "src": "2835:16:35",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_array$_t_struct$_Basset_$13587_storage_$dyn_storage_ptr",
+                  "typeString": "struct MixStructs.Basset[]"
+                },
+                "typeName": {
+                  "baseType": {
+                    "contractScope": null,
+                    "id": 13633,
+                    "name": "Basset",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 13587,
+                    "src": "2835:6:35",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_Basset_$13587_storage_ptr",
+                      "typeString": "struct MixStructs.Basset"
+                    }
+                  },
+                  "id": 13634,
+                  "length": null,
+                  "nodeType": "ArrayTypeName",
+                  "src": "2835:8:35",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_struct$_Basset_$13587_storage_$dyn_storage_ptr",
+                    "typeString": "struct MixStructs.Basset[]"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 13638,
+                "name": "integrators",
+                "nodeType": "VariableDeclaration",
+                "scope": 13642,
+                "src": "2861:21:35",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_array$_t_address_$dyn_storage_ptr",
+                  "typeString": "address[]"
+                },
+                "typeName": {
+                  "baseType": {
+                    "id": 13636,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2861:7:35",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "id": 13637,
+                  "length": null,
+                  "nodeType": "ArrayTypeName",
+                  "src": "2861:9:35",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_address_$dyn_storage_ptr",
+                    "typeString": "address[]"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 13641,
+                "name": "indexes",
+                "nodeType": "VariableDeclaration",
+                "scope": 13642,
+                "src": "2892:15:35",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_array$_t_uint8_$dyn_storage_ptr",
+                  "typeString": "uint8[]"
+                },
+                "typeName": {
+                  "baseType": {
+                    "id": 13639,
+                    "name": "uint8",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2892:5:35",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint8",
+                      "typeString": "uint8"
+                    }
+                  },
+                  "id": 13640,
+                  "length": null,
+                  "nodeType": "ArrayTypeName",
+                  "src": "2892:7:35",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_uint8_$dyn_storage_ptr",
+                    "typeString": "uint8[]"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              }
+            ],
+            "name": "RedeemPropsMulti",
+            "nodeType": "StructDefinition",
+            "scope": 13643,
+            "src": "2775:139:35",
+            "visibility": "public"
+          }
+        ],
+        "scope": 13644,
+        "src": "158:2758:35"
+      }
+    ],
+    "src": "0:2917:35"
+  },
+  "legacyAST": {
+    "absolutePath": "/Volumes/sdxc/ETHEREUM/CODE/mStable-v1-edit/contracts/mix/shared/MixStructs.sol",
+    "exportedSymbols": {
+      "MixStructs": [
+        13643
+      ]
+    },
+    "id": 13644,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 13562,
+        "literals": [
+          "solidity",
+          "0.5",
+          ".16"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:35"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "documentation": "@title   MixStructs\n@author  Stability Labs Pty. Ltd.\n@notice  Structs used in the Mix contract and associated Libs",
+        "fullyImplemented": true,
+        "id": 13643,
+        "linearizedBaseContracts": [
+          13643
+        ],
+        "name": "MixStructs",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "canonicalName": "MixStructs.Basket",
+            "id": 13574,
+            "members": [
+              {
+                "constant": false,
+                "id": 13565,
+                "name": "bassets",
+                "nodeType": "VariableDeclaration",
+                "scope": 13574,
+                "src": "311:16:35",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_array$_t_struct$_Basset_$13587_storage_$dyn_storage_ptr",
+                  "typeString": "struct MixStructs.Basset[]"
+                },
+                "typeName": {
+                  "baseType": {
+                    "contractScope": null,
+                    "id": 13563,
+                    "name": "Basset",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 13587,
+                    "src": "311:6:35",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_Basset_$13587_storage_ptr",
+                      "typeString": "struct MixStructs.Basset"
+                    }
+                  },
+                  "id": 13564,
+                  "length": null,
+                  "nodeType": "ArrayTypeName",
+                  "src": "311:8:35",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_struct$_Basset_$13587_storage_$dyn_storage_ptr",
+                    "typeString": "struct MixStructs.Basset[]"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 13567,
+                "name": "maxBassets",
+                "nodeType": "VariableDeclaration",
+                "scope": 13574,
+                "src": "414:16:35",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint8",
+                  "typeString": "uint8"
+                },
+                "typeName": {
+                  "id": 13566,
+                  "name": "uint8",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "414:5:35",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint8",
+                    "typeString": "uint8"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 13569,
+                "name": "undergoingRecol",
+                "nodeType": "VariableDeclaration",
+                "scope": 13574,
+                "src": "508:20:35",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bool",
+                  "typeString": "bool"
+                },
+                "typeName": {
+                  "id": 13568,
+                  "name": "bool",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "508:4:35",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 13571,
+                "name": "failed",
+                "nodeType": "VariableDeclaration",
+                "scope": 13574,
+                "src": "827:11:35",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bool",
+                  "typeString": "bool"
+                },
+                "typeName": {
+                  "id": 13570,
+                  "name": "bool",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "827:4:35",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 13573,
+                "name": "collateralisationRatio",
+                "nodeType": "VariableDeclaration",
+                "scope": 13574,
+                "src": "848:30:35",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 13572,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "848:7:35",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              }
+            ],
+            "name": "Basket",
+            "nodeType": "StructDefinition",
+            "scope": 13643,
+            "src": "232:654:35",
+            "visibility": "public"
+          },
+          {
+            "canonicalName": "MixStructs.Basset",
+            "id": 13587,
+            "members": [
+              {
+                "constant": false,
+                "id": 13576,
+                "name": "addr",
+                "nodeType": "VariableDeclaration",
+                "scope": 13587,
+                "src": "1039:12:35",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                },
+                "typeName": {
+                  "id": 13575,
+                  "name": "address",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "1039:7:35",
+                  "stateMutability": "nonpayable",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 13578,
+                "name": "status",
+                "nodeType": "VariableDeclaration",
+                "scope": 13587,
+                "src": "1105:19:35",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_enum$_BassetStatus_$13596",
+                  "typeString": "enum MixStructs.BassetStatus"
+                },
+                "typeName": {
+                  "contractScope": null,
+                  "id": 13577,
+                  "name": "BassetStatus",
+                  "nodeType": "UserDefinedTypeName",
+                  "referencedDeclaration": 13596,
+                  "src": "1105:12:35",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_enum$_BassetStatus_$13596",
+                    "typeString": "enum MixStructs.BassetStatus"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 13580,
+                "name": "isTransferFeeCharged",
+                "nodeType": "VariableDeclaration",
+                "scope": 13587,
+                "src": "1263:25:35",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bool",
+                  "typeString": "bool"
+                },
+                "typeName": {
+                  "id": 13579,
+                  "name": "bool",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "1263:4:35",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 13582,
+                "name": "ratio",
+                "nodeType": "VariableDeclaration",
+                "scope": 13587,
+                "src": "1592:13:35",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 13581,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "1592:7:35",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 13584,
+                "name": "maxWeight",
+                "nodeType": "VariableDeclaration",
+                "scope": 13587,
+                "src": "1680:17:35",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 13583,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "1680:7:35",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 13586,
+                "name": "vaultBalance",
+                "nodeType": "VariableDeclaration",
+                "scope": 13587,
+                "src": "1776:20:35",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 13585,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "1776:7:35",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              }
+            ],
+            "name": "Basset",
+            "nodeType": "StructDefinition",
+            "scope": 13643,
+            "src": "972:832:35",
+            "visibility": "public"
+          },
+          {
+            "canonicalName": "MixStructs.BassetStatus",
+            "id": 13596,
+            "members": [
+              {
+                "id": 13588,
+                "name": "Default",
+                "nodeType": "EnumValue",
+                "src": "1900:7:35"
+              },
+              {
+                "id": 13589,
+                "name": "Normal",
+                "nodeType": "EnumValue",
+                "src": "1917:6:35"
+              },
+              {
+                "id": 13590,
+                "name": "BrokenBelowPeg",
+                "nodeType": "EnumValue",
+                "src": "1933:14:35"
+              },
+              {
+                "id": 13591,
+                "name": "BrokenAbovePeg",
+                "nodeType": "EnumValue",
+                "src": "1957:14:35"
+              },
+              {
+                "id": 13592,
+                "name": "Blacklisted",
+                "nodeType": "EnumValue",
+                "src": "1981:11:35"
+              },
+              {
+                "id": 13593,
+                "name": "Liquidating",
+                "nodeType": "EnumValue",
+                "src": "2002:11:35"
+              },
+              {
+                "id": 13594,
+                "name": "Liquidated",
+                "nodeType": "EnumValue",
+                "src": "2023:10:35"
+              },
+              {
+                "id": 13595,
+                "name": "Failed",
+                "nodeType": "EnumValue",
+                "src": "2043:6:35"
+              }
+            ],
+            "name": "BassetStatus",
+            "nodeType": "EnumDefinition",
+            "src": "1872:183:35"
+          },
+          {
+            "canonicalName": "MixStructs.BassetDetails",
+            "id": 13603,
+            "members": [
+              {
+                "constant": false,
+                "id": 13598,
+                "name": "bAsset",
+                "nodeType": "VariableDeclaration",
+                "scope": 13603,
+                "src": "2135:13:35",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_struct$_Basset_$13587_storage_ptr",
+                  "typeString": "struct MixStructs.Basset"
+                },
+                "typeName": {
+                  "contractScope": null,
+                  "id": 13597,
+                  "name": "Basset",
+                  "nodeType": "UserDefinedTypeName",
+                  "referencedDeclaration": 13587,
+                  "src": "2135:6:35",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_struct$_Basset_$13587_storage_ptr",
+                    "typeString": "struct MixStructs.Basset"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 13600,
+                "name": "integrator",
+                "nodeType": "VariableDeclaration",
+                "scope": 13603,
+                "src": "2158:18:35",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                },
+                "typeName": {
+                  "id": 13599,
+                  "name": "address",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "2158:7:35",
+                  "stateMutability": "nonpayable",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 13602,
+                "name": "index",
+                "nodeType": "VariableDeclaration",
+                "scope": 13603,
+                "src": "2186:11:35",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint8",
+                  "typeString": "uint8"
+                },
+                "typeName": {
+                  "id": 13601,
+                  "name": "uint8",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "2186:5:35",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint8",
+                    "typeString": "uint8"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              }
+            ],
+            "name": "BassetDetails",
+            "nodeType": "StructDefinition",
+            "scope": 13643,
+            "src": "2104:100:35",
+            "visibility": "public"
+          },
+          {
+            "canonicalName": "MixStructs.ForgePropsMulti",
+            "id": 13615,
+            "members": [
+              {
+                "constant": false,
+                "id": 13605,
+                "name": "isValid",
+                "nodeType": "VariableDeclaration",
+                "scope": 13615,
+                "src": "2309:12:35",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bool",
+                  "typeString": "bool"
+                },
+                "typeName": {
+                  "id": 13604,
+                  "name": "bool",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "2309:4:35",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 13608,
+                "name": "bAssets",
+                "nodeType": "VariableDeclaration",
+                "scope": 13615,
+                "src": "2396:16:35",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_array$_t_struct$_Basset_$13587_storage_$dyn_storage_ptr",
+                  "typeString": "struct MixStructs.Basset[]"
+                },
+                "typeName": {
+                  "baseType": {
+                    "contractScope": null,
+                    "id": 13606,
+                    "name": "Basset",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 13587,
+                    "src": "2396:6:35",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_Basset_$13587_storage_ptr",
+                      "typeString": "struct MixStructs.Basset"
+                    }
+                  },
+                  "id": 13607,
+                  "length": null,
+                  "nodeType": "ArrayTypeName",
+                  "src": "2396:8:35",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_struct$_Basset_$13587_storage_$dyn_storage_ptr",
+                    "typeString": "struct MixStructs.Basset[]"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 13611,
+                "name": "integrators",
+                "nodeType": "VariableDeclaration",
+                "scope": 13615,
+                "src": "2422:21:35",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_array$_t_address_$dyn_storage_ptr",
+                  "typeString": "address[]"
+                },
+                "typeName": {
+                  "baseType": {
+                    "id": 13609,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2422:7:35",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "id": 13610,
+                  "length": null,
+                  "nodeType": "ArrayTypeName",
+                  "src": "2422:9:35",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_address_$dyn_storage_ptr",
+                    "typeString": "address[]"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 13614,
+                "name": "indexes",
+                "nodeType": "VariableDeclaration",
+                "scope": 13615,
+                "src": "2453:15:35",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_array$_t_uint8_$dyn_storage_ptr",
+                  "typeString": "uint8[]"
+                },
+                "typeName": {
+                  "baseType": {
+                    "id": 13612,
+                    "name": "uint8",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2453:5:35",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint8",
+                      "typeString": "uint8"
+                    }
+                  },
+                  "id": 13613,
+                  "length": null,
+                  "nodeType": "ArrayTypeName",
+                  "src": "2453:7:35",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_uint8_$dyn_storage_ptr",
+                    "typeString": "uint8[]"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              }
+            ],
+            "name": "ForgePropsMulti",
+            "nodeType": "StructDefinition",
+            "scope": 13643,
+            "src": "2276:199:35",
+            "visibility": "public"
+          },
+          {
+            "canonicalName": "MixStructs.RedeemProps",
+            "id": 13630,
+            "members": [
+              {
+                "constant": false,
+                "id": 13617,
+                "name": "isValid",
+                "nodeType": "VariableDeclaration",
+                "scope": 13630,
+                "src": "2575:12:35",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bool",
+                  "typeString": "bool"
+                },
+                "typeName": {
+                  "id": 13616,
+                  "name": "bool",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "2575:4:35",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 13620,
+                "name": "allBassets",
+                "nodeType": "VariableDeclaration",
+                "scope": 13630,
+                "src": "2597:19:35",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_array$_t_struct$_Basset_$13587_storage_$dyn_storage_ptr",
+                  "typeString": "struct MixStructs.Basset[]"
+                },
+                "typeName": {
+                  "baseType": {
+                    "contractScope": null,
+                    "id": 13618,
+                    "name": "Basset",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 13587,
+                    "src": "2597:6:35",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_Basset_$13587_storage_ptr",
+                      "typeString": "struct MixStructs.Basset"
+                    }
+                  },
+                  "id": 13619,
+                  "length": null,
+                  "nodeType": "ArrayTypeName",
+                  "src": "2597:8:35",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_struct$_Basset_$13587_storage_$dyn_storage_ptr",
+                    "typeString": "struct MixStructs.Basset[]"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 13623,
+                "name": "bAssets",
+                "nodeType": "VariableDeclaration",
+                "scope": 13630,
+                "src": "2626:16:35",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_array$_t_struct$_Basset_$13587_storage_$dyn_storage_ptr",
+                  "typeString": "struct MixStructs.Basset[]"
+                },
+                "typeName": {
+                  "baseType": {
+                    "contractScope": null,
+                    "id": 13621,
+                    "name": "Basset",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 13587,
+                    "src": "2626:6:35",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_Basset_$13587_storage_ptr",
+                      "typeString": "struct MixStructs.Basset"
+                    }
+                  },
+                  "id": 13622,
+                  "length": null,
+                  "nodeType": "ArrayTypeName",
+                  "src": "2626:8:35",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_struct$_Basset_$13587_storage_$dyn_storage_ptr",
+                    "typeString": "struct MixStructs.Basset[]"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 13626,
+                "name": "integrators",
+                "nodeType": "VariableDeclaration",
+                "scope": 13630,
+                "src": "2652:21:35",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_array$_t_address_$dyn_storage_ptr",
+                  "typeString": "address[]"
+                },
+                "typeName": {
+                  "baseType": {
+                    "id": 13624,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2652:7:35",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "id": 13625,
+                  "length": null,
+                  "nodeType": "ArrayTypeName",
+                  "src": "2652:9:35",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_address_$dyn_storage_ptr",
+                    "typeString": "address[]"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 13629,
+                "name": "indexes",
+                "nodeType": "VariableDeclaration",
+                "scope": 13630,
+                "src": "2683:15:35",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_array$_t_uint8_$dyn_storage_ptr",
+                  "typeString": "uint8[]"
+                },
+                "typeName": {
+                  "baseType": {
+                    "id": 13627,
+                    "name": "uint8",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2683:5:35",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint8",
+                      "typeString": "uint8"
+                    }
+                  },
+                  "id": 13628,
+                  "length": null,
+                  "nodeType": "ArrayTypeName",
+                  "src": "2683:7:35",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_uint8_$dyn_storage_ptr",
+                    "typeString": "uint8[]"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              }
+            ],
+            "name": "RedeemProps",
+            "nodeType": "StructDefinition",
+            "scope": 13643,
+            "src": "2546:159:35",
+            "visibility": "public"
+          },
+          {
+            "canonicalName": "MixStructs.RedeemPropsMulti",
+            "id": 13642,
+            "members": [
+              {
+                "constant": false,
+                "id": 13632,
+                "name": "colRatio",
+                "nodeType": "VariableDeclaration",
+                "scope": 13642,
+                "src": "2809:16:35",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 13631,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "2809:7:35",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 13635,
+                "name": "bAssets",
+                "nodeType": "VariableDeclaration",
+                "scope": 13642,
+                "src": "2835:16:35",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_array$_t_struct$_Basset_$13587_storage_$dyn_storage_ptr",
+                  "typeString": "struct MixStructs.Basset[]"
+                },
+                "typeName": {
+                  "baseType": {
+                    "contractScope": null,
+                    "id": 13633,
+                    "name": "Basset",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 13587,
+                    "src": "2835:6:35",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_Basset_$13587_storage_ptr",
+                      "typeString": "struct MixStructs.Basset"
+                    }
+                  },
+                  "id": 13634,
+                  "length": null,
+                  "nodeType": "ArrayTypeName",
+                  "src": "2835:8:35",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_struct$_Basset_$13587_storage_$dyn_storage_ptr",
+                    "typeString": "struct MixStructs.Basset[]"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 13638,
+                "name": "integrators",
+                "nodeType": "VariableDeclaration",
+                "scope": 13642,
+                "src": "2861:21:35",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_array$_t_address_$dyn_storage_ptr",
+                  "typeString": "address[]"
+                },
+                "typeName": {
+                  "baseType": {
+                    "id": 13636,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2861:7:35",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "id": 13637,
+                  "length": null,
+                  "nodeType": "ArrayTypeName",
+                  "src": "2861:9:35",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_address_$dyn_storage_ptr",
+                    "typeString": "address[]"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 13641,
+                "name": "indexes",
+                "nodeType": "VariableDeclaration",
+                "scope": 13642,
+                "src": "2892:15:35",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_array$_t_uint8_$dyn_storage_ptr",
+                  "typeString": "uint8[]"
+                },
+                "typeName": {
+                  "baseType": {
+                    "id": 13639,
+                    "name": "uint8",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2892:5:35",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint8",
+                      "typeString": "uint8"
+                    }
+                  },
+                  "id": 13640,
+                  "length": null,
+                  "nodeType": "ArrayTypeName",
+                  "src": "2892:7:35",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_uint8_$dyn_storage_ptr",
+                    "typeString": "uint8[]"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              }
+            ],
+            "name": "RedeemPropsMulti",
+            "nodeType": "StructDefinition",
+            "scope": 13643,
+            "src": "2775:139:35",
+            "visibility": "public"
+          }
+        ],
+        "scope": 13644,
+        "src": "158:2758:35"
+      }
+    ],
+    "src": "0:2917:35"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.16+commit.9c3226ce.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.1.0",
+  "updatedAt": "2021-03-11T05:43:15.860Z",
+  "devdoc": {
+    "author": "Stability Labs Pty. Ltd.",
+    "methods": {},
+    "title": "MixStructs"
+  },
+  "userdoc": {
+    "methods": {},
+    "notice": "Structs used in the Mix contract and associated Libs"
+  }
+}

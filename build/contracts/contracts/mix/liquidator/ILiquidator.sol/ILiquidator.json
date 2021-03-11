@@ -1,0 +1,126 @@
+{
+  "_format": "hh-sol-artifact-1",
+  "contractName": "ILiquidator",
+  "sourceName": "contracts/mix/liquidator/ILiquidator.sol",
+  "abi": [
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_integration",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "_sellToken",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "_bAsset",
+          "type": "address"
+        },
+        {
+          "internalType": "int128",
+          "name": "_curvePosition",
+          "type": "int128"
+        },
+        {
+          "internalType": "address[]",
+          "name": "_uniswapPath",
+          "type": "address[]"
+        },
+        {
+          "internalType": "uint256",
+          "name": "_trancheAmount",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "_minReturn",
+          "type": "uint256"
+        }
+      ],
+      "name": "createLiquidation",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_integration",
+          "type": "address"
+        }
+      ],
+      "name": "deleteLiquidation",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_integration",
+          "type": "address"
+        }
+      ],
+      "name": "triggerLiquidation",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_integration",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "_bAsset",
+          "type": "address"
+        },
+        {
+          "internalType": "int128",
+          "name": "_curvePosition",
+          "type": "int128"
+        },
+        {
+          "internalType": "address[]",
+          "name": "_uniswapPath",
+          "type": "address[]"
+        },
+        {
+          "internalType": "uint256",
+          "name": "_trancheAmount",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "_minReturn",
+          "type": "uint256"
+        }
+      ],
+      "name": "updateBasset",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "linkReferences": {},
+  "deployedLinkReferences": {}
+}

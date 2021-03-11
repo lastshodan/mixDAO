@@ -1,0 +1,26 @@
+{
+  "_format": "hh-sol-artifact-1",
+  "contractName": "InitializableModule2",
+  "sourceName": "contracts/shared/InitializableModule2.sol",
+  "abi": [
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "nexus",
+      "outputs": [
+        {
+          "internalType": "contract INexus",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "bytecode": "0x6080604052348015600f57600080fd5b5060938061001e6000396000f3fe6080604052348015600f57600080fd5b506004361060285760003560e01c8063a3f5c1d214602d575b600080fd5b6033604f565b604080516001600160a01b039092168252519081900360200190f35b6000546001600160a01b03168156fea265627a7a72315820f2af5e7ddb048708f3a504af3f3d8a5d00ada0cb7abc160d06f2aacd3993750b64736f6c63430005100032",
+  "deployedBytecode": "0x6080604052348015600f57600080fd5b506004361060285760003560e01c8063a3f5c1d214602d575b600080fd5b6033604f565b604080516001600160a01b039092168252519081900360200190f35b6000546001600160a01b03168156fea265627a7a72315820f2af5e7ddb048708f3a504af3f3d8a5d00ada0cb7abc160d06f2aacd3993750b64736f6c63430005100032",
+  "linkReferences": {},
+  "deployedLinkReferences": {}
+}
