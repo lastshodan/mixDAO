@@ -6,7 +6,7 @@ CementDao's Assets ([mIxs](./contracts/mix/Mix.sol)) are tokens that allow minti
 
 Core mIx contracts utilise OpenZeppelin's [InitializableAdminUpgradeabilityProxy](https://github.com/OpenZeppelin/openzeppelin-sdk/blob/master/packages/lib/contracts/upgradeability/InitializableAdminUpgradeabilityProxy.sol) to facilitate future upgrades, fixes or feature additions. The upgrades are proposed by the CementDao Governors (with current governor address stored in the [Nexus](./contracts/nexus/Nexus.sol) - the system kernel) and executed via the [DelayedProxyAdmin](./contracts/upgradability/DelayedProxyAdmin.sol). Both changes to the `governor`, and contract upgrades have a one week delay built in to execution. This allows CementDao users a one week opt out window if they do not agree with the given change.
 
-CementDao rewards those who contribute to its utility and growth - for more information see [MTA rewards](https://docs.CementDao.org/bild-rewards-1/).
+CementDao rewards those who contribute to its utility and growth - for more information see [BILD rewards](https://docs.CementDao.org/bild-rewards-1/).
 
 
 <br />
