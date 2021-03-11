@@ -117,10 +117,10 @@ This produces reports that are visible in the `/coverage` folder, and navigatabl
 
 Example usage:
 
-* Mint 100 MUSD: `yarn script mint 100`
-* Redeem 100 of the MUSD basset at index 0 (USDT): `yarn redeem-basset 0 100`
-* Deposit 100 mUSD into savings: `yarn deposit-savings 100`
-* Withdraw 100 mUSD from savings: `yarn withdraw-savings 100`
+* Mint 100 MIX: `yarn script mint 100`
+* Redeem 100 of the MIX basset at index 0 (USDT): `yarn redeem-basset 0 100`
+* Deposit 100 mIX into savings: `yarn deposit-savings 100`
+* Withdraw 100 mIX from savings: `yarn withdraw-savings 100`
 * Travel through time (forwards only, sorry): `yarn script time-travel 1 year`
 
 ### CI
