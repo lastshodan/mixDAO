@@ -12,11 +12,14 @@ mixDao rewards those who contribute to its utility and growth - for more informa
 <br />
 
 🏠 https://mixdao.money --coming soon 
+<br />
+
 📀 https://app.mixdao.money ---coming soon
+<br />
+
 📄 https://docs.mixdao.money ---coming soon
 
 
-<br />
 
 <br />
 
