@@ -11,19 +11,14 @@ mixDao rewards those who contribute to its utility and growth - for more informa
 
 <br />
 
-🏠 https://mixdao.money  
-📀 https://app.mixdao.money
-📄 https://docs.mixdao.money 
+🏠 https://mixdao.money --coming soon 
+📀 https://app.mixdao.money ---coming soon
+📄 https://docs.mixdao.money ---coming soon
 
 
 <br />
 
-## Bug bounty
 
-Found a bug? Claim a reward from our open [Bug Bounty](https://docs.CementDao.org/protocol/security/CementDao-bug-bounty) by reporting it to CementDao (following the [responsible disclosure](https://docs.CementDao.com/protocol/security/CementDao-bug-bounty#responsible-disclosure) policy)
-
-
-<br />
 
 ---
 
