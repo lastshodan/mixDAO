@@ -11,9 +11,9 @@ mixDao rewards those who contribute to its utility and growth - for more informa
 
 <br />
 
-🏠 https://mixDao.com  
-📀 https://app.mixDao.com 
-📄 https://docs.mixDao.com 
+🏠 https://mixdao.money  
+📀 https://app.mixdao.money
+📄 https://docs.mixdao.money 
 
 
 <br />
