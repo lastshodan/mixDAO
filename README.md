@@ -1,19 +1,19 @@
 
 
-This repo contains all contracts and tests relevant to the core CementDao protocol. CementDao is a protocol built to make stablecoins easy, robust and profitable.
+This repo contains all contracts and tests relevant to the core mixDao protocol. mixDao is a protocol built to make stablecoins easy, robust and profitable.
 
-CementDao's Assets ([mIxs](./contracts/mix/Mix.sol)) are tokens that allow minting and redemption at a 1:1 ratio for underlying Basket Assets (`bAssets`) of the same peg (i.e. USD, BTC, Gold), with composition managed by the [BasketManager](./contracts/mix/BasketManager.sol). `bAssets` are integrated with lending protocols (initially Aave, Compound) to generate interest which is accrued in `mIx` terms. mIxs can be deposited to earn native interest through their respective Savings Contract, just like you would with a savings account. `bAssets` within an `mIx` can also be swapped 1:1 (provided they remain within their [forge validator](./contracts/mix/forge-validator) limits), with a small `swapFee` credited additionally to Savers.
+mixDao's Assets ([mIxs](./contracts/mix/Mix.sol)) are tokens that allow minting and redemption at a 1:1 ratio for underlying Basket Assets (`bAssets`) of the same peg (i.e. USD, BTC, Gold), with composition managed by the [BasketManager](./contracts/mix/BasketManager.sol). `bAssets` are integrated with lending protocols (initially Aave, Compound) to generate interest which is accrued in `mIx` terms. mIxs can be deposited to earn native interest through their respective Savings Contract, just like you would with a savings account. `bAssets` within an `mIx` can also be swapped 1:1 (provided they remain within their [forge validator](./contracts/mix/forge-validator) limits), with a small `swapFee` credited additionally to Savers.
 
-Core mIx contracts utilise OpenZeppelin's [InitializableAdminUpgradeabilityProxy](https://github.com/OpenZeppelin/openzeppelin-sdk/blob/master/packages/lib/contracts/upgradeability/InitializableAdminUpgradeabilityProxy.sol) to facilitate future upgrades, fixes or feature additions. The upgrades are proposed by the CementDao Governors (with current governor address stored in the [Nexus](./contracts/nexus/Nexus.sol) - the system kernel) and executed via the [DelayedProxyAdmin](./contracts/upgradability/DelayedProxyAdmin.sol). Both changes to the `governor`, and contract upgrades have a one week delay built in to execution. This allows CementDao users a one week opt out window if they do not agree with the given change.
+Core mIx contracts utilise OpenZeppelin's [InitializableAdminUpgradeabilityProxy](https://github.com/OpenZeppelin/openzeppelin-sdk/blob/master/packages/lib/contracts/upgradeability/InitializableAdminUpgradeabilityProxy.sol) to facilitate future upgrades, fixes or feature additions. The upgrades are proposed by the mixDao Governors (with current governor address stored in the [Nexus](./contracts/nexus/Nexus.sol) - the system kernel) and executed via the [DelayedProxyAdmin](./contracts/upgradability/DelayedProxyAdmin.sol). Both changes to the `governor`, and contract upgrades have a one week delay built in to execution. This allows mixDao users a one week opt out window if they do not agree with the given change.
 
-CementDao rewards those who contribute to its utility and growth - for more information see [BILD rewards](https://docs.CementDao.org/bild-rewards-1/).
+mixDao rewards those who contribute to its utility and growth - for more information see [BILD rewards](https://docs.mixDao.org/bild-rewards-1/).
 
 
 <br />
 
-🏠 https://CementDao.com  
-📀 https://app.CementDao.com 
-📄 https://docs.CementDao.com 
+🏠 https://mixDao.com  
+📀 https://app.mixDao.com 
+📄 https://docs.mixDao.com 
 
 
 <br />
@@ -38,7 +38,7 @@ Found a bug? Claim a reward from our open [Bug Bounty](https://docs.CementDao.or
 
 ## Artifacts
 
-We publish the contract artifacts to an npm package called [@CementDao/protocol](https://www.npmjs.com/package/@CementDao/protocol). You can browse them via [unpkg.com](https://unpkg.com/browse/@CementDao/protocol@latest/).
+We publish the contract artifacts to an npm package called [@mixDao/protocol](https://www.npmjs.com/package/@mixDao/protocol). You can browse them via [unpkg.com](https://unpkg.com/browse/@mixDao/protocol@latest/).
 
 <br />
 
@@ -79,7 +79,7 @@ $ yarn test
 
 #### Ganache-fork
 
-CementDao-contracts test suite is built to support execution on a [mainnet fork](https://medium.com/ethereum-grid/forking-ethereum-mainnet-mint-your-own-dai-d8b62a82b3f7) of ganache. This allows tests to be ran using all mainnet dependencies (bAssets, lending protocols). To do this, certain mainnet accounts need to be unlocked to allows tx to be sent from that origin. 
+mixDao-contracts test suite is built to support execution on a [mainnet fork](https://medium.com/ethereum-grid/forking-ethereum-mainnet-mint-your-own-dai-d8b62a82b3f7) of ganache. This allows tests to be ran using all mainnet dependencies (bAssets, lending protocols). To do this, certain mainnet accounts need to be unlocked to allows tx to be sent from that origin. 
 
 *NB: The following commands assume you have a full Ethereum node running and exposed on local port 1234*
 
@@ -106,7 +106,7 @@ Key folders:
 
 [Solidity-coverage](https://github.com/sc-forks/solidity-coverage) is used to run coverage analysis on test suite.
 
-This produces reports that are visible in the `/coverage` folder, and navigatable/uploadable. Ultimately they are used as a reference that there is some sort of adequate cover, although they will not be a source of truth for a robust test framework. Reports publically available on [coveralls](https://coveralls.io/github/CementDao/CementDao-contracts).
+This produces reports that are visible in the `/coverage` folder, and navigatable/uploadable. Ultimately they are used as a reference that there is some sort of adequate cover, although they will not be a source of truth for a robust test framework. Reports publically available on [coveralls](https://coveralls.io/github/mixDao/mixDao-contracts).
 
 *NB: solidity-coverage runs with solc `optimizer=false` (see [discussion](https://github.com/sc-forks/solidity-coverage/issues/417))*
 
