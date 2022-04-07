@@ -22,7 +22,7 @@ import { IERC20 } from "@openzeppelin/contracts/token/ERC20/IERC20.sol";
 
 /**
  * @title   Mix
- * @author  Stability Labs Pty. Ltd.
+ * @author  Lastshodan
  * @notice  The Mix is a token that allows minting and redemption at a 1:1 ratio
  *          for underlying basket assets (bAssets) of the same peg (i.e. USD,
  *          EUR, Gold). Composition and validation is enforced via the BasketManager.
